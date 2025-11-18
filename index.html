@@ -45,6 +45,24 @@
             width: auto;
             object-fit: contain;
         }
+        .authority-photo {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            object-fit: cover;
+        }
+        .gallery-image {
+            width: 100%;
+            height: 250px; /* Altura fija para que la cuadrícula se vea uniforme */
+            object-fit: cover; /* Ajusta la imagen para cubrir el espacio sin distorsionarla */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery-image:hover {
+            transform: scale(1.02);
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -115,13 +133,73 @@
                 <blockquote class="text-xl italic text-slate-700 mb-6 border-l-4 border-olive pl-4">
                     "Antes de Fabricio, las reuniones eran caóticas. Su Método CEREBRO nos dio un marco mental claro. En 6 meses, vimos una mejora del 30% en la velocidad de toma de decisiones. Es ciencia aplicada a resultados."
                 </blockquote>
-                <p class="font-bold text-slate-dark">- CEO de Empresa </p>
+                <p class="font-bold text-slate-dark">- CEO de Tecnología (Testimonio de Resultado Cuantificable)</p>
             </div>
 
         </div>
     </section>
 
-    <section id="metodo" class="py-20 md:py-32">
+    <section class="py-20 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <div class="order-2 lg:order-1 text-center">
+                    <img src="fabriymagnano.jpg" alt="Fabricio Martínez junto a Rubén Magnano, entrenador campeón olímpico." class="authority-photo mx-auto">
+                </div>
+
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-3xl font-bold text-slate-dark mb-4">
+                        Alianzas Estratégicas y Alto Rendimiento
+                    </h2>
+                    <p class="text-xl text-slate-700 mb-6">
+                        La Neurociencia y el Liderazgo se prueban en la élite. Hemos compartido giras de disertación con figuras como **Rubén Magnano**, campeón olímpico de baloncesto.
+                    </p>
+                    <p class="text-lg text-slate-700">
+                        Esto valida que los protocolos del Método C.E.R.E.B.R.O. están alineados con las estrategias de **coaching de máxima presión** utilizadas por los líderes más exitosos del deporte mundial.
+                    </p>
+                    <a href="#contacto" class="mt-8 bg-accent-blue text-white text-lg font-bold py-3 px-8 rounded-full inline-block hover:bg-slate-dark transition duration-300">
+                        Aplique esta Mentalidad Ganadora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 md:py-24 bg-F7F3E8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold text-slate-dark mb-4">
+                Mi Impacto Visual: Aplicación en Vivo
+            </h2>
+            <p class="text-xl text-slate-700 max-w-3xl mx-auto mb-12">
+                Experiencias comprobadas en el coaching ejecutivo, deportivo de élite y eventos masivos.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div>
+                    <img src="argentinasoftbolmeditando.jpg" alt="Selección Argentina de Softbol aplicando protocolos de enfoque y neurociencia." class="gallery-image">
+                    <p class="mt-3 text-sm font-semibold text-olive">Neurociencias en Selecciones Nacionales</p>
+                </div>
+                
+                <div>
+                    <img src="fabrisalallena.jpg" alt="Fabricio Martínez disertando a una sala llena de ejecutivos." class="gallery-image">
+                    <p class="mt-3 text-sm font-semibold text-olive">Disertaciones a Sala Llena</p>
+                </div>
+                
+                <div>
+                    <img src="collagefotos.jpg" alt="Collage de fotos de una charla de liderazgo en Gualeguaychú." class="gallery-image">
+                    <p class="mt-3 text-sm font-semibold text-olive">Eventos de Liderazgo Regional</p>
+                </div>
+
+                <div>
+                    <img src="fabriymagnano.jpg" alt="Resumen de Alto Rendimiento." class="gallery-image opacity-70">
+                    <p class="mt-3 text-sm font-semibold text-olive">Metodología Comprobada</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="metodo" class="py-20 md:py-32 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-bold text-center mb-4 text-slate-dark">
                 Nuestro Framework: El Método C.E.R.E.B.R.O.
@@ -132,7 +210,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
                 
-                <div class="text-center p-6 bg-white rounded-xl card-shadow border-t-8 border-accent-blue">
+                <div class="text-center p-6 bg-F7F3E8 rounded-xl card-shadow border-t-8 border-accent-blue">
                     <span class="step-icon text-accent-blue">🧠</span>
                     <h3 class="text-2xl font-bold text-accent-blue mt-2 mb-3">1. Diagnóstico Neuronal</h3>
                     <p class="text-slate-700">
@@ -145,7 +223,7 @@
                     &rarr; 
                 </div>
                 
-                <div class="text-center p-6 bg-white rounded-xl card-shadow border-t-8 border-olive">
+                <div class="text-center p-6 bg-F7F3E8 rounded-xl card-shadow border-t-8 border-olive">
                     <span class="step-icon">🎯</span>
                     <h3 class="text-2xl font-bold text-slate-dark mt-2 mb-3">2. Implementación de Protocolos</h3>
                     <p class="text-slate-700">
@@ -158,7 +236,7 @@
                     &rarr;
                 </div>
 
-                <div class="text-center p-6 bg-white rounded-xl card-shadow border-t-8 border-slate-dark">
+                <div class="text-center p-6 bg-F7F3E8 rounded-xl card-shadow border-t-8 border-slate-dark">
                     <span class="step-icon">📈</span>
                     <h3 class="text-2xl font-bold text-slate-dark mt-2 mb-3">3. Medición y Refuerzo</h3>
                     <p class="text-slate-700">
