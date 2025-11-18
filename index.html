@@ -195,21 +195,37 @@
     </section>
 
     <!-- 5. Contacto / CTA Final -->
-    <section id="contacto" class="py-20 md:py-24">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-white p-10 rounded-xl card-shadow border-4 border-blue">
+    <!-- 5. Contacto / Formulario de Solicitud de Diagnóstico -->
+    <section id="contacto" class="py-20 md:py-24 bg-F7F3E8">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-white p-10 rounded-xl card-shadow border-4 border-olive">
             <h2 class="text-4xl font-bold mb-4 text-slate-dark">
-                ¿Listo para transformar su Liderazgo?
+                Comencemos: Agenda tu Sesión Estratégica
             </h2>
-            <p class="text-xl max-w-3xl mx-auto mb-8 text-slate-700">
-                Agenda tu sesión de 30 minutos sin compromiso. Evaluaremos la brecha de rendimiento de tu equipo y te mostraremos cómo el Método CEREBRO puede cerrarla.
+            <p class="text-lg max-w-3xl mx-auto mb-8 text-slate-700">
+                Complete este breve formulario para que podamos comprender mejor el desafío de liderazgo que enfrenta. Nos pondremos en contacto en menos de 24 horas.
             </p>
-            <a href="TU_ENLACE_A_CALENDARIO" target="_blank" class="cta-button bg-slate-dark text-white text-xl font-bold py-4 px-10 rounded-full inline-block">
-                Agenda tu Sesión Estratégica
-            </a>
-            <p class="text-sm mt-4 text-slate-600">Cupos limitados por mes para asegurar la calidad de la consultoría.</p>
+
+            <!-- Este formulario envía datos a tu nuevo Google Form -->
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLSeS-xR0h1eN5W0R3W4t_07p_p42F-N6Q9c9_QdOaO/formResponse" method="POST" class="max-w-md mx-auto">
+                <!-- Nombre -->
+                <input type="text" name="entry.1436151662" placeholder="Su Nombre y Apellido" class="w-full p-3 mb-4 rounded-md border-2 border-AEC6CF text-slate-dark focus:ring-olive focus:border-olive" required>
+
+                <!-- Correo -->
+                <input type="email" name="entry.1982705494" placeholder="Su Correo Electrónico Profesional" class="w-full p-3 mb-4 rounded-md border-2 border-AEC6CF text-slate-dark focus:ring-olive focus:border-olive" required>
+
+                <!-- Teléfono (Opcional) -->
+                <input type="tel" name="entry.1843236750" placeholder="Su Número de Teléfono (Opcional)" class="w-full p-3 mb-4 rounded-md border-2 border-AEC6CF text-slate-dark focus:ring-olive focus:border-olive">
+                
+                <!-- Desafío Principal (Área de Texto) -->
+                <textarea name="entry.126593452" placeholder="Describa brevemente el desafío de liderazgo más urgente en su organización." rows="4" class="w-full p-3 mb-6 rounded-md border-2 border-AEC6CF text-slate-dark focus:ring-olive focus:border-olive" required></textarea>
+
+                <button type="submit" class="w-full cta-button bg-olive text-white text-xl font-bold py-3 rounded-full hover:bg-slate-dark">
+                    Enviar Solicitud y Agendar
+                </button>
+            </form>
+            <p class="text-sm mt-4 text-slate-600">Confidencialidad garantizada. Sus datos están seguros.</p>
         </div>
     </section>
-
     <!-- Footer -->
     <footer class="bg-343E40 text-white py-10 mt-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
