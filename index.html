@@ -45,68 +45,19 @@
             width: auto;
             object-fit: contain;
         }
-        .authority-photo {
-            max-width: 100%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-            object-fit: cover;
-        }
+        
+        /* Estilos generales para las imágenes en cuadrícula/galería */
         .gallery-image {
             width: 100%;
             height: 250px; /* Altura fija para que la cuadrícula se vea uniforme */
             object-fit: cover; /* Ajusta la imagen para cubrir el espacio sin distorsionarla */
+            object-position: center; /* Centra la imagen para el recorte */
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
         .gallery-image:hover {
             transform: scale(1.02);
-        }
-
-        /* --- Estilos para el Carrusel de Autoridad (Nuevo) --- */
-        .carousel-container {
-            position: relative;
-            max-width: 900px; 
-            margin: auto;
-            overflow: hidden; 
-            border-radius: 12px;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
-        }
-        .carousel-slide {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        /* ALTURA FINAL: REDUCIDA A 450px */
-        .carousel-slide img {
-            width: 100%;
-            height: 450px; 
-            object-fit: cover;
-            flex-shrink: 0; 
-            object-position: top; 
-        }
-        .carousel-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            cursor: pointer;
-            z-index: 10;
-            font-size: 1.5rem;
-            border-radius: 50%;
-            transition: background-color 0.3s ease;
-        }
-        .carousel-button:hover {
-            background-color: rgba(0, 0, 0, 0.7);
-        }
-        .carousel-button.prev {
-            left: 10px;
-        }
-        .carousel-button.next {
-            right: 10px;
         }
 
         /* --- Estilos para la SECCIÓN DE ALTO IMPACTO (con Overlay) --- */
@@ -225,28 +176,36 @@
                 Llevamos los protocolos de liderazgo a figuras clave en el deporte de élite, la educación y los negocios, en escenarios de máxima exigencia.
             </p>
 
-            <div class="carousel-container">
-                <div id="authority-carousel-slide" class="carousel-slide">
-                    
-                    <img src="fabriymagnano.jpg" alt="Coaching de Alto Rendimiento en Deporte de Élite" data-caption="Protocolos probados en la gestión de equipos de élite.">
-                    
-                    <img src="20231002_102908.jpg" alt="Innovación Educativa" data-caption="Compartiendo metodologías con líderes en innovación educativa (Rebeca Anijovich).">
-                    
-                    <img src="mariodisanto.png" alt="Neurociencia y Control Motor" data-caption="Estrategias de performance y control motor para la toma de decisiones (Mario Di Santo).">
-                    
-                    <img src="aldanaaraneda.jpg" alt="Desarrollo de Talento en Recursos Humanos" data-caption="Liderazgo efectivo y desarrollo de talento en Recursos Humanos.">
-
-                    <img src="azzerboni.jpg" alt="Didáctica y Formación de Formadores" data-caption="Modelos de enseñanza y aprendizaje para la transformación organizacional (Delia Azzerboni).">
-
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                
+                <div class="rounded-xl shadow-md overflow-hidden">
+                    <img src="fabriymagnano.jpg" alt="Coaching de Alto Rendimiento en Deporte de Élite" class="gallery-image">
+                    <p class="p-3 text-sm font-semibold text-slate-dark bg-F7F3E8">Protocolos probados en la gestión de equipos de élite.</p>
+                </div>
+                
+                <div class="rounded-xl shadow-md overflow-hidden">
+                    <img src="20231002_102908.jpg" alt="Innovación Educativa" class="gallery-image">
+                    <p class="p-3 text-sm font-semibold text-slate-dark bg-F7F3E8">Compartiendo metodologías con líderes en innovación educativa (Rebeca Anijovich).</p>
+                </div>
+                
+                <div class="rounded-xl shadow-md overflow-hidden">
+                    <img src="mariodisanto.png" alt="Neurociencia y Control Motor" class="gallery-image">
+                    <p class="p-3 text-sm font-semibold text-slate-dark bg-F7F3E8">Estrategias de performance y control motor para la toma de decisiones (Mario Di Santo).</p>
+                </div>
+                
+                <div class="rounded-xl shadow-md overflow-hidden">
+                    <img src="aldanaaraneda.jpg" alt="Desarrollo de Talento en Recursos Humanos" class="gallery-image">
+                    <p class="p-3 text-sm font-semibold text-slate-dark bg-F7F3E8">Liderazgo efectivo y desarrollo de talento en Recursos Humanos.</p>
                 </div>
 
-                <button class="carousel-button prev" onclick="prevSlide()">&#10094;</button>
-                <button class="carousel-button next" onclick="nextSlide()">&#10095;</button>
+                <div class="rounded-xl shadow-md overflow-hidden">
+                    <img src="azzerboni.jpg" alt="Didáctica y Formación de Formadores" class="gallery-image">
+                    <p class="p-3 text-sm font-semibold text-slate-dark bg-F7F3E8">Modelos de enseñanza y aprendizaje para la transformación organizacional (Delia Azzerboni).</p>
+                </div>
+
             </div>
             
-            <p id="carousel-caption" class="mt-4 text-lg font-semibold text-slate-dark h-6"></p>
-
-            <a href="#contacto" class="mt-8 bg-accent-blue text-white text-lg font-bold py-3 px-8 rounded-full inline-block hover:bg-slate-dark transition duration-300">
+            <a href="#contacto" class="mt-12 bg-accent-blue text-white text-lg font-bold py-3 px-8 rounded-full inline-block hover:bg-slate-dark transition duration-300">
                 Aplique esta Mentalidad Ganadora
             </a>
         </div>
@@ -413,42 +372,6 @@
     </footer>
 
     <script>
-        // Lógica del Carrusel
-        const slideContainer = document.getElementById('authority-carousel-slide');
-        const slides = slideContainer.querySelectorAll('img');
-        const totalSlides = slides.length;
-        let currentSlide = 0;
-
-        function updateCaption() {
-            const captionElement = document.getElementById('carousel-caption');
-            captionElement.textContent = slides[currentSlide].getAttribute('data-caption') || '';
-        }
-
-        function updateSlide() {
-            const offset = -currentSlide * 100;
-            slideContainer.style.transform = `translateX(${offset}%)`;
-            updateCaption();
-        }
-
-        window.nextSlide = function() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateSlide();
-        }
-
-        window.prevSlide = function() {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            updateSlide();
-        }
-
-        // Inicializar carrusel y autodesplazamiento
-        window.onload = function() {
-            updateSlide(); // Muestra la primera imagen y su caption
-            
-            // Autodesplazamiento cada 5 segundos
-            setInterval(window.nextSlide, 5000); 
-        };
-        
-        // Smooth Scrolling para la Navegación
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
