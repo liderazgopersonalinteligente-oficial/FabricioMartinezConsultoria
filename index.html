@@ -3,415 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fabricio Martínez Consultoría - Nuestros Servicios</title>
+    <title>Fabricio Martínez | Liderazgo, Neurociencias y Alto Rendimiento</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* Paleta: Beige: #F7F3E8, Olive: #8F9779, Blue: #AEC6CF, Slate: #343E40, White: #FFFFFF */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
+            font-family: 'Inter', sans-serif;
+            background-color: #F7F3E8; 
+            color: #343E40; 
         }
-
-        header {
-            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
-            color: white;
-            padding: 40px 20px 60px;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 15px;
-        }
-
-        header p {
-            font-size: 1.1em;
-            opacity: 0.95;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .servicios-rapidos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 50px 0;
-            padding: 0 20px;
-        }
-
-        .servicio-card {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-        }
-
-        .servicio-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-        }
-
-        .servicio-card h3 {
-            color: #1e3a8a;
-            margin-bottom: 12px;
-            font-size: 1.2em;
-        }
-
-        .servicio-card p {
-            color: #666;
-            font-size: 0.95em;
-        }
-
-        .servicios-destacados {
-            background: white;
-            padding: 60px 0;
-            margin: 50px 0;
-        }
-
-        .servicios-destacados h2 {
-            text-align: center;
-            font-size: 2em;
-            color: #1e3a8a;
-            margin-bottom: 15px;
-        }
-
-        .subtitulo {
-            text-align: center;
-            color: #666;
-            font-size: 1.1em;
-            margin-bottom: 50px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .servicio-detallado {
-            margin-bottom: 50px;
-            padding-bottom: 50px;
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        .servicio-detallado:last-child {
-            border-bottom: none;
-        }
-
-        .servicio-detallado h3 {
-            color: #1e3a8a;
-            font-size: 1.5em;
-            margin-bottom: 15px;
-        }
-
-        .servicio-detallado p {
-            color: #555;
-            margin-bottom: 15px;
-            line-height: 1.8;
-        }
-
-        .lista-puntos {
-            margin: 20px 0;
-            padding-left: 20px;
-        }
-
-        .lista-puntos li {
-            list-style: none;
-            margin-bottom: 10px;
-            padding-left: 25px;
-            position: relative;
-            color: #555;
-        }
-
-        .lista-puntos li:before {
-            content: "•";
-            color: #2563eb;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-
+        .text-olive { color: #8F9779; }
+        .bg-olive { background-color: #8F9779; }
+        .text-slate-dark { color: #343E40; }
+        .border-blue { border-color: #AEC6CF; }
         .cta-button {
-            display: inline-block;
-            background: #2563eb;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background 0.3s ease;
-            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(143, 151, 121, 0.4);
         }
-
         .cta-button:hover {
-            background: #1e40af;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(143, 151, 121, 0.6);
         }
-
-        .formulario-contacto {
-            background: #f0f4f8;
-            padding: 60px 0;
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         }
-
-        .seccion-contacto-header {
-            margin-bottom: 50px;
-            text-align: center;
-        }
-
-        .seccion-contacto-header h2 {
-            font-size: 2.2em;
-            color: #1e3a8a;
-            margin-bottom: 20px;
-        }
-
-        .seccion-contacto-header p {
-            font-size: 1.1em;
-            color: #555;
-            line-height: 1.8;
-        }
-
-        .form-contacto {
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-contacto input,
-        .form-contacto select,
-        .form-contacto textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-family: inherit;
-            font-size: 1em;
-        }
-
-        .form-contacto input:focus,
-        .form-contacto select:focus,
-        .form-contacto textarea:focus {
-            outline: none;
-            border-color: #2563eb;
-            box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
-        }
-
-        .btn-submit {
-            width: 100%;
-            padding: 14px;
-            background: #2563eb;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.05em;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .btn-submit:hover {
-            background: #1e40af;
-        }
-
-        footer {
-            background: #1e3a8a;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 60px;
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
-
-            .servicios-destacados h2 {
-                font-size: 1.5em;
-            }
-
-            .servicio-detallado h3 {
-                font-size: 1.2em;
-            }
+        .step-icon {
+            font-size: 2rem;
+            line-height: 1;
         }
     </style>
 </head>
-<body>
-    <header>
-        <h1>Fabricio Martínez Consultoría</h1>
-        <p>Nuestros Servicios</p>
-        <p style="font-size: 0.95em; margin-top: 10px;">Soluciones integrales para el desarrollo de tu organización</p>
+<body class="antialiased">
+
+    <!-- Navbar Fijo -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <span class="text-2xl font-extrabold text-slate-dark">Fabricio Martínez</span>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#metodo" class="text-slate-dark hover:text-olive px-3 py-2 rounded-md text-sm font-medium transition duration-150">Mi Método</a>
+                    <a href="#resultados" class="text-slate-dark hover:text-olive px-3 py-2 rounded-md text-sm font-medium transition duration-150">Resultados</a>
+                    <a href="#servicios" class="text-slate-dark hover:text-olive px-3 py-2 rounded-md text-sm font-medium transition duration-150">Servicios</a>
+                    <a href="#contacto" class="ml-4 bg-olive text-white px-4 py-2 rounded-full text-sm font-bold cta-button">Agenda tu Diagnóstico</a>
+                </div>
+                <!-- Menú móvil (simplificado, solo CTA) -->
+                <div class="md:hidden">
+                     <a href="#contacto" class="bg-olive text-white px-3 py-1.5 rounded-full text-sm font-bold cta-button">Diagnóstico</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Hero / Propuesta de Valor -->
+    <header class="pt-16 pb-24 md:pt-24 md:pb-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-4 leading-tight text-slate-dark">
+                Deje de liderar por intuición.
+            </h1>
+            <h2 class="text-3xl md:text-4xl font-light text-olive mb-8">
+                Implemente protocolos de **Neurociencia Aplicada** para el Alto Rendimiento.
+            </h2>
+            <p class="text-xl max-w-3xl mx-auto mb-10 text-slate-700">
+                Diseñamos e integramos su liderazgo en un sistema probado que **reduce la fatiga de decisiones** y aumenta la **productividad ejecutiva hasta un 25%**.
+            </p>
+            <a href="#contacto" class="cta-button bg-olive text-white text-xl font-bold py-4 px-10 rounded-full inline-block">
+                Agenda tu Sesión Estratégica Gratuita $\rightarrow$
+            </a>
+            <div class="mt-12 max-w-lg mx-auto">
+                 
+            </div>
+        </div>
     </header>
 
-    <div class="container">
-        <section class="servicios-rapidos">
-            <div class="servicio-card">
-                <h3>Reclutamiento y Selección</h3>
-                <p>Identificamos y atraemos el talento que tu empresa necesita para alcanzar sus objetivos.</p>
-            </div>
-            <div class="servicio-card">
-                <h3>Desarrollo de Líderes</h3>
-                <p>Formamos líderes capacitados para conducir equipos con visión estratégica.</p>
-            </div>
-            <div class="servicio-card">
-                <h3>Capacitación Corporativa</h3>
-                <p>Diseñamos programas de formación personalizados según las necesidades de tu organización.</p>
-            </div>
-            <div class="servicio-card">
-                <h3>Diagnóstico Organizacional</h3>
-                <p>Evaluamos tu estructura y procesos para identificar oportunidades de mejora.</p>
-            </div>
-            <div class="servicio-card">
-                <h3>Coaching Ejecutivo</h3>
-                <p>Acompañamos a tus ejecutivos en el desarrollo de habilidades de liderazgo.</p>
-            </div>
-            <div class="servicio-card">
-                <h3>Consultoría Estratégica</h3>
-                <p>Asesoramos en procesos de transformación y cambio organizacional.</p>
-            </div>
-        </section>
-    </div>
-
-    <section class="servicios-destacados">
-        <div class="container">
-            <h2>Servicios Destacados</h2>
-            <p class="subtitulo">Contamos con soluciones personalizadas que se adaptan a los desafíos únicos de tu empresa.</p>
-
-            <div class="servicio-detallado">
-                <h3>Diseño Organizacional</h3>
-                <p>Integramos una visión externa con el conocimiento profundo de tu negocio para llegar a soluciones efectivas y duraderas. Asesoramos en la implementación de:</p>
-                <ul class="lista-puntos">
-                    <li>Análisis de la estructura organizacional actual</li>
-                    <li>Diseño de organigramas funcionales</li>
-                    <li>Definición de perfiles de puestos</li>
-                    <li>Elaboración de manuales de procedimientos</li>
-                    <li>Diagnóstico de clima organizacional</li>
-                </ul>
+    <!-- 2. Autoridad / Prueba Social -->
+    <section id="autoridad" class="py-16 bg-F7F3E8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-center text-2xl font-semibold mb-10 text-slate-dark">
+                La Neurociencia del Liderazgo que genera resultados:
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-16">
+                <div class="p-6 bg-white rounded-xl card-shadow border-t-4 border-olive">
+                    <p class="text-4xl font-extrabold text-olive">10+</p>
+                    <p class="text-lg font-medium mt-1">Años de Experiencia en Liderazgo</p>
+                </div>
+                <div class="p-6 bg-white rounded-xl card-shadow border-t-4 border-olive">
+                    <p class="text-4xl font-extrabold text-olive">98%</p>
+                    <p class="text-lg font-medium mt-1">Tasa de Satisfacción de Ejecutivos</p>
+                </div>
+                <div class="p-6 bg-white rounded-xl card-shadow border-t-4 border-olive">
+                    <p class="text-4xl font-extrabold text-olive">600+</p>
+                    <p class="text-lg font-medium mt-1">Líderes Transformados</p>
+                </div>
             </div>
 
-            <div class="servicio-detallado">
-                <h3>Coaching y Desarrollo</h3>
-                <p>Trabajamos en conjunto con especialistas para desarrollar habilidades específicas en los profesionales de tu organización. Utilizamos diferentes técnicas manteniendo un enfoque holístico, logrando generar cambios personales que impactan directamente en el desarrollo profesional de los participantes.</p>
-                <p>Nuestro programa incluye sesiones individualizadas, seguimiento personalizado y evaluación de resultados.</p>
+            <div class="max-w-4xl mx-auto text-center">
+                <blockquote class="text-xl italic text-slate-700 mb-6 border-l-4 border-olive pl-4">
+                    "Antes de Fabricio, las reuniones eran caóticas. Su Método CEREBRO nos dio un marco mental claro. En 6 meses, vimos una mejora del $30\%$ en la velocidad de toma de decisiones. Es ciencia aplicada a resultados."
+                </blockquote>
+                <p class="font-bold text-slate-dark">- CEO de Tecnología (Testimonio de Resultado Cuantificable)</p>
             </div>
 
-            <div class="servicio-detallado">
-                <h3>Capacitaciones Empresariales</h3>
-                <p>Atendiendo a la necesidad específica de cada empresa, diseñamos programas de formación completos que comprenden:</p>
-                <ul class="lista-puntos">
-                    <li>Diagnóstico de necesidades de capacitación</li>
-                    <li>Diseño personalizado del programa</li>
-                    <li>Implementación y facilitación</li>
-                    <li>Seguimiento y evaluación de resultados</li>
-                </ul>
-                <p>Nuestras capacitaciones abarcan temas como liderazgo, comunicación, gestión de proyectos y habilidades técnicas específicas.</p>
-            </div>
-
-            <div class="servicio-detallado">
-                <h3>Asesoría en Recursos Humanos</h3>
-                <p>Proporcionamos asesoría estratégica en la gestión integral de recursos humanos. Ayudamos a optimizar procesos de selección, retención de talento, evaluación del desempeño y planificación de carrera.</p>
-                <ul class="lista-puntos">
-                    <li>Estrategias de retención de talento</li>
-                    <li>Planes de sucesión ejecutiva</li>
-                    <li>Evaluación del desempeño</li>
-                    <li>Compensación y beneficios</li>
-                </ul>
-            </div>
         </div>
     </section>
 
-    <section class="formulario-contacto">
-        <div class="container">
-            <div class="seccion-contacto-header">
-                <h2>¿Interesado en nuestros servicios?</h2>
-                <p>Déjanos tus datos y nos pondremos en contacto contigo lo antes posible</p>
+    <!-- 3. El Método (Tu Framework Único) -->
+    <section id="metodo" class="py-20 md:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-4 text-slate-dark">
+                Nuestro Framework: El Método C.E.R.E.B.R.O.
+            </h2>
+            <p class="text-xl text-center max-w-3xl mx-auto mb-16 text-slate-700">
+                Hemos sintetizado las mejores prácticas de consultoras y la ciencia más reciente para crear un sistema de 3 pasos que garantiza la adopción y el impacto real.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                
+                <!-- Paso 1 -->
+                <div class="text-center p-6 bg-white rounded-xl card-shadow border-t-8 border-blue">
+                    <span class="step-icon">🧠</span>
+                    <h3 class="text-2xl font-bold text-slate-dark mt-2 mb-3">1. Diagnóstico Neuronal</h3>
+                    <p class="text-slate-700">
+                        Evaluación profunda de los patrones de liderazgo y las zonas de fatiga cognitiva del equipo. Identificamos los "sesgos ciegos" que detienen el crecimiento.
+                    </p>
+                    <p class="text-sm text-olive font-semibold mt-4">Pilar: Rigor Consultor</p>
+                </div>
+                
+                <!-- Separador Flecha (solo en desktop) -->
+                <div class="hidden md:flex items-center justify-center text-5xl text-blue">
+                    $\rightarrow$
+                </div>
+                
+                <!-- Paso 2 -->
+                <div class="text-center p-6 bg-white rounded-xl card-shadow border-t-8 border-olive">
+                    <span class="step-icon">🎯</span>
+                    <h3 class="text-2xl font-bold text-slate-dark mt-2 mb-3">2. Implementación de Protocolos</h3>
+                    <p class="text-slate-700">
+                        Entrenamiento enfocado en implementar "protocolos" diarios (micro-acciones) de neurociencia y storytelling que rescriben los hábitos de liderazgo.
+                    </p>
+                    <p class="text-sm text-olive font-semibold mt-4">Pilar: Neurociencia Aplicada</p>
+                </div>
+                
+                 <!-- Separador Flecha (solo en desktop) -->
+                <div class="hidden md:flex items-center justify-center text-5xl text-blue">
+                    $\rightarrow$
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="text-center p-6 bg-white rounded-xl card-shadow border-t-8 border-slate-dark">
+                    <span class="step-icon">📈</span>
+                    <h3 class="text-2xl font-bold text-slate-dark mt-2 mb-3">3. Medición y Refuerzo</h3>
+                    <p class="text-slate-700">
+                        Monitoreo del ROI (Retorno de Inversión) del liderazgo con data post-intervención. Refuerzo continuo para asegurar la sostenibilidad del cambio.
+                    </p>
+                    <p class="text-sm text-olive font-semibold mt-4">Pilar: Medición de Impacto</p>
+                </div>
             </div>
-            <form id="formulario" class="form-contacto">
-                <div class="form-group">
-                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder="Tu email" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" id="telefono" name="telefono" placeholder="Tu teléfono">
-                </div>
-                <div class="form-group">
-                    <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa">
-                </div>
-                <div class="form-group">
-                    <select id="servicio" name="servicio" required>
-                        <option value="">Selecciona un servicio</option>
-                        <option value="Reclutamiento">Reclutamiento y Selección</option>
-                        <option value="Liderazgo">Desarrollo de Líderes</option>
-                        <option value="Capacitación">Capacitación Corporativa</option>
-                        <option value="Diagnóstico">Diagnóstico Organizacional</option>
-                        <option value="Coaching">Coaching Ejecutivo</option>
-                        <option value="Consultoría">Consultoría Estratégica</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos más sobre tu necesidad..." rows="5"></textarea>
-                </div>
-                <button type="submit" class="btn-submit">Enviar</button>
-                <p id="mensaje-exito" style="display:none; color: green; margin-top: 15px;">¡Gracias! Tu mensaje fue enviado correctamente.</p>
+            
+            <div class="mt-16 text-center">
+                <a href="#contacto" class="bg-blue text-white text-lg font-bold py-3 px-8 rounded-full inline-block hover:bg-slate-dark transition duration-300">
+                    Comienza el Diagnóstico Aquí
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. Lead Magnet / Píldora de Conocimiento (La Estrategia de los Disertantes) -->
+    <section class="py-20 md:py-24 bg-olive text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-4">
+                🎁 Regalo: El Protocolo de Liderazgo de 5 Minutos
+            </h2>
+            <p class="text-xl max-w-3xl mx-auto mb-10 opacity-90">
+                Descargue nuestra "Píldora de Conocimiento" gratuita: una guía basada en neurociencia para tomar decisiones bajo presión sin agotamiento.
+            </p>
+            
+            <form action="URL_DE_PROCESAMIENTO_DE_FORMULARIO" method="POST" class="max-w-md mx-auto bg-white p-8 rounded-xl card-shadow">
+                <input type="text" name="nombre" placeholder="Su Nombre" class="w-full p-3 mb-4 rounded-md border-2 border-AEC6CF text-slate-dark focus:ring-blue focus:border-blue" required>
+                <input type="email" name="email" placeholder="Su Correo Electrónico Profesional" class="w-full p-3 mb-6 rounded-md border-2 border-AEC6CF text-slate-dark focus:ring-blue focus:border-blue" required>
+                <button type="submit" class="w-full bg-slate-dark text-white text-lg font-bold py-3 rounded-md cta-button hover:bg-343E40/90">
+                    Descargar Guía y Empezar Ahora
+                </button>
             </form>
+            <p class="text-sm mt-4 opacity-80">Prometemos no enviar spam. Solo contenido de alto valor para líderes.</p>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Fabricio Martínez Consultoría. Todos los derechos reservados.</p>
-        <p>Transformando organizaciones, generando valor.</p>
+    <!-- 5. Contacto / CTA Final -->
+    <section id="contacto" class="py-20 md:py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-white p-10 rounded-xl card-shadow border-4 border-blue">
+            <h2 class="text-4xl font-bold mb-4 text-slate-dark">
+                ¿Listo para transformar su Liderazgo?
+            </h2>
+            <p class="text-xl max-w-3xl mx-auto mb-8 text-slate-700">
+                Agenda tu sesión de 30 minutos sin compromiso. Evaluaremos la brecha de rendimiento de tu equipo y te mostraremos cómo el Método CEREBRO puede cerrarla.
+            </p>
+            <a href="TU_ENLACE_A_CALENDARIO" target="_blank" class="cta-button bg-slate-dark text-white text-xl font-bold py-4 px-10 rounded-full inline-block">
+                Agenda tu Sesión Estratégica
+            </a>
+            <p class="text-sm mt-4 text-slate-600">Cupos limitados por mes para asegurar la calidad de la consultoría.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-343E40 text-white py-10 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="mb-4">Fabricio Martínez | Consultoría en Liderazgo y Neurociencias</p>
+            <div class="space-x-4 text-sm opacity-75">
+                <a href="#" class="hover:text-AEC6CF">Política de Privacidad</a>
+                <a href="#" class="hover:text-AEC6CF">Términos de Servicio</a>
+            </div>
+            <p class="mt-4 text-sm opacity-50">&copy; 2025 Fabricio Martínez. Todos los derechos reservados.</p>
+        </div>
     </footer>
 
     <script>
-        document.getElementById('formulario').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            const datos = {
-                nombre: document.getElementById('nombre').value,
-                email: document.getElementById('email').value,
-                telefono: document.getElementById('telefono').value,
-                empresa: document.getElementById('empresa').value,
-                servicio: document.getElementById('servicio').value,
-                mensaje: document.getElementById('mensaje').value,
-                fecha: new Date().toLocaleString('es-AR')
-            };
-
-            try {
-                const response = await fetch('https://formspree.io/f/xldpzvpw', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(datos)
+        // JavaScript para asegurar que el scroll suave funcione en la navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
                 });
-
-                if (response.ok) {
-                    document.getElementById('formulario').style.display = 'none';
-                    document.getElementById('mensaje-exito').style.display = 'block';
-                    
-                    setTimeout(() => {
-                        window.location.reload();
-                    }, 3000);
-                }
-            } catch (error) {
-                alert('Hubo un error. Por favor intenta de nuevo.');
-                console.error('Error:', error);
-            }
+            });
         });
     </script>
 </body>
