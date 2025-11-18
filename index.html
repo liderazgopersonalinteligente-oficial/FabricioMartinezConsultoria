@@ -45,12 +45,12 @@
             width: auto;
             object-fit: contain;
         }
-        /* Estilo para la foto de alto impacto 20240606_122252.jpg */
-        .full-width-impact-photo {
-            width: 100%;
-            height: 450px; /* Altura generosa para impacto visual */
+        .authority-photo {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
             object-fit: cover;
-            object-position: top center; /* Enfoca la parte superior de la foto si es vertical */
         }
         .gallery-image {
             width: 100%;
@@ -67,9 +67,9 @@
         /* --- Estilos para el Carrusel de Autoridad (Nuevo) --- */
         .carousel-container {
             position: relative;
-            max-width: 900px; /* Ancho más amplio para el carrusel */
+            max-width: 900px; 
             margin: auto;
-            overflow: hidden;
+            overflow: hidden; 
             border-radius: 12px;
             box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
         }
@@ -77,11 +77,12 @@
             display: flex;
             transition: transform 0.5s ease-in-out;
         }
+        /* ALTURA DE IMAGEN CORREGIDA: Aumentada a 550px */
         .carousel-slide img {
             width: 100%;
-            height: 450px; /* Altura para carrusel */
+            height: 550px; 
             object-fit: cover;
-            flex-shrink: 0;
+            flex-shrink: 0; 
         }
         .carousel-button {
             position: absolute;
@@ -191,15 +192,16 @@
 
             <div class="carousel-container">
                 <div id="authority-carousel-slide" class="carousel-slide">
+                    
                     <img src="fabriymagnano.jpg" alt="Coaching de Alto Rendimiento en Deporte de Élite" data-caption="Protocolos probados en la gestión de equipos de élite.">
                     
-                    <img src="20231002_102908.jpg" alt="Innovación Educativa" data-caption="Compartiendo metodologías con líderes en innovación educativa.">
+                    <img src="20231002_102908.jpg" alt="Innovación Educativa" data-caption="Compartiendo metodologías con líderes en innovación educativa (Rebeca Anijovich).">
                     
-                    <img src="mariodisanto.png" alt="Neurociencia y Control Motor" data-caption="Estrategias de performance y control motor para la toma de decisiones.">
+                    <img src="mariodisanto.png" alt="Neurociencia y Control Motor" data-caption="Estrategias de performance y control motor para la toma de decisiones (Mario Di Santo).">
                     
                     <img src="aldanaaraneda.jpg" alt="Desarrollo de Talento en Recursos Humanos" data-caption="Liderazgo efectivo y desarrollo de talento en Recursos Humanos.">
 
-                    <img src="azzerboni.jpg" alt="Didáctica y Formación de Formadores" data-caption="Modelos de enseñanza y aprendizaje para la transformación organizacional.">
+                    <img src="azzerboni.jpg" alt="Didáctica y Formación de Formadores" data-caption="Modelos de enseñanza y aprendizaje para la transformación organizacional (Delia Azzerboni).">
 
                 </div>
 
@@ -236,7 +238,6 @@
             </div>
         </div>
     </section>
-
 
     <section class="py-20 md:py-24 bg-F7F3E8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -376,8 +377,41 @@
     </footer>
 
     <script>
-        // JS para Carrusel (Asumo que el usuario no tiene más fotos y eliminamos el carrusel para no complicar la UI)
+        // Lógica del Carrusel
+        const slideContainer = document.getElementById('authority-carousel-slide');
+        const slides = slideContainer.querySelectorAll('img');
+        const totalSlides = slides.length;
+        let currentSlide = 0;
 
+        function updateCaption() {
+            const captionElement = document.getElementById('carousel-caption');
+            captionElement.textContent = slides[currentSlide].getAttribute('data-caption') || '';
+        }
+
+        function updateSlide() {
+            const offset = -currentSlide * 100;
+            slideContainer.style.transform = `translateX(${offset}%)`;
+            updateCaption();
+        }
+
+        window.nextSlide = function() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlide();
+        }
+
+        window.prevSlide = function() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlide();
+        }
+
+        // Inicializar carrusel y autodesplazamiento
+        window.onload = function() {
+            updateSlide(); // Muestra la primera imagen y su caption
+            
+            // Autodesplazamiento cada 5 segundos
+            setInterval(window.nextSlide, 5000); 
+        };
+        
         // Smooth Scrolling para la Navegación
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
