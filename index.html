@@ -64,7 +64,7 @@
             transform: scale(1.02);
         }
 
-        /* --- Estilos para el Carrusel de Autoridad --- */
+        /* --- Estilos para el Carrusel de Autoridad (Nuevo) --- */
         .carousel-container {
             position: relative;
             max-width: 900px; 
@@ -77,11 +77,13 @@
             display: flex;
             transition: transform 0.5s ease-in-out;
         }
+        /* ALTURA FINAL Y CORREGIDA: 580px */
         .carousel-slide img {
             width: 100%;
-            height: 550px; 
+            height: 580px; 
             object-fit: cover;
             flex-shrink: 0; 
+            /* FIX FINAL: Asegura que la parte superior (las caras) no se corten */
             object-position: top; 
         }
         .carousel-button {
@@ -106,42 +108,6 @@
         }
         .carousel-button.next {
             right: 10px;
-        }
-
-        /* --- Estilos para la SECCIÓN DE ALTO IMPACTO (con Overlay) --- */
-        .impact-section {
-            position: relative; /* Necesario para que el overlay se posicione correctamente */
-            overflow: hidden; /* Asegura que el overlay no se salga */
-            background-color: #343E40; /* Fondo de fallback si la imagen no carga */
-        }
-        .impact-section .full-width-impact-photo {
-            width: 100%;
-            height: 450px;
-            object-fit: cover;
-            object-position: center; /* Mantener el centro de la foto para esta sección */
-            position: absolute; /* Posiciona la imagen detrás del contenido */
-            top: 0;
-            left: 0;
-            z-index: 1; /* Detrás del overlay */
-        }
-        /* Overlay oscuro semitransparente */
-        .impact-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.6); /* Negro con 60% de opacidad */
-            z-index: 2; /* Encima de la imagen, debajo del texto */
-        }
-        /* Contenido de texto encima del overlay */
-        .impact-content {
-            position: relative; /* Para que el texto se posicione encima del overlay */
-            z-index: 3; /* Encima de todo */
-            color: white; /* Aseguramos que el texto sea blanco */
-        }
-        .impact-content .text-olive { /* Asegura que este texto se mantenga olive */
-            color: #8F9779;
         }
     </style>
 </head>
@@ -255,7 +221,9 @@
 
     <section class="impact-section py-20 md:py-32 text-white">
         <img src="20240606_122252.jpg" alt="Fabricio Martínez con grupo de ejecutivos haciendo pose de éxito en una sala llena." class="full-width-impact-photo rounded-lg">
+        
         <div class="impact-overlay"></div>
+        
         <div class="impact-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center h-full flex flex-col justify-center">
             <h2 class="text-4xl font-bold text-center mb-10">
                 La Demanda de Liderazgo Estratégico
@@ -365,4 +333,97 @@
             
             <form action="https://docs.google.com/forms/d/e/1FAIpQLSeE7c2TI9Zsrtom96p1s4MPDMenreMMmgvSdk2TR9NaNti9-g/formResponse" method="POST" class="max-w-md mx-auto bg-white p-8 rounded-xl card-shadow">
                 <input type="text" name="entry.2005620554" placeholder="Su Nombre" class="w-full p-3 mb-4 rounded-md border-2 border-blue-light text-slate-dark focus:ring-accent-blue focus:border-accent-blue" required>
-                <input type="email" name="entry.1045781442" placeholder="Su Correo Electrón
+                <input type="email" name="entry.1045781442" placeholder="Su Correo Electrónico Profesional" class="w-full p-3 mb-6 rounded-md border-2 border-blue-light text-slate-dark focus:ring-accent-blue focus:border-accent-blue" required>
+                <button type="submit" class="w-full bg-slate-dark text-white text-lg font-bold py-3 rounded-md cta-button hover:bg-343E40/90">
+                    Descargar Guía y Empezar Ahora
+                </button>
+            </form>
+            <p class="text-sm mt-4 opacity-80">Prometemos no enviar spam. Solo contenido de alto valor para líderes.</p>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-20 md:py-24 bg-F7F3E8">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-white p-10 rounded-xl card-shadow border-4 border-olive">
+            <h2 class="text-4xl font-bold mb-4 text-slate-dark">
+                Comencemos: Agenda tu Sesión Estratégica
+            </h2>
+            <p class="text-lg max-w-3xl mx-auto mb-8 text-slate-700">
+                Complete este breve formulario para que podamos comprender mejor el desafío de liderazgo que enfrenta. Nos pondremos en contacto en menos de 24 horas.
+            </p>
+
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLSeS-xR0h1eN5W0R3W4t_07p_p42F-N6Q9c9_QdOaO/formResponse" method="POST" class="max-w-md mx-auto">
+                <input type="text" name="entry.1436151662" placeholder="Su Nombre y Apellido" class="w-full p-3 mb-4 rounded-md border-2 border-blue-light text-slate-dark focus:ring-accent-blue focus:border-accent-blue" required>
+
+                <input type="email" name="entry.1982705494" placeholder="Su Correo Electrónico Profesional" class="w-full p-3 mb-4 rounded-md border-2 border-blue-light text-slate-dark focus:ring-accent-blue focus:border-accent-blue" required>
+
+                <input type="tel" name="entry.1843236750" placeholder="Su Número de Teléfono (Opcional)" class="w-full p-3 mb-4 rounded-md border-2 border-blue-light text-slate-dark focus:ring-accent-blue focus:border-accent-blue">
+                
+                <textarea name="entry.126593452" placeholder="Describa brevemente el desafío de liderazgo más urgente en su organización." rows="4" class="w-full p-3 mb-6 rounded-md border-2 border-blue-light text-slate-dark focus:ring-accent-blue focus:border-accent-blue" required></textarea>
+
+                <button type="submit" class="w-full cta-button bg-olive text-white text-xl font-bold py-3 rounded-full hover:bg-slate-dark">
+                    Enviar Solicitud y Agendar
+                </button>
+            </form>
+            <p class="text-sm mt-4 text-slate-600">Confidencialidad garantizada. Sus datos están seguros.</p>
+        </div>
+    </section>
+
+    <footer class="bg-343E40 text-white py-10 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="mb-4">Fabricio Martínez | Consultoría en Liderazgo y Neurociencias</p>
+            <div class="space-x-4 text-sm opacity-75">
+                <a href="#" class="hover:text-accent-blue">Política de Privacidad</a>
+                <a href="#" class="hover:text-accent-blue">Términos de Servicio</a>
+            </div>
+            <p class="mt-4 text-sm opacity-50">&copy; 2025 Fabricio Martínez. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Lógica del Carrusel
+        const slideContainer = document.getElementById('authority-carousel-slide');
+        const slides = slideContainer.querySelectorAll('img');
+        const totalSlides = slides.length;
+        let currentSlide = 0;
+
+        function updateCaption() {
+            const captionElement = document.getElementById('carousel-caption');
+            captionElement.textContent = slides[currentSlide].getAttribute('data-caption') || '';
+        }
+
+        function updateSlide() {
+            const offset = -currentSlide * 100;
+            slideContainer.style.transform = `translateX(${offset}%)`;
+            updateCaption();
+        }
+
+        window.nextSlide = function() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlide();
+        }
+
+        window.prevSlide = function() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlide();
+        }
+
+        // Inicializar carrusel y autodesplazamiento
+        window.onload = function() {
+            updateSlide(); // Muestra la primera imagen y su caption
+            
+            // Autodesplazamiento cada 5 segundos
+            setInterval(window.nextSlide, 5000); 
+        };
+        
+        // Smooth Scrolling para la Navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
