@@ -46,12 +46,33 @@
             object-fit: contain;
         }
         
+        /* --- ESTILOS PARA LAS IMÁGENES DEL COLLAGE (GALERÍA DE AUTORIDAD) --- */
+        .authority-collage-item {
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Para que el borde redondeado se aplique bien */
+            transition: transform 0.3s ease;
+            background-color: #fff; /* Fondo blanco para el texto */
+        }
+        .authority-collage-item:hover {
+            transform: translateY(-5px); /* Pequeño efecto hover */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        }
+        .authority-collage-item img {
+            width: 100%;
+            height: auto; /* IMPORTANTE: Sin altura fija para evitar recortes */
+            display: block; /* Elimina espacio extra debajo de la imagen */
+            /* Si necesitas una proporción consistente, puedes usar aspect-ratio,
+               pero sin object-fit: cover para evitar recortes. */
+            /* O si quieres que se vean *todas* del mismo alto sin recortar,
+               podríamos poner un max-height y object-fit: contain, pero dejaría bordes */
+        }
         /* Estilos generales para las imágenes en cuadrícula/galería */
         .gallery-image {
             width: 100%;
-            height: 250px; /* Altura fija para que la cuadrícula se vea uniforme */
-            object-fit: cover; /* Ajusta la imagen para cubrir el espacio sin distorsionarla */
-            object-position: center; /* Centra la imagen para el recorte */
+            height: 250px; 
+            object-fit: cover; 
+            object-position: center; 
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
@@ -170,37 +191,37 @@
     <section class="py-20 md:py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-4xl font-bold text-slate-dark mb-4">
-                Experiencia en el Alto Rendimiento y la Educación
+                Experiencia y Colaboraciones en el Alto Rendimiento
             </h2>
             <p class="text-xl text-slate-700 max-w-3xl mx-auto mb-10">
-                Llevamos los protocolos de liderazgo a figuras clave en el deporte de élite, la educación y los negocios, en escenarios de máxima exigencia.
+                Nuestros protocolos de liderazgo han sido aplicados y compartidos con figuras clave en el deporte de élite, la educación y los negocios, en escenarios de máxima exigencia.
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
                 
-                <div class="rounded-xl shadow-md overflow-hidden">
-                    <img src="fabriymagnano.jpg" alt="Coaching de Alto Rendimiento en Deporte de Élite" class="gallery-image">
-                    <p class="p-3 text-sm font-semibold text-slate-dark bg-F7F3E8">Protocolos probados en la gestión de equipos de élite.</p>
+                <div class="authority-collage-item">
+                    <img src="fabriymagnano.jpg" alt="Fabricio Martínez con Rubén Magnano." loading="lazy">
+                    <p class="p-3 text-sm font-semibold text-slate-dark">Con Rubén Magnano, reconocido entrenador de baloncesto de élite.</p>
                 </div>
                 
-                <div class="rounded-xl shadow-md overflow-hidden">
-                    <img src="20231002_102908.jpg" alt="Innovación Educativa" class="gallery-image">
-                    <p class="p-3 text-sm font-semibold text-slate-dark bg-F7F3E8">Compartiendo metodologías con líderes en innovación educativa (Rebeca Anijovich).</p>
+                <div class="authority-collage-item">
+                    <img src="20231002_102908.jpg" alt="Fabricio Martínez con Rebeca Anijovich." loading="lazy">
+                    <p class="p-3 text-sm font-semibold text-slate-dark">Con Rebeca Anijovich, referente en innovación educativa.</p>
                 </div>
                 
-                <div class="rounded-xl shadow-md overflow-hidden">
-                    <img src="mariodisanto.png" alt="Neurociencia y Control Motor" class="gallery-image">
-                    <p class="p-3 text-sm font-semibold text-slate-dark bg-F7F3E8">Estrategias de performance y control motor para la toma de decisiones (Mario Di Santo).</p>
+                <div class="authority-collage-item">
+                    <img src="mariodisanto.png" alt="Fabricio Martínez con Mario Di Santo." loading="lazy">
+                    <p class="p-3 text-sm font-semibold text-slate-dark">Junto a Mario Di Santo, experto en neurociencia y control motor.</p>
                 </div>
                 
-                <div class="rounded-xl shadow-md overflow-hidden">
-                    <img src="aldanaaraneda.jpg" alt="Desarrollo de Talento en Recursos Humanos" class="gallery-image">
-                    <p class="p-3 text-sm font-semibold text-slate-dark bg-F7F3E8">Liderazgo efectivo y desarrollo de talento en Recursos Humanos.</p>
+                <div class="authority-collage-item">
+                    <img src="aldanaaraneda.jpg" alt="Fabricio Martínez con Aldana Araneda." loading="lazy">
+                    <p class="p-3 text-sm font-semibold text-slate-dark">Colaborando con Aldana Araneda, especialista en desarrollo de talento.</p>
                 </div>
 
-                <div class="rounded-xl shadow-md overflow-hidden">
-                    <img src="azzerboni.jpg" alt="Didáctica y Formación de Formadores" class="gallery-image">
-                    <p class="p-3 text-sm font-semibold text-slate-dark bg-F7F3E8">Modelos de enseñanza y aprendizaje para la transformación organizacional (Delia Azzerboni).</p>
+                <div class="authority-collage-item">
+                    <img src="azzerboni.jpg" alt="Fabricio Martínez con Delia Azzerboni." loading="lazy">
+                    <p class="p-3 text-sm font-semibold text-slate-dark">Con Delia Azzerboni, autoridad en didáctica y formación de formadores.</p>
                 </div>
 
             </div>
@@ -342,44 +363,3 @@
             <p class="text-lg max-w-3xl mx-auto mb-8 text-slate-700">
                 Complete este breve formulario para que podamos comprender mejor el desafío de liderazgo que enfrenta. Nos pondremos en contacto en menos de 24 horas.
             </p>
-
-            <form action="https://docs.google.com/forms/d/e/1FAIpQLSeS-xR0h1eN5W0R3W4t_07p_p42F-N6Q9c9_QdOaO/formResponse" method="POST" class="max-w-md mx-auto">
-                <input type="text" name="entry.1436151662" placeholder="Su Nombre y Apellido" class="w-full p-3 mb-4 rounded-md border-2 border-blue-light text-slate-dark focus:ring-accent-blue focus:border-accent-blue" required>
-
-                <input type="email" name="entry.1982705494" placeholder="Su Correo Electrónico Profesional" class="w-full p-3 mb-4 rounded-md border-2 border-blue-light text-slate-dark focus:ring-accent-blue focus:border-accent-blue" required>
-
-                <input type="tel" name="entry.1843236750" placeholder="Su Número de Teléfono (Opcional)" class="w-full p-3 mb-4 rounded-md border-2 border-blue-light text-slate-dark focus:ring-accent-blue focus:border-accent-blue">
-                
-                <textarea name="entry.126593452" placeholder="Describa brevemente el desafío de liderazgo más urgente en su organización." rows="4" class="w-full p-3 mb-6 rounded-md border-2 border-blue-light text-slate-dark focus:ring-accent-blue focus:border-accent-blue" required></textarea>
-
-                <button type="submit" class="w-full cta-button bg-olive text-white text-xl font-bold py-3 rounded-full hover:bg-slate-dark">
-                    Enviar Solicitud y Agendar
-                </button>
-            </form>
-            <p class="text-sm mt-4 text-slate-600">Confidencialidad garantizada. Sus datos están seguros.</p>
-        </div>
-    </section>
-
-    <footer class="bg-343E40 text-white py-10 mt-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="mb-4">Fabricio Martínez | Consultoría en Liderazgo y Neurociencias</p>
-            <div class="space-x-4 text-sm opacity-75">
-                <a href="#" class="hover:text-accent-blue">Política de Privacidad</a>
-                <a href="#" class="hover:text-accent-blue">Términos de Servicio</a>
-            </div>
-            <p class="mt-4 text-sm opacity-50">&copy; 2025 Fabricio Martínez. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-</body>
-</html>
