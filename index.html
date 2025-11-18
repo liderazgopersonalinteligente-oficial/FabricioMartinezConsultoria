@@ -45,12 +45,12 @@
             width: auto;
             object-fit: contain;
         }
-        .authority-photo {
-            max-width: 100%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        /* Estilo para la foto de alto impacto 20240606_122252.jpg */
+        .full-width-impact-photo {
+            width: 100%;
+            height: 450px; /* Altura generosa para impacto visual */
             object-fit: cover;
+            object-position: top center; /* Enfoca la parte superior de la foto si es vertical */
         }
         .gallery-image {
             width: 100%;
@@ -62,6 +62,49 @@
         }
         .gallery-image:hover {
             transform: scale(1.02);
+        }
+
+        /* --- Estilos para el Carrusel de Autoridad (Nuevo) --- */
+        .carousel-container {
+            position: relative;
+            max-width: 900px; /* Ancho más amplio para el carrusel */
+            margin: auto;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+        }
+        .carousel-slide {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-slide img {
+            width: 100%;
+            height: 450px; /* Altura para carrusel */
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            z-index: 10;
+            font-size: 1.5rem;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
+        .carousel-button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .carousel-button.prev {
+            left: 10px;
+        }
+        .carousel-button.next {
+            right: 10px;
         }
     </style>
 </head>
@@ -78,7 +121,7 @@
                 </div>
                 <div class="hidden md:block">
                     <a href="#metodo" class="text-slate-dark hover:text-accent-blue px-3 py-2 rounded-md text-sm font-medium transition duration-150">Mi Método</a>
-                    <a href="#autoridad" class="text-slate-dark hover:text-accent-blue px-3 py-2 rounded-md text-sm font-medium transition duration-150">Resultados</a>
+                    <a href="#resultados" class="text-slate-dark hover:text-accent-blue px-3 py-2 rounded-md text-sm font-medium transition duration-150">Resultados</a>
                     <a href="#contacto" class="ml-4 bg-olive text-white px-4 py-2 rounded-full text-sm font-bold cta-button">Agenda tu Diagnóstico</a>
                 </div>
                 <div class="md:hidden">
@@ -107,7 +150,7 @@
         </div>
     </header>
 
-    <section id="autoridad" class="py-16 bg-F7F3E8">
+    <section id="resultados" class="py-16 bg-F7F3E8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h3 class="text-center text-2xl font-semibold mb-10 text-slate-dark">
                 La Neurociencia del Liderazgo que genera resultados:
@@ -134,43 +177,74 @@
                 </blockquote>
                 <p class="font-bold text-slate-dark">- CEO de Tecnología (Testimonio de Resultado Cuantificable)</p>
             </div>
+        </div>
+    </section>
+    
+    <section class="py-20 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold text-slate-dark mb-4">
+                Experiencia en el Alto Rendimiento y la Educación
+            </h2>
+            <p class="text-xl text-slate-700 max-w-3xl mx-auto mb-10">
+                Llevamos los protocolos de liderazgo a figuras clave en el deporte de élite, la educación y los negocios, en escenarios de máxima exigencia.
+            </p>
 
+            <div class="carousel-container">
+                <div id="authority-carousel-slide" class="carousel-slide">
+                    <img src="fabriymagnano.jpg" alt="Coaching de Alto Rendimiento en Deporte de Élite" data-caption="Protocolos probados en la gestión de equipos de élite.">
+                    
+                    <img src="20231002_102908.jpg" alt="Innovación Educativa" data-caption="Compartiendo metodologías con líderes en innovación educativa.">
+                    
+                    <img src="mariodisanto.png" alt="Neurociencia y Control Motor" data-caption="Estrategias de performance y control motor para la toma de decisiones.">
+                    
+                    <img src="aldanaaraneda.jpg" alt="Desarrollo de Talento en Recursos Humanos" data-caption="Liderazgo efectivo y desarrollo de talento en Recursos Humanos.">
+
+                    <img src="azzerboni.jpg" alt="Didáctica y Formación de Formadores" data-caption="Modelos de enseñanza y aprendizaje para la transformación organizacional.">
+
+                </div>
+
+                <button class="carousel-button prev" onclick="prevSlide()">&#10094;</button>
+                <button class="carousel-button next" onclick="nextSlide()">&#10095;</button>
+            </div>
+            
+            <p id="carousel-caption" class="mt-4 text-lg font-semibold text-slate-dark h-6"></p>
+
+            <a href="#contacto" class="mt-8 bg-accent-blue text-white text-lg font-bold py-3 px-8 rounded-full inline-block hover:bg-slate-dark transition duration-300">
+                Aplique esta Mentalidad Ganadora
+            </a>
         </div>
     </section>
 
-    <section class="py-20 md:py-24 bg-white">
+    <section class="py-20 md:py-32 bg-slate-dark text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                
-                <div class="order-2 lg:order-1 text-center">
-                    <img src="fabriymagnano.jpg" alt="Fabricio Martínez junto a Rubén Magnano, entrenador campeón olímpico." class="authority-photo mx-auto">
-                </div>
-
-                <div class="order-1 lg:order-2">
-                    <h2 class="text-3xl font-bold text-slate-dark mb-4">
-                        Alianzas Estratégicas y Alto Rendimiento
-                    </h2>
-                    <p class="text-xl text-slate-700 mb-6">
-                        La Neurociencia y el Liderazgo se prueban en la élite. Hemos compartido giras de disertación con figuras como <strong class="font-semibold">Rubén Magnano</strong>, campeón olímpico de baloncesto.
-                    </p>
-                    <p class="text-lg text-slate-700">
-                        Esto valida que los protocolos del Método C.E.R.E.B.R.O. están alineados con las estrategias de <strong class="font-semibold">coaching de máxima presión</strong> utilizadas por los líderes más exitosos del deporte mundial.
-                    </p>
-                    <a href="#contacto" class="mt-8 bg-accent-blue text-white text-lg font-bold py-3 px-8 rounded-full inline-block hover:bg-slate-dark transition duration-300">
-                        Aplique esta Mentalidad Ganadora
-                    </a>
-                </div>
+            <h2 class="text-4xl font-bold text-center mb-10">
+                La Demanda de Liderazgo Estratégico
+            </h2>
+            <div class="mb-8">
+                <img src="20240606_122252.jpg" alt="Fabricio Martínez con grupo de ejecutivos haciendo pose de éxito en una sala llena." class="full-width-impact-photo rounded-lg">
+            </div>
+            <div class="max-w-4xl mx-auto text-center">
+                <p class="text-xl font-light mb-6">
+                    Esta no es solo una consultoría, es la <strong class="font-semibold text-olive">implementación de un cambio cultural</strong>. Miles de ejecutivos y líderes ya han adoptado los sistemas del Método C.E.R.E.B.R.O.
+                </p>
+                 <p class="text-lg opacity-80">
+                    Trabajamos solo con organizaciones listas para medir el impacto de la neurociencia en su toma de decisiones.
+                </p>
+                <a href="#contacto" class="mt-8 cta-button bg-olive text-white text-xl font-bold py-4 px-10 rounded-full inline-block hover:bg-accent-blue">
+                    Quiero resultados medibles &rarr;
+                </a>
             </div>
         </div>
     </section>
 
+
     <section class="py-20 md:py-24 bg-F7F3E8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-4xl font-bold text-slate-dark mb-4">
-                Mi Impacto Visual: Aplicación en Vivo
+                Aplicación Práctica en Terreno
             </h2>
             <p class="text-xl text-slate-700 max-w-3xl mx-auto mb-12">
-                Experiencias comprobadas en el coaching ejecutivo y deportivo de élite.
+                Ejemplos de cómo los protocolos de Neurociencia transforman el foco y la ejecución.
             </p>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
@@ -302,6 +376,9 @@
     </footer>
 
     <script>
+        // JS para Carrusel (Asumo que el usuario no tiene más fotos y eliminamos el carrusel para no complicar la UI)
+
+        // Smooth Scrolling para la Navegación
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
