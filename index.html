@@ -3,361 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fabricio Martínez | Consultoría Liderazgo y Neurociencia</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    
+    <title>Fabricio Martínez | Consultoría de Alto Rendimiento</title>
     <style>
-        /* Paleta Principal: Beige: #F7F3E8, Olive: #8F9779, Slate: #343E40 */
-        /* Nuevo Acento Azul: #3182CE */
+        /* ESTILOS GENERALES - DISEÑO LIMPIO Y EJECUTIVO */
+        :root {
+            --primary: #003366; /* Azul Oscuro Corporativo */
+            --accent: #25D366; /* Verde WhatsApp */
+            --text: #333;
+            --light: #f4f4f4;
+        }
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #F7F3E8; 
-            color: #343E40; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text);
         }
-        .text-olive { color: #8F9779; }
-        .bg-olive { background-color: #8F9779; }
-        .text-slate-dark { color: #343E40; }
+        h1, h2, h3 { color: var(--primary); }
         
-        /* Definición del nuevo Acento Azul */
-        .text-accent-blue { color: #3182CE; }
-        .bg-accent-blue { background-color: #3182CE; }
-        .border-blue-light { border-color: #AEC6CF; } /* Pale Blue */
+        /* HEADER */
+        header {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        header img {
+            max-height: 80px; /* Ajusta el tamaño del logo */
+        }
 
-        .cta-button {
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(143, 151, 121, 0.4);
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(rgba(0,51,102,0.9), rgba(0,51,102,0.8)), url('fabrisalallena.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
         }
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(143, 151, 121, 0.6);
+        .hero h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
         }
-        .card-shadow {
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
         }
-        .step-icon {
-            font-size: 2rem;
-            line-height: 1;
+
+        /* SECCIONES */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
         }
-        /* Estilos para el logo */
-        .logo {
-            height: 48px; /* Tamaño del logo en el navbar */
-            width: auto;
-            object-fit: contain;
+        .about, .services {
+            text-align: center;
         }
-        .authority-photo {
+        
+        /* FOTOS */
+        .photo-grid {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .photo-grid img {
             max-width: 100%;
             height: auto;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-            object-fit: cover;
-        }
-        .gallery-image {
-            width: 100%;
-            height: 250px; /* Altura fija para que la cuadrícula se vea uniforme */
-            object-fit: cover; /* Ajusta la imagen para cubrir el espacio sin distorsionarla */
             border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        .gallery-image:hover {
-            transform: scale(1.02);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            width: 45%; /* Dos fotos por fila en escritorio */
         }
 
-        /* --- Estilos para la SECCIÓN DE ALTO IMPACTO (con Overlay) --- */
-        .impact-section {
-            position: relative; 
-            overflow: hidden; 
-            background-color: #343E40; 
+        /* BOTON WHATSAPP */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
+            transition: transform 0.2s;
         }
-        .impact-section .full-width-impact-photo {
-            width: 100%;
-            height: 450px;
-            object-fit: cover;
-            object-position: center; 
-            position: absolute; 
-            top: 0;
-            left: 0;
-            z-index: 1; 
+        .cta-button:hover {
+            transform: scale(1.05);
         }
-        .impact-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.6); 
-            z-index: 2; 
+
+        /* FOOTER */
+        footer {
+            background: var(--text);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
         }
-        .impact-content {
-            position: relative; 
-            z-index: 3; 
-            color: white; 
-        }
-        .impact-content .text-olive { 
-            color: #8F9779;
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .photo-grid img { width: 100%; }
+            .hero h1 { font-size: 2rem; }
         }
     </style>
 </head>
-<body class="antialiased">
+<body>
 
-    <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                
-                <div class="flex-shrink-0">
-                    <a href="#" class="flex items-center">
-                        <img src="logo-fabricio.jpg" alt="Logo Fabricio Martínez Consultoría" class="logo"> 
-                    </a>
-                </div>
-                <div class="hidden md:block">
-                    <a href="#metodo" class="text-slate-dark hover:text-accent-blue px-3 py-2 rounded-md text-sm font-medium transition duration-150">Mi Método</a>
-                    <a href="#resultados" class="text-slate-dark hover:text-accent-blue px-3 py-2 rounded-md text-sm font-medium transition duration-150">Resultados</a>
-                    <a href="#contacto" class="ml-4 bg-olive text-white px-4 py-2 rounded-full text-sm font-bold cta-button">Agenda tu Diagnóstico</a>
-                </div>
-                <div class="md:hidden">
-                     <a href="#contacto" class="bg-olive text-white px-3 py-1.5 rounded-full text-sm font-bold cta-button">Diagnóstico</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <header class="pt-16 pb-24 md:pt-24 md:pb-32 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-5xl md:text-6xl font-extrabold mb-4 leading-tight text-slate-dark">
-                Deje de liderar por intuición.
-            </h1>
-            <h2 class="text-3xl md:text-4xl font-light text-olive mb-8">
-                Implemente protocolos de <strong class="font-semibold">Neurociencia Aplicada</strong> para el Alto Rendimiento.
-            </h2>
-            <p class="text-xl max-w-3xl mx-auto mb-10 text-slate-700">
-                Diseñamos e integramos su liderazgo en un sistema probado que <strong class="font-semibold">reduce la fatiga de decisiones</strong> y aumenta la <strong class="font-semibold">productividad ejecutiva hasta un 25%</strong>.
-            </p>
-            <a href="#contacto" class="cta-button bg-olive text-white text-xl font-bold py-4 px-10 rounded-full inline-block">
-                Agenda tu Sesión Estratégica Gratuita &rarr;
-            </a>
-            <div class="mt-12 max-w-lg mx-auto">
-                             </div>
-        </div>
+    <header>
+        <img src="logo-fabricio.jpg" alt="Fabricio Martínez Consultoría">
     </header>
 
-    <section id="resultados" class="py-16 bg-F7F3E8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h3 class="text-center text-2xl font-semibold mb-10 text-slate-dark">
-                La Neurociencia del Liderazgo que genera resultados:
-            </h3>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-16">
-                <div class="p-6 bg-white rounded-xl card-shadow border-t-4 border-olive">
-                    <p class="text-4xl font-extrabold text-olive">25+</p>
-                    <p class="text-lg font-medium mt-1">Años de Experiencia en Liderazgo</p>
-                </div>
-                <div class="p-6 bg-white rounded-xl card-shadow border-t-4 border-olive">
-                    <p class="text-4xl font-extrabold text-olive">98%</p>
-                    <p class="text-lg font-medium mt-1">Tasa de Satisfacción de Ejecutivos</p>
-                </div>
-                <div class="p-6 bg-white rounded-xl card-shadow border-t-4 border-olive">
-                    <p class="text-4xl font-extrabold text-olive">600+</p>
-                    <p class="text-lg font-medium mt-1">Líderes Transformados</p>
-                </div>
-            </div>
+    <div class="hero">
+        <h1>Neurociencias aplicadas al Alto Rendimiento</h1>
+        <p>Entreno la toma de decisiones bajo presión para líderes que no pueden permitirse el error.</p>
+        <a href="#contacto" class="cta-button">Hablemos ahora</a>
+    </div>
 
-            <div class="max-w-4xl mx-auto text-center">
-                <blockquote class="text-xl italic text-slate-700 mb-6 border-l-4 border-olive pl-4">
-                    "Antes de Fabricio, las reuniones eran caóticas. Su Método CEREBRO nos dio un marco mental claro. En 6 meses, vimos una mejora del 30% en la velocidad de toma de decisiones. Es ciencia aplicada a resultados."
-                </blockquote>
-                <p class="font-bold text-slate-dark">- CEO de Empresa </p>
-            </div>
-        </div>
-    </section>
-    
-    <section class="impact-section py-20 md:py-32 text-white">
-        <img src="20240606_122252.jpg" alt="Fabricio Martínez con grupo de ejecutivos haciendo pose de éxito en una sala llena." class="full-width-impact-photo rounded-lg">
+    <section class="container about">
+        <h2>¿Quién soy?</h2>
+        <p>Soy <strong>Fabricio Martínez</strong>, consultor especializado en Neuro-Liderazgo y Gestión Emocional.</p>
+        <p>Actualmente trabajo preparando la mentalidad de la <strong>Selección Argentina de Sóftbol</strong> y blindando a los equipos directivos de empresas líderes como <strong>Grupo Motta</strong>.</p>
+        <p>Mi enfoque no es teórico: llevo la ciencia del comportamiento a la planta industrial y a la cancha, donde los resultados mandan.</p>
         
-        <div class="impact-overlay"></div>
+        <div class="photo-grid">
+            <img src="argentinasoftbolmeditando.jpg" alt="Entrenamiento Selección Argentina">
+            <img src="fabriymagnano.jpg" alt="Con referentes del deporte">
+        </div>
+    </section>
+
+    <section class="container services" style="background-color: #f9f9f9;">
+        <h2>Soluciones para Empresas</h2>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 30px;">
+            
+            <div style="flex: 1; min-width: 300px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                <h3>🚀 Conferencias de Impacto</h3>
+                <p>Charlas de 90 minutos para sacudir la mentalidad del equipo y alinear objetivos.</p>
+            </div>
+
+            <div style="flex: 1; min-width: 300px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                <h3>🛡️ Programa de Blindaje</h3>
+                <p>Entrenamiento de 3 a 6 meses para mandos medios. Reducción de error humano y estrés.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contacto" class="container" style="text-align: center; padding: 60px 20px;">
+        <h2>Contacto Directo</h2>
+        <p>Los grandes cambios empiezan con una conversación breve.</p>
+        <p>Sin formularios largos. Escríbeme directo a mi WhatsApp personal:</p>
         
-        <div class="impact-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center h-full flex flex-col justify-center">
-            <h2 class="text-4xl font-bold text-center mb-10">
-                La Demanda de Liderazgo Estratégico
-            </h2>
-            <div class="max-w-4xl mx-auto text-center">
-                <p class="text-xl font-light mb-6">
-                    Esta no es solo una consultoría, es la <strong class="font-semibold text-olive">implementación de un cambio cultural</strong>. Decenas de ejecutivos y líderes ya han adoptado los sistemas del Método C.E.R.E.B.R.O.
-                </p>
-                 <p class="text-lg opacity-80">
-                    Trabajamos solo con organizaciones listas para medir el impacto de la neurociencia en su toma de decisiones.
-                </p>
-                <a href="#contacto" class="mt-8 cta-button bg-olive text-white text-xl font-bold py-4 px-10 rounded-full inline-block hover:bg-accent-blue">
-                    Quiero resultados medibles &rarr;
-                </a>
-            </div>
-        </div>
+        <a href="https://wa.me/5493434164699?text=Hola%20Fabricio,%20vengo%20de%20tu%20web%20y%20me%20interesa%20tu%20consultoría." class="cta-button">
+            📲 Enviar WhatsApp a Fabricio
+        </a>
     </section>
 
-    <section class="py-20 md:py-24 bg-F7F3E8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl font-bold text-slate-dark mb-4">
-                Trayectoria y Resultados en Terreno
-            </h2>
-            <p class="text-xl text-slate-700 max-w-3xl mx-auto mb-12">
-                Desde el alto rendimiento deportivo hasta los escenarios corporativos internacionales.
-            </p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                
-                <div class="bg-white p-4 rounded-xl card-shadow hover:shadow-2xl transition-shadow duration-300">
-                    <div class="relative">
-                        <img src="argentinasoftbolmeditando.jpg" alt="Selección Argentina de Softbol aplicando protocolos de enfoque." class="gallery-image mb-4">
-                        <span class="absolute top-3 right-3 bg-yellow-500 text-white text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg border border-white">
-                            🏆 Hito Histórico
-                        </span>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-dark uppercase tracking-wide">Bicampeonas Sudamericanas</h3>
-                    <p class="text-sm font-semibold text-olive mb-2">Selecciones Argentinas Femeninas de Sóftbol</p>
-                    <p class="text-slate-600 text-sm leading-relaxed px-4 pb-2">
-                        Como Coach Mental, integré neurociencias en un equipo que logró lo inédito: un bicampeonato histórico para el país. Gestión de presión y enfoque mental de élite.
-                    </p>
-                </div>
-                
-                <div class="bg-white p-4 rounded-xl card-shadow hover:shadow-2xl transition-shadow duration-300">
-                    <div class="relative">
-                        <img src="fabrisalallena.jpg" alt="Fabricio Martínez disertando en congreso internacional." class="gallery-image mb-4">
-                        <span class="absolute top-3 right-3 bg-accent-blue text-white text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg border border-white">
-                            🌎 Internacional
-                        </span>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-dark uppercase tracking-wide">Speaker en 9 Países</h3>
-                    <p class="text-sm font-semibold text-olive mb-2">Liderazgo y Neurociencias</p>
-                    <p class="text-slate-600 text-sm leading-relaxed px-4 pb-2">
-                        Disertante en <strong>Argentina, Perú, México, Uruguay, Chile, Ecuador, Costa Rica, Bolivia y Paraguay</strong>. Llevando ciencia y empatía a toda la región.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="metodo" class="py-20 md:py-32 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-center mb-4 text-slate-dark">
-                Nuestro Framework: El Método C.E.R.E.B.R.O.
-            </h2>
-            <p class="text-xl text-center max-w-3xl mx-auto mb-16 text-slate-700">
-                Hemos sintetizado las mejores prácticas de consultoras y la ciencia más reciente para crear un sistema de 3 pasos que garantiza la adopción y el impacto real.
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                
-                <div class="text-center p-6 bg-F7F3E8 rounded-xl card-shadow border-t-8 border-accent-blue">
-                    <span class="step-icon text-accent-blue">🧠</span>
-                    <h3 class="text-2xl font-bold text-accent-blue mt-2 mb-3">1. Diagnóstico Neuronal</h3>
-                    <p class="text-slate-700">
-                        Evaluación profunda de los patrones de liderazgo y las zonas de fatiga cognitiva del equipo. Identificamos los "sesgos ciegos" que detienen el crecimiento.
-                    </p>
-                    <p class="text-sm text-olive font-semibold mt-4">Pilar: Rigor Consultor</p>
-                </div>
-                
-                <div class="hidden md:flex items-center justify-center text-5xl text-accent-blue">
-                    &rarr; 
-                </div>
-                
-                <div class="text-center p-6 bg-F7F3E8 rounded-xl card-shadow border-t-8 border-olive">
-                    <span class="step-icon">🎯</span>
-                    <h3 class="text-2xl font-bold text-slate-dark mt-2 mb-3">2. Implementación de Protocolos</h3>
-                    <p class="text-slate-700">
-                        Entrenamiento enfocado en implementar "protocolos" diarios (micro-acciones) de neurociencia y storytelling que rescriben los hábitos de liderazgo.
-                    </p>
-                    <p class="text-sm text-olive font-semibold mt-4">Pilar: Neurociencia Aplicada</p>
-                </div>
-                
-                 <div class="hidden md:flex items-center justify-center text-5xl text-accent-blue">
-                    &rarr;
-                </div>
-
-                <div class="text-center p-6 bg-F7F3E8 rounded-xl card-shadow border-t-8 border-slate-dark">
-                    <span class="step-icon">📈</span>
-                    <h3 class="text-2xl font-bold text-slate-dark mt-2 mb-3">3. Medición y Refuerzo</h3>
-                    <p class="text-slate-700">
-                        Monitoreo del ROI (Retorno de Inversión) del liderazgo con data post-intervención. Refuerzo continuo para asegurar la sostenibilidad del cambio.
-                    </p>
-                    <p class="text-sm text-olive font-semibold mt-4">Pilar: Medición de Impacto</p>
-                </div>
-            </div>
-            
-            <div class="mt-16 text-center">
-                <a href="#contacto" class="bg-accent-blue text-white text-lg font-bold py-3 px-8 rounded-full inline-block hover:bg-slate-dark transition duration-300">
-                    Comienza el Diagnóstico Aquí
-                </a>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="py-20 md:py-24 bg-olive text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-extrabold mb-4">
-                🎁 Regalo: El Protocolo de Liderazgo de 5 Minutos
-            </h2>
-            <p class="text-xl max-w-3xl mx-auto mb-10 opacity-90">
-                Descargue nuestra "Píldora de Conocimiento" gratuita: una guía basada en neurociencia para tomar decisiones bajo presión sin agotamiento.
-            </p>
-            
-            <form action="https://docs.google.com/forms/d/e/1FAIpQLSeE7c2TI9Zsrtom96p1s4MPDMenreMMmgvSdk2TR9NaNti9-g/formResponse" method="POST" class="max-w-md mx-auto bg-white p-8 rounded-xl card-shadow">
-                <input type="text" name="entry.2005620554" placeholder="Su Nombre" class="w-full p-3 mb-4 rounded-md border-2 border-blue-light text-slate-dark focus:ring-accent-blue focus:border-accent-blue" required>
-                <input type="email" name="entry.1045781442" placeholder="Su Correo Electrónico Profesional" class="w-full p-3 mb-6 rounded-md border-2 border-blue-light text-slate-dark focus:ring-accent-blue focus:border-accent-blue" required>
-                <button type="submit" class="w-full bg-slate-dark text-white text-lg font-bold py-3 rounded-md cta-button hover:bg-343E40/90">
-                    Descargar Guía y Empezar Ahora
-                </button>
-            </form>
-            <p class="text-sm mt-4 opacity-80">Prometemos no enviar spam. Solo contenido de alto valor para líderes.</p>
-        </div>
-    </section>
-
-    <section id="contacto" class="py-20 md:py-24 bg-F7F3E8">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-white p-10 rounded-xl card-shadow border-4 border-olive">
-            <h2 class="text-4xl font-bold mb-4 text-slate-dark">
-                Comencemos: Agenda tu Sesión Estratégica
-            </h2>
-            <p class="text-lg max-w-3xl mx-auto mb-8 text-slate-700">
-                Complete este breve formulario para que podamos comprender mejor el desafío de liderazgo que enfrenta. Nos pondremos en contacto en menos de 24 horas.
-            </p>
-
-            <form action="https://docs.google.com/forms/d/e/1FAIpQLSeS-xR0h1eN5W0R3W4t_07p_p42F-N6Q9c9_QdOaO/formResponse" method="POST" class="max-w-md mx-auto">
-                <input type="text" name="entry.1436151662" placeholder="Su Nombre y Apellido" class="w-full p-3 mb-4 rounded-md border-2 border-blue-light text-slate-dark focus:ring-accent-blue focus:border-accent-blue" required>
-
-                <input type="email" name="entry.1982705494" placeholder="Su Correo Electrónico Profesional" class="w-full p-3 mb-4 rounded-md border-2 border-blue-light text-slate-dark focus:ring-accent-blue focus:border-accent-blue" required>
-
-                <input type="tel" name="entry.1843236750" placeholder="Su Número de Teléfono (Opcional)" class="w-full p-3 mb-4 rounded-md border-2 border-blue-light text-slate-dark focus:ring-accent-blue focus:border-accent-blue">
-                
-                <textarea name="entry.126593452" placeholder="Describa brevemente el desafío de liderazgo más urgente en su organización." rows="4" class="w-full p-3 mb-6 rounded-md border-2 border-blue-light text-slate-dark focus:ring-accent-blue focus:border-accent-blue" required></textarea>
-
-                <button type="submit" class="w-full cta-button bg-olive text-white text-xl font-bold py-3 rounded-full hover:bg-slate-dark">
-                    Enviar Solicitud y Agendar
-                </button>
-            </form>
-            <p class="text-sm mt-4 text-slate-600">Confidencialidad garantizada. Sus datos están seguros.</p>
-        </div>
-    </section>
-
-    <footer class="bg-343E40 text-white py-10 mt-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="mb-4">Fabricio Martínez | Consultoría en Liderazgo y Neurociencias</p>
-            <div class="space-x-4 text-sm opacity-75">
-                <a href="#" class="hover:text-accent-blue">Política de Privacidad</a>
-                <a href="#" class="hover:text-accent-blue">Términos de Servicio</a>
-            </div>
-            <p class="mt-4 text-sm opacity-50">&copy; 2025 Fabricio Martínez. Todos los derechos reservados.</p>
-        </div>
+    <footer>
+        <p>&copy; 2026 Fabricio Martínez - Consultoría & Alto Rendimiento.</p>
+        <p>Paraná, Entre Ríos, Argentina.</p>
     </footer>
 
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
 </html>
