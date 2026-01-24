@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fabricio Martínez | Consultoría de Alto Rendimiento</title>
+    <title>Fabricio Martínez | Estrategia y Gestión</title>
     <style>
         /* ESTILOS GENERALES */
         :root {
-            --primary: #003366; /* Azul Oscuro Corporativo */
-            --accent: #25D366; /* Verde WhatsApp */
+            --primary: #003366; /* Azul Oscuro Corporativo Original */
+            --accent: #25D366;  /* Verde WhatsApp Original */
+            --secondary: #2980b9; /* Azul más claro para detalles */
             --text: #333;
-            --light: #f4f4f4;
+            --light: #f4f6f7;
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -18,67 +19,146 @@
             padding: 0;
             line-height: 1.6;
             color: var(--text);
+            background-color: #fff;
         }
         h1, h2, h3 { color: var(--primary); }
         
-        /* HEADER */
+        /* HEADER SENCILLO */
         header {
             background: white;
-            padding: 20px;
+            padding: 15px 20px;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        header img {
-            max-height: 80px;
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        /* HERO SECTION */
+        /* HERO SECTION (PORTADA MEJORADA) */
         .hero {
+            /* Mantenemos tu foto de fondo 'fabrisalallena.jpg' */
             background: linear-gradient(rgba(0,51,102,0.9), rgba(0,51,102,0.8)), url('fabrisalallena.jpg');
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 80px 20px;
+            padding: 100px 20px;
             text-align: center;
         }
         .hero h1 {
             color: white;
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 10px;
+            text-transform: uppercase;
         }
         .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
+            font-size: 1.3rem;
+            max-width: 700px;
             margin: 0 auto 30px auto;
+            font-weight: 300;
+        }
+        .hero p.frase-fuerte {
+            font-style: italic;
+            color: #bdc3c7;
+            font-size: 1.1rem;
+            margin-top: -20px;
+            margin-bottom: 40px;
         }
 
-        /* SECCIONES */
+        /* CONTENEDORES */
         .container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 40px 20px;
-        }
-        .about, .services {
-            text-align: center;
+            padding: 60px 20px;
         }
         
-        /* FOTOS */
-        .photo-grid {
+        /* SECCIÓN QUIÉN SOY (TEXTO NUEVO + FOTOS VIEJAS) */
+        .about {
             display: flex;
-            gap: 20px;
-            justify-content: center;
             flex-wrap: wrap;
-            margin-top: 30px;
+            align-items: center;
+            gap: 40px;
+        }
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        .photo-grid {
+            flex: 1;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            min-width: 300px;
         }
         .photo-grid img {
-            max-width: 100%;
-            height: auto;
+            width: 48%; /* Para que entren las dos lado a lado */
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            width: 45%;
+            object-fit: cover;
         }
 
-        /* BOTON WHATSAPP */
+        /* NUEVA SECCIÓN: SOLUCIONES CORPORATIVAS (LA SOCIEDAD) */
+        .servicios-nuevos {
+            background-color: var(--light);
+            text-align: center;
+        }
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            flex: 1 1 300px;
+            max-width: 350px;
+            text-align: left;
+            border-top: 5px solid var(--secondary);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h3 {
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+        .lista-check {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+            font-size: 0.95rem;
+        }
+        .lista-check li::before {
+            content: "✔";
+            color: var(--secondary);
+            margin-right: 8px;
+            font-weight: bold;
+        }
+
+        /* SECCIÓN CLÁSICA (LO QUE YA TENÍAS) */
+        .servicios-clasicos {
+            text-align: center;
+        }
+        .grid-clasica {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .item-clasico {
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* BOTÓN WHATSAPP */
         .cta-button {
             display: inline-block;
             background-color: var(--accent);
@@ -88,7 +168,6 @@
             border-radius: 50px;
             font-weight: bold;
             font-size: 1.2rem;
-            margin-top: 20px;
             box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
             transition: transform 0.2s;
         }
@@ -98,73 +177,102 @@
 
         /* FOOTER */
         footer {
-            background: var(--text);
-            color: white;
+            background: #222;
+            color: #aaa;
             text-align: center;
-            padding: 20px;
-            margin-top: 50px;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .photo-grid img { width: 100%; }
-            .hero h1 { font-size: 2rem; }
+            padding: 30px 20px;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <img src="logo-fabricio.jpg" alt="Fabricio Martínez Consultoría">
-    </header>
-
     <div class="hero">
-        <h1>Neurociencias aplicadas al Alto Rendimiento</h1>
-        <p>Entreno la toma de decisiones bajo presión para líderes que no pueden permitirse el error.</p>
+        <h1>Fabricio Martínez</h1>
+        <p>Estrategia | Gestión | Neurociencias</p>
+        <p class="frase-fuerte">"Ordenar para Despegar. Transformamos la gestión artesanal en sistemas de alto rendimiento."</p>
         <a href="#contacto" class="cta-button">Hablemos ahora</a>
     </div>
 
     <section class="container about">
-        <h2>¿Quién soy?</h2>
-        <p>Soy <strong>Fabricio Martínez</strong>, consultor especializado en Neuro-Liderazgo y Gestión Emocional.</p>
-        <p>Mi trayectoria incluye haber trabajado en la preparación mental de la <strong>Selección Argentina de Sóftbol</strong> y en el acompañamiento de equipos directivos en empresas referentes como <strong>Grupo Motta</strong>.</p>
-        <p>Mi enfoque no es teórico: llevo la ciencia del comportamiento a la planta industrial y a la cancha, donde los resultados mandan.</p>
-        
+        <div class="about-text">
+            <h2>Trayectoria y Visión</h2>
+            <p>Soy un convencido de que la excelencia no es un acto, sino un hábito gestionado inteligentemente.</p>
+            <p>Mi visión se forjó en la realidad: como <strong>entrenador y dirigente</strong>, y en la preparación mental de la <strong>Selección Argentina de Sóftbol</strong>. Sé lo que es tomar decisiones bajo presión.</p>
+            <p>Hoy, integro ese recorrido con mi rol de Supervisor Educativo y Consultor Corporativo. Fusiono la planificación estratégica con las neurociencias para ayudar a organizaciones (como <strong>Grupo Motta</strong> o <strong>Mirstravel</strong>) a salir del 'modo supervivencia' y entrar en 'modo expansión'.</p>
+        </div>
         <div class="photo-grid">
-            <img src="argentinasoftbolmeditando.jpg" alt="Entrenamiento Selección Argentina">
+            <img src="argentinasoftbolmeditando.jpg" alt="Selección Argentina Sóftbol">
             <img src="fabrisalallena.jpg" alt="Conferencia Fabricio Martínez">
         </div>
     </section>
 
-    <section class="container services" style="background-color: #f9f9f9;">
-        <h2>Soluciones para Empresas</h2>
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 30px;">
+    <section class="servicios-nuevos">
+        <div class="container">
+            <h2>Soluciones Corporativas 360°</h2>
+            <p>Fusionamos Neurociencias, Gestión y Producción de Medios para escalar tu organización.</p>
             
-            <div style="flex: 1; min-width: 300px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-                <h3>🚀 Conferencias de Impacto</h3>
-                <p>Charlas de 90 minutos para sacudir la mentalidad del equipo y alinear objetivos.</p>
-            </div>
+            <div class="cards-container">
+                <div class="card">
+                    <h3>Consultoría de Procesos</h3>
+                    <p>Aplicamos nuestro "Sistema de Escalamiento Operativo" para profesionalizar áreas clave.</p>
+                    <ul class="lista-check">
+                        <li>Diagnóstico de Liderazgo</li>
+                        <li>Diseño de Procesos y Roles</li>
+                        <li>Tableros de Control</li>
+                    </ul>
+                </div>
 
-            <div style="flex: 1; min-width: 300px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-                <h3>🛡️ Programa de Blindaje</h3>
-                <p>Entrenamiento de 3 a 6 meses para mandos medios. Reducción de error humano y estrés.</p>
-            </div>
+                <div class="card">
+                    <h3>Gestión Deportiva</h3>
+                    <p>Solución integral para Clubes y Asociaciones que buscan el alto rendimiento institucional.</p>
+                    <ul class="lista-check">
+                        <li>Ordenamiento Administrativo</li>
+                        <li>Capacitación Dirigencial</li>
+                        <li>Campaña de Socios y Medios</li>
+                    </ul>
+                </div>
 
+                <div class="card">
+                    <h3>Producción de Eventos</h3>
+                    <p>Congresos y lanzamientos con calidad televisiva que amplifican tu autoridad.</p>
+                    <ul class="lista-check">
+                        <li>Diseño de Contenido Académico</li>
+                        <li>Producción Técnica Integral</li>
+                        <li>Difusión en Medios (TV/Redes)</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="contacto" class="container" style="text-align: center; padding: 60px 20px;">
+    <section class="container servicios-clasicos">
+        <h2>Academia y Capacitación</h2>
+        <div class="grid-clasica">
+            <div class="item-clasico">
+                <h3>🎓 Conferencias de Impacto</h3>
+                <p>Charlas de 90 min para sacudir la mentalidad del equipo y alinear objetivos.</p>
+            </div>
+            <div class="item-clasico">
+                <h3>🛡️ Programa de Blindaje</h3>
+                <p>Entrenamiento para mandos medios. Reducción de error humano y estrés.</p>
+            </div>
+            <div class="item-clasico">
+                <h3>📚 Supervisión Educativa</h3>
+                <p>Asesoría especializada para equipos directivos y docentes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="container" style="text-align: center;">
         <h2>Contacto Directo</h2>
         <p>Los grandes cambios empiezan con una conversación breve.</p>
-        <p>Sin formularios largos. Escríbeme directo a mi WhatsApp personal:</p>
-        
-        <a href="https://wa.me/5493434164699?text=Hola%20Fabricio,%20vengo%20de%20tu%20web%20y%20me%20interesa%20tu%20consultoría." class="cta-button">
+        <a href="https://wa.me/5493434164699?text=Hola%20Fabricio,%20vi%20tu%20nueva%20web%20y%20quiero%20consultarte." class="cta-button">
             📲 Enviar WhatsApp a Fabricio
         </a>
     </section>
 
     <footer>
-        <p>&copy; 2026 Fabricio Martínez - Consultoría & Alto Rendimiento.</p>
+        <p>&copy; 2026 Fabricio Martínez. Todos los derechos reservados.</p>
         <p>Paraná, Entre Ríos, Argentina.</p>
     </footer>
 
