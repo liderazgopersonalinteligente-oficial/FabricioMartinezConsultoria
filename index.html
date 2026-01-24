@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fabricio Martínez | Estrategia y Gestión</title>
+    <title>Fabricio Martínez | Estrategia y Alto Rendimiento</title>
     <style>
         /* ESTILOS GENERALES */
         :root {
-            --primary: #003366; /* Azul Oscuro Corporativo Original */
-            --accent: #25D366;  /* Verde WhatsApp Original */
-            --secondary: #2980b9; /* Azul más claro para detalles */
+            --primary: #003366; /* Azul Oscuro Corporativo */
+            --accent: #25D366;  /* Verde WhatsApp */
+            --secondary: #2980b9; /* Azul Brillante */
             --text: #333;
             --light: #f4f6f7;
         }
@@ -37,9 +37,9 @@
             letter-spacing: 1px;
         }
 
-        /* HERO SECTION (PORTADA MEJORADA) */
+        /* HERO SECTION */
         .hero {
-            /* Mantenemos tu foto de fondo 'fabrisalallena.jpg' */
+            /* Mantenemos tu foto 'fabrisalallena.jpg' */
             background: linear-gradient(rgba(0,51,102,0.9), rgba(0,51,102,0.8)), url('fabrisalallena.jpg');
             background-size: cover;
             background-position: center;
@@ -74,7 +74,7 @@
             padding: 60px 20px;
         }
         
-        /* SECCIÓN QUIÉN SOY (TEXTO NUEVO + FOTOS VIEJAS) */
+        /* SECCIÓN QUIÉN SOY */
         .about {
             display: flex;
             flex-wrap: wrap;
@@ -93,16 +93,17 @@
             min-width: 300px;
         }
         .photo-grid img {
-            width: 48%; /* Para que entren las dos lado a lado */
+            width: 48%; 
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
             object-fit: cover;
         }
 
-        /* NUEVA SECCIÓN: SOLUCIONES CORPORATIVAS (LA SOCIEDAD) */
+        /* SECCIÓN NUEVOS SERVICIOS (AHORA CON NEURO-COACHING) */
         .servicios-nuevos {
             background-color: var(--light);
             text-align: center;
+            padding: 80px 20px;
         }
         .cards-container {
             display: flex;
@@ -116,7 +117,7 @@
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            flex: 1 1 300px;
+            flex: 1 1 280px; /* Ajustado para que entren 4 */
             max-width: 350px;
             text-align: left;
             border-top: 5px solid var(--secondary);
@@ -124,10 +125,14 @@
         }
         .card:hover {
             transform: translateY(-5px);
+            border-top-color: var(--accent); /* Detalle verde al pasar mouse */
         }
         .card h3 {
             margin-top: 0;
             font-size: 1.3rem;
+            min-height: 55px; /* Para alinear títulos */
+            display: flex;
+            align-items: center;
         }
         .lista-check {
             list-style: none;
@@ -135,14 +140,20 @@
             margin-top: 15px;
             font-size: 0.95rem;
         }
+        .lista-check li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
         .lista-check li::before {
             content: "✔";
             color: var(--secondary);
-            margin-right: 8px;
+            position: absolute;
+            left: 0;
             font-weight: bold;
         }
 
-        /* SECCIÓN CLÁSICA (LO QUE YA TENÍAS) */
+        /* SECCIÓN CLÁSICA */
         .servicios-clasicos {
             text-align: center;
         }
@@ -189,7 +200,7 @@
     <div class="hero">
         <h1>Fabricio Martínez</h1>
         <p>Estrategia | Gestión | Neurociencias</p>
-        <p class="frase-fuerte">"Ordenar para Despegar. Transformamos la gestión artesanal en sistemas de alto rendimiento."</p>
+        <p class="frase-fuerte">"Ordenar para Despegar. Transformamos el potencial en alto rendimiento."</p>
         <a href="#contacto" class="cta-button">Hablemos ahora</a>
     </div>
 
@@ -198,7 +209,7 @@
             <h2>Trayectoria y Visión</h2>
             <p>Soy un convencido de que la excelencia no es un acto, sino un hábito gestionado inteligentemente.</p>
             <p>Mi visión se forjó en la realidad: como <strong>entrenador y dirigente</strong>, y en la preparación mental de la <strong>Selección Argentina de Sóftbol</strong>. Sé lo que es tomar decisiones bajo presión.</p>
-            <p>Hoy, integro ese recorrido con mi rol de Supervisor Educativo y Consultor Corporativo. Fusiono la planificación estratégica con las neurociencias para ayudar a organizaciones (como <strong>Grupo Motta</strong> o <strong>Mirstravel</strong>) a salir del 'modo supervivencia' y entrar en 'modo expansión'.</p>
+            <p>Hoy, integro ese recorrido con mi rol de Supervisor Educativo y Consultor Corporativo. Fusiono la planificación estratégica con las neurociencias para ayudar a organizaciones y equipos a salir del 'modo supervivencia' y entrar en 'modo expansión'.</p>
         </div>
         <div class="photo-grid">
             <img src="argentinasoftbolmeditando.jpg" alt="Selección Argentina Sóftbol">
@@ -208,13 +219,13 @@
 
     <section class="servicios-nuevos">
         <div class="container">
-            <h2>Soluciones Corporativas 360°</h2>
-            <p>Fusionamos Neurociencias, Gestión y Producción de Medios para escalar tu organización.</p>
+            <h2>Soluciones de Alto Impacto</h2>
+            <p>Metodología probada en empresas y deporte de élite para escalar resultados.</p>
             
             <div class="cards-container">
                 <div class="card">
-                    <h3>Consultoría de Procesos</h3>
-                    <p>Aplicamos nuestro "Sistema de Escalamiento Operativo" para profesionalizar áreas clave.</p>
+                    <h3>🏢 Consultoría de Procesos</h3>
+                    <p>Aplicamos nuestro "Sistema de Escalamiento Operativo" para profesionalizar empresas.</p>
                     <ul class="lista-check">
                         <li>Diagnóstico de Liderazgo</li>
                         <li>Diseño de Procesos y Roles</li>
@@ -223,17 +234,27 @@
                 </div>
 
                 <div class="card">
-                    <h3>Gestión Deportiva</h3>
-                    <p>Solución integral para Clubes y Asociaciones que buscan el alto rendimiento institucional.</p>
+                    <h3>🧠 Neuro-Coaching Deportivo</h3>
+                    <p>Entrenamiento Cognitivo-Motor específico para deportistas y equipos de élite.</p>
                     <ul class="lista-check">
-                        <li>Ordenamiento Administrativo</li>
-                        <li>Capacitación Dirigencial</li>
-                        <li>Campaña de Socios y Medios</li>
+                        <li>Velocidad de Reacción</li>
+                        <li>Toma de Decisiones bajo presión</li>
+                        <li>Neuro-Planificación de campo</li>
                     </ul>
                 </div>
 
                 <div class="card">
-                    <h3>Producción de Eventos</h3>
+                    <h3>⚽ Gestión Deportiva 360°</h3>
+                    <p>Solución integral para Clubes y Asociaciones que buscan dejar de ser "amateurs".</p>
+                    <ul class="lista-check">
+                        <li>Ordenamiento Administrativo</li>
+                        <li>Capacitación Dirigencial</li>
+                        <li>Campaña de Socios</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>🎥 Producción de Eventos</h3>
                     <p>Congresos y lanzamientos con calidad televisiva que amplifican tu autoridad.</p>
                     <ul class="lista-check">
                         <li>Diseño de Contenido Académico</li>
@@ -254,7 +275,7 @@
             </div>
             <div class="item-clasico">
                 <h3>🛡️ Programa de Blindaje</h3>
-                <p>Entrenamiento estratégico para Dueños, CEOs y Gerentes. Reducción de error humano y estrés.</p>
+                <p>Entrenamiento estratégico para Dueños, CEOs y Gerentes. Reducción de error humano.</p>
             </div>
             <div class="item-clasico">
                 <h3>📚 Supervisión Educativa</h3>
@@ -265,8 +286,8 @@
 
     <section id="contacto" class="container" style="text-align: center;">
         <h2>Contacto Directo</h2>
-        <p>Los grandes cambios empiezan con una conversación breve.</p>
-        <a href="https://wa.me/5493434164699?text=Hola%20Fabricio,%20vi%20tu%20nueva%20web%20y%20quiero%20consultarte." class="cta-button">
+        <p>¿Tu equipo o empresa necesita dar el salto de calidad?</p>
+        <a href="https://wa.me/5493434164699?text=Hola%20Fabricio,%20vi%20tu%20web%20y%20me%20interesa%20tu%20propuesta." class="cta-button">
             📲 Enviar WhatsApp a Fabricio
         </a>
     </section>
