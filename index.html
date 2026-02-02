@@ -3,156 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fabricio Martínez | Consultoría & Neurociencias</title>
+    <title>Fabricio Martínez | Consultoría de Inmersión Profunda</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        html, body {
-            height: auto !important;
-            min-height: 100% !important;
-            overflow-y: auto !important;
-            overflow-x: hidden !important;
-            margin: 0;
-            padding: 0;
-            background-color: #f8fafc;
-        }
-        .hero-section {
-            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f1f5f9; overflow-x: hidden; }
+        .accent-gold { color: #D4AF37; }
+        .bg-gold { background-color: #D4AF37; }
+        .border-gold { border-color: #D4AF37; }
+        .hero-gradient {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), 
                         url('20240606_122252.jpg');
             background-size: cover;
             background-position: center;
-            padding: 120px 20px;
         }
-        .accent-gold { color: #e2b13c; }
-        .bg-gold { background-color: #e2b13c; }
     </style>
 </head>
-<body class="font-sans text-slate-900 leading-relaxed">
+<body>
 
-    <header class="hero-section text-center text-white">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-amber-500 text-sm font-bold uppercase tracking-[0.3em] mb-4">Estrategia & Gestión</h2>
-            <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight uppercase tracking-tighter">RESULTADOS <br><span class="accent-gold italic text-4xl md:text-6xl text-amber-400">MEDIBLES</span></h1>
-            <p class="text-xl text-slate-300 italic mb-10 max-w-2xl mx-auto">"Optimizamos procesos institucionales mediante la inmersión profunda y evidencia científica."</p>
-            <a href="https://wa.me/5493434164699?text=Hola%20Fabricio,%20vi%20tu%20web%20y%20me%20gustar%C3%ADa%20consultarte..." target="_blank" class="inline-block bg-gold text-slate-900 px-8 py-4 font-bold uppercase rounded-sm hover:bg-amber-400 transition shadow-2xl tracking-widest text-sm">Contactar ahora</a>
+    <header class="hero-gradient min-h-screen flex items-center justify-center text-center px-6">
+        <div class="max-w-4xl">
+            <h2 class="accent-gold text-xs font-bold uppercase tracking-[0.6em] mb-6">Estrategia & Gestión Institucional</h2>
+            <h1 class="text-5xl md:text-8xl font-black mb-8 leading-tight uppercase tracking-tighter">
+                INMERSIÓN <br><span class="accent-gold italic text-4xl md:text-7xl">PROFUNDA</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 italic mb-10 max-w-2xl mx-auto">
+                Neurociencias aplicadas a la optimización de procesos y resultados reales en organizaciones de alto impacto.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#diagnostico" class="bg-gold text-slate-900 px-10 py-4 font-bold uppercase text-[10px] tracking-[0.3em] rounded-sm hover:bg-amber-400 transition shadow-2xl">
+                    Iniciar Diagnóstico
+                </a>
+                <a href="https://wa.me/5493434164699" target="_blank" class="border border-white/20 text-white px-10 py-4 font-bold uppercase text-[10px] tracking-[0.3em] rounded-sm hover:bg-white/10 transition">
+                    Contacto Directo
+                </a>
+            </div>
         </div>
     </header>
 
-    <section class="py-8 bg-slate-100 border-b border-slate-200">
-        <div class="container mx-auto px-6 text-center">
-            <p class="text-slate-500 text-xs md:text-sm uppercase tracking-[0.3em] font-bold">
-                Organismos públicos, empresas, clubes y deportistas ya confían en nosotros
-            </p>
-        </div>
-    </section>
-
-    <section class="py-16 bg-white shadow-inner">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center font-black">
-                <div>
-                    <p class="text-6xl text-slate-900">+20%</p>
-                    <p class="text-xs uppercase tracking-widest text-amber-600 mt-2 font-bold">Mejora en Eficiencia</p>
-                </div>
-                <div class="border-y md:border-y-0 md:border-x border-slate-100 py-10 md:py-0">
-                    <p class="text-6xl text-slate-900">8 Meses</p>
-                    <p class="text-xs uppercase tracking-widest text-amber-600 mt-2 font-bold">Ciclo de Inmersión</p>
-                </div>
-                <div>
-                    <p class="text-6xl text-slate-900">360°</p>
-                    <p class="text-xs uppercase tracking-widest text-amber-600 mt-2 font-bold">Neurociencias</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 bg-slate-50 px-6">
+    <section class="py-24 bg-slate-950 px-6">
         <div class="container mx-auto">
-            <div class="text-center mb-20">
-                <h3 class="text-amber-600 font-bold text-sm uppercase tracking-widest mb-2">Especialidades</h3>
-                <h2 class="text-4xl font-bold text-slate-900 uppercase tracking-tighter italic">Ejes de <span class="accent-gold">Intervención</span></h2>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-8 border-slate-900">
-                    <i class="fas fa-building text-3xl accent-gold mb-6"></i>
-                    <h4 class="text-xl font-bold mb-4 uppercase">Empresas</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed">Optimización de equipos y comunicación interna. Intervenciones profundas en el núcleo operativo para maximizar la productividad.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-slate-900/40 p-10 rounded-2xl border border-white/5">
+                    <i class="fas fa-industry text-2xl accent-gold mb-6"></i>
+                    <h4 class="text-sm font-bold mb-4 uppercase tracking-widest">Empresas</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed">Eficiencia operativa, rentabilidad y reingeniería de procesos industriales.</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-8 border-amber-500">
-                    <i class="fas fa-graduation-cap text-3xl text-amber-500 mb-6"></i>
-                    <h4 class="text-xl font-bold mb-4 uppercase">Educación</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed">Neurociencia aplicada al aula y liderazgo docente. Transformación de instituciones con base en evidencia cognitiva.</p>
+                <div class="bg-slate-900/40 p-10 rounded-2xl border border-white/5">
+                    <i class="fas fa-brain text-2xl accent-gold mb-6"></i>
+                    <h4 class="text-sm font-bold mb-4 uppercase tracking-widest">Educación</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed">Neurociencia aplicada a la gestión directiva y climas institucionales.</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-8 border-slate-900">
-                    <i class="fas fa-running text-3xl accent-gold mb-6"></i>
-                    <h4 class="text-xl font-bold mb-4 uppercase text-amber-600">Deporte</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed">Alto rendimiento mediante **trabajo cognitivo motor**. Entrenamiento de la toma de decisiones bajo presión y neurociencias aplicadas al campo.</p>
+                <div class="bg-slate-900/40 p-10 rounded-2xl border border-white/5">
+                    <i class="fas fa-trophy text-2xl accent-gold mb-6"></i>
+                    <h4 class="text-sm font-bold mb-4 uppercase tracking-widest">Deporte</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed">Entrenamiento cognitivo-motor y toma de decisiones bajo presión.</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-8 border-amber-500">
-                    <i class="fas fa-chart-pie text-3xl text-amber-500 mb-6"></i>
-                    <h4 class="text-xl font-bold mb-4 uppercase">Gestión</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed">Auditoría estratégica y reestructuración de procesos institucionales complejos para una gestión fluida y eficiente.</p>
+                <div class="bg-slate-900/40 p-10 rounded-2xl border border-white/5">
+                    <i class="fas fa-landmark text-2xl accent-gold mb-6"></i>
+                    <h4 class="text-sm font-bold mb-4 uppercase tracking-widest">Gestión</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed">Auditoría estratégica para organismos públicos e instituciones civiles.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 bg-white px-6">
-        <div class="container mx-auto max-w-5xl flex flex-col md:flex-row items-center gap-16">
-            <div class="w-full md:w-1/2">
-                <img src="20240606_122252.jpg" alt="Fabricio Martínez" class="rounded-2xl shadow-2xl border-4 border-white w-full h-auto">
+    <section class="py-24 bg-slate-900 px-6">
+        <div class="container mx-auto max-w-6xl flex flex-col md:flex-row items-center gap-16">
+            <div class="w-full md:w-1/2 lg:w-2/5">
+                <img src="20240606_122252.jpg" alt="Fabricio Martínez" class="rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition duration-700 border border-white/10">
             </div>
             <div class="w-full md:w-1/2">
-                <h3 class="text-amber-600 font-bold text-sm uppercase tracking-widest mb-4">Metodología</h3>
-                <p class="text-lg text-slate-600 mb-8 leading-relaxed italic">
-                    "La inmersión profunda permite transformar la realidad institucional desde adentro, no solo desde el diagnóstico, sino desde la ejecución táctica."
+                <h3 class="accent-gold font-bold text-xs uppercase tracking-[0.4em] mb-4">Fabricio Martínez</h3>
+                <h2 class="text-4xl font-bold mb-8 uppercase tracking-tighter italic">Experticia en <span class="accent-gold">Gestión Real</span></h2>
+                <p class="text-lg text-slate-400 mb-8 leading-relaxed italic">
+                    "Mi enfoque no es teórico; es una inmersión en la biología de la organización para desbloquear su máximo potencial productivo."
                 </p>
-                <div class="space-y-4 font-bold text-slate-800 uppercase text-xs">
-                    <p><i class="fas fa-certificate accent-gold mr-2"></i> Posgrado en Coaching, Liderazgo y PNL (ENEB)</p>
-                    <p><i class="fas fa-microscope accent-gold mr-2"></i> Consultoría basada en Evidencia Científica</p>
+                <div class="grid grid-cols-1 gap-4 font-bold text-slate-500 uppercase text-[10px] tracking-widest">
+                    <p><i class="fas fa-check accent-gold mr-2"></i> Posgrado en Coaching, Liderazgo y PNL (ENEB)</p>
+                    <p><i class="fas fa-check accent-gold mr-2"></i> Especialista en Trabajo Cognitivo Motor</p>
+                    <p><i class="fas fa-check accent-gold mr-2"></i> Estratega en Procesos de Cambio Institucional</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 bg-slate-900 text-white px-6">
-        <div class="container mx-auto text-center">
-            <h3 class="text-2xl font-light mb-16 uppercase tracking-[0.4em]">Speaker & <span class="accent-gold font-bold">Investigación</span></h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-                <div class="p-8 bg-slate-800 rounded-lg border-b-4 border-amber-500">
-                    <h4 class="font-bold mb-2 italic uppercase">NeuroCoach 360°</h4>
-                    <p class="text-slate-400 text-sm italic leading-relaxed text-sm">Entrenamiento de alto rendimiento para toma de decisiones críticas.</p>
+    <section id="diagnostico" class="py-32 bg-slate-950 border-t border-white/5">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-black text-white uppercase italic mb-6 tracking-tighter">Auto-Diagnóstico Profesional</h2>
+            <p class="text-slate-500 mb-20 max-w-3xl mx-auto italic text-lg">Identificá los puntos críticos de tu organización de forma inmediata.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+                
+                <div class="bg-slate-900 p-12 rounded-3xl border border-white/5 hover:border-amber-500/50 transition flex flex-col items-center">
+                    <i class="fas fa-building text-3xl accent-gold mb-8"></i>
+                    <h4 class="text-lg font-bold text-white mb-4 uppercase tracking-widest">Empresas</h4>
+                    <p class="text-xs text-slate-500 mb-10 h-10">Optimización operativa, KPIs y liderazgo de equipos de producción.</p>
+                    <a href="https://forms.gle/pg1ouQV6j6DnZFpj6" target="_blank" class="w-full bg-gold text-slate-900 px-4 py-4 font-bold uppercase text-[10px] tracking-widest rounded-sm hover:bg-amber-400 transition">Iniciar Test</a>
                 </div>
-                <div class="p-8 bg-slate-800 rounded-lg border-b-4 border-amber-500">
-                    <h4 class="font-bold mb-2 italic uppercase">Liderar desde el Cerebro</h4>
-                    <p class="text-slate-400 text-sm italic leading-relaxed text-sm">Gestión basada en el funcionamiento cerebral y clima institucional.</p>
+
+                <div class="bg-slate-900 p-12 rounded-3xl border border-white/5 hover:border-amber-500/50 transition flex flex-col items-center">
+                    <i class="fas fa-running text-3xl accent-gold mb-8"></i>
+                    <h4 class="text-lg font-bold text-white mb-4 uppercase tracking-widest">Deporte</h4>
+                    <p class="text-xs text-slate-500 mb-10 h-10">Alto rendimiento, toma de decisiones y gestión de clubes deportivos.</p>
+                    <a href="https://forms.gle/LsHtd83g56hgBUcbA" target="_blank" class="w-full border border-gold text-gold px-4 py-4 font-bold uppercase text-[10px] tracking-widest rounded-sm hover:bg-gold hover:text-slate-900 transition">Iniciar Test</a>
                 </div>
-                <div class="p-8 bg-slate-800 rounded-lg border-b-4 border-amber-500">
-                    <h4 class="font-bold mb-2 italic uppercase">Producción Académica</h4>
-                    <p class="text-slate-400 text-sm italic leading-relaxed text-sm">Desarrollo de contenidos y marcos teóricos aplicados al liderazgo institucional y el potencial humano.</p>
+
+                <div class="bg-slate-900 p-12 rounded-3xl border border-white/5 hover:border-amber-500/50 transition flex flex-col items-center">
+                    <i class="fas fa-university text-3xl accent-gold mb-8"></i>
+                    <h4 class="text-lg font-bold text-white mb-4 uppercase tracking-widest">Organismos</h4>
+                    <p class="text-xs text-slate-500 mb-10 h-10">Clima institucional, calidad de gestión y organismos públicos.</p>
+                    <a href="https://forms.gle/oPkkv4fJvEop37aE7" target="_blank" class="w-full border border-gold text-gold px-4 py-4 font-bold uppercase text-[10px] tracking-widest rounded-sm hover:bg-gold hover:text-slate-900 transition">Iniciar Test</a>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <footer class="py-20 bg-black text-slate-500 text-center px-6 border-t border-white/5">
-        <h2 class="text-white text-2xl font-bold mb-2 uppercase italic tracking-tighter">Fabricio Martínez</h2>
-        <p class="text-sm mb-12 italic text-slate-400 max-w-2xl mx-auto leading-relaxed">
-            Posgrado en Coaching, Liderazgo y PNL (ENEB) <br class="hidden md:inline"> | Consultor en Gestión | Speaker
-        </p>
+    <footer class="py-24 bg-black text-slate-600 text-center px-6">
+        <h2 class="text-white text-4xl font-black mb-4 uppercase italic tracking-tighter">Fabricio Martínez</h2>
+        <p class="text-[10px] mb-16 uppercase tracking-[0.6em] text-slate-500">Inmersión Profunda • Resultados Reales</p>
         
-        <div class="mb-12">
-            <a href="https://wa.me/5493434164699?text=Hola%20Fabricio,%20me%20gustar%C3%ADa%20consultarte..." target="_blank" class="bg-gold text-slate-900 px-10 py-4 font-bold uppercase rounded-sm hover:bg-amber-400 transition shadow-lg inline-flex items-center gap-2">
-                <i class="fab fa-whatsapp"></i> WhatsApp
-            </a>
+        <div class="flex justify-center space-x-12 mb-20 text-3xl">
+            <a href="https://www.linkedin.com/in/fabriciomartinezok/" target="_blank" class="hover:accent-gold transition"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/fabri_martinez_ok/?hl=es" target="_blank" class="hover:accent-gold transition"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/5493434164699" target="_blank" class="hover:accent-gold transition"><i class="fab fa-whatsapp"></i></a>
         </div>
-
-        <div class="flex justify-center space-x-12 mb-10 text-3xl">
-            <a href="https://www.linkedin.com/in/fabriciomartinezok/" target="_blank" rel="noopener noreferrer" class="hover:text-amber-500 transition"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/fabri_martinez_ok/?hl=es" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/FabriMartinezProfe" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500 transition"><i class="fab fa-facebook"></i></a>
-        </div>
-        <p class="mt-16 text-[9px] uppercase tracking-[0.5em] opacity-40 italic font-bold">&copy; 2026 Fabricio Martínez Consultoría Corporativa.</p>
+        <p class="text-[9px] uppercase tracking-[0.8em] opacity-30">&copy; 2026 Fabricio Martínez | Estrategia & Gestión</p>
     </footer>
 
 </body>
