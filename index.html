@@ -396,10 +396,10 @@
 const rDims = [
     {key:'liderazgo',    label:'Liderazgo'},
     {key:'comunicacion', label:'Comunicación'},
-    {key:'okr',          label:'OKRs / Estrategia'},
+    {key:'okr',          label:'Estrategia / OKRs'},
     {key:'clima',        label:'Clima / Cultura'},
     {key:'decision',     label:'Toma de decisiones'},
-    {key:'procesos',     label:'Procesos / Calidad'},
+    {key:'procesos',     label:'Procesos / Eficiencia'},
 ];
 const rVals = {}; rDims.forEach(d => rVals[d.key] = 5);
  
@@ -483,28 +483,28 @@ function rReset() {
     rUpdateChart(); rUpdateMetrics();
 }
  
-/* ═══ DIAGNÓSTICO ═══ */
+/* ═══ DIAGNÓSTICO (NUEVAS PREGUNTAS OPTIMIZADAS) ═══ */
 const dQuestions = {
     empresa:[
-        {dim:'OKR',label:'¿Qué tan alineados están los equipos con los objetivos estratégicos?',opts:[['Sin alineación formal',1],['Alineación parcial, inconsistente',2],['Mayoría alineada, algunos focos dispersos',3],['Alta alineación, revisión periódica',4]]},
-        {dim:'Liderazgo',label:'¿Cómo es la toma de decisiones de tus líderes bajo presión?',opts:[['Reactiva, sin protocolo claro',1],['Depende mucho de quién esté a cargo',2],['Existe protocolo pero no siempre se aplica',3],['Toma de decisiones estructurada y efectiva',4]]},
-        {dim:'Comunicación',label:'¿Con qué frecuencia el ruido interno afecta la productividad?',opts:[['A diario, es un problema crónico',1],['Varias veces por semana',2],['Ocasionalmente',3],['Rara vez, los canales están bien definidos',4]]},
-        {dim:'Clima',label:'¿Cómo es el nivel de energía y motivación general del equipo?',opts:[['Bajo, hay desgaste y rotación',1],['Variable, depende del área o líder',2],['Aceptable, pero con potencial de mejora',3],['Alto, el equipo está comprometido',4]]},
-        {dim:'Calidad',label:'¿Tiene tu organización procesos de calidad certificados?',opts:[['No, trabajamos de forma empírica',1],['Hay intención pero sin avance concreto',2],['En proceso de implementación',3],['Certificados y auditados regularmente',4]]},
+        {dim:'Estrategia & OKRs', label:'¿Qué tan alineados están los equipos con los objetivos de rentabilidad?', opts:[['Sin rumbo claro, apagando incendios diarios',1],['Metas vagas, seguimiento inconsistente',2],['Mayoría alineada, algunos silos aislados',3],['Alta alineación, OKRs medidos y ajustados',4]]},
+        {dim:'Liderazgo & Presión', label:'¿Cómo responden tus líderes ante crisis o picos de estrés?', opts:[['Decisiones reactivas y emocionales',1],['Depende exclusivamente del líder de turno',2],['Protocolos existen pero a veces fallan bajo presión',3],['Visión fría, estratégica y sistematizada',4]]},
+        {dim:'Flujo de Procesos', label:'¿El conocimiento operativo depende de personas o de sistemas?', opts:[['100% dependiente de personas clave (cuello de botella)',1],['Algunas cosas documentadas, pero muy informales',2],['Sistemas básicos en áreas críticas',3],['Procesos estandarizados y auditables',4]]},
+        {dim:'Clima Organizacional', label:'¿Cuál es el nivel de "ruido" y desgaste en los equipos?', opts:[['Alta fricción, quejas constantes y rotación',1],['Desgaste visible en épocas de alta demanda',2],['Aceptable, con episodios aislados de estrés',3],['Alta cohesión, comunicación limpia y asertiva',4]]},
+        {dim:'Calidad & Mejora', label:'¿Tienen procesos de certificación o auditoría de calidad?', opts:[['Ninguno, gestión puramente empírica',1],['En planes, sin ejecución real',2],['En proceso de implementación (ej. Normas ISO)',3],['Certificados y en mejora continua comprobable',4]]},
     ],
     deporte:[
-        {dim:'Toma de decisiones',label:'¿Cómo responde tu equipo ante alta presión competitiva?',opts:[['Se bloquea o pierde eficacia',1],['Respuesta inconsistente',2],['Responde bien en la mayoría de los casos',3],['Sólido y predecible bajo presión máxima',4]]},
-        {dim:'Liderazgo',label:'¿Cómo describirías el liderazgo dentro del equipo deportivo?',opts:[['Ausente o generador de conflictos',1],['Liderazgo informal y no estructurado',2],['Un líder claro pero sin apoyo sistémico',3],['Liderazgo distribuido y funcional',4]]},
-        {dim:'Cognitivo-Motor',label:'¿Existe trabajo específico de entrenamiento cognitivo-motor?',opts:[['No, sólo trabajo físico-técnico',1],['Muy esporádico, sin metodología',2],['Incorporado pero no sistematizado',3],['Programa estructurado y medido',4]]},
-        {dim:'Clima',label:'¿Cómo es la cohesión y el clima dentro del grupo?',opts:[['Tensiones frecuentes, falta de confianza',1],['Clima inestable, varía por resultados',2],['Buena base, con focos de mejora',3],['Alta cohesión y confianza grupal',4]]},
-        {dim:'Gestión',label:'¿Cómo se gestiona el club en términos administrativos?',opts:[['Sin estructura formal de gestión',1],['Gestión básica, muchos procesos informales',2],['Estructura parcial con algunos sistemas',3],['Gestión profesional con indicadores claros',4]]},
+        {dim:'Toma de Decisiones', label:'¿Cómo reacciona el atleta/equipo en los momentos críticos del juego?', opts:[['Pánico, bloqueo o decisiones erráticas',1],['Inconsistente: a veces bien, a veces mal',2],['Sólido, pero baja eficacia en la instancia final',3],['Precisión y lucidez bajo máxima presión',4]]},
+        {dim:'Neuro-Coaching', label:'¿Tienen entrenamiento específico cognitivo-motor y velocidad de reacción?', opts:[['Solo entrenamiento físico, técnico y táctico',1],['Algún ejercicio aislado, sin medición real',2],['Rutinas cognitivas incorporadas pero básicas',3],['Programa neuro-motor sistematizado y medido',4]]},
+        {dim:'Liderazgo de Campo', label:'¿Cómo es la gestión emocional del cuerpo técnico hacia el plantel?', opts:[['Gritos, presión negativa y desgaste sistemático',1],['Liderazgo motivacional pero sin método claro',2],['Buen manejo, pero falta protocolo ante crisis en cancha',3],['Liderazgo inteligente, asertivo y neuro-compatible',4]]},
+        {dim:'Cohesión Grupal', label:'¿El equipo funciona como una suma de talentos o como un sistema?', opts:[['Silos, egos fuertes y poca solidaridad interna',1],['Se unen solo cuando los resultados acompañan',2],['Buena base, falta química en la adversidad extrema',3],['Sistema cohesionado de alto rendimiento',4]]},
+        {dim:'Gestión Institucional', label:'¿El club respalda al deporte con procesos administrativos predecibles?', opts:[['Caos directivo, promesas incumplidas y urgencias',1],['Esfuerzo amateur, buena voluntad pero sin recursos organizados',2],['Estructura en desarrollo, con algunos baches de gestión',3],['Gestión dirigencial profesional, previsible y medible',4]]},
     ],
     organismo:[
-        {dim:'Clima institucional',label:'¿Cómo describirías el clima general de la institución?',opts:[['Conflictivo, con resistencia al cambio',1],['Tenso pero manejable',2],['Neutro, sin compromiso ni conflicto',3],['Positivo y orientado a la mejora continua',4]]},
-        {dim:'Liderazgo directivo',label:'¿Con qué claridad se ejerce la conducción institucional?',opts:[['Sin dirección clara, mucha improvisación',1],['Dirección existe pero genera contradicciones',2],['Conducción aceptable con áreas de mejora',3],['Liderazgo claro, estratégico y coherente',4]]},
-        {dim:'Comunicación',label:'¿Cómo fluye la información entre niveles jerárquicos?',opts:[['Obstruida, con silos y rumores',1],['Lenta e inconsistente',2],['Fluye pero con pérdida de calidad',3],['Clara, oportuna y bidireccional',4]]},
-        {dim:'Procesos',label:'¿Existen procesos documentados y protocolos claros?',opts:[['Casi todo es informal o empírico',1],['Algunos procesos escritos, poco aplicados',2],['Varios procesos documentados y en uso',3],['Procesos claros, auditados y actualizados',4]]},
-        {dim:'Desarrollo',label:'¿Se invierte en capacitación y desarrollo profesional?',opts:[['No existe política de formación',1],['Capacitación esporádica sin planificación',2],['Plan de formación básico',3],['Programa robusto de desarrollo institucional',4]]},
+        {dim:'Dirección Estratégica', label:'¿El equipo directivo lidera la visión o solo administra la burocracia?', opts:[['Apagando incendios administrativos diarios',1],['Intenta liderar pero el sistema lo consume',2],['Logra espacios de liderazgo pedagógico/institucional',3],['Conducción proactiva, estratégica y transformadora',4]]},
+        {dim:'Clima Institucional', label:'¿Cómo es el nivel de resistencia al cambio en la organización?', opts:[['Alta toxicidad y bloqueo a cualquier innovación',1],['Escepticismo generalizado ("siempre se hizo así")',2],['Receptividad media, adopción lenta de nuevas dinámicas',3],['Cultura abierta al cambio y enfocada en mejora continua',4]]},
+        {dim:'Comunicación', label:'¿Cómo fluye la información entre la dirección y los equipos de trabajo?', opts:[['Principalmente a través de rumores y pasillos',1],['Canales formales lentos, burocráticos y poco efectivos',2],['Flujo regular, a veces con ruido o malos entendidos',3],['Comunicación asertiva, transparente, rápida y directa',4]]},
+        {dim:'Estandarización', label:'¿Los procesos internos están sistematizados y documentados?', opts:[['Totalmente artesanales y dependientes de una persona',1],['Básicos, con mucha carga manual y papel',2],['Parcialmente automatizados y documentados',3],['Totalmente sistematizados, eficientes y auditables',4]]},
+        {dim:'Desarrollo Humano', label:'¿Existen espacios formales de capacitación y contención profesional?', opts:[['Nulos, cada integrante sobrevive como puede',1],['Charlas esporádicas sin seguimiento real',2],['Plan de capacitación anual estándar',3],['Formación continua integral en liderazgo y gestión emocional',4]]},
     ]
 };
 const dAreas=[
@@ -556,13 +556,38 @@ function dShowResult(){
     const qs=dQuestions[dArea];
     const total=dAnswers.reduce((a,b)=>a+b,0);
     const pct=Math.round((total/(qs.length*4))*100);
-    let nivel,fg,recos;
-    if(pct<=40)     {nivel='Estadio inicial';          fg='#F09595';recos=['Tu organización requiere una intervención estructural. Los procesos informales generan pérdida de energía sistémica.','La resistencia al cambio es probablemente alta. Un diagnóstico de inmersión profunda identifica los cuellos de botella biológicos y organizacionales.','Se recomienda comenzar por la dimensión con menor puntaje para generar tracción y confianza institucional.'];}
-    else if(pct<=65){nivel='En desarrollo';            fg='#EF9F27';recos=['Existen bases sólidas pero con focos importantes de fuga energética. La inconsistencia en liderazgo limita el potencial.','Un proceso de alineación de OKRs puede impactar de forma inmediata en la productividad.','El trabajo en clima y cohesión puede destrabar resistencias que hoy frenan la implementación de mejoras.'];}
-    else if(pct<=85){nivel='Alto rendimiento parcial'; fg='#85B7EB';recos=['Tu organización tiene capacidad real de alto rendimiento, pero hay dimensiones que frenan el techo de excelencia.','Optimizar los puntos débiles detectados puede generar un salto exponencial en eficiencia.','Este es el momento ideal para implementar estándares internacionales de calidad.'];}
-    else            {nivel='Excelencia organizacional';fg='#D4AF37';recos=['Tu organización opera en un nivel de alto rendimiento. El desafío ahora es mantener y escalar la excelencia.','Se recomienda una auditoría estratégica para identificar las próximas palancas de crecimiento.','Considerar la expansión de buenas prácticas hacia áreas o instituciones aliadas.'];}
- 
+    
+    // RECOMENDACIONES ESPECÍFICAS POR ÁREA Y PUNTAJE
+    const dRecos = {
+        empresa: [
+            ['Tu empresa necesita estructura urgente. La falta de procesos está quemando a tu equipo y perdiendo rentabilidad.','Es vital implementar un "Sistema de Escalamiento Operativo" para salir del caos de depender de personas clave.','Sugerencia: Empezar con un diagnóstico de liderazgo profundo y mapeo de procesos clave.'],
+            ['Hay buenas bases, pero la fuga de energía es alta. Falta sistematizar el crecimiento de la operación.','Una alineación formal de OKRs ordenará las prioridades de todos los niveles.','El entrenamiento en toma de decisiones bajo presión evitará errores costosos.'],
+            ['Operan bien, pero hay cuellos de botella que impiden la escalabilidad total y la automatización.','Es el momento exacto para pulir la eficiencia interna y preparar certificaciones de calidad.','El "Programa de Blindaje" para CEOs y gerentes potenciará el ROI del liderazgo.'],
+            ['Nivel de excelencia. El sistema funciona, ahora el foco es la innovación estratégica y el legado.','Recomendamos auditorías preventivas y programas de formación de nuevos líderes.','Considerar la expansión del modelo de gestión corporativo a nuevas unidades de negocio.']
+        ],
+        deporte: [
+            ['El equipo está en grave riesgo competitivo por bloqueos emocionales y falta de gestión institucional.','Urge implementar entrenamiento cognitivo-motor para recuperar la lucidez y velocidad de reacción.','La directiva necesita ordenar los procesos administrativos para no trasladar el caos a la cancha.'],
+            ['El talento físico no es suficiente. La inconsistencia mental está costando resultados decisivos.','Hay que sistematizar la toma de decisiones bajo presión con técnicas de Neuro-Coaching.','El cuerpo técnico necesita incorporar herramientas de liderazgo neuro-compatible.'],
+            ['Son sumamente competitivos, pero les falta el salto de calidad mental para consolidarse en las finales.','Es necesario afinar la cohesión grupal y automatizar las respuestas motoras ante el estrés agudo.','La dirigencia debe acompañar con gestión 360° para sostener operativamente este nivel deportivo.'],
+            ['Nivel de élite comprobado. Músculo y cerebro están perfectamente sincronizados y soportados institucionalmente.','El trabajo ahora es de mantenimiento preventivo y manejo psicológico del éxito sostenido.','Sugerimos implementar mediciones neuro-cognitivas avanzadas para evitar el desgaste invisible.']
+        ],
+        organismo: [
+            ['La institución se encuentra en modo supervivencia. La burocracia y el desgaste consumen toda la energía.','Se requiere una intervención inmediata en el clima institucional y en el liderazgo directivo.','Es prioritario fijar protocolos básicos de comunicación para frenar el "ruido" y los rumores internos.'],
+            ['El esfuerzo individual es grande, pero la falta de sistematización colectiva frena la innovación.','Hay que trabajar en la gestión de la resistencia al cambio desde las neurociencias aplicadas.','Es clave profesionalizar y documentar procesos administrativos que hoy son demasiado artesanales.'],
+            ['Se percibe una buena gestión general, con importantes oportunidades de mejora en la agilidad de los procesos.','Es momento de potenciar el liderazgo directivo para que sea más transformador y menos operativo.','Aumentar la inversión institucional en el desarrollo y contención emocional del staff educativo/técnico.'],
+            ['Institución modelo. Cultura sólida, procesos estandarizados, ágiles y clima sumamente positivo.','El foco ahora debe estar en la proyección comunitaria y en consolidarse como faro para otras organizaciones.','Mantener programas de actualización permanente en neuro-educación, gestión y liderazgo estratégico.']
+        ]
+    };
+
+    let nivel, fg, recosIdx;
+    if(pct<=40)     {nivel='Estadio inicial';          fg='#F09595'; recosIdx=0;}
+    else if(pct<=65){nivel='En desarrollo';            fg='#EF9F27'; recosIdx=1;}
+    else if(pct<=85){nivel='Alto rendimiento parcial'; fg='#85B7EB'; recosIdx=2;}
+    else            {nivel='Excelencia organizacional';fg='#D4AF37'; recosIdx=3;}
+
+    const recos = dRecos[dArea][recosIdx];
     const dimColors=['#D4AF37','#85B7EB','#EF9F27','#F09595','#9FE1CB'];
+    
     let html=`<div class="text-center mb-8">
         <div class="text-7xl font-black mb-3" style="color:${fg}">${pct}%</div>
         <span class="text-[9px] font-bold uppercase tracking-widest px-4 py-2 rounded-sm inline-block" style="background:rgba(255,255,255,0.04);color:${fg};border:1px solid ${fg}55;">${nivel}</span>
