@@ -27,89 +27,104 @@
  
     <style>
         html { scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; background-color: #020617; color: #f1f5f9; overflow-x: hidden; }
-        .accent-gold { color: #D4AF37; }
-        .bg-gold { background-color: #D4AF37; }
+        /* Fondo Blanco, Texto Oscuro */
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1e293b; overflow-x: hidden; } 
+        
+        /* Overlay más luminoso para el Hero */
         .hero-gradient {
-            background: linear-gradient(rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.95)),
+            background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.95)),
                         url('20240606_122252.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
+        
         .card-hover:hover {
-            border-color: rgba(212, 175, 55, 0.4);
+            border-color: rgba(14, 165, 233, 0.4); /* Borde Celeste al pasar el mouse */
             transform: translateY(-5px);
             transition: all 0.4s ease;
+            box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.1);
         }
  
-        /* ── RADAR SLIDERS ── */
+        /* ── RADAR SLIDERS (Azul y Celeste) ── */
         .r-slider {
             -webkit-appearance: none; appearance: none;
-            width: 100%; height: 3px;
-            background: rgba(212,175,55,0.2);
+            width: 100%; height: 4px;
+            background: #e0f2fe; /* Fondo pista celeste claro */
             border-radius: 2px; cursor: pointer; outline: none;
         }
         .r-slider::-webkit-slider-thumb {
             -webkit-appearance: none;
-            width: 14px; height: 14px;
-            background: #D4AF37; border-radius: 50%; border: none;
+            width: 16px; height: 16px;
+            background: #1d4ed8; /* Azul */
+            border-radius: 50%; border: none; transition: transform 0.1s;
         }
+        .r-slider::-webkit-slider-thumb:hover { transform: scale(1.2); background: #0ea5e9; } /* Celeste al hover */
+        
         .r-slider::-moz-range-thumb {
-            width: 14px; height: 14px;
-            background: #D4AF37; border-radius: 50%; border: none;
+            width: 16px; height: 16px;
+            background: #1d4ed8; border-radius: 50%; border: none; transition: transform 0.1s;
         }
+        .r-slider::-moz-range-thumb:hover { transform: scale(1.2); background: #0ea5e9; }
  
-        /* ── DIAGNOSTICO ── */
-        .d-progress-bg { height: 2px; background: rgba(255,255,255,0.07); border-radius: 1px; }
-        .d-progress-fill { height: 2px; background: #D4AF37; border-radius: 1px; transition: width 0.4s ease; }
+        /* ── DIAGNOSTICO (Tema Claro) ── */
+        .d-progress-bg { height: 4px; background: #e2e8f0; border-radius: 2px; }
+        .d-progress-fill { height: 4px; background: #0ea5e9; border-radius: 2px; transition: width 0.4s ease; } /* Celeste */
         .d-step { display: none; }
         .d-step.active { display: block; }
+        
         .d-area-btn {
             padding: 32px 16px;
-            border: 1px solid rgba(255,255,255,0.05);
-            background: rgba(15,23,42,0.5);
+            border: 2px solid #f1f5f9;
+            background: #ffffff;
             color: #64748b;
             border-radius: 24px; cursor: pointer;
             text-align: center; transition: all 0.2s;
             font-family: 'Inter', sans-serif;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }
-        .d-area-btn:hover { border-color: rgba(212,175,55,0.35); color: #D4AF37; background: rgba(212,175,55,0.04); }
-        .d-area-btn.selected { border-color: #D4AF37; color: #D4AF37; background: rgba(212,175,55,0.06); }
+        .d-area-btn:hover { border-color: #bae6fd; color: #1d4ed8; background: #f0f9ff; }
+        .d-area-btn.selected { border-color: #1d4ed8; color: #1d4ed8; background: #eff6ff; box-shadow: 0 10px 15px -3px rgba(29, 78, 216, 0.1); }
+        
         .d-opt-btn {
-            width: 100%; padding: 14px 20px;
-            border: 1px solid rgba(255,255,255,0.06);
-            background: rgba(15,23,42,0.4);
-            color: #94a3b8; border-radius: 12px; cursor: pointer;
-            text-align: left; font-size: 13px; line-height: 1.5;
+            width: 100%; padding: 16px 20px;
+            border: 1px solid #e2e8f0;
+            background: #ffffff;
+            color: #334155; border-radius: 12px; cursor: pointer;
+            text-align: left; font-size: 14px; line-height: 1.5;
             transition: all 0.15s; font-family: 'Inter', sans-serif;
-            display: block;
+            display: block; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
         }
-        .d-opt-btn:hover { border-color: rgba(212,175,55,0.3); color: #f1f5f9; }
-        .d-opt-btn.selected { border-color: #D4AF37; color: #D4AF37; background: rgba(212,175,55,0.05); }
+        .d-opt-btn:hover { border-color: #bae6fd; background: #f8fafc; color: #0f172a; }
+        .d-opt-btn.selected { border-color: #1d4ed8; color: #1d4ed8; background: #eff6ff; font-weight: bold; border-width: 2px; padding: 15px 19px; } /* Ajuste de padding por el borde de 2px */
+        
         .d-btn-back {
             padding: 14px 24px;
-            border: 1px solid rgba(255,255,255,0.08); background: transparent; color: #475569;
+            border: 1px solid #cbd5e1; background: #ffffff; color: #64748b;
             font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;
-            border-radius: 4px; cursor: pointer; font-family: 'Inter', sans-serif; transition: border-color 0.2s;
+            border-radius: 6px; cursor: pointer; font-family: 'Inter', sans-serif; transition: all 0.2s;
         }
-        .d-btn-back:hover { border-color: rgba(212,175,55,0.3); }
+        .d-btn-back:hover { border-color: #94a3b8; color: #0f172a; background: #f8fafc; }
+        
         .d-btn-next {
             flex: 1; padding: 14px 24px;
-            background: #D4AF37; color: #020617;
+            background: #1d4ed8; color: #ffffff; /* Azul */
             font-size: 10px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase;
-            border-radius: 4px; border: none; cursor: pointer;
+            border-radius: 6px; border: none; cursor: pointer;
             font-family: 'Inter', sans-serif; transition: background 0.2s, opacity 0.2s;
         }
-        .d-btn-next:disabled { opacity: 0.2; cursor: default; }
-        .d-btn-next:not(:disabled):hover { background: #e8c96b; }
-        .d-bar-bg { flex: 1; height: 4px; background: rgba(255,255,255,0.06); border-radius: 2px; overflow: hidden; }
-        .d-bar-fill { height: 4px; border-radius: 2px; transition: width 1.1s ease; }
+        .d-btn-next:disabled { opacity: 0.3; cursor: default; }
+        .d-btn-next:not(:disabled):hover { background: #1e40af; } /* Azul más oscuro al hover */
+        
+        .d-bar-bg { flex: 1; height: 6px; background: #e2e8f0; border-radius: 3px; overflow: hidden; }
+        .d-bar-fill { height: 6px; border-radius: 3px; transition: width 1.1s ease; }
+        
         .d-reco {
-            border-left: 2px solid #D4AF37;
-            padding: 12px 16px; margin-bottom: 10px;
-            background: rgba(212,175,55,0.04);
-            font-size: 13px; color: #94a3b8; line-height: 1.7;
+            border-left: 3px solid #0ea5e9; /* Borde Celeste */
+            padding: 16px 20px; margin-bottom: 12px;
+            background: #f0f9ff; /* Fondo celeste super clarito */
+            font-size: 14px; color: #334155; line-height: 1.7;
+            border-radius: 0 8px 8px 0;
         }
     </style>
 </head>
@@ -117,207 +132,218 @@
  
 <header class="hero-gradient min-h-screen flex items-center justify-center text-center px-6">
     <div class="max-w-4xl">
-        <h2 class="accent-gold text-xs font-bold uppercase tracking-[0.6em] mb-6">Estrategia & Gestión Institucional</h2>
-        <h1 class="text-6xl md:text-8xl font-black mb-8 leading-tight uppercase tracking-tighter">
-            INMERSIÓN <br><span class="accent-gold italic text-5xl md:text-7xl">PROFUNDA</span>
+        <h2 class="text-blue-700 text-xs font-bold uppercase tracking-[0.6em] mb-6">Estrategia & Gestión Institucional</h2>
+        <h1 class="text-6xl md:text-8xl font-black mb-8 leading-tight uppercase tracking-tighter text-slate-900">
+            INMERSIÓN <br><span class="text-sky-500 italic text-5xl md:text-7xl">PROFUNDA</span>
         </h1>
-        <p class="text-lg md:text-2xl text-slate-400 italic mb-12 max-w-2xl mx-auto leading-relaxed">
+        <p class="text-lg md:text-2xl text-slate-600 italic mb-12 max-w-2xl mx-auto leading-relaxed">
             "La inspiración es la chispa, pero la biología es el motor. Optimizamos organizaciones desde su núcleo neurocognitivo."
         </p>
-        <div class="flex flex-col md:flex-row gap-6 justify-center">
-            <a href="#diagnostico" class="bg-gold text-slate-900 px-12 py-5 font-bold uppercase text-[11px] tracking-[0.3em] rounded-sm hover:bg-amber-400 transition shadow-2xl">
+        <div class="flex flex-col md:flex-row gap-6 justify-center relative z-10">
+            <a href="#diagnostico" class="bg-blue-700 text-white px-12 py-5 font-bold uppercase text-[11px] tracking-[0.3em] rounded-md hover:bg-blue-800 transition shadow-xl hover:shadow-2xl hover:-translate-y-1">
                 Iniciar Diagnóstico
             </a>
-            <a href="https://wa.me/5493434164699" target="_blank" class="border border-white/20 text-white px-12 py-5 font-bold uppercase text-[11px] tracking-[0.3em] rounded-sm hover:bg-white/10 transition">
+            <a href="https://wa.me/5493434164699" target="_blank" class="bg-white border-2 border-blue-700 text-blue-700 px-12 py-5 font-bold uppercase text-[11px] tracking-[0.3em] rounded-md hover:bg-blue-50 transition">
                 Contacto Directo
             </a>
         </div>
     </div>
 </header>
  
-<section class="py-32 bg-slate-950 px-6">
+<section class="py-32 bg-sky-50 px-6 border-b border-slate-200">
     <div class="container mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="bg-slate-900/40 p-10 rounded-2xl border border-white/5 card-hover">
-                <i class="fas fa-industry text-2xl accent-gold mb-6"></i>
-                <h4 class="text-sm font-bold mb-4 uppercase tracking-widest text-white">Empresas</h4>
-                <p class="text-slate-500 text-xs leading-relaxed">Alineación de objetivos estratégicos, OKRs y optimización de eficiencia operativa.</p>
+            <div class="bg-white p-10 rounded-2xl border border-slate-100 card-hover shadow-sm">
+                <i class="fas fa-industry text-3xl text-blue-700 mb-6"></i>
+                <h4 class="text-sm font-bold mb-4 uppercase tracking-widest text-slate-900">Empresas</h4>
+                <p class="text-slate-600 text-sm leading-relaxed font-light">Alineación de objetivos estratégicos, OKRs y optimización de eficiencia operativa.</p>
             </div>
-            <div class="bg-slate-900/40 p-10 rounded-2xl border border-white/5 card-hover">
-                <i class="fas fa-brain text-2xl accent-gold mb-6"></i>
-                <h4 class="text-sm font-bold mb-4 uppercase tracking-widest text-white">Educación</h4>
-                <p class="text-slate-500 text-xs leading-relaxed">Gestión directiva basada en neurociencias y transformación de climas institucionales.</p>
+            <div class="bg-white p-10 rounded-2xl border border-slate-100 card-hover shadow-sm">
+                <i class="fas fa-brain text-3xl text-blue-700 mb-6"></i>
+                <h4 class="text-sm font-bold mb-4 uppercase tracking-widest text-slate-900">Educación</h4>
+                <p class="text-slate-600 text-sm leading-relaxed font-light">Gestión directiva basada en neurociencias y transformación de climas institucionales.</p>
             </div>
-            <div class="bg-slate-900/40 p-10 rounded-2xl border border-white/5 card-hover">
-                <i class="fas fa-trophy text-2xl accent-gold mb-6"></i>
-                <h4 class="text-sm font-bold mb-4 uppercase tracking-widest text-white">Deporte</h4>
-                <p class="text-slate-500 text-xs leading-relaxed">Entrenamiento cognitivo-motor y toma de decisiones bajo alta presión competitiva.</p>
+            <div class="bg-white p-10 rounded-2xl border border-slate-100 card-hover shadow-sm">
+                <i class="fas fa-trophy text-3xl text-blue-700 mb-6"></i>
+                <h4 class="text-sm font-bold mb-4 uppercase tracking-widest text-slate-900">Deporte</h4>
+                <p class="text-slate-600 text-sm leading-relaxed font-light">Entrenamiento cognitivo-motor y toma de decisiones bajo alta presión competitiva.</p>
             </div>
-            <div class="bg-slate-900/40 p-10 rounded-2xl border border-white/5 card-hover">
-                <i class="fas fa-landmark text-2xl accent-gold mb-6"></i>
-                <h4 class="text-sm font-bold mb-4 uppercase tracking-widest text-white">Gestión</h4>
-                <p class="text-slate-500 text-xs leading-relaxed">Auditoría estratégica para organismos públicos e instituciones de la sociedad civil.</p>
+            <div class="bg-white p-10 rounded-2xl border border-slate-100 card-hover shadow-sm">
+                <i class="fas fa-landmark text-3xl text-blue-700 mb-6"></i>
+                <h4 class="text-sm font-bold mb-4 uppercase tracking-widest text-slate-900">Gestión</h4>
+                <p class="text-slate-600 text-sm leading-relaxed font-light">Auditoría estratégica para organismos públicos e instituciones de la sociedad civil.</p>
             </div>
         </div>
     </div>
 </section>
  
-<section class="py-32 bg-slate-900 px-6 border-y border-white/5">
+<section class="py-32 bg-white px-6">
     <div class="container mx-auto max-w-6xl">
-        <h3 class="accent-gold font-bold text-xs text-center uppercase tracking-[0.5em] mb-4">Business Solutions</h3>
-        <h2 class="text-4xl font-black text-center mb-16 uppercase italic tracking-tighter text-white">Impacto Estratégico & <span class="accent-gold">Resultados</span></h2>
+        <h3 class="text-sky-500 font-bold text-xs text-center uppercase tracking-[0.5em] mb-4">Business Solutions</h3>
+        <h2 class="text-4xl font-black text-center mb-16 uppercase italic tracking-tighter text-slate-900">Impacto Estratégico & <span class="text-blue-700">Resultados</span></h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-slate-950 p-8 rounded-2xl border border-white/5 card-hover">
+            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 card-hover">
                 <div class="flex items-center gap-4 mb-6">
-                    <span class="bg-blue-900/20 text-blue-400 p-3 rounded-lg"><i class="fas fa-bullseye"></i></span>
-                    <h4 class="font-bold text-lg uppercase tracking-tighter">Alineación OKRs</h4>
+                    <span class="bg-blue-100 text-blue-700 p-3 rounded-xl text-xl"><i class="fas fa-bullseye"></i></span>
+                    <h4 class="font-bold text-lg uppercase tracking-tighter text-slate-900">Alineación OKRs</h4>
                 </div>
-                <p class="text-slate-400 text-sm leading-relaxed mb-6">Despliegue de objetivos estratégicos para asegurar que cada nivel de la organización trabaje en lo que realmente mueve la aguja del negocio.</p>
-                <div class="text-[10px] font-bold uppercase tracking-widest text-blue-400 bg-blue-400/5 p-3 rounded-md">KPI: % Cumplimiento de metas anuales</div>
+                <p class="text-slate-600 text-sm leading-relaxed mb-8">Despliegue de objetivos estratégicos para asegurar que cada nivel de la organización trabaje en lo que realmente mueve la aguja del negocio.</p>
+                <div class="text-[10px] font-bold uppercase tracking-widest text-blue-700 bg-blue-100/50 p-3 rounded-lg border border-blue-200 text-center">KPI: % Cumplimiento anual</div>
             </div>
-            <div class="bg-slate-950 p-8 rounded-2xl border border-white/5 card-hover">
+            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 card-hover">
                 <div class="flex items-center gap-4 mb-6">
-                    <span class="bg-green-900/20 text-green-400 p-3 rounded-lg"><i class="fas fa-comments"></i></span>
-                    <h4 class="font-bold text-lg uppercase tracking-tighter">Eficiencia Interna</h4>
+                    <span class="bg-sky-100 text-sky-600 p-3 rounded-xl text-xl"><i class="fas fa-comments"></i></span>
+                    <h4 class="font-bold text-lg uppercase tracking-tighter text-slate-900">Eficiencia Interna</h4>
                 </div>
-                <p class="text-slate-400 text-sm leading-relaxed mb-6">Optimización de flujos de información y protocolos de feedback para reducir el ruido organizacional y la fatiga por reuniones.</p>
-                <div class="text-[10px] font-bold uppercase tracking-widest text-green-400 bg-green-400/5 p-3 rounded-md">KPI: Reducción de tiempos muertos</div>
+                <p class="text-slate-600 text-sm leading-relaxed mb-8">Optimización de flujos de información y protocolos de feedback para reducir el ruido organizacional y la fatiga por reuniones.</p>
+                <div class="text-[10px] font-bold uppercase tracking-widest text-sky-700 bg-sky-100/50 p-3 rounded-lg border border-sky-200 text-center">KPI: Reducción de tiempos</div>
             </div>
-            <div class="bg-slate-950 p-8 rounded-2xl border border-white/5 card-hover">
+            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 card-hover">
                 <div class="flex items-center gap-4 mb-6">
-                    <span class="bg-amber-900/20 text-amber-500 p-3 rounded-lg"><i class="fas fa-chart-line"></i></span>
-                    <h4 class="font-bold text-lg uppercase tracking-tighter">ROI de Liderazgo</h4>
+                    <span class="bg-indigo-100 text-indigo-600 p-3 rounded-xl text-xl"><i class="fas fa-chart-line"></i></span>
+                    <h4 class="font-bold text-lg uppercase tracking-tighter text-slate-900">ROI de Liderazgo</h4>
                 </div>
-                <p class="text-slate-400 text-sm leading-relaxed mb-6">Maximizamos la capacidad de toma de decisiones bajo presión, garantizando un retorno real sobre la inversión en desarrollo de talento.</p>
-                <div class="text-[10px] font-bold uppercase tracking-widest text-amber-500 bg-amber-500/5 p-3 rounded-md">KPI: +25% Productividad Ejecutiva</div>
+                <p class="text-slate-600 text-sm leading-relaxed mb-8">Maximizamos la capacidad de toma de decisiones bajo presión, garantizando un retorno real sobre la inversión en desarrollo de talento.</p>
+                <div class="text-[10px] font-bold uppercase tracking-widest text-indigo-700 bg-indigo-100/50 p-3 rounded-lg border border-indigo-200 text-center">KPI: +25% Productividad</div>
             </div>
         </div>
     </div>
 </section>
  
-<section class="py-24 bg-slate-950 px-6 border-b border-white/5">
+<section class="py-24 bg-sky-50 px-6 border-y border-slate-200">
     <div class="container mx-auto max-w-5xl">
-        <div class="bg-slate-900/50 p-12 rounded-3xl border border-white/10 flex flex-col md:flex-row items-center gap-12">
+        <div class="bg-white p-12 rounded-3xl border border-slate-200 flex flex-col md:flex-row items-center gap-12 shadow-md">
             <div class="w-full md:w-2/3">
-                <h3 class="accent-gold font-bold text-xs uppercase tracking-[0.5em] mb-4">Certificación de Procesos</h3>
-                <h2 class="text-3xl font-black mb-6 uppercase italic tracking-tighter text-white">Estándares Internacionales de Calidad</h2>
-                <p class="text-slate-400 leading-relaxed mb-8">
+                <h3 class="text-sky-500 font-bold text-xs uppercase tracking-[0.5em] mb-4">Certificación de Procesos</h3>
+                <h2 class="text-3xl font-black mb-6 uppercase italic tracking-tighter text-slate-900">Estándares Internacionales</h2>
+                <p class="text-slate-600 leading-relaxed mb-8">
                     Como parte de la <strong>Inmersión Profunda</strong>, facilitamos la transición hacia estándares internacionales. Contamos con un equipo técnico especializado en la implementación de <strong>Normas ISO</strong> para asegurar la calidad e inocuidad alimentaria en sus procesos.
                 </p>
                 <div class="flex flex-wrap gap-4 mb-8">
-                    <span class="bg-slate-800 text-white text-[10px] font-bold px-4 py-2 rounded-full border border-white/10">ISO 9001</span>
-                    <span class="bg-slate-800 text-white text-[10px] font-bold px-4 py-2 rounded-full border border-white/10">ISO 22000 (Inocuidad)</span>
-                    <span class="bg-slate-800 text-white text-[10px] font-bold px-4 py-2 rounded-full border border-white/10">ISO 14001</span>
-                    <span class="bg-slate-800 text-white text-[10px] font-bold px-4 py-2 rounded-full border border-white/10">ISO 45001</span>
+                    <span class="bg-slate-100 text-slate-700 text-[10px] font-bold px-4 py-2 rounded-full border border-slate-300">ISO 9001</span>
+                    <span class="bg-slate-100 text-slate-700 text-[10px] font-bold px-4 py-2 rounded-full border border-slate-300">ISO 22000</span>
+                    <span class="bg-slate-100 text-slate-700 text-[10px] font-bold px-4 py-2 rounded-full border border-slate-300">ISO 14001</span>
+                    <span class="bg-slate-100 text-slate-700 text-[10px] font-bold px-4 py-2 rounded-full border border-slate-300">ISO 45001</span>
                 </div>
-                <a href="https://wa.me/5493434164699" target="_blank" class="inline-block border border-amber-500/40 text-amber-500 hover:bg-amber-500/10 px-8 py-3 font-bold uppercase text-[10px] tracking-widest rounded-sm transition">
+                <a href="https://wa.me/5493434164699" target="_blank" class="inline-block border-2 border-blue-700 text-blue-700 hover:bg-blue-50 px-8 py-3 font-bold uppercase text-[10px] tracking-widest rounded-md transition">
                     Consultar por Implementación
                 </a>
             </div>
             <div class="w-full md:w-1/3 text-center">
-                <i class="fas fa-certificate text-8xl accent-gold opacity-20"></i>
+                <i class="fas fa-certificate text-9xl text-sky-100"></i>
             </div>
         </div>
     </div>
 </section>
  
-<section class="py-32 bg-slate-900 px-6">
-    <div class="container mx-auto max-w-6xl flex flex-col md:flex-row items-center gap-20">
-        <div class="w-full md:w-1/2 lg:w-2/5">
-            <img src="20240606_122252.jpg" alt="Fabricio Martínez" class="rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition duration-700 border border-white/10">
+<section class="py-32 bg-white px-6">
+    <div class="container mx-auto max-w-6xl flex flex-col md:flex-row items-center gap-16 lg:gap-24">
+        
+        <div class="w-full md:w-1/2 lg:w-2/5 relative mb-12 md:mb-0">
+            <img src="20240606_122252.jpg" alt="Fabricio Martínez" class="rounded-2xl shadow-xl border border-slate-200 relative z-10 w-4/5">
+            
+            <img src="argentinasoftbolmeditando.jpg" alt="Selección Argentina Femenina de Sóftbol meditando antes de la final Sudamericana" class="rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.2)] border-4 border-white absolute bottom-[-15%] right-0 w-3/5 z-20 hover:scale-105 transition duration-500">
+            
+            <div class="absolute bottom-[-22%] right-2 z-30 bg-blue-700 px-4 py-2 rounded-lg shadow-lg border border-blue-600">
+                <p class="text-[9px] text-white font-bold uppercase tracking-widest"><i class="fas fa-medal text-sky-300 mr-2"></i>Selección Argentina</p>
+            </div>
         </div>
-        <div class="w-full md:w-1/2">
-            <h3 class="accent-gold font-bold text-xs uppercase tracking-[0.4em] mb-4">Fabricio Martínez</h3>
-            <h2 class="text-4xl md:text-5xl font-bold mb-8 uppercase tracking-tighter italic">Experiencia en <span class="accent-gold">Alto Rendimiento</span></h2>
-            <p class="text-lg text-slate-300 mb-6 leading-relaxed">
+
+        <div class="w-full md:w-1/2 mt-10 md:mt-0">
+            <h3 class="text-sky-500 font-bold text-xs uppercase tracking-[0.4em] mb-4">Fabricio Martínez</h3>
+            <h2 class="text-4xl md:text-5xl font-bold mb-8 uppercase tracking-tighter italic text-slate-900">Experiencia en <br><span class="text-blue-700">Alto Rendimiento</span></h2>
+            <p class="text-lg text-slate-600 mb-6 leading-relaxed">
                 Consultor con más de 25 años de trayectoria. Ha brindado servicios de <strong>Capacitación y Coaching Ejecutivo</strong> para empresas multinacionales, <strong>Industria</strong> y se ha desempeñado como Coach en Neurociencias para <strong>Selecciones Nacionales de Sóftbol</strong>.
             </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8 font-bold text-slate-500 uppercase text-[9px] tracking-[0.2em] mb-10">
-                <p><i class="fas fa-check accent-gold mr-2"></i> Neurociencias (UBA)</p>
-                <p><i class="fas fa-check accent-gold mr-2"></i> Liderazgo Educativo (Univ. San Andrés)</p>
-                <p><i class="fas fa-check accent-gold mr-2"></i> Posgrado Liderazgo y PNL (ENEB)</p>
-                <p><i class="fas fa-check accent-gold mr-2"></i> Especialista Cognitivo Motor</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 font-bold text-slate-700 uppercase text-[10px] tracking-[0.15em] mb-10 bg-slate-50 p-6 rounded-xl border border-slate-100">
+                <p><i class="fas fa-check text-blue-600 mr-3"></i> Neurociencias (UBA)</p>
+                <p><i class="fas fa-check text-blue-600 mr-3"></i> Liderazgo Educativo (UdeSA)</p>
+                <p><i class="fas fa-check text-blue-600 mr-3"></i> Liderazgo y PNL (ENEB)</p>
+                <p><i class="fas fa-check text-blue-600 mr-3"></i> Especialista Cognitivo Motor</p>
             </div>
         </div>
     </div>
 </section>
  
-<section class="py-32 bg-slate-950 px-6 text-center">
-    <div class="container mx-auto max-w-4xl">
-        <h3 class="accent-gold font-bold text-xs uppercase tracking-[0.5em] mb-4">Oratoria & Liderazgo</h3>
-        <h2 class="text-4xl font-black mb-16 uppercase italic tracking-tighter">Disertaciones <span class="accent-gold">Destacadas</span></h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-            <div>
-                <i class="fas fa-microchip text-2xl text-slate-700 mb-6"></i>
-                <h4 class="text-white font-bold text-lg mb-4 italic uppercase tracking-tighter">Neurociencias</h4>
-                <p class="text-slate-500 text-xs">Biología de la resistencia al cambio en organizaciones complejas.</p>
-            </div>
-            <div>
-                <i class="fas fa-university text-2xl text-slate-700 mb-6"></i>
-                <h4 class="text-white font-bold text-lg mb-4 italic uppercase tracking-tighter">Educación</h4>
-                <p class="text-slate-500 text-xs">Estrategias de gestión y climas institucionales de excelencia.</p>
-            </div>
-            <div>
-                <i class="fas fa-running text-2xl text-slate-700 mb-6"></i>
-                <h4 class="text-white font-bold text-lg mb-4 italic uppercase tracking-tighter">Alto Rendimiento</h4>
-                <p class="text-slate-500 text-xs">Ciencia aplicada a la toma de decisiones bajo presión competitiva.</p>
-            </div>
-        </div>
-    </div>
-</section>
- 
-<section class="py-32 bg-slate-900 border-y border-white/5">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-        <i class="fas fa-quote-left text-3xl accent-gold mb-10 opacity-30"></i>
-        <h3 class="text-white text-3xl font-black uppercase italic mb-8 tracking-tighter">El Valor de la <span class="accent-gold">Inmersión</span></h3>
-        <p class="text-xl text-slate-400 leading-relaxed italic mb-10">
-            "No diagnosticamos desde la periferia. Nos sumergimos en la operación diaria para identificar los cuellos de botella biológicos y sistémicos. Corregimos los puntos de fuga de energía para que la estructura rinda a su máximo potencial."
+<section class="py-32 bg-blue-700 border-y border-blue-800 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 30px 30px;"></div>
+    
+    <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+        <i class="fas fa-quote-left text-5xl text-sky-400 mb-10 opacity-80"></i>
+        <h3 class="text-white text-4xl font-black uppercase italic mb-10 tracking-tighter">Humanidad, <span class="text-sky-300">Propósito</span> y Vida</h3>
+        <p class="text-2xl md:text-3xl text-blue-50 leading-relaxed italic mb-12 font-light">
+            "Ayudo a que las organizaciones recuperen humanidad, propósito y vida. Porque la ciencia optimiza el rendimiento, pero es el propósito lo que sostiene el éxito."
         </p>
+        <div class="w-24 h-1 bg-sky-400 mx-auto rounded-full"></div>
+    </div>
+</section>
+
+<section class="py-32 bg-sky-50 px-6 text-center border-b border-slate-200">
+    <div class="container mx-auto max-w-4xl">
+        <h3 class="text-sky-500 font-bold text-xs uppercase tracking-[0.5em] mb-4">Oratoria & Liderazgo</h3>
+        <h2 class="text-4xl font-black mb-16 uppercase italic tracking-tighter text-slate-900">Disertaciones <span class="text-blue-700">Destacadas</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                <i class="fas fa-microchip text-4xl text-blue-200 mb-6 block"></i>
+                <h4 class="text-slate-900 font-bold text-lg mb-4 italic uppercase tracking-tighter">Neurociencias</h4>
+                <p class="text-slate-600 text-sm">Biología de la resistencia al cambio en organizaciones complejas.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                <i class="fas fa-university text-4xl text-sky-200 mb-6 block"></i>
+                <h4 class="text-slate-900 font-bold text-lg mb-4 italic uppercase tracking-tighter">Educación</h4>
+                <p class="text-slate-600 text-sm">Estrategias de gestión y climas institucionales de excelencia.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                <i class="fas fa-running text-4xl text-indigo-200 mb-6 block"></i>
+                <h4 class="text-slate-900 font-bold text-lg mb-4 italic uppercase tracking-tighter">Alto Rendimiento</h4>
+                <p class="text-slate-600 text-sm">Ciencia aplicada a la toma de decisiones bajo presión competitiva.</p>
+            </div>
+        </div>
     </div>
 </section>
  
-<section class="py-32 bg-slate-950 px-6 border-b border-white/5">
+<section class="py-32 bg-white px-6 border-b border-slate-200">
     <div class="container mx-auto max-w-6xl">
-        <h3 class="accent-gold font-bold text-xs text-center uppercase tracking-[0.5em] mb-4">Herramienta de Análisis</h3>
-        <h2 class="text-4xl font-black text-center mb-4 uppercase italic tracking-tighter text-white">Radar de <span class="accent-gold">Madurez Organizacional</span></h2>
+        <h3 class="text-sky-500 font-bold text-xs text-center uppercase tracking-[0.5em] mb-4">Herramienta de Análisis</h3>
+        <h2 class="text-4xl font-black text-center mb-4 uppercase italic tracking-tighter text-slate-900">Radar de <span class="text-blue-700">Madurez</span></h2>
         <p class="text-slate-500 text-center italic mb-20 max-w-xl mx-auto">Ajustá cada dimensión según tu realidad actual y observá tu perfil en tiempo real.</p>
  
-        <div class="bg-slate-900/50 p-10 md:p-14 rounded-3xl border border-white/10">
+        <div class="bg-slate-50 p-10 md:p-14 rounded-3xl border border-slate-200 shadow-lg">
  
-            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-10">
-                <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-slate-600">1 = bajo rendimiento &nbsp;·&nbsp; 10 = excelencia</span>
-                <span id="r-nivel-badge" class="text-[9px] font-bold uppercase tracking-widest px-4 py-2 rounded-sm" style="background:rgba(212,175,55,0.1);color:#D4AF37;">Calculando...</span>
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-12">
+                <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-slate-500 bg-white px-4 py-2 rounded-md border border-slate-200">1 = bajo rendimiento &nbsp;·&nbsp; 10 = excelencia</span>
+                <span id="r-nivel-badge" class="text-[10px] font-bold uppercase tracking-widest px-5 py-2.5 rounded-md shadow-sm" style="background:#e0f2fe;color:#0369a1;border:1px solid #bae6fd;">Calculando...</span>
             </div>
  
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8 mb-10" id="r-sliders"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-10 mb-12" id="r-sliders"></div>
  
-            <div class="grid grid-cols-3 gap-4 mb-10">
-                <div class="bg-slate-950 p-6 rounded-2xl border border-white/5">
-                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-600 mb-3">Índice global</p>
-                    <p class="text-4xl font-black accent-gold" id="r-global">—</p>
-                    <p class="text-[10px] text-slate-600 mt-1">sobre 100</p>
+            <div class="grid grid-cols-3 gap-6 mb-12">
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2">Índice global</p>
+                    <p class="text-4xl font-black text-blue-700" id="r-global">—</p>
+                    <p class="text-[10px] text-slate-400 mt-1">sobre 100</p>
                 </div>
-                <div class="bg-slate-950 p-6 rounded-2xl border border-white/5">
-                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-600 mb-3">Más fuerte</p>
-                    <p class="text-sm font-bold text-white leading-snug" id="r-best">—</p>
-                    <p class="text-[10px] text-slate-600 mt-2" id="r-best-val"></p>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3">Más fuerte</p>
+                    <p class="text-sm font-bold text-slate-800 leading-snug" id="r-best">—</p>
+                    <p class="text-[11px] font-bold text-sky-600 mt-2 bg-sky-50 py-1 rounded" id="r-best-val"></p>
                 </div>
-                <div class="bg-slate-950 p-6 rounded-2xl border border-white/5">
-                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-600 mb-3">Oportunidad</p>
-                    <p class="text-sm font-bold text-white leading-snug" id="r-worst">—</p>
-                    <p class="text-[10px] text-slate-600 mt-2" id="r-worst-val"></p>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3">Oportunidad</p>
+                    <p class="text-sm font-bold text-slate-800 leading-snug" id="r-worst">—</p>
+                    <p class="text-[11px] font-bold text-rose-500 mt-2 bg-rose-50 py-1 rounded" id="r-worst-val"></p>
                 </div>
             </div>
  
-            <div class="flex justify-center mb-10">
-                <canvas id="radarChart" width="400" height="340"></canvas>
+            <div class="flex justify-center mb-12 bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+                <canvas id="radarChart" width="450" height="380"></canvas>
             </div>
  
             <div class="flex flex-col md:flex-row gap-4">
-                <button onclick="rReset()" class="border border-white/10 text-slate-500 px-8 py-4 font-bold uppercase text-[10px] tracking-widest rounded-sm hover:border-amber-500/30 hover:text-amber-500 transition">
+                <button onclick="rReset()" class="bg-white border-2 border-slate-300 text-slate-600 px-8 py-4 font-bold uppercase text-[11px] tracking-widest rounded-md hover:border-slate-400 hover:text-slate-800 transition shadow-sm">
                     Reiniciar
                 </button>
-                <a href="https://wa.me/5493434164699" target="_blank" class="flex-1 bg-gold text-slate-900 px-8 py-4 font-bold uppercase text-[10px] tracking-[0.25em] rounded-sm hover:bg-amber-400 transition text-center">
+                <a href="https://wa.me/5493434164699" target="_blank" class="flex-1 bg-blue-700 text-white px-8 py-4 font-bold uppercase text-[11px] tracking-[0.25em] rounded-md hover:bg-blue-800 transition text-center shadow-md">
                     Hablar con Fabricio sobre mi perfil →
                 </a>
             </div>
@@ -325,54 +351,54 @@
     </div>
 </section>
  
-<section id="diagnostico" class="py-32 bg-slate-900 px-6">
+<section id="diagnostico" class="py-32 bg-sky-50 px-6">
     <div class="container mx-auto max-w-6xl">
-        <h3 class="accent-gold font-bold text-xs text-center uppercase tracking-[0.5em] mb-4">Auto-Diagnóstico Profesional</h3>
-        <h2 class="text-4xl font-black text-center mb-4 uppercase italic tracking-tighter text-white">¿Cómo está tu <span class="accent-gold">Organización?</span></h2>
-        <p class="text-slate-500 text-center italic mb-20 max-w-2xl mx-auto">5 preguntas adaptadas a tu área. Obtenés un análisis inmediato con recomendaciones estratégicas personalizadas.</p>
+        <h3 class="text-sky-500 font-bold text-xs text-center uppercase tracking-[0.5em] mb-4">Auto-Diagnóstico Profesional</h3>
+        <h2 class="text-4xl font-black text-center mb-4 uppercase italic tracking-tighter text-slate-900">¿Cómo está tu <span class="text-blue-700">Organización?</span></h2>
+        <p class="text-slate-600 text-center italic mb-16 max-w-2xl mx-auto">5 preguntas adaptadas a tu área. Obtenés un análisis inmediato con recomendaciones estratégicas personalizadas.</p>
  
-        <div class="bg-slate-950 p-10 md:p-14 rounded-3xl border border-white/5 max-w-3xl mx-auto">
+        <div class="bg-white p-10 md:p-14 rounded-3xl border border-slate-200 shadow-xl max-w-3xl mx-auto">
  
-            <div class="flex justify-between items-center mb-3">
-                <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-600" id="d-step-label">Seleccioná tu área</span>
-                <span class="text-[10px] font-bold uppercase tracking-[0.15em] text-slate-600" id="d-step-count">Paso 1 de 7</span>
+            <div class="flex justify-between items-center mb-4">
+                <span class="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400" id="d-step-label">Seleccioná tu área</span>
+                <span class="text-[11px] font-bold uppercase tracking-[0.15em] text-blue-700 bg-blue-50 px-3 py-1 rounded-full" id="d-step-count">Paso 1 de 7</span>
             </div>
-            <div class="d-progress-bg mb-10"><div class="d-progress-fill" id="d-progress" style="width:14%"></div></div>
+            <div class="d-progress-bg mb-12"><div class="d-progress-fill" id="d-progress" style="width:14%"></div></div>
  
             <div class="d-step active" id="d-step-0">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8" id="d-area-btns"></div>
-                <button class="d-btn-next w-full" id="d-next-0" disabled onclick="dNext()">Continuar →</button>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10" id="d-area-btns"></div>
+                <button class="d-btn-next w-full py-5 text-[12px]" id="d-next-0" disabled onclick="dNext()">Continuar →</button>
             </div>
  
             <div class="d-step" id="d-step-1">
-                <span class="text-[10px] font-bold uppercase tracking-[0.25em] accent-gold block mb-3" id="d-dim-1"></span>
-                <p class="text-white font-bold text-xl italic uppercase tracking-tight leading-tight mb-8" id="d-q-1"></p>
-                <div class="flex flex-col gap-3 mb-8" id="d-opts-1"></div>
-                <div class="flex gap-3"><button class="d-btn-back" onclick="dBack()">← Atrás</button><button class="d-btn-next" id="d-next-1" disabled onclick="dNext()">Continuar →</button></div>
+                <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-sky-500 block mb-3" id="d-dim-1"></span>
+                <p class="text-slate-900 font-bold text-2xl italic uppercase tracking-tight leading-tight mb-8" id="d-q-1"></p>
+                <div class="flex flex-col gap-4 mb-10" id="d-opts-1"></div>
+                <div class="flex gap-4"><button class="d-btn-back" onclick="dBack()">← Atrás</button><button class="d-btn-next" id="d-next-1" disabled onclick="dNext()">Continuar →</button></div>
             </div>
             <div class="d-step" id="d-step-2">
-                <span class="text-[10px] font-bold uppercase tracking-[0.25em] accent-gold block mb-3" id="d-dim-2"></span>
-                <p class="text-white font-bold text-xl italic uppercase tracking-tight leading-tight mb-8" id="d-q-2"></p>
-                <div class="flex flex-col gap-3 mb-8" id="d-opts-2"></div>
-                <div class="flex gap-3"><button class="d-btn-back" onclick="dBack()">← Atrás</button><button class="d-btn-next" id="d-next-2" disabled onclick="dNext()">Continuar →</button></div>
+                <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-sky-500 block mb-3" id="d-dim-2"></span>
+                <p class="text-slate-900 font-bold text-2xl italic uppercase tracking-tight leading-tight mb-8" id="d-q-2"></p>
+                <div class="flex flex-col gap-4 mb-10" id="d-opts-2"></div>
+                <div class="flex gap-4"><button class="d-btn-back" onclick="dBack()">← Atrás</button><button class="d-btn-next" id="d-next-2" disabled onclick="dNext()">Continuar →</button></div>
             </div>
             <div class="d-step" id="d-step-3">
-                <span class="text-[10px] font-bold uppercase tracking-[0.25em] accent-gold block mb-3" id="d-dim-3"></span>
-                <p class="text-white font-bold text-xl italic uppercase tracking-tight leading-tight mb-8" id="d-q-3"></p>
-                <div class="flex flex-col gap-3 mb-8" id="d-opts-3"></div>
-                <div class="flex gap-3"><button class="d-btn-back" onclick="dBack()">← Atrás</button><button class="d-btn-next" id="d-next-3" disabled onclick="dNext()">Continuar →</button></div>
+                <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-sky-500 block mb-3" id="d-dim-3"></span>
+                <p class="text-slate-900 font-bold text-2xl italic uppercase tracking-tight leading-tight mb-8" id="d-q-3"></p>
+                <div class="flex flex-col gap-4 mb-10" id="d-opts-3"></div>
+                <div class="flex gap-4"><button class="d-btn-back" onclick="dBack()">← Atrás</button><button class="d-btn-next" id="d-next-3" disabled onclick="dNext()">Continuar →</button></div>
             </div>
             <div class="d-step" id="d-step-4">
-                <span class="text-[10px] font-bold uppercase tracking-[0.25em] accent-gold block mb-3" id="d-dim-4"></span>
-                <p class="text-white font-bold text-xl italic uppercase tracking-tight leading-tight mb-8" id="d-q-4"></p>
-                <div class="flex flex-col gap-3 mb-8" id="d-opts-4"></div>
-                <div class="flex gap-3"><button class="d-btn-back" onclick="dBack()">← Atrás</button><button class="d-btn-next" id="d-next-4" disabled onclick="dNext()">Continuar →</button></div>
+                <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-sky-500 block mb-3" id="d-dim-4"></span>
+                <p class="text-slate-900 font-bold text-2xl italic uppercase tracking-tight leading-tight mb-8" id="d-q-4"></p>
+                <div class="flex flex-col gap-4 mb-10" id="d-opts-4"></div>
+                <div class="flex gap-4"><button class="d-btn-back" onclick="dBack()">← Atrás</button><button class="d-btn-next" id="d-next-4" disabled onclick="dNext()">Continuar →</button></div>
             </div>
             <div class="d-step" id="d-step-5">
-                <span class="text-[10px] font-bold uppercase tracking-[0.25em] accent-gold block mb-3" id="d-dim-5"></span>
-                <p class="text-white font-bold text-xl italic uppercase tracking-tight leading-tight mb-8" id="d-q-5"></p>
-                <div class="flex flex-col gap-3 mb-8" id="d-opts-5"></div>
-                <div class="flex gap-3"><button class="d-btn-back" onclick="dBack()">← Atrás</button><button class="d-btn-next" id="d-next-5" disabled onclick="dNext()">Ver mi diagnóstico →</button></div>
+                <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-sky-500 block mb-3" id="d-dim-5"></span>
+                <p class="text-slate-900 font-bold text-2xl italic uppercase tracking-tight leading-tight mb-8" id="d-q-5"></p>
+                <div class="flex flex-col gap-4 mb-10" id="d-opts-5"></div>
+                <div class="flex gap-4"><button class="d-btn-back" onclick="dBack()">← Atrás</button><button class="d-btn-next" id="d-next-5" disabled onclick="dNext()">Ver mi diagnóstico →</button></div>
             </div>
  
             <div class="d-step" id="d-step-6"><div id="d-result"></div></div>
@@ -380,15 +406,15 @@
     </div>
 </section>
  
-<footer class="py-24 bg-black text-slate-600 text-center px-6 border-t border-white/5">
+<footer class="py-24 bg-slate-950 text-slate-400 text-center px-6">
     <h2 class="text-white text-4xl font-black mb-4 uppercase italic tracking-tighter">Fabricio Martínez</h2>
-    <p class="text-[10px] mb-16 uppercase tracking-[0.6em] text-slate-500 italic">Inmersión Profunda • Resultados Reales</p>
+    <p class="text-[10px] mb-16 uppercase tracking-[0.6em] text-sky-400 italic">Inmersión Profunda • Resultados Reales</p>
     <div class="flex justify-center space-x-12 mb-20 text-3xl">
-        <a href="https://www.linkedin.com/in/fabriciomartinezok/" target="_blank" class="hover:text-amber-400 transition"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.instagram.com/fabri_martinez_ok/?hl=es" target="_blank" class="hover:text-amber-400 transition"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/5493434164699" target="_blank" class="hover:text-amber-400 transition"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.linkedin.com/in/fabriciomartinezok/" target="_blank" class="hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/fabri_martinez_ok/?hl=es" target="_blank" class="hover:text-white transition"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/5493434164699" target="_blank" class="hover:text-white transition"><i class="fab fa-whatsapp"></i></a>
     </div>
-    <p class="text-[9px] uppercase tracking-[0.8em] opacity-30">&copy; 2026 Fabricio Martínez | Estrategia & Gestión</p>
+    <p class="text-[9px] uppercase tracking-[0.8em] opacity-40">&copy; 2026 Fabricio Martínez | Estrategia & Gestión</p>
 </footer>
  
 <script>
@@ -408,9 +434,9 @@ const rVals = {}; rDims.forEach(d => rVals[d.key] = 5);
     rDims.forEach(d => {
         const div = document.createElement('div');
         div.innerHTML = `
-          <div class="flex justify-between items-center mb-2">
-            <span class="text-[10px] font-bold uppercase tracking-widest text-slate-500">${d.label}</span>
-            <span class="text-[10px] font-bold accent-gold" id="rv-${d.key}">5</span>
+          <div class="flex justify-between items-center mb-3">
+            <span class="text-[11px] font-bold uppercase tracking-widest text-slate-600">${d.label}</span>
+            <span class="text-[12px] font-bold text-blue-700 bg-blue-50 px-2 py-1 rounded" id="rv-${d.key}">5</span>
           </div>
           <input class="r-slider" type="range" min="1" max="10" step="1" value="5" oninput="rSlide('${d.key}',this.value)">`;
         c.appendChild(div);
@@ -432,13 +458,13 @@ function rUpdateMetrics() {
     document.getElementById('r-best-val').textContent = rVals[best.key] + ' / 10';
     document.getElementById('r-worst').textContent = worst.label;
     document.getElementById('r-worst-val').textContent = rVals[worst.key] + ' / 10';
-    let nivel, bg, color;
-    if(global<=35)      {nivel='Estadio inicial';          bg='rgba(163,45,45,0.15)';  color='#F09595';}
-    else if(global<=55) {nivel='En desarrollo';            bg='rgba(186,117,23,0.15)'; color='#EF9F27';}
-    else if(global<=75) {nivel='Alto rendimiento parcial'; bg='rgba(55,138,221,0.15)'; color='#85B7EB';}
-    else                {nivel='Excelencia organizacional';bg='rgba(212,175,55,0.15)'; color='#D4AF37';}
+    let nivel, bg, color, border;
+    if(global<=35)      {nivel='Estadio inicial';          bg='#fff1f2'; color='#e11d48'; border='#fecdd3';}
+    else if(global<=55) {nivel='En desarrollo';            bg='#fffbeb'; color='#d97706'; border='#fde68a';}
+    else if(global<=75) {nivel='Alto rendimiento parcial'; bg='#f0f9ff'; color='#0284c7'; border='#bae6fd';}
+    else                {nivel='Excelencia organizacional';bg='#eff6ff'; color='#1d4ed8'; border='#bfdbfe';}
     const b = document.getElementById('r-nivel-badge');
-    b.textContent=nivel; b.style.background=bg; b.style.color=color;
+    b.textContent=nivel; b.style.background=bg; b.style.color=color; b.style.borderColor=border;
 }
 let rChart;
 (function() {
@@ -449,10 +475,10 @@ let rChart;
             labels: rDims.map(d=>d.label),
             datasets:[
                 {label:'Tu organización', data:rDims.map(d=>rVals[d.key]),
-                 backgroundColor:'rgba(212,175,55,0.12)', borderColor:'#D4AF37',
-                 borderWidth:2, pointBackgroundColor:'#D4AF37', pointRadius:4, pointHoverRadius:6},
-                {label:'Referencia', data:rDims.map(()=>8),
-                 backgroundColor:'rgba(255,255,255,0.02)', borderColor:'rgba(255,255,255,0.1)',
+                 backgroundColor:'rgba(14, 165, 233, 0.2)', borderColor:'#0ea5e9', /* Celeste */
+                 borderWidth:3, pointBackgroundColor:'#1d4ed8', pointBorderColor:'#fff', pointRadius:5, pointHoverRadius:7},
+                {label:'Referencia (8)', data:rDims.map(()=>8),
+                 backgroundColor:'rgba(0,0,0,0)', borderColor:'rgba(148, 163, 184, 0.4)',
                  borderWidth:1.5, borderDash:[5,5], pointRadius:0}
             ]
         },
@@ -460,14 +486,14 @@ let rChart;
             responsive:false,
             plugins:{
                 legend:{display:false},
-                tooltip:{backgroundColor:'rgba(2,6,23,0.95)',titleColor:'#D4AF37',bodyColor:'#94a3b8',borderColor:'rgba(212,175,55,0.2)',borderWidth:1}
+                tooltip:{backgroundColor:'rgba(15, 23, 42, 0.9)',titleColor:'#fff',bodyColor:'#cbd5e1',borderColor:'rgba(255,255,255,0.1)',borderWidth:1, padding: 12}
             },
             scales:{r:{
                 min:0, max:10,
-                ticks:{stepSize:2, color:'rgba(255,255,255,0.12)', font:{size:10}, backdropColor:'transparent'},
-                grid:{color:'rgba(255,255,255,0.05)'},
-                angleLines:{color:'rgba(255,255,255,0.05)'},
-                pointLabels:{color:'rgba(148,163,184,0.6)', font:{size:11}}
+                ticks:{stepSize:2, color:'rgba(100,116,139,0.5)', font:{size:10, family: 'Inter'}, backdropColor:'transparent'},
+                grid:{color:'rgba(226, 232, 240, 0.8)'},
+                angleLines:{color:'rgba(226, 232, 240, 0.8)'},
+                pointLabels:{color:'#475569', font:{size:12, family: 'Inter', weight: 'bold'}}
             }}
         }
     });
@@ -483,34 +509,34 @@ function rReset() {
     rUpdateChart(); rUpdateMetrics();
 }
  
-/* ═══ DIAGNÓSTICO (NUEVAS PREGUNTAS OPTIMIZADAS) ═══ */
+/* ═══ DIAGNÓSTICO (PREGUNTAS COMPLETAS) ═══ */
 const dQuestions = {
-    empresa:[
+    empresa: [
         {dim:'Estrategia & OKRs', label:'¿Qué tan alineados están los equipos con los objetivos de rentabilidad?', opts:[['Sin rumbo claro, apagando incendios diarios',1],['Metas vagas, seguimiento inconsistente',2],['Mayoría alineada, algunos silos aislados',3],['Alta alineación, OKRs medidos y ajustados',4]]},
         {dim:'Liderazgo & Presión', label:'¿Cómo responden tus líderes ante crisis o picos de estrés?', opts:[['Decisiones reactivas y emocionales',1],['Depende exclusivamente del líder de turno',2],['Protocolos existen pero a veces fallan bajo presión',3],['Visión fría, estratégica y sistematizada',4]]},
         {dim:'Flujo de Procesos', label:'¿El conocimiento operativo depende de personas o de sistemas?', opts:[['100% dependiente de personas clave (cuello de botella)',1],['Algunas cosas documentadas, pero muy informales',2],['Sistemas básicos en áreas críticas',3],['Procesos estandarizados y auditables',4]]},
         {dim:'Clima Organizacional', label:'¿Cuál es el nivel de "ruido" y desgaste en los equipos?', opts:[['Alta fricción, quejas constantes y rotación',1],['Desgaste visible en épocas de alta demanda',2],['Aceptable, con episodios aislados de estrés',3],['Alta cohesión, comunicación limpia y asertiva',4]]},
-        {dim:'Calidad & Mejora', label:'¿Tienen procesos de certificación o auditoría de calidad?', opts:[['Ninguno, gestión puramente empírica',1],['En planes, sin ejecución real',2],['En proceso de implementación (ej. Normas ISO)',3],['Certificados y en mejora continua comprobable',4]]},
+        {dim:'Calidad & Mejora', label:'¿Tienen procesos de certificación o auditoría de calidad?', opts:[['Ninguno, gestión puramente empírica',1],['En planes, sin ejecución real',2],['En proceso de implementación (ej. Normas ISO)',3],['Certificados y en mejora continua comprobable',4]]}
     ],
-    deporte:[
+    deporte: [
         {dim:'Toma de Decisiones', label:'¿Cómo reacciona el atleta/equipo en los momentos críticos del juego?', opts:[['Pánico, bloqueo o decisiones erráticas',1],['Inconsistente: a veces bien, a veces mal',2],['Sólido, pero baja eficacia en la instancia final',3],['Precisión y lucidez bajo máxima presión',4]]},
         {dim:'Neuro-Coaching', label:'¿Tienen entrenamiento específico cognitivo-motor y velocidad de reacción?', opts:[['Solo entrenamiento físico, técnico y táctico',1],['Algún ejercicio aislado, sin medición real',2],['Rutinas cognitivas incorporadas pero básicas',3],['Programa neuro-motor sistematizado y medido',4]]},
         {dim:'Liderazgo de Campo', label:'¿Cómo es la gestión emocional del cuerpo técnico hacia el plantel?', opts:[['Gritos, presión negativa y desgaste sistemático',1],['Liderazgo motivacional pero sin método claro',2],['Buen manejo, pero falta protocolo ante crisis en cancha',3],['Liderazgo inteligente, asertivo y neuro-compatible',4]]},
         {dim:'Cohesión Grupal', label:'¿El equipo funciona como una suma de talentos o como un sistema?', opts:[['Silos, egos fuertes y poca solidaridad interna',1],['Se unen solo cuando los resultados acompañan',2],['Buena base, falta química en la adversidad extrema',3],['Sistema cohesionado de alto rendimiento',4]]},
-        {dim:'Gestión Institucional', label:'¿El club respalda al deporte con procesos administrativos predecibles?', opts:[['Caos directivo, promesas incumplidas y urgencias',1],['Esfuerzo amateur, buena voluntad pero sin recursos organizados',2],['Estructura en desarrollo, con algunos baches de gestión',3],['Gestión dirigencial profesional, previsible y medible',4]]},
+        {dim:'Gestión Institucional', label:'¿El club respalda al deporte con procesos administrativos predecibles?', opts:[['Caos directivo, promesas incumplidas y urgencias',1],['Esfuerzo amateur, buena voluntad pero sin recursos organizados',2],['Estructura en desarrollo, con algunos baches de gestión',3],['Gestión dirigencial profesional, previsible y medible',4]]}
     ],
-    organismo:[
+    organismo: [
         {dim:'Dirección Estratégica', label:'¿El equipo directivo lidera la visión o solo administra la burocracia?', opts:[['Apagando incendios administrativos diarios',1],['Intenta liderar pero el sistema lo consume',2],['Logra espacios de liderazgo pedagógico/institucional',3],['Conducción proactiva, estratégica y transformadora',4]]},
         {dim:'Clima Institucional', label:'¿Cómo es el nivel de resistencia al cambio en la organización?', opts:[['Alta toxicidad y bloqueo a cualquier innovación',1],['Escepticismo generalizado ("siempre se hizo así")',2],['Receptividad media, adopción lenta de nuevas dinámicas',3],['Cultura abierta al cambio y enfocada en mejora continua',4]]},
         {dim:'Comunicación', label:'¿Cómo fluye la información entre la dirección y los equipos de trabajo?', opts:[['Principalmente a través de rumores y pasillos',1],['Canales formales lentos, burocráticos y poco efectivos',2],['Flujo regular, a veces con ruido o malos entendidos',3],['Comunicación asertiva, transparente, rápida y directa',4]]},
         {dim:'Estandarización', label:'¿Los procesos internos están sistematizados y documentados?', opts:[['Totalmente artesanales y dependientes de una persona',1],['Básicos, con mucha carga manual y papel',2],['Parcialmente automatizados y documentados',3],['Totalmente sistematizados, eficientes y auditables',4]]},
-        {dim:'Desarrollo Humano', label:'¿Existen espacios formales de capacitación y contención profesional?', opts:[['Nulos, cada integrante sobrevive como puede',1],['Charlas esporádicas sin seguimiento real',2],['Plan de capacitación anual estándar',3],['Formación continua integral en liderazgo y gestión emocional',4]]},
+        {dim:'Desarrollo Humano', label:'¿Existen espacios formales de capacitación y contención profesional?', opts:[['Nulos, cada integrante sobrevive como puede',1],['Charlas esporádicas sin seguimiento real',2],['Plan de capacitación anual estándar',3],['Formación continua integral en liderazgo y gestión emocional',4]]}
     ]
 };
 const dAreas=[
-    {key:'empresa',   label:'Empresa',              icon:'fa-industry'},
-    {key:'deporte',   label:'Deporte',              icon:'fa-trophy'},
-    {key:'organismo', label:'Organismo / Educación', icon:'fa-university'},
+    {key:'empresa',   label:'Empresa',              icon:'fa-industry text-sky-500'},
+    {key:'deporte',   label:'Deporte',              icon:'fa-trophy text-blue-600'},
+    {key:'organismo', label:'Organismo / Educación', icon:'fa-university text-indigo-500'},
 ];
 let dArea=null, dStep=0, dAnswers=[];
  
@@ -518,7 +544,7 @@ let dArea=null, dStep=0, dAnswers=[];
     const c=document.getElementById('d-area-btns');
     dAreas.forEach(a=>{
         const btn=document.createElement('button'); btn.className='d-area-btn';
-        btn.innerHTML=`<i class="fas ${a.icon} text-2xl mb-4 block accent-gold"></i><span class="text-[10px] font-bold uppercase tracking-widest block">${a.label}</span>`;
+        btn.innerHTML=`<i class="fas ${a.icon} text-4xl mb-6 block"></i><span class="text-[12px] font-bold uppercase tracking-widest block">${a.label}</span>`;
         btn.onclick=()=>{ document.querySelectorAll('.d-area-btn').forEach(b=>b.classList.remove('selected')); btn.classList.add('selected'); dArea=a.key; document.getElementById('d-next-0').disabled=false; };
         c.appendChild(btn);
     });
@@ -557,54 +583,39 @@ function dShowResult(){
     const total=dAnswers.reduce((a,b)=>a+b,0);
     const pct=Math.round((total/(qs.length*4))*100);
     
-    // RECOMENDACIONES ESPECÍFICAS POR ÁREA Y PUNTAJE
     const dRecos = {
-        empresa: [
-            ['Tu empresa necesita estructura urgente. La falta de procesos está quemando a tu equipo y perdiendo rentabilidad.','Es vital implementar un "Sistema de Escalamiento Operativo" para salir del caos de depender de personas clave.','Sugerencia: Empezar con un diagnóstico de liderazgo profundo y mapeo de procesos clave.'],
-            ['Hay buenas bases, pero la fuga de energía es alta. Falta sistematizar el crecimiento de la operación.','Una alineación formal de OKRs ordenará las prioridades de todos los niveles.','El entrenamiento en toma de decisiones bajo presión evitará errores costosos.'],
-            ['Operan bien, pero hay cuellos de botella que impiden la escalabilidad total y la automatización.','Es el momento exacto para pulir la eficiencia interna y preparar certificaciones de calidad.','El "Programa de Blindaje" para CEOs y gerentes potenciará el ROI del liderazgo.'],
-            ['Nivel de excelencia. El sistema funciona, ahora el foco es la innovación estratégica y el legado.','Recomendamos auditorías preventivas y programas de formación de nuevos líderes.','Considerar la expansión del modelo de gestión corporativo a nuevas unidades de negocio.']
-        ],
-        deporte: [
-            ['El equipo está en grave riesgo competitivo por bloqueos emocionales y falta de gestión institucional.','Urge implementar entrenamiento cognitivo-motor para recuperar la lucidez y velocidad de reacción.','La directiva necesita ordenar los procesos administrativos para no trasladar el caos a la cancha.'],
-            ['El talento físico no es suficiente. La inconsistencia mental está costando resultados decisivos.','Hay que sistematizar la toma de decisiones bajo presión con técnicas de Neuro-Coaching.','El cuerpo técnico necesita incorporar herramientas de liderazgo neuro-compatible.'],
-            ['Son sumamente competitivos, pero les falta el salto de calidad mental para consolidarse en las finales.','Es necesario afinar la cohesión grupal y automatizar las respuestas motoras ante el estrés agudo.','La dirigencia debe acompañar con gestión 360° para sostener operativamente este nivel deportivo.'],
-            ['Nivel de élite comprobado. Músculo y cerebro están perfectamente sincronizados y soportados institucionalmente.','El trabajo ahora es de mantenimiento preventivo y manejo psicológico del éxito sostenido.','Sugerimos implementar mediciones neuro-cognitivas avanzadas para evitar el desgaste invisible.']
-        ],
-        organismo: [
-            ['La institución se encuentra en modo supervivencia. La burocracia y el desgaste consumen toda la energía.','Se requiere una intervención inmediata en el clima institucional y en el liderazgo directivo.','Es prioritario fijar protocolos básicos de comunicación para frenar el "ruido" y los rumores internos.'],
-            ['El esfuerzo individual es grande, pero la falta de sistematización colectiva frena la innovación.','Hay que trabajar en la gestión de la resistencia al cambio desde las neurociencias aplicadas.','Es clave profesionalizar y documentar procesos administrativos que hoy son demasiado artesanales.'],
-            ['Se percibe una buena gestión general, con importantes oportunidades de mejora en la agilidad de los procesos.','Es momento de potenciar el liderazgo directivo para que sea más transformador y menos operativo.','Aumentar la inversión institucional en el desarrollo y contención emocional del staff educativo/técnico.'],
-            ['Institución modelo. Cultura sólida, procesos estandarizados, ágiles y clima sumamente positivo.','El foco ahora debe estar en la proyección comunitaria y en consolidarse como faro para otras organizaciones.','Mantener programas de actualización permanente en neuro-educación, gestión y liderazgo estratégico.']
-        ]
+        empresa: [['Tu empresa necesita estructura urgente. La falta de procesos está quemando a tu equipo y perdiendo rentabilidad.','Es vital implementar un "Sistema de Escalamiento Operativo" para salir del caos de depender de personas clave.','Sugerencia: Empezar con un diagnóstico de liderazgo profundo y mapeo de procesos clave.'],['Hay buenas bases, pero la fuga de energía es alta. Falta sistematizar el crecimiento de la operación.','Una alineación formal de OKRs ordenará las prioridades de todos los niveles.','El entrenamiento en toma de decisiones bajo presión evitará errores costosos.'],['Operan bien, pero hay cuellos de botella que impiden la escalabilidad total y la automatización.','Es el momento exacto para pulir la eficiencia interna y preparar certificaciones de calidad.','El "Programa de Blindaje" para CEOs y gerentes potenciará el ROI del liderazgo.'],['Nivel de excelencia. El sistema funciona, ahora el foco es la innovación estratégica y el legado.','Recomendamos auditorías preventivas y programas de formación de nuevos líderes.','Considerar la expansión del modelo de gestión corporativo a nuevas unidades de negocio.']],
+        deporte: [['El equipo está en grave riesgo competitivo por bloqueos emocionales y falta de gestión institucional.','Urge implementar entrenamiento cognitivo-motor para recuperar la lucidez y velocidad de reacción.','La directiva necesita ordenar los procesos administrativos para no trasladar el caos a la cancha.'],['El talento físico no es suficiente. La inconsistencia mental está costando resultados decisivos.','Hay que sistematizar la toma de decisiones bajo presión con técnicas de Neuro-Coaching.','El cuerpo técnico necesita incorporar herramientas de liderazgo neuro-compatible.'],['Son sumamente competitivos, pero les falta el salto de calidad mental para consolidarse en las finales.','Es necesario afinar la cohesión grupal y automatizar las respuestas motoras ante el estrés agudo.','La dirigencia debe acompañar con gestión 360° para sostener operativamente este nivel deportivo.'],['Nivel de élite comprobado. Músculo y cerebro están perfectamente sincronizados y soportados institucionalmente.','El trabajo ahora es de mantenimiento preventivo y manejo psicológico del éxito sostenido.','Sugerimos implementar mediciones neuro-cognitivas avanzadas para evitar el desgaste invisible.']],
+        organismo: [['La institución se encuentra en modo supervivencia. La burocracia y el desgaste consumen toda la energía.','Se requiere una intervención inmediata en el clima institucional y en el liderazgo directivo.','Es prioritario fijar protocolos básicos de comunicación para frenar el "ruido" y los rumores internos.'],['El esfuerzo individual es grande, pero la falta de sistematización colectiva frena la innovación.','Hay que trabajar en la gestión de la resistencia al cambio desde las neurociencias aplicadas.','Es clave profesionalizar y documentar procesos administrativos que hoy son demasiado artesanales.'],['Se percibe una buena gestión general, con importantes oportunidades de mejora en la agilidad de los procesos.','Es momento de potenciar el liderazgo directivo para que sea más transformador y menos operativo.','Aumentar la inversión institucional en el desarrollo y contención emocional del staff educativo/técnico.'],['Institución modelo. Cultura sólida, procesos estandarizados, ágiles y clima sumamente positivo.','El foco ahora debe estar en la proyección comunitaria y en consolidarse como faro para otras organizaciones.','Mantener programas de actualización permanente en neuro-educación, gestión y liderazgo estratégico.']]
     };
 
-    let nivel, fg, recosIdx;
-    if(pct<=40)     {nivel='Estadio inicial';          fg='#F09595'; recosIdx=0;}
-    else if(pct<=65){nivel='En desarrollo';            fg='#EF9F27'; recosIdx=1;}
-    else if(pct<=85){nivel='Alto rendimiento parcial'; fg='#85B7EB'; recosIdx=2;}
-    else            {nivel='Excelencia organizacional';fg='#D4AF37'; recosIdx=3;}
+    let nivel, fg, bg, border, recosIdx;
+    if(pct<=40)     {nivel='Estadio inicial';          fg='#e11d48'; bg='#fff1f2'; border='#fecdd3'; recosIdx=0;}
+    else if(pct<=65){nivel='En desarrollo';            fg='#d97706'; bg='#fffbeb'; border='#fde68a'; recosIdx=1;}
+    else if(pct<=85){nivel='Alto rendimiento parcial'; fg='#0284c7'; bg='#f0f9ff'; border='#bae6fd'; recosIdx=2;}
+    else            {nivel='Excelencia organizacional';fg='#1d4ed8'; bg='#eff6ff'; border='#bfdbfe'; recosIdx=3;}
 
     const recos = dRecos[dArea][recosIdx];
-    const dimColors=['#D4AF37','#85B7EB','#EF9F27','#F09595','#9FE1CB'];
+    const dimColors=['#1d4ed8','#0ea5e9','#0284c7','#3b82f6','#06b6d4']; /* Tonos azules y celestes */
     
-    let html=`<div class="text-center mb-8">
-        <div class="text-7xl font-black mb-3" style="color:${fg}">${pct}%</div>
-        <span class="text-[9px] font-bold uppercase tracking-widest px-4 py-2 rounded-sm inline-block" style="background:rgba(255,255,255,0.04);color:${fg};border:1px solid ${fg}55;">${nivel}</span>
-    </div><div class="mb-8">`;
+    let html=`<div class="text-center mb-10">
+        <div class="text-7xl font-black mb-4" style="color:${fg}">${pct}%</div>
+        <span class="text-[11px] font-bold uppercase tracking-widest px-6 py-2 rounded-md inline-block shadow-sm" style="background:${bg};color:${fg};border:1px solid ${border};">${nivel}</span>
+    </div><div class="mb-10 bg-slate-50 p-6 rounded-2xl border border-slate-100">`;
     qs.forEach((q,i)=>{
         const p=Math.round((dAnswers[i]||0)/4*100);
-        html+=`<div class="flex items-center gap-3 mb-3">
-            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-500 w-36 flex-shrink-0">${q.dim}</span>
-            <div class="d-bar-bg"><div class="d-bar-fill" style="width:${p}%;background:${dimColors[i]}"></div></div>
-            <span class="text-[10px] font-bold text-slate-500 w-8 text-right">${p}%</span>
+        html+=`<div class="flex items-center gap-4 mb-4">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-600 w-36 flex-shrink-0">${q.dim}</span>
+            <div class="d-bar-bg flex-1"><div class="d-bar-fill" style="width:${p}%;background:${dimColors[i]}"></div></div>
+            <span class="text-[11px] font-bold text-slate-800 w-10 text-right">${p}%</span>
         </div>`;
     });
-    html+=`</div><div class="mb-8">`;
-    recos.forEach(r=>{ html+=`<div class="d-reco">${r}</div>`; });
-    html+=`</div><div class="flex flex-col md:flex-row gap-4">
-        <a href="https://wa.me/5493434164699?text=Hola%20Fabricio,%20acabo%20de%20hacer%20el%20diagnóstico%20de%20${dArea}%20en%20tu%20web%20y%20obtuve%20un%20${pct}%25.%20Me%20interesa%20charlar%20sobre%20cómo%20mejorar." target="_blank" class="flex-1 bg-gold text-slate-900 px-6 py-4 font-bold uppercase text-[10px] tracking-[0.25em] rounded-sm text-center hover:bg-amber-400 transition">Consultar con Fabricio →</a>
-        <button onclick="dReset()" class="border border-white/10 text-slate-500 px-6 py-4 font-bold uppercase text-[10px] tracking-widest rounded-sm hover:border-amber-500/30 hover:text-amber-500 transition">Reiniciar</button>
+    html+=`</div><div class="mb-10">
+        <h4 class="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-4">Recomendaciones Estratégicas</h4>`;
+    recos.forEach(r=>{ html+=`<div class="d-reco shadow-sm">${r}</div>`; });
+    html+=`</div><div class="flex flex-col md:flex-row gap-4 pt-4 border-t border-slate-200">
+        <button onclick="dReset()" class="bg-white border-2 border-slate-300 text-slate-600 px-8 py-4 font-bold uppercase text-[11px] tracking-widest rounded-md hover:border-slate-400 hover:text-slate-800 transition shadow-sm">Reiniciar</button>
+        <a href="https://wa.me/5493434164699?text=Hola%20Fabricio,%20acabo%20de%20hacer%20el%20diagnóstico%20de%20${dArea}%20en%20tu%20web%20y%20obtuve%20un%20${pct}%25.%20Me%20interesa%20charlar%20sobre%20cómo%20mejorar." target="_blank" class="flex-1 bg-blue-700 text-white px-8 py-4 font-bold uppercase text-[11px] tracking-[0.25em] rounded-md hover:bg-blue-800 transition text-center shadow-md">Consultar con Fabricio →</a>
     </div>`;
     document.getElementById('d-result').innerHTML=html;
 }
