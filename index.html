@@ -53,7 +53,7 @@
         }
         .r-slider::-webkit-slider-thumb {
             -webkit-appearance: none;
-            width: 18px; height: 18px; /* Un poquito más grande para el dedo en el celu */
+            width: 18px; height: 18px;
             background: #1d4ed8; 
             border-radius: 50%; border: none; transition: transform 0.1s;
         }
@@ -259,8 +259,14 @@
     <div class="container mx-auto max-w-6xl">
         <h3 class="text-sky-500 font-bold text-[10px] md:text-xs text-center uppercase tracking-[0.5em] mb-4">Herramienta de Diagnóstico</h3>
         <h2 class="text-3xl md:text-4xl font-black text-center mb-4 uppercase italic tracking-tighter text-slate-900">El Radar de <span class="text-blue-700">Madurez</span></h2>
-        <p class="text-slate-500 text-center italic mb-12 md:mb-20 max-w-xl mx-auto text-sm md:text-base px-2">Evaluá en tiempo real qué dimensiones están impulsando a tu equipo y cuáles actúan como un ancla invisible.</p>
+        <p class="text-slate-500 text-center italic mb-6 md:mb-8 max-w-xl mx-auto text-sm md:text-base px-2">Evaluá en tiempo real qué dimensiones están impulsando a tu equipo y cuáles actúan como un ancla invisible.</p>
  
+        <div class="flex justify-center mb-10 md:mb-16">
+            <div class="bg-blue-50 border border-blue-200 text-blue-700 px-5 py-3 rounded-full text-[10px] md:text-[11px] font-bold uppercase tracking-widest shadow-sm flex items-center gap-2">
+                <i class="fas fa-arrows-alt-h text-lg"></i> 👉 Deslizá los puntos azules para ajustar tu nivel
+            </div>
+        </div>
+
         <div class="bg-slate-50 p-6 md:p-14 rounded-2xl md:rounded-3xl border border-slate-200 shadow-lg">
  
             <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-8 md:mb-12 text-center md:text-left">
@@ -310,7 +316,7 @@
     <div class="container mx-auto max-w-6xl">
         <h3 class="text-sky-500 font-bold text-[10px] md:text-xs text-center uppercase tracking-[0.5em] mb-4">No asumas. Medí.</h3>
         <h2 class="text-3xl md:text-4xl font-black text-center mb-4 uppercase italic tracking-tighter text-slate-900">Encontrá tu <span class="text-blue-700">Cuello de Botella</span></h2>
-        <p class="text-slate-600 text-center italic mb-12 md:mb-16 max-w-2xl mx-auto text-sm md:text-base px-2">Seleccioná tu sector y respondé 5 preguntas clave. Vas a obtener un diagnóstico clínico de por qué tu equipo no está rindiendo al 100%.</p>
+        <p class="text-slate-600 text-center italic mb-12 md:mb-16 max-w-2xl mx-auto text-sm md:text-base px-2">Respondé 5 preguntas clave y obtené un diagnóstico clínico inmediato de por qué tu equipo no está rindiendo al 100%.</p>
  
         <div class="bg-white p-6 md:p-14 rounded-2xl md:rounded-3xl border border-slate-200 shadow-xl max-w-3xl mx-auto">
  
@@ -321,6 +327,8 @@
             <div class="d-progress-bg mb-8 md:mb-12"><div class="d-progress-fill" id="d-progress" style="width:14%"></div></div>
  
             <div class="d-step active" id="d-step-0">
+                <p class="text-center text-sky-600 font-bold text-[10px] md:text-[12px] uppercase tracking-widest mb-8"><i class="fas fa-hand-pointer text-lg mr-2"></i> 👇 Tocá una de las tarjetas para iniciar el test</p>
+                
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-10" id="d-area-btns"></div>
                 <button class="d-btn-next w-full py-4 md:py-5 text-[11px] md:text-[12px]" id="d-next-0" disabled onclick="dNext()">Iniciar Evaluación →</button>
             </div>
