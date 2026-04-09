@@ -53,14 +53,14 @@
         }
         .r-slider::-webkit-slider-thumb {
             -webkit-appearance: none;
-            width: 16px; height: 16px;
+            width: 18px; height: 18px; /* Un poquito más grande para el dedo en el celu */
             background: #1d4ed8; 
             border-radius: 50%; border: none; transition: transform 0.1s;
         }
         .r-slider::-webkit-slider-thumb:hover { transform: scale(1.2); background: #0ea5e9; } 
         
         .r-slider::-moz-range-thumb {
-            width: 16px; height: 16px;
+            width: 18px; height: 18px;
             background: #1d4ed8; border-radius: 50%; border: none; transition: transform 0.1s;
         }
         .r-slider::-moz-range-thumb:hover { transform: scale(1.2); background: #0ea5e9; }
@@ -72,7 +72,7 @@
         .d-step.active { display: block; }
         
         .d-area-btn {
-            padding: 32px 16px;
+            padding: 24px 16px; md:padding: 32px 16px;
             border: 2px solid #f1f5f9;
             background: #ffffff;
             color: #64748b;
@@ -97,7 +97,7 @@
         .d-opt-btn.selected { border-color: #1d4ed8; color: #1d4ed8; background: #eff6ff; font-weight: bold; border-width: 2px; padding: 15px 19px; } 
         
         .d-btn-back {
-            padding: 14px 24px;
+            padding: 14px 20px; md:padding: 14px 24px;
             border: 1px solid #cbd5e1; background: #ffffff; color: #64748b;
             font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;
             border-radius: 6px; cursor: pointer; font-family: 'Inter', sans-serif; transition: all 0.2s;
@@ -105,7 +105,7 @@
         .d-btn-back:hover { border-color: #94a3b8; color: #0f172a; background: #f8fafc; }
         
         .d-btn-next {
-            flex: 1; padding: 14px 24px;
+            flex: 1; padding: 14px 20px; md:padding: 14px 24px;
             background: #1d4ed8; color: #ffffff; 
             font-size: 10px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase;
             border-radius: 6px; border: none; cursor: pointer;
@@ -121,55 +121,55 @@
             border-left: 3px solid #0ea5e9; 
             padding: 16px 20px; margin-bottom: 12px;
             background: #f0f9ff; 
-            font-size: 14px; color: #334155; line-height: 1.7;
+            font-size: 13px; md:font-size: 14px; color: #334155; line-height: 1.7;
             border-radius: 0 8px 8px 0;
         }
     </style>
 </head>
 <body>
  
-<header class="hero-gradient min-h-screen flex items-center justify-center text-center px-6">
-    <div class="max-w-5xl">
-        <h2 class="text-blue-700 text-xs font-bold uppercase tracking-[0.6em] mb-6">Neurociencias & Alto Rendimiento</h2>
-        <h1 class="text-5xl md:text-7xl font-black mb-8 leading-tight uppercase tracking-tighter text-slate-900">
+<header class="hero-gradient min-h-screen flex items-center justify-center text-center px-4 md:px-6">
+    <div class="max-w-5xl mt-10 md:mt-0">
+        <h2 class="text-blue-700 text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-6">Neurociencias & Alto Rendimiento</h2>
+        <h1 class="text-4xl md:text-7xl font-black mb-6 md:mb-8 leading-tight uppercase tracking-tighter text-slate-900">
             ¿Tu equipo <span class="text-sky-500 italic">rinde</span> <br>o solo sobrevive?
         </h1>
-        <p class="text-lg md:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+        <p class="text-base md:text-2xl text-slate-600 mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed px-4 md:px-0">
             Fusionamos neurociencia y gestión para que dejes de apagar incendios. Entrenamos la capacidad de tu organización para tomar decisiones bajo presión y escalar resultados reales.
         </p>
-        <div class="flex flex-col md:flex-row gap-6 justify-center relative z-10">
-            <a href="#diagnostico" class="bg-blue-700 text-white px-10 py-5 font-bold uppercase text-[11px] tracking-[0.2em] rounded-md hover:bg-blue-800 transition shadow-xl hover:shadow-2xl hover:-translate-y-1">
+        <div class="flex flex-col md:flex-row gap-4 md:gap-6 justify-center relative z-10 px-4 md:px-0">
+            <a href="#diagnostico" class="bg-blue-700 text-white w-full md:w-auto px-6 md:px-10 py-5 font-bold uppercase text-[10px] md:text-[11px] tracking-[0.2em] rounded-md hover:bg-blue-800 transition shadow-xl hover:shadow-2xl hover:-translate-y-1 text-center">
                 Descubrí tu cuello de botella ahora
             </a>
-            <a href="https://wa.me/5493434164699" target="_blank" class="bg-white border-2 border-blue-700 text-blue-700 px-10 py-5 font-bold uppercase text-[11px] tracking-[0.2em] rounded-md hover:bg-blue-50 transition">
+            <a href="https://wa.me/5493434164699" target="_blank" class="bg-white border-2 border-blue-700 text-blue-700 w-full md:w-auto px-6 md:px-10 py-5 font-bold uppercase text-[10px] md:text-[11px] tracking-[0.2em] rounded-md hover:bg-blue-50 transition text-center">
                 Agendar Sesión Estratégica
             </a>
         </div>
     </div>
 </header>
  
-<section class="py-32 bg-sky-50 px-6 border-b border-slate-200">
+<section class="py-24 md:py-32 bg-sky-50 px-4 md:px-6 border-b border-slate-200">
     <div class="container mx-auto">
-        <h3 class="text-sky-500 font-bold text-xs text-center uppercase tracking-[0.5em] mb-4">Metodología de Inmersión</h3>
-        <h2 class="text-4xl font-black text-center mb-16 uppercase italic tracking-tighter text-slate-900">Programas de <span class="text-blue-700">Intervención</span></h2>
+        <h3 class="text-sky-500 font-bold text-[10px] md:text-xs text-center uppercase tracking-[0.5em] mb-4">Metodología de Inmersión</h3>
+        <h2 class="text-3xl md:text-4xl font-black text-center mb-12 md:mb-16 uppercase italic tracking-tighter text-slate-900">Programas de <span class="text-blue-700">Intervención</span></h2>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="bg-white p-10 rounded-2xl border border-slate-100 card-hover shadow-sm">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            <div class="bg-white p-8 md:p-10 rounded-2xl border border-slate-100 card-hover shadow-sm">
                 <i class="fas fa-chart-pie text-3xl text-blue-700 mb-6"></i>
                 <h4 class="text-sm font-bold mb-4 uppercase tracking-widest text-slate-900">Blindaje Ejecutivo (Empresas)</h4>
                 <p class="text-slate-600 text-sm leading-relaxed font-light">Terminá con la dependencia de personas clave. Sistematizamos procesos y OKRs para escalar tu operación sin agotar a tu equipo.</p>
             </div>
-            <div class="bg-white p-10 rounded-2xl border border-slate-100 card-hover shadow-sm">
+            <div class="bg-white p-8 md:p-10 rounded-2xl border border-slate-100 card-hover shadow-sm">
                 <i class="fas fa-trophy text-3xl text-blue-700 mb-6"></i>
                 <h4 class="text-sm font-bold mb-4 uppercase tracking-widest text-slate-900">Neuro-Coaching (Deportes)</h4>
                 <p class="text-slate-600 text-sm leading-relaxed font-light">Entrenamiento cognitivo-motor para atletas y cuerpos técnicos. Decisiones perfectas en milisegundos bajo la máxima presión competitiva.</p>
             </div>
-            <div class="bg-white p-10 rounded-2xl border border-slate-100 card-hover shadow-sm">
+            <div class="bg-white p-8 md:p-10 rounded-2xl border border-slate-100 card-hover shadow-sm">
                 <i class="fas fa-users-cog text-3xl text-blue-700 mb-6"></i>
                 <h4 class="text-sm font-bold mb-4 uppercase tracking-widest text-slate-900">Liderazgo Institucional 360°</h4>
                 <p class="text-slate-600 text-sm leading-relaxed font-light">De la burocracia al liderazgo ágil. Transformamos climas institucionales y blindamos a los directivos ante la resistencia al cambio.</p>
             </div>
-            <div class="bg-white p-10 rounded-2xl border border-slate-100 card-hover shadow-sm">
+            <div class="bg-white p-8 md:p-10 rounded-2xl border border-slate-100 card-hover shadow-sm">
                 <i class="fas fa-check-double text-3xl text-blue-700 mb-6"></i>
                 <h4 class="text-sm font-bold mb-4 uppercase tracking-widest text-slate-900">Certificación Integral ISO</h4>
                 <p class="text-slate-600 text-sm leading-relaxed font-light">Auditamos y preparamos a tu organización para obtener estándares internacionales de calidad, inocuidad y seguridad (ISO 9001/22000).</p>
@@ -178,11 +178,11 @@
     </div>
 </section>
  
-<section class="py-32 bg-white px-6">
+<section class="py-24 md:py-32 bg-white px-4 md:px-6">
     <div class="container mx-auto max-w-6xl">
-        <h3 class="text-sky-500 font-bold text-xs text-center uppercase tracking-[0.5em] mb-4">El Fin del "Ruido"</h3>
-        <h2 class="text-4xl font-black text-center mb-16 uppercase italic tracking-tighter text-slate-900">Resultados que <span class="text-blue-700">Transforman</span></h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <h3 class="text-sky-500 font-bold text-[10px] md:text-xs text-center uppercase tracking-[0.5em] mb-4">El Fin del "Ruido"</h3>
+        <h2 class="text-3xl md:text-4xl font-black text-center mb-12 md:mb-16 uppercase italic tracking-tighter text-slate-900">Resultados que <span class="text-blue-700">Transforman</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 card-hover">
                 <div class="flex items-center gap-4 mb-6">
                     <span class="bg-blue-100 text-blue-700 p-3 rounded-xl text-xl"><i class="fas fa-bullseye"></i></span>
@@ -211,10 +211,10 @@
     </div>
 </section>
  
-<section class="py-32 bg-sky-50 px-6 border-y border-slate-200 overflow-hidden">
-    <div class="container mx-auto max-w-6xl flex flex-col md:flex-row items-center gap-16 lg:gap-24">
+<section class="py-24 md:py-32 bg-sky-50 px-4 md:px-6 border-y border-slate-200 overflow-hidden">
+    <div class="container mx-auto max-w-6xl flex flex-col md:flex-row items-center gap-12 lg:gap-24">
         
-        <div class="w-full md:w-1/2 lg:w-5/12 relative mb-16 md:mb-0">
+        <div class="w-full sm:w-4/5 md:w-1/2 lg:w-5/12 relative mb-12 md:mb-0 mx-auto">
             <div class="w-5/6 aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-slate-200 relative z-10">
                 <img src="20240606_122252.jpg" alt="Fabricio Martínez Consultoría" class="w-full h-full object-cover">
             </div>
@@ -222,82 +222,83 @@
             <div class="absolute bottom-[-10%] right-0 w-2/3 aspect-video rounded-xl overflow-hidden shadow-2xl border-4 border-white z-20 hover:scale-105 transition duration-500 bg-slate-100">
                 <img src="argentinasoftbolmeditando.jpg" alt="Selección Argentina Femenina de Sóftbol en proceso de neuro-coaching" class="w-full h-full object-cover">
                 <div class="absolute bottom-0 left-0 w-full bg-blue-700/90 backdrop-blur-sm px-2 py-2 text-center">
-                    <p class="text-[8px] md:text-[9px] text-white font-bold uppercase tracking-widest"><i class="fas fa-medal text-sky-300 mr-1"></i>Selección Argentina</p>
+                    <p class="text-[7px] md:text-[9px] text-white font-bold uppercase tracking-widest"><i class="fas fa-medal text-sky-300 mr-1"></i>Selección Argentina</p>
                 </div>
             </div>
         </div>
 
-        <div class="w-full md:w-1/2 mt-8 md:mt-0">
-            <h3 class="text-sky-500 font-bold text-xs uppercase tracking-[0.4em] mb-4">Fabricio Martínez</h3>
-            <h2 class="text-4xl md:text-5xl font-bold mb-8 uppercase tracking-tighter italic text-slate-900">Autoridad en <br><span class="text-blue-700">Alto Rendimiento</span></h2>
-            <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+        <div class="w-full md:w-1/2 mt-4 md:mt-0">
+            <h3 class="text-sky-500 font-bold text-[10px] md:text-xs uppercase tracking-[0.4em] mb-4 text-center md:text-left">Fabricio Martínez</h3>
+            <h2 class="text-3xl md:text-5xl font-bold mb-6 md:mb-8 uppercase tracking-tighter italic text-slate-900 text-center md:text-left">Autoridad en <br><span class="text-blue-700">Alto Rendimiento</span></h2>
+            <p class="text-base md:text-lg text-slate-600 mb-6 md:mb-8 leading-relaxed text-center md:text-left">
                 Consultor y Especialista Cognitivo Motor con más de 25 años de trayectoria. Mi misión es destrabar el potencial biológico y sistémico de los equipos. He implementado programas de <strong>Coaching Ejecutivo y Liderazgo</strong> en el mundo corporativo y me desempeño como Coach en Neurociencias para <strong>Selecciones Nacionales</strong>.
             </p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 font-bold text-slate-700 uppercase text-[10px] tracking-[0.15em] mb-10 bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
-                <p><i class="fas fa-check text-blue-600 mr-3"></i> Neurociencias (UBA)</p>
-                <p><i class="fas fa-check text-blue-600 mr-3"></i> Liderazgo Educativo (UdeSA)</p>
-                <p><i class="fas fa-check text-blue-600 mr-3"></i> Liderazgo y PNL (ENEB)</p>
-                <p><i class="fas fa-check text-blue-600 mr-3"></i> Gestión Institucional</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 md:gap-y-4 gap-x-4 md:gap-x-8 font-bold text-slate-700 uppercase text-[9px] md:text-[10px] tracking-[0.15em] mb-10 bg-white p-5 md:p-6 rounded-xl border border-slate-100 shadow-sm">
+                <p class="flex items-center"><i class="fas fa-check text-blue-600 mr-3"></i> Neurociencias (UBA)</p>
+                <p class="flex items-center"><i class="fas fa-check text-blue-600 mr-3"></i> Liderazgo Educativo (UdeSA)</p>
+                <p class="flex items-center"><i class="fas fa-check text-blue-600 mr-3"></i> Liderazgo y PNL (ENEB)</p>
+                <p class="flex items-center"><i class="fas fa-check text-blue-600 mr-3"></i> Gestión Institucional</p>
             </div>
         </div>
     </div>
 </section>
  
-<section class="py-32 bg-blue-700 border-y border-blue-800 relative overflow-hidden">
+<section class="py-24 md:py-32 bg-blue-700 border-y border-blue-800 relative overflow-hidden">
     <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 30px 30px;"></div>
-    
     <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
-        <i class="fas fa-quote-left text-5xl text-sky-400 mb-10 opacity-80"></i>
-        <h3 class="text-white text-4xl font-black uppercase italic mb-10 tracking-tighter">Humanidad, <span class="text-sky-300">Propósito</span> y Vida</h3>
-        <p class="text-2xl md:text-3xl text-blue-50 leading-relaxed italic mb-12 font-light">
+        <i class="fas fa-quote-left text-4xl md:text-5xl text-sky-400 mb-8 md:mb-10 opacity-80"></i>
+        <h3 class="text-white text-3xl md:text-4xl font-black uppercase italic mb-8 md:mb-10 tracking-tighter">Humanidad, <span class="text-sky-300">Propósito</span> y Vida</h3>
+        <p class="text-xl md:text-3xl text-blue-50 leading-relaxed italic mb-10 md:mb-12 font-light">
             "Ayudo a que las organizaciones recuperen humanidad, propósito y vida. Porque la ciencia optimiza el rendimiento, pero es el propósito lo que sostiene el éxito."
         </p>
-        <div class="w-24 h-1 bg-sky-400 mx-auto rounded-full"></div>
+        <div class="w-16 md:w-24 h-1 bg-sky-400 mx-auto rounded-full"></div>
     </div>
 </section>
  
-<section class="py-32 bg-white px-6 border-b border-slate-200">
+<section class="py-24 md:py-32 bg-white px-4 md:px-6 border-b border-slate-200">
     <div class="container mx-auto max-w-6xl">
-        <h3 class="text-sky-500 font-bold text-xs text-center uppercase tracking-[0.5em] mb-4">Herramienta de Diagnóstico</h3>
-        <h2 class="text-4xl font-black text-center mb-4 uppercase italic tracking-tighter text-slate-900">El Radar de <span class="text-blue-700">Madurez</span></h2>
-        <p class="text-slate-500 text-center italic mb-20 max-w-xl mx-auto">Evaluá en tiempo real qué dimensiones están impulsando a tu equipo y cuáles actúan como un ancla invisible.</p>
+        <h3 class="text-sky-500 font-bold text-[10px] md:text-xs text-center uppercase tracking-[0.5em] mb-4">Herramienta de Diagnóstico</h3>
+        <h2 class="text-3xl md:text-4xl font-black text-center mb-4 uppercase italic tracking-tighter text-slate-900">El Radar de <span class="text-blue-700">Madurez</span></h2>
+        <p class="text-slate-500 text-center italic mb-12 md:mb-20 max-w-xl mx-auto text-sm md:text-base px-2">Evaluá en tiempo real qué dimensiones están impulsando a tu equipo y cuáles actúan como un ancla invisible.</p>
  
-        <div class="bg-slate-50 p-10 md:p-14 rounded-3xl border border-slate-200 shadow-lg">
+        <div class="bg-slate-50 p-6 md:p-14 rounded-2xl md:rounded-3xl border border-slate-200 shadow-lg">
  
-            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-12">
-                <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-slate-500 bg-white px-4 py-2 rounded-md border border-slate-200">1 = Caos operativo &nbsp;·&nbsp; 10 = Excelencia ágil</span>
-                <span id="r-nivel-badge" class="text-[10px] font-bold uppercase tracking-widest px-5 py-2.5 rounded-md shadow-sm" style="background:#e0f2fe;color:#0369a1;border:1px solid #bae6fd;">Calculando...</span>
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-8 md:mb-12 text-center md:text-left">
+                <span class="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] md:tracking-[0.25em] text-slate-500 bg-white px-3 md:px-4 py-2 rounded-md border border-slate-200">1 = Caos &nbsp;·&nbsp; 10 = Excelencia</span>
+                <span id="r-nivel-badge" class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest px-4 md:px-5 py-2 md:py-2.5 rounded-md shadow-sm" style="background:#e0f2fe;color:#0369a1;border:1px solid #bae6fd;">Calculando...</span>
             </div>
  
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-10 mb-12" id="r-sliders"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-6 md:gap-y-10 mb-10 md:mb-12" id="r-sliders"></div>
  
-            <div class="grid grid-cols-3 gap-6 mb-12">
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-10 md:mb-12">
+                <div class="bg-white p-5 md:p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
                     <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2">Índice global</p>
                     <p class="text-4xl font-black text-blue-700" id="r-global">—</p>
                     <p class="text-[10px] text-slate-400 mt-1">sobre 100</p>
                 </div>
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
-                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3">Dimensión Fuerte</p>
+                <div class="bg-white p-5 md:p-6 rounded-2xl border border-slate-200 shadow-sm text-center flex flex-col justify-center">
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2 md:mb-3">Dimensión Fuerte</p>
                     <p class="text-sm font-bold text-slate-800 leading-snug" id="r-best">—</p>
-                    <p class="text-[11px] font-bold text-sky-600 mt-2 bg-sky-50 py-1 rounded" id="r-best-val"></p>
+                    <p class="text-[11px] font-bold text-sky-600 mt-2 bg-sky-50 py-1 rounded inline-block mx-auto px-3" id="r-best-val"></p>
                 </div>
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
-                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3">Punto de Fuga</p>
+                <div class="bg-white p-5 md:p-6 rounded-2xl border border-slate-200 shadow-sm text-center flex flex-col justify-center">
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2 md:mb-3">Punto de Fuga</p>
                     <p class="text-sm font-bold text-slate-800 leading-snug" id="r-worst">—</p>
-                    <p class="text-[11px] font-bold text-rose-500 mt-2 bg-rose-50 py-1 rounded" id="r-worst-val"></p>
+                    <p class="text-[11px] font-bold text-rose-500 mt-2 bg-rose-50 py-1 rounded inline-block mx-auto px-3" id="r-worst-val"></p>
                 </div>
             </div>
  
-            <div class="flex justify-center mb-12 bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
-                <canvas id="radarChart" width="450" height="380"></canvas>
+            <div class="flex justify-center mb-10 md:mb-12 bg-white p-4 md:p-8 rounded-2xl md:rounded-3xl border border-slate-200 shadow-sm w-full overflow-hidden">
+                <div class="relative w-full max-w-[450px] aspect-square md:aspect-auto md:h-[380px]">
+                    <canvas id="radarChart"></canvas>
+                </div>
             </div>
  
             <div class="flex flex-col md:flex-row gap-4">
-                <button onclick="rReset()" class="bg-white border-2 border-slate-300 text-slate-600 px-8 py-4 font-bold uppercase text-[11px] tracking-widest rounded-md hover:border-slate-400 hover:text-slate-800 transition shadow-sm">
+                <button onclick="rReset()" class="bg-white border-2 border-slate-300 text-slate-600 w-full md:w-auto px-8 py-4 font-bold uppercase text-[10px] md:text-[11px] tracking-widest rounded-md hover:border-slate-400 hover:text-slate-800 transition shadow-sm">
                     Restablecer
                 </button>
-                <a href="https://wa.me/5493434164699" target="_blank" class="flex-1 bg-blue-700 text-white px-8 py-4 font-bold uppercase text-[11px] tracking-[0.25em] rounded-md hover:bg-blue-800 transition text-center shadow-md">
+                <a href="https://wa.me/5493434164699" target="_blank" class="flex-1 bg-blue-700 text-white w-full md:w-auto px-8 py-4 font-bold uppercase text-[10px] md:text-[11px] tracking-[0.25em] rounded-md hover:bg-blue-800 transition text-center shadow-md">
                     Diseñar mi Plan de Acción →
                 </a>
             </div>
@@ -305,54 +306,54 @@
     </div>
 </section>
  
-<section id="diagnostico" class="py-32 bg-sky-50 px-6">
+<section id="diagnostico" class="py-24 md:py-32 bg-sky-50 px-4 md:px-6">
     <div class="container mx-auto max-w-6xl">
-        <h3 class="text-sky-500 font-bold text-xs text-center uppercase tracking-[0.5em] mb-4">No asumas. Medí.</h3>
-        <h2 class="text-4xl font-black text-center mb-4 uppercase italic tracking-tighter text-slate-900">Encontrá tu <span class="text-blue-700">Cuello de Botella</span></h2>
-        <p class="text-slate-600 text-center italic mb-16 max-w-2xl mx-auto">Seleccioná tu sector y respondé 5 preguntas clave. Vas a obtener un diagnóstico clínico de por qué tu equipo no está rindiendo al 100%.</p>
+        <h3 class="text-sky-500 font-bold text-[10px] md:text-xs text-center uppercase tracking-[0.5em] mb-4">No asumas. Medí.</h3>
+        <h2 class="text-3xl md:text-4xl font-black text-center mb-4 uppercase italic tracking-tighter text-slate-900">Encontrá tu <span class="text-blue-700">Cuello de Botella</span></h2>
+        <p class="text-slate-600 text-center italic mb-12 md:mb-16 max-w-2xl mx-auto text-sm md:text-base px-2">Seleccioná tu sector y respondé 5 preguntas clave. Vas a obtener un diagnóstico clínico de por qué tu equipo no está rindiendo al 100%.</p>
  
-        <div class="bg-white p-10 md:p-14 rounded-3xl border border-slate-200 shadow-xl max-w-3xl mx-auto">
+        <div class="bg-white p-6 md:p-14 rounded-2xl md:rounded-3xl border border-slate-200 shadow-xl max-w-3xl mx-auto">
  
             <div class="flex justify-between items-center mb-4">
-                <span class="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400" id="d-step-label">Seleccioná tu área</span>
-                <span class="text-[11px] font-bold uppercase tracking-[0.15em] text-blue-700 bg-blue-50 px-3 py-1 rounded-full" id="d-step-count">Paso 1 de 7</span>
+                <span class="text-[9px] md:text-[11px] font-bold uppercase tracking-[0.1em] md:tracking-[0.2em] text-slate-400" id="d-step-label">Seleccioná tu área</span>
+                <span class="text-[9px] md:text-[11px] font-bold uppercase tracking-[0.1em] md:tracking-[0.15em] text-blue-700 bg-blue-50 px-3 py-1 rounded-full" id="d-step-count">Paso 1 de 7</span>
             </div>
-            <div class="d-progress-bg mb-12"><div class="d-progress-fill" id="d-progress" style="width:14%"></div></div>
+            <div class="d-progress-bg mb-8 md:mb-12"><div class="d-progress-fill" id="d-progress" style="width:14%"></div></div>
  
             <div class="d-step active" id="d-step-0">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10" id="d-area-btns"></div>
-                <button class="d-btn-next w-full py-5 text-[12px]" id="d-next-0" disabled onclick="dNext()">Iniciar Evaluación →</button>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-10" id="d-area-btns"></div>
+                <button class="d-btn-next w-full py-4 md:py-5 text-[11px] md:text-[12px]" id="d-next-0" disabled onclick="dNext()">Iniciar Evaluación →</button>
             </div>
  
             <div class="d-step" id="d-step-1">
-                <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-sky-500 block mb-3" id="d-dim-1"></span>
-                <p class="text-slate-900 font-bold text-2xl italic uppercase tracking-tight leading-tight mb-8" id="d-q-1"></p>
-                <div class="flex flex-col gap-4 mb-10" id="d-opts-1"></div>
-                <div class="flex gap-4"><button class="d-btn-back" onclick="dBack()">← Atrás</button><button class="d-btn-next" id="d-next-1" disabled onclick="dNext()">Siguiente →</button></div>
+                <span class="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] md:tracking-[0.25em] text-sky-500 block mb-3" id="d-dim-1"></span>
+                <p class="text-slate-900 font-bold text-xl md:text-2xl italic uppercase tracking-tight leading-tight mb-6 md:mb-8" id="d-q-1"></p>
+                <div class="flex flex-col gap-3 md:gap-4 mb-8 md:mb-10" id="d-opts-1"></div>
+                <div class="flex flex-col sm:flex-row gap-3 md:gap-4"><button class="d-btn-back w-full sm:w-auto" onclick="dBack()">← Atrás</button><button class="d-btn-next w-full sm:w-auto" id="d-next-1" disabled onclick="dNext()">Siguiente →</button></div>
             </div>
             <div class="d-step" id="d-step-2">
-                <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-sky-500 block mb-3" id="d-dim-2"></span>
-                <p class="text-slate-900 font-bold text-2xl italic uppercase tracking-tight leading-tight mb-8" id="d-q-2"></p>
-                <div class="flex flex-col gap-4 mb-10" id="d-opts-2"></div>
-                <div class="flex gap-4"><button class="d-btn-back" onclick="dBack()">← Atrás</button><button class="d-btn-next" id="d-next-2" disabled onclick="dNext()">Siguiente →</button></div>
+                <span class="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] md:tracking-[0.25em] text-sky-500 block mb-3" id="d-dim-2"></span>
+                <p class="text-slate-900 font-bold text-xl md:text-2xl italic uppercase tracking-tight leading-tight mb-6 md:mb-8" id="d-q-2"></p>
+                <div class="flex flex-col gap-3 md:gap-4 mb-8 md:mb-10" id="d-opts-2"></div>
+                <div class="flex flex-col sm:flex-row gap-3 md:gap-4"><button class="d-btn-back w-full sm:w-auto" onclick="dBack()">← Atrás</button><button class="d-btn-next w-full sm:w-auto" id="d-next-2" disabled onclick="dNext()">Siguiente →</button></div>
             </div>
             <div class="d-step" id="d-step-3">
-                <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-sky-500 block mb-3" id="d-dim-3"></span>
-                <p class="text-slate-900 font-bold text-2xl italic uppercase tracking-tight leading-tight mb-8" id="d-q-3"></p>
-                <div class="flex flex-col gap-4 mb-10" id="d-opts-3"></div>
-                <div class="flex gap-4"><button class="d-btn-back" onclick="dBack()">← Atrás</button><button class="d-btn-next" id="d-next-3" disabled onclick="dNext()">Siguiente →</button></div>
+                <span class="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] md:tracking-[0.25em] text-sky-500 block mb-3" id="d-dim-3"></span>
+                <p class="text-slate-900 font-bold text-xl md:text-2xl italic uppercase tracking-tight leading-tight mb-6 md:mb-8" id="d-q-3"></p>
+                <div class="flex flex-col gap-3 md:gap-4 mb-8 md:mb-10" id="d-opts-3"></div>
+                <div class="flex flex-col sm:flex-row gap-3 md:gap-4"><button class="d-btn-back w-full sm:w-auto" onclick="dBack()">← Atrás</button><button class="d-btn-next w-full sm:w-auto" id="d-next-3" disabled onclick="dNext()">Siguiente →</button></div>
             </div>
             <div class="d-step" id="d-step-4">
-                <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-sky-500 block mb-3" id="d-dim-4"></span>
-                <p class="text-slate-900 font-bold text-2xl italic uppercase tracking-tight leading-tight mb-8" id="d-q-4"></p>
-                <div class="flex flex-col gap-4 mb-10" id="d-opts-4"></div>
-                <div class="flex gap-4"><button class="d-btn-back" onclick="dBack()">← Atrás</button><button class="d-btn-next" id="d-next-4" disabled onclick="dNext()">Siguiente →</button></div>
+                <span class="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] md:tracking-[0.25em] text-sky-500 block mb-3" id="d-dim-4"></span>
+                <p class="text-slate-900 font-bold text-xl md:text-2xl italic uppercase tracking-tight leading-tight mb-6 md:mb-8" id="d-q-4"></p>
+                <div class="flex flex-col gap-3 md:gap-4 mb-8 md:mb-10" id="d-opts-4"></div>
+                <div class="flex flex-col sm:flex-row gap-3 md:gap-4"><button class="d-btn-back w-full sm:w-auto" onclick="dBack()">← Atrás</button><button class="d-btn-next w-full sm:w-auto" id="d-next-4" disabled onclick="dNext()">Siguiente →</button></div>
             </div>
             <div class="d-step" id="d-step-5">
-                <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-sky-500 block mb-3" id="d-dim-5"></span>
-                <p class="text-slate-900 font-bold text-2xl italic uppercase tracking-tight leading-tight mb-8" id="d-q-5"></p>
-                <div class="flex flex-col gap-4 mb-10" id="d-opts-5"></div>
-                <div class="flex gap-4"><button class="d-btn-back" onclick="dBack()">← Atrás</button><button class="d-btn-next" id="d-next-5" disabled onclick="dNext()">Generar Resultado →</button></div>
+                <span class="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] md:tracking-[0.25em] text-sky-500 block mb-3" id="d-dim-5"></span>
+                <p class="text-slate-900 font-bold text-xl md:text-2xl italic uppercase tracking-tight leading-tight mb-6 md:mb-8" id="d-q-5"></p>
+                <div class="flex flex-col gap-3 md:gap-4 mb-8 md:mb-10" id="d-opts-5"></div>
+                <div class="flex flex-col sm:flex-row gap-3 md:gap-4"><button class="d-btn-back w-full sm:w-auto" onclick="dBack()">← Atrás</button><button class="d-btn-next w-full sm:w-auto" id="d-next-5" disabled onclick="dNext()">Generar Resultado →</button></div>
             </div>
  
             <div class="d-step" id="d-step-6"><div id="d-result"></div></div>
@@ -360,15 +361,15 @@
     </div>
 </section>
  
-<footer class="py-24 bg-slate-950 text-slate-400 text-center px-6 border-t-[8px] border-blue-700">
-    <h2 class="text-white text-4xl font-black mb-4 uppercase italic tracking-tighter">Fabricio Martínez</h2>
-    <p class="text-[10px] mb-16 uppercase tracking-[0.6em] text-sky-400 italic">Intervención desde la humanidad</p>
-    <div class="flex justify-center space-x-12 mb-20 text-3xl">
+<footer class="py-16 md:py-24 bg-slate-950 text-slate-400 text-center px-6 border-t-[8px] border-blue-700">
+    <h2 class="text-white text-3xl md:text-4xl font-black mb-4 uppercase italic tracking-tighter">Fabricio Martínez</h2>
+    <p class="text-[9px] md:text-[10px] mb-12 md:mb-16 uppercase tracking-[0.6em] text-sky-400 italic">Intervención desde la humanidad</p>
+    <div class="flex justify-center space-x-8 md:space-x-12 mb-16 md:mb-20 text-2xl md:text-3xl">
         <a href="https://www.linkedin.com/in/fabriciomartinezok/" target="_blank" class="hover:text-white transition"><i class="fab fa-linkedin"></i></a>
         <a href="https://www.instagram.com/fabri_martinez_ok/?hl=es" target="_blank" class="hover:text-white transition"><i class="fab fa-instagram"></i></a>
         <a href="https://wa.me/5493434164699" target="_blank" class="hover:text-white transition"><i class="fab fa-whatsapp"></i></a>
     </div>
-    <p class="text-[9px] uppercase tracking-[0.8em] opacity-40">&copy; 2026 Fabricio Martínez | Educación, Estrategia & Liderazgo</p>
+    <p class="text-[8px] md:text-[9px] uppercase tracking-[0.8em] opacity-40">&copy; 2026 Fabricio Martínez | Educación, Estrategia & Liderazgo</p>
 </footer>
  
 <script>
@@ -388,9 +389,9 @@ const rVals = {}; rDims.forEach(d => rVals[d.key] = 5);
     rDims.forEach(d => {
         const div = document.createElement('div');
         div.innerHTML = `
-          <div class="flex justify-between items-center mb-3">
-            <span class="text-[11px] font-bold uppercase tracking-widest text-slate-600">${d.label}</span>
-            <span class="text-[12px] font-bold text-blue-700 bg-blue-50 px-2 py-1 rounded" id="rv-${d.key}">5</span>
+          <div class="flex justify-between items-center mb-2 md:mb-3">
+            <span class="text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-slate-600">${d.label}</span>
+            <span class="text-[11px] md:text-[12px] font-bold text-blue-700 bg-blue-50 px-2 py-1 rounded" id="rv-${d.key}">5</span>
           </div>
           <input class="r-slider" type="range" min="1" max="10" step="1" value="5" oninput="rSlide('${d.key}',this.value)">`;
         c.appendChild(div);
@@ -430,24 +431,25 @@ let rChart;
             datasets:[
                 {label:'Tu organización', data:rDims.map(d=>rVals[d.key]),
                  backgroundColor:'rgba(14, 165, 233, 0.2)', borderColor:'#0ea5e9',
-                 borderWidth:3, pointBackgroundColor:'#1d4ed8', pointBorderColor:'#fff', pointRadius:5, pointHoverRadius:7},
+                 borderWidth:2, pointBackgroundColor:'#1d4ed8', pointBorderColor:'#fff', pointRadius:4, pointHoverRadius:6},
                 {label:'Zona de Seguridad (8)', data:rDims.map(()=>8),
                  backgroundColor:'rgba(0,0,0,0)', borderColor:'rgba(148, 163, 184, 0.4)',
                  borderWidth:1.5, borderDash:[5,5], pointRadius:0}
             ]
         },
         options:{
-            responsive:false,
+            responsive:true,
+            maintainAspectRatio:false,
             plugins:{
                 legend:{display:false},
-                tooltip:{backgroundColor:'rgba(15, 23, 42, 0.9)',titleColor:'#fff',bodyColor:'#cbd5e1',borderColor:'rgba(255,255,255,0.1)',borderWidth:1, padding: 12}
+                tooltip:{backgroundColor:'rgba(15, 23, 42, 0.9)',titleColor:'#fff',bodyColor:'#cbd5e1',borderColor:'rgba(255,255,255,0.1)',borderWidth:1, padding: 10}
             },
             scales:{r:{
                 min:0, max:10,
-                ticks:{stepSize:2, color:'rgba(100,116,139,0.5)', font:{size:10, family: 'Inter'}, backdropColor:'transparent'},
+                ticks:{stepSize:2, color:'rgba(100,116,139,0.5)', font:{size:9, family: 'Inter'}, backdropColor:'transparent'},
                 grid:{color:'rgba(226, 232, 240, 0.8)'},
                 angleLines:{color:'rgba(226, 232, 240, 0.8)'},
-                pointLabels:{color:'#475569', font:{size:12, family: 'Inter', weight: 'bold'}}
+                pointLabels:{color:'#475569', font:{size:11, family: 'Inter', weight: 'bold'}}
             }}
         }
     });
@@ -498,7 +500,7 @@ let dArea=null, dStep=0, dAnswers=[];
     const c=document.getElementById('d-area-btns');
     dAreas.forEach(a=>{
         const btn=document.createElement('button'); btn.className='d-area-btn';
-        btn.innerHTML=`<i class="fas ${a.icon} text-4xl mb-6 block"></i><span class="text-[12px] font-bold uppercase tracking-widest block">${a.label}</span>`;
+        btn.innerHTML=`<i class="fas ${a.icon} text-3xl md:text-4xl mb-4 md:mb-6 block"></i><span class="text-[11px] md:text-[12px] font-bold uppercase tracking-widest block">${a.label}</span>`;
         btn.onclick=()=>{ document.querySelectorAll('.d-area-btn').forEach(b=>b.classList.remove('selected')); btn.classList.add('selected'); dArea=a.key; document.getElementById('d-next-0').disabled=false; };
         c.appendChild(btn);
     });
@@ -567,24 +569,24 @@ function dShowResult(){
     const recos = dRecos[dArea][recosIdx];
     const dimColors=['#1d4ed8','#0ea5e9','#0284c7','#3b82f6','#06b6d4']; 
     
-    let html=`<div class="text-center mb-10">
-        <div class="text-7xl font-black mb-4" style="color:${fg}">${pct}%</div>
-        <span class="text-[11px] font-bold uppercase tracking-widest px-6 py-2 rounded-md inline-block shadow-sm" style="background:${bg};color:${fg};border:1px solid ${border};">${nivel}</span>
-    </div><div class="mb-10 bg-slate-50 p-6 rounded-2xl border border-slate-100">`;
+    let html=`<div class="text-center mb-8 md:mb-10">
+        <div class="text-6xl md:text-7xl font-black mb-3 md:mb-4" style="color:${fg}">${pct}%</div>
+        <span class="text-[9px] md:text-[11px] font-bold uppercase tracking-widest px-4 md:px-6 py-2 rounded-md inline-block shadow-sm" style="background:${bg};color:${fg};border:1px solid ${border};">${nivel}</span>
+    </div><div class="mb-8 md:mb-10 bg-slate-50 p-4 md:p-6 rounded-2xl border border-slate-100">`;
     qs.forEach((q,i)=>{
         const p=Math.round((dAnswers[i]||0)/4*100);
-        html+=`<div class="flex items-center gap-4 mb-4">
-            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-600 w-36 flex-shrink-0">${q.dim}</span>
+        html+=`<div class="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+            <span class="text-[9px] md:text-[10px] font-bold uppercase tracking-wider text-slate-600 w-28 md:w-36 flex-shrink-0 leading-tight">${q.dim}</span>
             <div class="d-bar-bg flex-1"><div class="d-bar-fill" style="width:${p}%;background:${dimColors[i]}"></div></div>
-            <span class="text-[11px] font-bold text-slate-800 w-10 text-right">${p}%</span>
+            <span class="text-[10px] md:text-[11px] font-bold text-slate-800 w-8 md:w-10 text-right">${p}%</span>
         </div>`;
     });
-    html+=`</div><div class="mb-10">
-        <h4 class="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-4">Diagnóstico de Inmersión</h4>`;
+    html+=`</div><div class="mb-8 md:mb-10">
+        <h4 class="text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-3 md:mb-4">Diagnóstico de Inmersión</h4>`;
     recos.forEach(r=>{ html+=`<div class="d-reco shadow-sm">${r}</div>`; });
-    html+=`</div><div class="flex flex-col md:flex-row gap-4 pt-4 border-t border-slate-200">
-        <button onclick="dReset()" class="bg-white border-2 border-slate-300 text-slate-600 px-8 py-4 font-bold uppercase text-[11px] tracking-widest rounded-md hover:border-slate-400 hover:text-slate-800 transition shadow-sm">Reiniciar Test</button>
-        <a href="https://wa.me/5493434164699?text=Hola%20Fabricio,%20acabo%20de%20hacer%20el%20diagnóstico%20de%20${dArea}%20en%20tu%20web%20y%20el%20resultado%20es:%20${nivel}%20(${pct}%25).%20Necesito%20agendar%20una%20sesión%20estratégica." target="_blank" class="flex-1 bg-blue-700 text-white px-8 py-4 font-bold uppercase text-[11px] tracking-[0.25em] rounded-md hover:bg-blue-800 transition text-center shadow-md">Agendar Sesión Estratégica →</a>
+    html+=`</div><div class="flex flex-col sm:flex-row gap-3 md:gap-4 pt-4 border-t border-slate-200">
+        <button onclick="dReset()" class="bg-white border-2 border-slate-300 text-slate-600 w-full sm:w-auto px-6 md:px-8 py-4 font-bold uppercase text-[10px] md:text-[11px] tracking-widest rounded-md hover:border-slate-400 hover:text-slate-800 transition shadow-sm">Reiniciar Test</button>
+        <a href="https://wa.me/5493434164699?text=Hola%20Fabricio,%20acabo%20de%20hacer%20el%20diagnóstico%20de%20${dArea}%20en%20tu%20web%20y%20el%20resultado%20es:%20${nivel}%20(${pct}%25).%20Necesito%20agendar%20una%20sesión%20estratégica." target="_blank" class="flex-1 bg-blue-700 text-white w-full sm:w-auto px-6 md:px-8 py-4 font-bold uppercase text-[10px] md:text-[11px] tracking-[0.25em] rounded-md hover:bg-blue-800 transition text-center shadow-md">Agendar Sesión Estratégica →</a>
     </div>`;
     document.getElementById('d-result').innerHTML=html;
 }
