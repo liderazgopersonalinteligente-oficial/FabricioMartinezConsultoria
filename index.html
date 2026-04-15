@@ -11,7 +11,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Fabricio Martínez — Consultoría de Inmersión Profunda. Estrategia organizacional, neurociencias aplicadas, alto rendimiento.">
-    
     <meta property="og:title" content="Fabricio Martínez | Estrategia & Alto Rendimiento">
     <meta property="og:description" content="Inmersión profunda en organizaciones. Alineación estratégica, neurociencias y gestión institucional. Hacé tu diagnóstico gratuito.">
     <meta property="og:image" content="https://www.fabriciomartinez.com.ar/20240606_122252.jpg">
@@ -29,214 +28,48 @@
  
     <style>
         html { scroll-behavior: smooth; }
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background-color: #ffffff; 
-            color: #1e293b; 
-            overflow-x: hidden; 
-        } 
-        
-        .hero-gradient {
-            background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.95)),
-                        url('20240606_122252.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        
-        .card-hover:hover {
-            border-color: rgba(14, 165, 233, 0.4);
-            transform: translateY(-5px);
-            transition: all 0.4s ease;
-            box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.1);
-        }
- 
-        /* ── RADAR SLIDERS ── */
-        .r-slider {
-            -webkit-appearance: none; 
-            appearance: none;
-            width: 100%; 
-            height: 4px;
-            background: #e0f2fe; 
-            border-radius: 2px; 
-            cursor: pointer; 
-            outline: none;
-        }
-        .r-slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            width: 18px; 
-            height: 18px;
-            background: #1d4ed8; 
-            border-radius: 50%; 
-            border: none; 
-            transition: transform 0.1s;
-        }
-        .r-slider::-webkit-slider-thumb:hover { 
-            transform: scale(1.2); 
-            background: #0ea5e9; 
-        } 
-        
-        .r-slider::-moz-range-thumb {
-            width: 18px; 
-            height: 18px;
-            background: #1d4ed8; 
-            border-radius: 50%; 
-            border: none; 
-            transition: transform 0.1s;
-        }
-        .r-slider::-moz-range-thumb:hover { 
-            transform: scale(1.2); 
-            background: #0ea5e9; 
-        }
- 
-        /* ── DIAGNOSTICO ── */
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1e293b; overflow-x: hidden; } 
+        .hero-gradient { background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.95)), url('20240606_122252.jpg'); background-size: cover; background-position: center; background-attachment: fixed; }
+        .card-hover:hover { border-color: rgba(14, 165, 233, 0.4); transform: translateY(-5px); transition: all 0.4s ease; box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.1); }
+        .r-slider { -webkit-appearance: none; appearance: none; width: 100%; height: 4px; background: #e0f2fe; border-radius: 2px; cursor: pointer; outline: none; }
+        .r-slider::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px; background: #1d4ed8; border-radius: 50%; border: none; transition: transform 0.1s; }
+        .r-slider::-webkit-slider-thumb:hover { transform: scale(1.2); background: #0ea5e9; } 
+        .r-slider::-moz-range-thumb { width: 18px; height: 18px; background: #1d4ed8; border-radius: 50%; border: none; transition: transform 0.1s; }
+        .r-slider::-moz-range-thumb:hover { transform: scale(1.2); background: #0ea5e9; }
         .d-progress-bg { height: 4px; background: #e2e8f0; border-radius: 2px; }
         .d-progress-fill { height: 4px; background: #0ea5e9; border-radius: 2px; transition: width 0.4s ease; } 
-        .d-step { display: none; }
-        .d-step.active { display: block; }
-        
-        .d-area-btn {
-            padding: 24px 16px; 
-            border: 2px solid #f1f5f9;
-            background: #ffffff;
-            color: #64748b;
-            border-radius: 24px; 
-            cursor: pointer;
-            text-align: center; 
-            transition: all 0.2s;
-            font-family: 'Inter', sans-serif;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-        }
-        @media (min-width: 768px) {
-            .d-area-btn { padding: 32px 16px; }
-        }
-        .d-area-btn:hover { 
-            border-color: #bae6fd; 
-            color: #1d4ed8; 
-            background: #f0f9ff; 
-        }
-        .d-area-btn.selected { 
-            border-color: #1d4ed8; 
-            color: #1d4ed8; 
-            background: #eff6ff; 
-            box-shadow: 0 10px 15px -3px rgba(29, 78, 216, 0.1); 
-        }
-        
-        .d-opt-btn {
-            width: 100%; 
-            padding: 16px 20px;
-            border: 1px solid #e2e8f0;
-            background: #ffffff;
-            color: #334155; 
-            border-radius: 12px; 
-            cursor: pointer;
-            text-align: left; 
-            font-size: 14px; 
-            line-height: 1.5;
-            transition: all 0.15s; 
-            font-family: 'Inter', sans-serif;
-            display: block; 
-            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-        }
-        .d-opt-btn:hover { 
-            border-color: #bae6fd; 
-            background: #f8fafc; 
-            color: #0f172a; 
-        }
-        .d-opt-btn.selected { 
-            border-color: #1d4ed8; 
-            color: #1d4ed8; 
-            background: #eff6ff; 
-            font-weight: bold; 
-            border-width: 2px; 
-            padding: 15px 19px; 
-        } 
-        
-        .d-btn-back {
-            padding: 14px 20px; 
-            border: 1px solid #cbd5e1; 
-            background: #ffffff; 
-            color: #64748b;
-            font-size: 10px; 
-            font-weight: 700; 
-            letter-spacing: 0.15em; 
-            text-transform: uppercase;
-            border-radius: 6px; 
-            cursor: pointer; 
-            font-family: 'Inter', sans-serif; 
-            transition: all 0.2s;
-        }
-        @media (min-width: 768px) {
-            .d-btn-back { padding: 14px 24px; }
-        }
-        .d-btn-back:hover { 
-            border-color: #94a3b8; 
-            color: #0f172a; 
-            background: #f8fafc; 
-        }
-        
-        .d-btn-next {
-            flex: 1; 
-            padding: 14px 20px; 
-            background: #1d4ed8; 
-            color: #ffffff; 
-            font-size: 10px; 
-            font-weight: 700; 
-            letter-spacing: 0.25em; 
-            text-transform: uppercase;
-            border-radius: 6px; 
-            border: none; 
-            cursor: pointer;
-            font-family: 'Inter', sans-serif; 
-            transition: background 0.2s, opacity 0.2s;
-        }
-        @media (min-width: 768px) {
-            .d-btn-next { padding: 14px 24px; }
-        }
-        .d-btn-next:disabled { opacity: 0.3; cursor: default; }
-        .d-btn-next:not(:disabled):hover { background: #1e40af; } 
-        
+        .d-step { display: none; } .d-step.active { display: block; }
+        .d-area-btn { padding: 24px 16px; border: 2px solid #f1f5f9; background: #ffffff; color: #64748b; border-radius: 24px; cursor: pointer; text-align: center; transition: all 0.2s; font-family: 'Inter', sans-serif; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
+        .d-area-btn:hover { border-color: #bae6fd; color: #1d4ed8; background: #f0f9ff; }
+        .d-area-btn.selected { border-color: #1d4ed8; color: #1d4ed8; background: #eff6ff; box-shadow: 0 10px 15px -3px rgba(29, 78, 216, 0.1); }
+        .d-opt-btn { width: 100%; padding: 16px 20px; border: 1px solid #e2e8f0; background: #ffffff; color: #334155; border-radius: 12px; cursor: pointer; text-align: left; font-size: 14px; line-height: 1.5; transition: all 0.15s; font-family: 'Inter', sans-serif; display: block; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+        .d-opt-btn:hover { border-color: #bae6fd; background: #f8fafc; color: #0f172a; }
+        .d-opt-btn.selected { border-color: #1d4ed8; color: #1d4ed8; background: #eff6ff; font-weight: bold; border-width: 2px; padding: 15px 19px; } 
+        .d-btn-back { padding: 14px 20px; border: 1px solid #cbd5e1; background: #ffffff; color: #64748b; font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; border-radius: 6px; cursor: pointer; font-family: 'Inter', sans-serif; transition: all 0.2s; }
+        .d-btn-back:hover { border-color: #94a3b8; color: #0f172a; background: #f8fafc; }
+        .d-btn-next { flex: 1; padding: 14px 20px; background: #1d4ed8; color: #ffffff; font-size: 10px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; border-radius: 6px; border: none; cursor: pointer; font-family: 'Inter', sans-serif; transition: background 0.2s, opacity 0.2s; }
+        .d-btn-next:disabled { opacity: 0.3; cursor: default; } .d-btn-next:not(:disabled):hover { background: #1e40af; } 
         .d-bar-bg { flex: 1; height: 6px; background: #e2e8f0; border-radius: 3px; overflow: hidden; }
         .d-bar-fill { height: 6px; border-radius: 3px; transition: width 1.1s ease; }
-        
-        .d-reco {
-            border-left: 3px solid #0ea5e9; 
-            padding: 16px 20px; 
-            margin-bottom: 12px;
-            background: #f0f9ff; 
-            font-size: 13px; 
-            color: #334155; 
-            line-height: 1.7;
-            border-radius: 0 8px 8px 0;
-        }
-        @media (min-width: 768px) {
-            .d-reco { font-size: 14px; }
-        }
+        .d-reco { border-left: 3px solid #0ea5e9; padding: 16px 20px; margin-bottom: 12px; background: #f0f9ff; font-size: 13px; color: #334155; line-height: 1.7; border-radius: 0 8px 8px 0; }
+        @media (min-width: 768px) { .d-area-btn { padding: 32px 16px; } .d-btn-back, .d-btn-next { padding: 14px 24px; } .d-reco { font-size: 14px; } }
     </style>
 </head>
 <body>
  
 <header class="hero-gradient relative min-h-screen flex items-center justify-center text-center px-4 md:px-6">
     
-    <div class="absolute top-0 left-0 w-full p-6 flex justify-center md:justify-start z-50">
-        <img src="logo-blanco.png" alt="Logo Fabricio Martínez" class="h-16 md:h-24 mix-blend-multiply opacity-90 hover:opacity-100 transition duration-300">
+    <div class="absolute top-0 left-0 w-full p-4 md:p-8 flex justify-center md:justify-start z-50">
+        <img src="logo-blanco.png" alt="Logo Fabricio Martínez" class="h-12 md:h-16 mix-blend-multiply opacity-90 hover:opacity-100 transition duration-300">
     </div>
 
-    <div class="max-w-5xl mt-20 md:mt-0">
+    <div class="max-w-5xl mt-32 md:mt-24">
         <h2 class="text-blue-700 text-[10px] md:text-xs font-bold uppercase tracking-[0.6em] mb-6">Neurociencias & Alto Rendimiento</h2>
-        <h1 class="text-4xl md:text-7xl font-black mb-6 md:mb-8 leading-tight uppercase tracking-tighter text-slate-900">
-            ¿Tu equipo <span class="text-sky-500 italic">rinde</span> <br>o solo sobrevive?
-        </h1>
-        <p class="text-base md:text-2xl text-slate-600 mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed px-4 md:px-0">
-            Fusionamos neurociencia y gestión para que dejes de apagar incendios. Entrenamos la capacidad de tu organización para tomar decisiones bajo presión y escalar resultados reales.
-        </p>
+        <h1 class="text-4xl md:text-7xl font-black mb-6 md:mb-8 leading-tight uppercase tracking-tighter text-slate-900">¿Tu equipo <span class="text-sky-500 italic">rinde</span> <br>o solo sobrevive?</h1>
+        <p class="text-base md:text-2xl text-slate-600 mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed px-4 md:px-0">Fusionamos neurociencia y gestión para que dejes de apagar incendios. Entrenamos la capacidad de tu organización para tomar decisiones bajo presión y escalar resultados reales.</p>
         <div class="flex flex-col md:flex-row gap-4 md:gap-6 justify-center relative z-10 px-4 md:px-0">
-            <a href="#diagnostico" class="bg-blue-700 text-white w-full md:w-auto px-6 md:px-10 py-5 font-bold uppercase text-[10px] md:text-[11px] tracking-[0.2em] rounded-md hover:bg-blue-800 transition shadow-xl hover:shadow-2xl hover:-translate-y-1 text-center">
-                Descubrí tu cuello de botella ahora
-            </a>
-            <a href="https://wa.me/5493434164699" target="_blank" class="bg-white border-2 border-blue-700 text-blue-700 w-full md:w-auto px-6 md:px-10 py-5 font-bold uppercase text-[10px] md:text-[11px] tracking-[0.2em] rounded-md hover:bg-blue-50 transition text-center">
-                Agendar Sesión Estratégica
-            </a>
+            <a href="#diagnostico" class="bg-blue-700 text-white w-full md:w-auto px-6 md:px-10 py-5 font-bold uppercase text-[10px] md:text-[11px] tracking-[0.2em] rounded-md hover:bg-blue-800 transition shadow-xl hover:shadow-2xl hover:-translate-y-1 text-center">Descubrí tu cuello de botella ahora</a>
+            <a href="https://wa.me/5493434164699" target="_blank" class="bg-white border-2 border-blue-700 text-blue-700 w-full md:w-auto px-6 md:px-10 py-5 font-bold uppercase text-[10px] md:text-[11px] tracking-[0.2em] rounded-md hover:bg-blue-50 transition text-center">Agendar Sesión Estratégica</a>
         </div>
     </div>
 </header>
@@ -245,28 +78,11 @@
     <div class="container mx-auto">
         <h3 class="text-sky-500 font-bold text-[10px] md:text-xs text-center uppercase tracking-[0.5em] mb-4">Metodología de Inmersión</h3>
         <h2 class="text-3xl md:text-4xl font-black text-center mb-12 md:mb-16 uppercase italic tracking-tighter text-slate-900">Programas de <span class="text-blue-700">Intervención</span></h2>
-        
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            <div class="bg-white p-8 md:p-10 rounded-2xl border border-slate-100 card-hover shadow-sm text-center md:text-left">
-                <i class="fas fa-chart-pie text-3xl text-blue-700 mb-6"></i>
-                <h4 class="text-sm font-bold mb-4 uppercase tracking-widest text-slate-900">Blindaje Ejecutivo</h4>
-                <p class="text-slate-600 text-sm leading-relaxed font-light">Terminá con la dependencia de personas clave. Sistematizamos procesos y OKRs para escalar tu operación sin agotar a tu equipo.</p>
-            </div>
-            <div class="bg-white p-8 md:p-10 rounded-2xl border border-slate-100 card-hover shadow-sm text-center md:text-left">
-                <i class="fas fa-trophy text-3xl text-blue-700 mb-6"></i>
-                <h4 class="text-sm font-bold mb-4 uppercase tracking-widest text-slate-900">Neuro-Coaching</h4>
-                <p class="text-slate-600 text-sm leading-relaxed font-light">Entrenamiento cognitivo-motor para atletas y cuerpos técnicos. Decisiones perfectas en milisegundos bajo la máxima presión competitiva.</p>
-            </div>
-            <div class="bg-white p-8 md:p-10 rounded-2xl border border-slate-100 card-hover shadow-sm text-center md:text-left">
-                <i class="fas fa-users-cog text-3xl text-blue-700 mb-6"></i>
-                <h4 class="text-sm font-bold mb-4 uppercase tracking-widest text-slate-900">Liderazgo 360°</h4>
-                <p class="text-slate-600 text-sm leading-relaxed font-light">De la burocracia al liderazgo ágil. Transformamos climas institucionales y blindamos a los directivos ante la resistencia al cambio.</p>
-            </div>
-            <div class="bg-white p-8 md:p-10 rounded-2xl border border-slate-100 card-hover shadow-sm text-center md:text-left">
-                <i class="fas fa-hand-holding-usd text-3xl text-blue-700 mb-6"></i>
-                <h4 class="text-sm font-bold mb-4 uppercase tracking-widest text-slate-900">Fugas Financieras</h4>
-                <p class="text-slate-600 text-sm leading-relaxed font-light">Auditoría a riesgo cero. Identificamos fugas de capital y solo cobramos un porcentaje del ahorro real generado en tu gestión.</p>
-            </div>
+            <div class="bg-white p-8 md:p-10 rounded-2xl border border-slate-100 card-hover shadow-sm text-center md:text-left"><i class="fas fa-chart-pie text-3xl text-blue-700 mb-6"></i><h4 class="text-sm font-bold mb-4 uppercase tracking-widest text-slate-900">Blindaje Ejecutivo</h4><p class="text-slate-600 text-sm leading-relaxed font-light">Terminá con la dependencia de personas clave. Sistematizamos procesos y OKRs para escalar tu operación sin agotar a tu equipo.</p></div>
+            <div class="bg-white p-8 md:p-10 rounded-2xl border border-slate-100 card-hover shadow-sm text-center md:text-left"><i class="fas fa-trophy text-3xl text-blue-700 mb-6"></i><h4 class="text-sm font-bold mb-4 uppercase tracking-widest text-slate-900">Neuro-Coaching</h4><p class="text-slate-600 text-sm leading-relaxed font-light">Entrenamiento cognitivo-motor para atletas y cuerpos técnicos. Decisiones perfectas en milisegundos bajo la máxima presión competitiva.</p></div>
+            <div class="bg-white p-8 md:p-10 rounded-2xl border border-slate-100 card-hover shadow-sm text-center md:text-left"><i class="fas fa-users-cog text-3xl text-blue-700 mb-6"></i><h4 class="text-sm font-bold mb-4 uppercase tracking-widest text-slate-900">Liderazgo 360°</h4><p class="text-slate-600 text-sm leading-relaxed font-light">De la burocracia al liderazgo ágil. Transformamos climas institucionales y blindamos a los directivos ante la resistencia al cambio.</p></div>
+            <div class="bg-white p-8 md:p-10 rounded-2xl border border-slate-100 card-hover shadow-sm text-center md:text-left"><i class="fas fa-hand-holding-usd text-3xl text-blue-700 mb-6"></i><h4 class="text-sm font-bold mb-4 uppercase tracking-widest text-slate-900">Fugas Financieras</h4><p class="text-slate-600 text-sm leading-relaxed font-light">Auditoría a riesgo cero. Identificamos fugas de capital y solo cobramos un porcentaje del ahorro real generado en tu gestión.</p></div>
         </div>
     </div>
 </section>
@@ -275,32 +91,10 @@
     <div class="container mx-auto max-w-6xl">
         <h3 class="text-sky-500 font-bold text-[10px] md:text-xs text-center uppercase tracking-[0.5em] mb-4">El Fin del "Ruido"</h3>
         <h2 class="text-3xl md:text-4xl font-black text-center mb-12 md:mb-16 uppercase italic tracking-tighter text-slate-900">Resultados que <span class="text-blue-700">Transforman</span></h2>
-        
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 card-hover">
-                <div class="flex items-center gap-4 mb-6">
-                    <span class="bg-blue-100 text-blue-700 p-3 rounded-xl text-xl"><i class="fas fa-bullseye"></i></span>
-                    <h4 class="font-bold text-lg uppercase tracking-tighter text-slate-900">Ejecución Predecible</h4>
-                </div>
-                <p class="text-slate-600 text-sm leading-relaxed mb-8">Dejamos de perseguir tareas aisladas para medir el progreso real. Alineamos a todos los niveles hacia un objetivo único.</p>
-                <div class="text-[10px] font-bold uppercase tracking-widest text-blue-700 bg-blue-100/50 p-3 rounded-lg border border-blue-200 text-center">Impacto: Multiplicador de Metas</div>
-            </div>
-            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 card-hover">
-                <div class="flex items-center gap-4 mb-6">
-                    <span class="bg-sky-100 text-sky-600 p-3 rounded-xl text-xl"><i class="fas fa-comments"></i></span>
-                    <h4 class="font-bold text-lg uppercase tracking-tighter text-slate-900">Comunicación Limpia</h4>
-                </div>
-                <p class="text-slate-600 text-sm leading-relaxed mb-8">Erradicamos las reuniones improductivas y el caos de los grupos de chat. Implementamos protocolos que aceleran el flujo de trabajo.</p>
-                <div class="text-[10px] font-bold uppercase tracking-widest text-sky-700 bg-sky-100/50 p-3 rounded-lg border border-sky-200 text-center">Impacto: Cero Tiempos Muertos</div>
-            </div>
-            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 card-hover">
-                <div class="flex items-center gap-4 mb-6">
-                    <span class="bg-indigo-100 text-indigo-600 p-3 rounded-xl text-xl"><i class="fas fa-chart-line"></i></span>
-                    <h4 class="font-bold text-lg uppercase tracking-tighter text-slate-900">Retorno de Liderazgo</h4>
-                </div>
-                <p class="text-slate-600 text-sm leading-relaxed mb-8">Un líder bloqueado por el estrés le cuesta dinero a la empresa. Blindamos neuro-cognitivamente a tus gerentes para que decidan con precisión.</p>
-                <div class="text-[10px] font-bold uppercase tracking-widest text-indigo-700 bg-indigo-100/50 p-3 rounded-lg border border-indigo-200 text-center">Impacto: +25% Productividad Ejecutiva</div>
-            </div>
+            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 card-hover"><div class="flex items-center gap-4 mb-6"><span class="bg-blue-100 text-blue-700 p-3 rounded-xl text-xl"><i class="fas fa-bullseye"></i></span><h4 class="font-bold text-lg uppercase tracking-tighter text-slate-900">Ejecución Predecible</h4></div><p class="text-slate-600 text-sm leading-relaxed mb-8">Dejamos de perseguir tareas aisladas para medir el progreso real. Alineamos a todos los niveles hacia un objetivo único.</p><div class="text-[10px] font-bold uppercase tracking-widest text-blue-700 bg-blue-100/50 p-3 rounded-lg border border-blue-200 text-center">Impacto: Multiplicador de Metas</div></div>
+            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 card-hover"><div class="flex items-center gap-4 mb-6"><span class="bg-sky-100 text-sky-600 p-3 rounded-xl text-xl"><i class="fas fa-comments"></i></span><h4 class="font-bold text-lg uppercase tracking-tighter text-slate-900">Comunicación Limpia</h4></div><p class="text-slate-600 text-sm leading-relaxed mb-8">Erradicamos las reuniones improductivas y el caos de los grupos de chat. Implementamos protocolos que aceleran el flujo de trabajo.</p><div class="text-[10px] font-bold uppercase tracking-widest text-sky-700 bg-sky-100/50 p-3 rounded-lg border border-sky-200 text-center">Impacto: Cero Tiempos Muertos</div></div>
+            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 card-hover"><div class="flex items-center gap-4 mb-6"><span class="bg-indigo-100 text-indigo-600 p-3 rounded-xl text-xl"><i class="fas fa-chart-line"></i></span><h4 class="font-bold text-lg uppercase tracking-tighter text-slate-900">Retorno de Liderazgo</h4></div><p class="text-slate-600 text-sm leading-relaxed mb-8">Un líder bloqueado por el estrés le cuesta dinero a la empresa. Blindamos neuro-cognitivamente a tus gerentes para que decidan con precisión.</p><div class="text-[10px] font-bold uppercase tracking-widest text-indigo-700 bg-indigo-100/50 p-3 rounded-lg border border-indigo-200 text-center">Impacto: +25% Productividad Ejecutiva</div></div>
         </div>
     </div>
 </section>
@@ -308,27 +102,15 @@
 <section class="py-24 md:py-32 bg-sky-50 px-4 md:px-6 border-y border-slate-200 overflow-hidden">
     <div class="container mx-auto max-w-6xl flex flex-col md:flex-row items-center gap-12 lg:gap-24">
         <div class="w-full sm:w-4/5 md:w-1/2 lg:w-5/12 relative mb-12 md:mb-0 mx-auto">
-            <div class="w-5/6 aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-slate-200 relative z-10">
-                <img src="20240606_122252.jpg" alt="Fabricio Martínez Consultoría" class="w-full h-full object-cover">
-            </div>
-            <div class="absolute bottom-[-10%] right-0 w-2/3 aspect-video rounded-xl overflow-hidden shadow-2xl border-4 border-white z-20 hover:scale-105 transition duration-500 bg-slate-100">
-                <img src="argentinasoftbolmeditando.jpg" alt="Selección Argentina Femenina de Sóftbol en proceso de neuro-coaching" class="w-full h-full object-cover">
-                <div class="absolute bottom-0 left-0 w-full bg-blue-700/90 backdrop-blur-sm px-2 py-2 text-center">
-                    <p class="text-[7px] md:text-[9px] text-white font-bold uppercase tracking-widest"><i class="fas fa-medal text-sky-300 mr-1"></i>Selección Argentina</p>
-                </div>
-            </div>
+            <div class="w-5/6 aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-slate-200 relative z-10"><img src="20240606_122252.jpg" alt="Fabricio Martínez Consultoría" class="w-full h-full object-cover"></div>
+            <div class="absolute bottom-[-10%] right-0 w-2/3 aspect-video rounded-xl overflow-hidden shadow-2xl border-4 border-white z-20 hover:scale-105 transition duration-500 bg-slate-100"><img src="argentinasoftbolmeditando.jpg" alt="Selección Argentina Femenina de Sóftbol" class="w-full h-full object-cover"><div class="absolute bottom-0 left-0 w-full bg-blue-700/90 backdrop-blur-sm px-2 py-2 text-center"><p class="text-[7px] md:text-[9px] text-white font-bold uppercase tracking-widest"><i class="fas fa-medal text-sky-300 mr-1"></i>Selección Argentina</p></div></div>
         </div>
         <div class="w-full md:w-1/2 mt-4 md:mt-0 text-center md:text-left">
             <h3 class="text-sky-500 font-bold text-[10px] md:text-xs uppercase tracking-[0.4em] mb-4">Dirección General</h3>
             <h2 class="text-3xl md:text-5xl font-bold mb-6 md:mb-8 uppercase tracking-tighter italic text-slate-900">Fabricio Martínez</h2>
-            <p class="text-base md:text-lg text-slate-600 mb-6 md:mb-8 leading-relaxed">
-                Consultor y Especialista Cognitivo Motor con más de 25 años de trayectoria. Mi misión es destrabar el potencial biológico y sistémico de los equipos. He implementado programas de <strong>Coaching Ejecutivo y Liderazgo</strong> en el mundo corporativo y me desempeño como Coach en Neurociencias para <strong>Selecciones Nacionales</strong>.
-            </p>
+            <p class="text-base md:text-lg text-slate-600 mb-6 md:mb-8 leading-relaxed">Consultor y Especialista Cognitivo Motor con más de 25 años de trayectoria. Mi misión es destrabar el potencial biológico y sistémico de los equipos. He implementado programas de <strong>Coaching Ejecutivo y Liderazgo</strong> en el mundo corporativo y me desempeño como Coach en Neurociencias para <strong>Selecciones Nacionales</strong>.</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 md:gap-y-4 gap-x-4 md:gap-x-8 font-bold text-slate-700 uppercase text-[9px] md:text-[10px] tracking-[0.15em] mb-10 bg-white p-5 md:p-6 rounded-xl border border-slate-100 shadow-sm">
-                <p class="flex items-center justify-center md:justify-start"><i class="fas fa-check text-blue-600 mr-3"></i> Neurociencias (UBA)</p>
-                <p class="flex items-center justify-center md:justify-start"><i class="fas fa-check text-blue-600 mr-3"></i> Liderazgo Educativo (UdeSA)</p>
-                <p class="flex items-center justify-center md:justify-start"><i class="fas fa-check text-blue-600 mr-3"></i> Liderazgo y PNL (ENEB)</p>
-                <p class="flex items-center justify-center md:justify-start"><i class="fas fa-check text-blue-600 mr-3"></i> Gestión Institucional</p>
+                <p class="flex items-center justify-center md:justify-start"><i class="fas fa-check text-blue-600 mr-3"></i> Neurociencias (UBA)</p><p class="flex items-center justify-center md:justify-start"><i class="fas fa-check text-blue-600 mr-3"></i> Liderazgo Educativo (UdeSA)</p><p class="flex items-center justify-center md:justify-start"><i class="fas fa-check text-blue-600 mr-3"></i> Liderazgo y PNL (ENEB)</p><p class="flex items-center justify-center md:justify-start"><i class="fas fa-check text-blue-600 mr-3"></i> Gestión Institucional</p>
             </div>
         </div>
     </div>
@@ -336,68 +118,32 @@
 
 <section class="py-24 md:py-32 bg-white px-4 md:px-6 border-b border-slate-200">
     <div class="container mx-auto max-w-6xl">
-        <h3 class="text-sky-500 font-bold text-[10px] md:text-xs text-center uppercase tracking-[0.5em] mb-4 text-center">Hub de Especialistas</h3>
+        <h3 class="text-sky-500 font-bold text-[10px] md:text-xs text-center uppercase tracking-[0.5em] mb-4">Hub de Especialistas</h3>
         <h2 class="text-3xl md:text-4xl font-black text-center mb-16 uppercase italic tracking-tighter text-slate-900">Expertos en <span class="text-blue-700">Implementación</span></h2>
         
         <div class="bg-slate-50 p-8 md:p-12 rounded-3xl border-2 border-blue-100 shadow-lg mb-16 flex flex-col md:flex-row items-center gap-10">
-            <div class="w-32 h-32 md:w-48 md:h-48 bg-gradient-to-br from-blue-700 to-sky-500 rounded-full flex items-center justify-center text-white text-4xl md:text-6xl font-black flex-shrink-0 shadow-md border-4 border-white">
-                MM
-            </div>
+            <div class="w-32 h-32 md:w-48 md:h-48 bg-gradient-to-br from-blue-700 to-sky-500 rounded-full flex items-center justify-center text-white text-4xl md:text-6xl font-black flex-shrink-0 shadow-md border-4 border-white">MM</div>
             <div class="text-center md:text-left">
                 <div class="inline-block bg-blue-100 text-blue-700 text-[9px] font-black uppercase tracking-widest px-3 py-1 rounded-full mb-4">Socio Estratégico Financiero</div>
                 <h3 class="text-3xl font-black text-slate-900 mb-4 uppercase italic">Matías Martínez</h3>
-                <p class="text-slate-600 mb-6 leading-relaxed">
-                    Especialista en comercialización y referente de análisis financiero en <strong>Canal 9 y Canal 6 de Entre Ríos</strong>. Lidera nuestra unidad de Auditoría Económica con un modelo disruptivo de <strong>"Riesgo Cero"</strong>: el objetivo es identificar fugas de capital y optimizar la rentabilidad, cobrando solo un porcentaje del ahorro generado para la empresa.
-                </p>
-                <div class="text-blue-700 font-bold text-[11px] uppercase tracking-widest flex items-center justify-center md:justify-start gap-2">
-                    <i class="fas fa-chart-line"></i> Diagnóstico de Capital • Eficiencia Financiera
-                </div>
+                <p class="text-slate-600 mb-6 leading-relaxed">Especialista en comercialización y referente de análisis financiero en <strong>Canal 9 y Canal 6 de Entre Ríos</strong>. Lidera nuestra unidad de Auditoría Económica con un modelo disruptivo de <strong>"Riesgo Cero"</strong>: el objetivo es identificar fugas de capital y optimizar la rentabilidad, cobrando solo un porcentaje del ahorro generado para la empresa.</p>
+                <div class="text-blue-700 font-bold text-[11px] uppercase tracking-widest flex items-center justify-center md:justify-start gap-2"><i class="fas fa-chart-line"></i> Diagnóstico de Capital • Eficiencia Financiera</div>
             </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm">
-                <h4 class="text-blue-700 font-black text-xs uppercase tracking-[0.3em] mb-6 flex items-center gap-3">
-                    <span class="w-8 h-8 bg-blue-100 text-blue-700 rounded-lg flex items-center justify-center"><i class="fas fa-award"></i></span>
-                    Unidad de Calidad y Normativas
-                </h4>
+                <h4 class="text-blue-700 font-black text-xs uppercase tracking-[0.3em] mb-6 flex items-center gap-3"><span class="w-8 h-8 bg-blue-100 text-blue-700 rounded-lg flex items-center justify-center"><i class="fas fa-award"></i></span> Unidad de Calidad y Normativas</h4>
                 <div class="space-y-6">
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-white border border-slate-200 rounded-full flex items-center justify-center text-slate-400 font-bold flex-shrink-0">JG</div>
-                        <div>
-                            <p class="text-slate-900 font-bold text-sm uppercase mb-1">Lic. José María González</p>
-                            <p class="text-slate-500 text-xs leading-relaxed">Especialista en Bromatología. Implementación de Normas IRAM e ISO para industrias alimenticias.</p>
-                        </div>
-                    </div>
-                    <div class="pt-4 border-t border-slate-200 flex items-center gap-4">
-                        <div class="w-12 h-12 bg-white border border-slate-200 text-blue-400 rounded-full flex items-center justify-center font-bold flex-shrink-0"><i class="fas fa-building"></i></div>
-                        <div>
-                            <p class="text-slate-900 font-bold text-sm uppercase mb-1">Edge Solutions</p>
-                            <p class="text-slate-500 text-xs leading-relaxed">Consultora asociada para la auditoría y certificación integral de estándares internacionales de gestión.</p>
-                        </div>
-                    </div>
+                    <div class="flex items-center gap-4"><div class="w-12 h-12 bg-white border border-slate-200 rounded-full flex items-center justify-center text-slate-400 font-bold flex-shrink-0">JG</div><div><p class="text-slate-900 font-bold text-sm uppercase mb-1">Lic. José María González</p><p class="text-slate-500 text-xs leading-relaxed">Especialista en Bromatología. Implementación de Normas IRAM e ISO para industrias alimenticias.</p></div></div>
+                    <div class="pt-4 border-t border-slate-200 flex items-center gap-4"><div class="w-12 h-12 bg-white border border-slate-200 text-blue-400 rounded-full flex items-center justify-center font-bold flex-shrink-0"><i class="fas fa-building"></i></div><div><p class="text-slate-900 font-bold text-sm uppercase mb-1">Edge Solutions</p><p class="text-slate-500 text-xs leading-relaxed">Consultora asociada para la auditoría y certificación integral de estándares internacionales de gestión.</p></div></div>
                 </div>
             </div>
             <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm">
-                <h4 class="text-sky-500 font-black text-xs uppercase tracking-[0.3em] mb-6 flex items-center gap-3">
-                    <span class="w-8 h-8 bg-sky-100 text-sky-600 rounded-lg flex items-center justify-center"><i class="fas fa-bullhorn"></i></span>
-                    Unidad de Comunicación & Institucionales
-                </h4>
+                <h4 class="text-sky-500 font-black text-xs uppercase tracking-[0.3em] mb-6 flex items-center gap-3"><span class="w-8 h-8 bg-sky-100 text-sky-600 rounded-lg flex items-center justify-center"><i class="fas fa-bullhorn"></i></span> Unidad de Comunicación & Institucionales</h4>
                 <div class="space-y-6">
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-white border border-slate-200 rounded-full flex items-center justify-center text-slate-400 font-bold flex-shrink-0">JM</div>
-                        <div>
-                            <p class="text-slate-900 font-bold text-sm uppercase mb-1">Julieta Micconi</p>
-                            <p class="text-slate-500 text-xs leading-relaxed">Estratega de Comunicación Corporativa. Aporta su vasta experiencia como ex-productora de Canal 9.</p>
-                        </div>
-                    </div>
-                    <div class="pt-4 border-t border-slate-200 flex items-center gap-4">
-                        <div class="w-12 h-12 bg-white border border-slate-200 rounded-full flex items-center justify-center text-slate-400 font-bold flex-shrink-0">CC</div>
-                        <div>
-                            <p class="text-slate-900 font-bold text-sm uppercase mb-1">Carolina Cometti</p>
-                            <p class="text-slate-500 text-xs leading-relaxed">Gestión de Relaciones Institucionales y vinculación estratégica con el sector público.</p>
-                        </div>
-                    </div>
+                    <div class="flex items-center gap-4"><div class="w-12 h-12 bg-white border border-slate-200 rounded-full flex items-center justify-center text-slate-400 font-bold flex-shrink-0">JM</div><div><p class="text-slate-900 font-bold text-sm uppercase mb-1">Julieta Micconi</p><p class="text-slate-500 text-xs leading-relaxed">Estratega de Comunicación Corporativa. Aporta su vasta experiencia como ex-productora de Canal 9.</p></div></div>
+                    <div class="pt-4 border-t border-slate-200 flex items-center gap-4"><div class="w-12 h-12 bg-white border border-slate-200 rounded-full flex items-center justify-center text-slate-400 font-bold flex-shrink-0">CC</div><div><p class="text-slate-900 font-bold text-sm uppercase mb-1">Carolina Cometti</p><p class="text-slate-500 text-xs leading-relaxed">Gestión de Relaciones Institucionales y vinculación estratégica con el sector público.</p></div></div>
                 </div>
             </div>
         </div>
@@ -409,9 +155,7 @@
     <div class="max-w-5xl mx-auto px-6 relative z-10">
         <i class="fas fa-quote-left text-4xl md:text-5xl text-sky-400 mb-8 opacity-80"></i>
         <h3 class="text-white text-3xl md:text-4xl font-black uppercase italic mb-8 tracking-tighter">Humanidad, <span class="text-sky-300">Propósito</span> y Vida</h3>
-        <p class="text-xl md:text-3xl text-blue-50 leading-relaxed italic mb-10 font-light px-4">
-            "Ayudo a que las organizaciones recuperen humanidad, propósito y vida. Porque la ciencia optimiza el rendimiento, pero es el propósito lo que sostiene el éxito."
-        </p>
+        <p class="text-xl md:text-3xl text-blue-50 leading-relaxed italic mb-10 font-light px-4">"Ayudo a que las organizaciones recuperen humanidad, propósito y vida. Porque la ciencia optimiza el rendimiento, pero es el propósito lo que sostiene el éxito."</p>
         <div class="w-16 md:w-24 h-1 bg-sky-400 mx-auto rounded-full"></div>
     </div>
 </section>
@@ -424,13 +168,8 @@
  
         <div class="bg-slate-50 p-6 md:p-14 rounded-2xl md:rounded-3xl border border-slate-200 shadow-lg">
             <div class="bg-blue-50 border border-blue-200 p-5 rounded-xl mb-10 shadow-sm flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
-                <div class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 shadow-md">
-                    <i class="fas fa-sliders-h text-xl"></i>
-                </div>
-                <div>
-                    <h4 class="text-blue-800 font-bold text-sm uppercase tracking-widest mb-1">¿Cómo usar esta herramienta?</h4>
-                    <p class="text-blue-700 text-xs md:text-sm">Arrastrá las flechitas azules hacia la <strong>derecha (10)</strong> si tu organización es excelente en esa área, o hacia la <strong>izquierda (1)</strong> si están en caos. El sistema se ajustará automáticamente.</p>
-                </div>
+                <div class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 shadow-md"><i class="fas fa-sliders-h text-xl"></i></div>
+                <div><h4 class="text-blue-800 font-bold text-sm uppercase tracking-widest mb-1">¿Cómo usar esta herramienta?</h4><p class="text-blue-700 text-xs md:text-sm">Arrastrá las flechitas azules hacia la <strong>derecha (10)</strong> si tu organización es excelente en esa área, o hacia la <strong>izquierda (1)</strong> si están en caos. El sistema se ajustará automáticamente.</p></div>
             </div>
 
             <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-8 md:mb-12 text-center md:text-left">
@@ -439,26 +178,12 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-6 md:gap-y-10 mb-10 md:mb-12" id="r-sliders"></div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-10 md:mb-12">
-                <div class="bg-white p-5 md:p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
-                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2">Índice global</p>
-                    <p class="text-4xl font-black text-blue-700" id="r-global">—</p>
-                    <p class="text-[10px] text-slate-400 mt-1">sobre 100</p>
-                </div>
-                <div class="bg-white p-5 md:p-6 rounded-2xl border border-slate-200 shadow-sm text-center flex flex-col justify-center">
-                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2 md:mb-3">Dimensión Fuerte</p>
-                    <p class="text-sm font-bold text-slate-800 leading-snug" id="r-best">—</p>
-                    <p class="text-[11px] font-bold text-sky-600 mt-2 bg-sky-50 py-1 rounded inline-block mx-auto px-3" id="r-best-val"></p>
-                </div>
-                <div class="bg-white p-5 md:p-6 rounded-2xl border border-slate-200 shadow-sm text-center flex flex-col justify-center">
-                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2 md:mb-3">Punto de Fuga</p>
-                    <p class="text-sm font-bold text-slate-800 leading-snug" id="r-worst">—</p>
-                    <p class="text-[11px] font-bold text-rose-500 mt-2 bg-rose-50 py-1 rounded inline-block mx-auto px-3" id="r-worst-val"></p>
-                </div>
+                <div class="bg-white p-5 md:p-6 rounded-2xl border border-slate-200 shadow-sm text-center"><p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2">Índice global</p><p class="text-4xl font-black text-blue-700" id="r-global">—</p><p class="text-[10px] text-slate-400 mt-1">sobre 100</p></div>
+                <div class="bg-white p-5 md:p-6 rounded-2xl border border-slate-200 shadow-sm text-center flex flex-col justify-center"><p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2 md:mb-3">Dimensión Fuerte</p><p class="text-sm font-bold text-slate-800 leading-snug" id="r-best">—</p><p class="text-[11px] font-bold text-sky-600 mt-2 bg-sky-50 py-1 rounded inline-block mx-auto px-3" id="r-best-val"></p></div>
+                <div class="bg-white p-5 md:p-6 rounded-2xl border border-slate-200 shadow-sm text-center flex flex-col justify-center"><p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2 md:mb-3">Punto de Fuga</p><p class="text-sm font-bold text-slate-800 leading-snug" id="r-worst">—</p><p class="text-[11px] font-bold text-rose-500 mt-2 bg-rose-50 py-1 rounded inline-block mx-auto px-3" id="r-worst-val"></p></div>
             </div>
             <div class="flex justify-center mb-10 md:mb-12 bg-white p-4 md:p-8 rounded-2xl md:rounded-3xl border border-slate-200 shadow-sm w-full overflow-hidden">
-                <div class="relative w-full max-w-[450px] aspect-square md:aspect-auto md:h-[380px]">
-                    <canvas id="radarChart"></canvas>
-                </div>
+                <div class="relative w-full max-w-[450px] aspect-square md:aspect-auto md:h-[380px]"><canvas id="radarChart"></canvas></div>
             </div>
             <div class="flex flex-col md:flex-row gap-4">
                 <button onclick="rReset()" class="bg-white border-2 border-slate-300 text-slate-600 w-full md:w-auto px-8 py-4 font-bold uppercase text-[10px] md:text-[11px] tracking-widest rounded-md hover:border-slate-400 hover:text-slate-800 transition shadow-sm">Restablecer</button>
@@ -534,10 +259,8 @@
         <div class="flex justify-center mb-8">
             <img src="logo-oscuro.png" alt="Logo FM" class="h-24 md:h-32 rounded-2xl shadow-[0_0_40px_rgba(29,78,216,0.3)] border border-slate-800 opacity-90 hover:opacity-100 transition duration-300">
         </div>
-        
         <h2 class="text-white text-3xl md:text-4xl font-black mb-4 uppercase italic tracking-tighter">Fabricio Martínez</h2>
         <p class="text-[9px] md:text-[10px] mb-12 md:mb-16 uppercase tracking-[0.6em] text-sky-400 italic">Intervención desde la humanidad</p>
-        
         <div class="flex justify-center space-x-8 md:space-x-12 mb-16 md:mb-20 text-2xl md:text-3xl">
             <a href="https://www.linkedin.com/in/fabriciomartinezok/" target="_blank" class="hover:text-white transition"><i class="fab fa-linkedin"></i></a>
             <a href="https://www.instagram.com/fabri_martinez_ok/?hl=es" target="_blank" class="hover:text-white transition"><i class="fab fa-instagram"></i></a>
