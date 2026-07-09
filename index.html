@@ -23,7 +23,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
  
     <style>
         html { scroll-behavior: smooth; }
@@ -35,9 +34,6 @@
             background-attachment: fixed; 
         }
         .card-hover:hover { border-color: rgba(212, 163, 89, 0.4); transform: translateY(-5px); transition: all 0.4s ease; box-shadow: 0 10px 25px -5px rgba(29, 78, 216, 0.1); }
-        .r-slider { -webkit-appearance: none; appearance: none; width: 100%; height: 4px; background: #e2e8f0; border-radius: 2px; cursor: pointer; outline: none; }
-        .r-slider::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px; background: #1d4ed8; border-radius: 50%; border: none; transition: transform 0.1s; }
-        .r-slider::-webkit-slider-thumb:hover { transform: scale(1.2); background: #d4a359; } 
         .d-progress-bg { height: 4px; background: #e2e8f0; border-radius: 2px; }
         .d-progress-fill { height: 4px; background: #1d4ed8; border-radius: 2px; transition: width 0.4s ease; } 
         .d-step { display: none; } .d-step.active { display: block; }
@@ -61,7 +57,7 @@
  
 <header class="hero-gradient relative min-h-screen flex items-center justify-center text-center px-4 md:px-6">
     <div class="absolute top-0 left-0 w-full p-4 md:p-8 flex justify-center md:justify-start z-50">
-        <img src="logo-blanco.png" alt="Logo Fabricio Martínez" class="h-12 md:h-16 brightness-0 invert opacity-90 hover:opacity-100 transition duration-300">
+        <img src="logo_fabricio.png" alt="Fabricio Martínez" class="h-14 md:h-16 object-contain brightness-0 invert opacity-95">
     </div>
 
     <div class="max-w-5xl mt-32 md:mt-24 z-10">
@@ -69,44 +65,44 @@
         <h1 class="text-4xl md:text-6xl font-black mb-6 md:mb-8 leading-tight uppercase tracking-tighter text-white">¿Tu empresa creció pero hoy <br><span class="text-sky-400 italic">sentís que es un caos?</span></h1>
         <p class="text-base md:text-xl text-slate-300 mb-10 md:mb-12 max-w-2xl mx-auto leading-relaxed px-4 md:px-0">Ayudamos a PyMEs y organizaciones que están desordenadas o frenadas por la falta de estructura. Profesionalizamos tu arquitectura interna mediante células tácticas especializadas.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center relative z-20 px-4 md:px-0">
-            <a href="#lanzamiento" class="bg-blue-700 text-white w-full sm:w-auto px-8 py-5 font-bold uppercase text-[10px] md:text-[11px] tracking-[0.2em] rounded-md hover:bg-blue-800 transition shadow-xl text-center">Nuevo: Gerencia de Talento Externa</a>
+            <a href="#gti-servicio" class="bg-blue-700 text-white w-full sm:w-auto px-8 py-5 font-bold uppercase text-[10px] md:text-[11px] tracking-[0.2em] rounded-md hover:bg-blue-800 transition shadow-xl text-center">Nuevo: Gerencia de Talento Externa</a>
             <a href="#diagnostico" class="bg-slate-800 border-2 border-slate-700 text-slate-200 w-full sm:w-auto px-8 py-5 font-bold uppercase text-[10px] md:text-[11px] tracking-[0.2em] rounded-md hover:bg-slate-700 transition text-center">Detectar fugas de productividad</a>
         </div>
     </div>
 </header>
 
-<section id="lanzamiento" class="py-24 bg-slate-900 text-white px-4 md:px-6 border-b border-slate-800 relative">
+<section id="gti-servicio" class="py-24 bg-slate-950 text-white px-4 md:px-6 border-b border-slate-900">
     <div class="container mx-auto max-w-6xl">
         <div class="text-center mb-16">
-            <span class="text-blue-500 font-bold text-[10px] md:text-xs uppercase tracking-[0.5em] bg-blue-950 px-4 py-1.5 rounded-full border border-blue-900">Servicio de Élite para PyMEs y Empresas Familiares</span>
+            <span class="text-blue-400 font-bold text-[10px] md:text-xs uppercase tracking-[0.5em] bg-blue-950/60 px-4 py-1.5 rounded-full border border-blue-900">Modelo Disruptivo Extra-muros</span>
             <h2 class="text-3xl md:text-5xl font-black mt-4 uppercase italic tracking-tighter text-white">Gerencia de Talento <span class="text-blue-500">Interina (GTI)</span></h2>
-            <p class="text-slate-400 mt-4 max-w-2xl mx-auto text-sm md:text-base">Disponé de la estructura de una corporación multinacional sin asumir cargas sociales fijas ni los costos de un departamento interno permanente. Entramos, ordenamos y nos retiramos.</p>
+            <p class="text-slate-400 mt-4 max-w-2xl mx-auto text-sm md:text-base">Estructuramos, profesionalizamos y organizamos los procesos de tu PyME sin sobrecargar tu estructura con costos fijos permanentes de personal. Intervenciones quirúrgicas de alto impacto.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 shadow-xl">
-                <div class="w-12 h-12 rounded-xl bg-blue-900/50 flex items-center justify-center text-blue-400 font-bold mb-6 border border-blue-800">01</div>
-                <h3 class="text-lg font-bold uppercase tracking-widest mb-3 text-white">Fase 1: Diagnóstico Basal</h3>
-                <p class="text-slate-400 text-xs md:text-sm leading-relaxed">Mapeamos analíticamente la empresa para delimitar responsabilidades claras mediante un mapa de calor neuro-organizacional.</p>
+            <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800/80 shadow-md">
+                <div class="text-rose-500 text-2xl mb-4"><i class="fas fa-user-slash"></i></div>
+                <h3 class="text-sm font-bold uppercase tracking-wider text-slate-200 mb-2">Dependencia Operativa Absoluta</h3>
+                <p class="text-slate-400 text-xs md:text-sm leading-relaxed font-light">¿Si el dueño o un empleado clave se ausenta, la toma de decisiones y el negocio se paralizan por completo?</p>
             </div>
-            <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 shadow-xl">
-                <div class="w-12 h-12 rounded-xl bg-blue-900/50 flex items-center justify-center text-blue-400 font-bold mb-6 border border-blue-800">02</div>
-                <h3 class="text-lg font-bold uppercase tracking-widest mb-3 text-white">Fase 2: Arquitectura</h3>
-                <p class="text-slate-400 text-xs md:text-sm leading-relaxed">Desplegamos células modulares compuestas por nuestra red de asociados expertos (Asuntos Legales, Headhunting y Procesos) según tu necesidad exacta.</p>
+            <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800/80 shadow-md">
+                <div class="text-rose-500 text-2xl mb-4"><i class="fas fa-people-arrows"></i></div>
+                <h3 class="text-sm font-bold uppercase tracking-wider text-slate-200 mb-2">Solapamiento e Incertidumbre</h3>
+                <p class="text-slate-400 text-xs md:text-sm leading-relaxed font-light">"Todos hacen todo" y nadie asume responsabilidades finales. Fricción invisible y fugas severas de capital y tiempo.</p>
             </div>
-            <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 shadow-xl">
-                <div class="w-12 h-12 rounded-xl bg-blue-900/50 flex items-center justify-center text-blue-400 font-bold mb-6 border border-blue-800">03</div>
-                <h3 class="text-lg font-bold uppercase tracking-widest mb-3 text-white">Fase 3: Autonomía</h3>
-                <p class="text-slate-400 text-xs md:text-sm leading-relaxed">Entrenamos a tus mandos medios, transferimos el control operativo del sistema mediante tableros KPI y retiramos la consultoría.</p>
+            <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800/80 shadow-md">
+                <div class="text-rose-500 text-2xl mb-4"><i class="fas fa-heart-broken"></i></div>
+                <h3 class="text-sm font-bold uppercase tracking-wider text-slate-200 mb-2">Conflictos en Empresa Familiar</h3>
+                <p class="text-slate-400 text-xs md:text-sm leading-relaxed font-light">Tensiones relacionales y de sucesión que bloquean la toma de decisiones objetiva y afectan la rentabilidad.</p>
             </div>
         </div>
 
-        <div class="bg-gradient-to-br from-blue-950 to-slate-950 border border-blue-900 p-8 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
-            <div>
-                <h4 class="font-bold text-white uppercase text-base tracking-wider mb-1">¿Tu organización está lista para dar el salto de madurez?</h4>
-                <p class="text-slate-400 text-xs md:text-sm">Evaluá la factibilidad de una intervención GTI en tu empresa en una reunión estratégica privada.</p>
+        <div class="bg-gradient-to-r from-blue-950 to-slate-900 border border-blue-900/60 p-8 md:p-12 rounded-3xl flex flex-col lg:flex-row items-center justify-between gap-8">
+            <div class="max-w-2xl text-center lg:text-left">
+                <h3 class="text-lg md:text-xl font-bold uppercase tracking-wide mb-2 text-white">Células Tácticas Modulares de Especialistas</h3>
+                <p class="text-slate-400 text-xs md:text-sm leading-relaxed">Coordinados bajo una dirección estratégica única, desplegamos asociados expertos temporales (Blindaje Legal Laboral, Headhunting Sénior y Auditorías de Calidad) según la necesidad exacta de la PyME. Ordenamos, estabilizamos y nos retiramos de forma limpia.</p>
             </div>
-            <a href="https://wa.me/5493434164699?text=Hola%20Fabricio,%20quiero%20consultar%20por%20el%20servicio%20de%20Gerencia%20de%20Talento%20Interina%20para%20mi%20empresa." target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-bold uppercase text-[10px] md:text-[11px] tracking-widest px-6 py-4 rounded-md transition whitespace-nowrap shadow-md">Agendar Viabilidad Táctica →</a>
+            <a href="https://wa.me/5493434164699?text=Hola%20Fabricio,%20estuve%20revisando%20la%20web%20y%20quiero%20coordinar%20una%20reunion%20de%20viabilidad%20para%20el%20servicio%20de%20Gerencia%20de%20Talento%20Interina." target="_blank" class="w-full lg:w-auto bg-blue-700 hover:bg-blue-800 text-white font-bold uppercase text-[10px] md:text-[11px] tracking-widest px-8 py-5 rounded-md transition text-center whitespace-nowrap shadow-xl">Analizar Viabilidad GTI →</a>
         </div>
     </div>
 </section>
@@ -190,7 +186,7 @@
 
 <section class="py-24 bg-white px-4 md:px-6 border-b border-slate-200">
     <div class="container mx-auto max-w-6xl">
-        <h3 class="text-sky-500 font-bold text-[10px] md:text-xs text-center uppercase tracking-[0.5em] mb-4">Hub de Especialistas asociados</h3>
+        <h3 class="text-sky-500 font-bold text-[10px] md:text-xs text-center uppercase tracking-[0.5em] mb-4">Hub de Especialistas Asociados</h3>
         <h2 class="text-3xl md:text-4xl font-black text-center mb-16 uppercase italic tracking-tighter text-slate-900">Expertos en <span class="text-blue-700">Implementación</span></h2>
         
         <div class="bg-slate-50 p-8 md:p-12 rounded-3xl border border-slate-200 shadow-md mb-12 flex flex-col md:flex-row items-center gap-10">
@@ -214,7 +210,7 @@
                         <div class="w-14 h-14 bg-white border border-slate-200 rounded-full flex items-center justify-center text-slate-400 font-bold flex-shrink-0 shadow-sm">JG</div>
                         <div>
                             <p class="text-slate-900 font-bold text-sm uppercase mb-1">Lic. José María González</p>
-                            <p class="text-slate-500 text-xs leading-relaxed">Especialista en Bromatología. Implementación de Normas IRAM e ISO para industries alimenticias.</p>
+                            <p class="text-slate-500 text-xs leading-relaxed">Especialista en Bromatología. Implementación de Normas IRAM e ISO para industrias alimenticias.</p>
                         </div>
                     </div>
                     <div class="pt-6 border-t border-slate-200 flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
@@ -223,7 +219,7 @@
                         </div>
                         <div>
                             <p class="text-slate-900 font-bold text-sm uppercase mb-1">Edge Solutions</p>
-                            <p class="text-slate-500 text-xs leading-relaxed">Consultora asociada para la auditoría y certificación integral de estándares internacionales de gestión y células tácticas de RRHH.</p>
+                            <p class="text-slate-500 text-xs leading-relaxed">Consultora asociada para la auditoría y certificación de estándares internacionales de gestión y despliegue modular de RRHH.</p>
                         </div>
                     </div>
                 </div>
@@ -232,61 +228,30 @@
     </div>
 </section>
  
-<section class="py-24 bg-sky-50 px-4 md:px-6 border-b border-slate-200">
-    <div class="container mx-auto max-w-5xl">
-        <h3 class="text-sky-500 font-bold text-[10px] md:text-xs text-center uppercase tracking-[0.5em] mb-4">Herramienta Interactiva</h3>
-        <h2 class="text-3xl font-black text-center mb-12 uppercase italic tracking-tighter text-slate-900">El Radar de <span class="text-blue-700">Madurez Operativa</span></h2>
-        <div class="bg-white p-6 md:p-14 rounded-2xl md:rounded-3xl border border-slate-200 shadow-lg">
-            <div class="bg-blue-50 border border-blue-200 p-5 rounded-xl mb-10 shadow-sm flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
-                <div class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 shadow-md"><i class="fas fa-sliders-h text-xl"></i></div>
-                <div><h4 class="text-blue-800 font-bold text-sm uppercase tracking-widest mb-1">¿Cómo usar esta herramienta?</h4><p class="text-blue-700 text-xs md:text-sm">Arrastrá las flechitas azules hacia la <strong>derecha (10)</strong> si tu organización es excelente en esa área, o hacia la <strong>izquierda (1)</strong> si están en caos.</p></div>
-            </div>
-
-            <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-8 md:mb-12 text-center md:text-left">
-                <span class="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] md:tracking-[0.25em] text-slate-500 bg-white px-3 md:px-4 py-2 rounded-md border border-slate-200 shadow-sm">1 = Caos &nbsp;·&nbsp; 10 = Excelencia</span>
-                <span id="r-nivel-badge" class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest px-4 md:px-5 py-2 md:py-2.5 rounded-md shadow-sm" style="background:#e0f2fe;color:#0369a1;border:1px solid #bae6fd;">Calculando...</span>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-6 md:gap-y-10 mb-10 md:mb-12" id="r-sliders"></div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-10 md:mb-12">
-                <div class="bg-white p-5 md:p-6 rounded-2xl border border-slate-200 shadow-sm text-center"><p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2">Índice global</p><p class="text-4xl font-black text-blue-700" id="r-global">—</p><p class="text-[10px] text-slate-400 mt-1">sobre 100</p></div>
-                <div class="bg-white p-5 md:p-6 rounded-2xl border border-slate-200 shadow-sm text-center flex flex-col justify-center"><p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2 md:mb-3">Dimensión Fuerte</p><p class="text-sm font-bold text-slate-800 leading-snug" id="r-best">—</p><p class="text-[11px] font-bold text-sky-600 mt-2 bg-sky-50 py-1 rounded inline-block mx-auto px-3" id="r-best-val"></p></div>
-                <div class="bg-white p-5 md:p-6 rounded-2xl border border-slate-200 shadow-sm text-center flex flex-col justify-center"><p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2 md:mb-3">Punto de Fuga</p><p class="text-sm font-bold text-slate-800 leading-snug" id="r-worst">—</p><p class="text-[11px] font-bold text-rose-500 mt-2 bg-rose-50 py-1 rounded inline-block mx-auto px-3" id="r-worst-val"></p></div>
-            </div>
-            <div class="flex justify-center mb-10 md:mb-12 bg-white p-4 md:p-8 rounded-2xl md:rounded-3xl border border-slate-200 shadow-sm w-full overflow-hidden">
-                <div class="relative w-full max-w-[450px] aspect-square md:aspect-auto md:h-[380px]"><canvas id="radarChart"></canvas></div>
-            </div>
-            <div class="flex flex-col md:flex-row gap-4">
-                <button onclick="rReset()" class="bg-white border-2 border-slate-300 text-slate-600 w-full md:w-auto px-8 py-4 font-bold uppercase text-[10px] md:text-[11px] tracking-widest rounded-md hover:border-slate-400 hover:text-slate-800 transition shadow-sm">Restablecer</button>
-                <a href="https://wa.me/5493434164699?text=Hola%20Fabricio,%20estuve%20revisando%20el%20Radar%20de%20Madurez%20Operativa%20de%20mi%20empresa%20y%20quiero%20diseñar%20un%20plan%20de%20acción." target="_blank" class="flex-1 bg-blue-700 text-white w-full md:w-auto px-8 py-4 font-bold uppercase text-[10px] md:text-[11px] tracking-[0.25em] rounded-md hover:bg-blue-800 transition text-center shadow-md">Diseñar mi Plan de Acción →</a>
-            </div>
-        </div>
-    </div>
-</section>
- 
-<section id="diagnostico" class="py-24 md:py-32 bg-white px-4 md:px-6">
+<section id="diagnostico" class="py-24 bg-sky-50 px-4 md:px-6">
     <div class="container mx-auto max-w-6xl">
         <h3 class="text-sky-500 font-bold text-[10px] md:text-xs text-center uppercase tracking-[0.5em] mb-4">No asumas. Medí.</h3>
         <h2 class="text-3xl md:text-4xl font-black text-center mb-4 uppercase italic tracking-tighter text-slate-900">Encontrá tu <span class="text-blue-700">Cuello de Botella</span></h2>
-        <p class="text-slate-600 text-center italic mb-12 md:mb-16 max-w-2xl mx-auto text-sm md:text-base px-2">Respondé 5 preguntas clave y obtené un diagnóstico clínico inmediato en pantalla.</p>
+        <p class="text-slate-600 text-center italic mb-12 md:mb-16 max-w-2xl mx-auto text-sm md:text-base px-2">Respondé 5 preguntas analíticas y obtené un diagnóstico clínico inmediato en pantalla.</p>
  
-        <div class="bg-slate-50 p-6 md:p-14 rounded-2xl md:rounded-3xl border border-slate-200 shadow-xl max-w-3xl mx-auto">
+        <div class="bg-white p-6 md:p-14 rounded-2xl md:rounded-3xl border border-slate-200 shadow-xl max-w-3xl mx-auto">
             <div class="flex justify-between items-center mb-4">
-                <span class="text-[9px] md:text-[11px] font-bold uppercase tracking-[0.1em] md:tracking-[0.2em] text-slate-400" id="d-step-label">Seleccioná tu área</span>
-                <span class="text-[9px] md:text-[11px] font-bold uppercase tracking-[0.1em] md:tracking-[0.15em] text-blue-700 bg-blue-50 px-3 py-1 rounded-full" id="d-step-count">Paso 1 de 6</span>
+                <span class="text-[9px] md:text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400" id="d-step-label">Seleccioná tu rubro</span>
+                <span class="text-[9px] md:text-[11px] font-bold uppercase tracking-[0.15em] text-blue-700 bg-blue-50 px-3 py-1 rounded-full" id="d-step-count">Paso 1 de 6</span>
             </div>
             <div class="d-progress-bg mb-8 md:mb-12"><div class="d-progress-fill" id="d-progress" style="width:16%"></div></div>
             
             <div class="d-step active" id="d-step-0">
-                <p class="text-center text-sky-600 font-bold text-[10px] md:text-[12px] uppercase tracking-widest mb-8"><i class="fas fa-hand-pointer text-lg mr-2"></i> 👇 Seleccioná tu ámbito corporativo o profesional</p>
+                <p class="text-center text-sky-600 font-bold text-[10px] md:text-[12px] uppercase tracking-widest mb-8"><i class="fas fa-hand-pointer text-lg mr-2"></i> 👇 Elegí el ámbito organizativo para iniciar el test</p>
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-10" id="d-area-btns"></div>
                 <button class="d-btn-next w-full py-4 md:py-5 text-[11px] md:text-[12px]" id="d-next-0" disabled onclick="dNext()">Iniciar Evaluación →</button>
             </div>
             
-            <div class="d-step" id="d-step-1"><span class="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] md:tracking-[0.25em] text-sky-500 block mb-3" id="d-dim-1"></span><p class="text-slate-900 font-bold text-xl md:text-2xl italic uppercase tracking-tight leading-tight mb-6 md:mb-8" id="d-q-1"></p><div class="flex flex-col gap-3 md:gap-4 mb-8 md:mb-10" id="d-opts-1"></div><div class="flex flex-col sm:flex-row gap-3 md:gap-4"><button class="d-btn-back w-full sm:w-auto" onclick="dBack()">← Atrás</button><button class="d-btn-next w-full sm:w-auto" id="d-next-1" disabled onclick="dNext()">Siguiente →</button></div></div>
-            <div class="d-step" id="d-step-2"><span class="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] md:tracking-[0.25em] text-sky-500 block mb-3" id="d-dim-2"></span><p class="text-slate-900 font-bold text-xl md:text-2xl italic uppercase tracking-tight leading-tight mb-6 md:mb-8" id="d-q-2"></p><div class="flex flex-col gap-3 md:gap-4 mb-8 md:mb-10" id="d-opts-2"></div><div class="flex flex-col sm:flex-row gap-3 md:gap-4"><button class="d-btn-back w-full sm:w-auto" onclick="dBack()">← Atrás</button><button class="d-btn-next w-full sm:w-auto" id="d-next-2" disabled onclick="dNext()">Siguiente →</button></div></div>
-            <div class="d-step" id="d-step-3"><span class="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] md:tracking-[0.25em] text-sky-500 block mb-3" id="d-dim-3"></span><p class="text-slate-900 font-bold text-xl md:text-2xl italic uppercase tracking-tight leading-tight mb-6 md:mb-8" id="d-q-3"></p><div class="flex flex-col gap-3 md:gap-4 mb-8 md:mb-10" id="d-opts-3"></div><div class="flex flex-col sm:flex-row gap-3 md:gap-4"><button class="d-btn-back w-full sm:w-auto" onclick="dBack()">← Atrás</button><button class="d-btn-next w-full sm:w-auto" id="d-next-3" disabled onclick="dNext()">Siguiente →</button></div></div>
-            <div class="d-step" id="d-step-4"><span class="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] md:tracking-[0.25em] text-sky-500 block mb-3" id="d-dim-4"></span><p class="text-slate-900 font-bold text-xl md:text-2xl italic uppercase tracking-tight leading-tight mb-6 md:mb-8" id="d-q-4"></p><div class="flex flex-col gap-3 md:gap-4 mb-8 md:mb-10" id="d-opts-4"></div><div class="flex flex-col sm:flex-row gap-3 md:gap-4"><button class="d-btn-back w-full sm:w-auto" onclick="dBack()">← Atrás</button><button class="d-btn-next w-full sm:w-auto" id="d-next-4" disabled onclick="dNext()">Siguiente →</button></div></div>
-            <div class="d-step" id="d-step-5"><span class="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] md:tracking-[0.25em] text-sky-500 block mb-3" id="d-dim-5"></span><p class="text-slate-900 font-bold text-xl md:text-2xl italic uppercase tracking-tight leading-tight mb-6 md:mb-8" id="d-q-5"></p><div class="flex flex-col gap-3 md:gap-4 mb-8 md:mb-10" id="d-opts-5"></div><div class="flex flex-col sm:flex-row gap-3 md:gap-4"><button class="d-btn-back w-full sm:w-auto" onclick="dBack()">← Atrás</button><button class="d-btn-next w-full sm:w-auto" id="d-next-5" disabled onclick="dFinalizeReportWithoutLead()">Procesar Resultados →</button></div></div>
+            <div class="d-step" id="d-step-1"><span class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-sky-500 block mb-3" id="d-dim-1"></span><p class="text-slate-900 font-bold text-xl md:text-2xl italic uppercase tracking-tight leading-tight mb-6 md:mb-8" id="d-q-1"></p><div class="flex flex-col gap-3 md:gap-4 mb-8 md:mb-10" id="d-opts-1"></div><div class="flex flex-col sm:flex-row gap-3 md:gap-4"><button class="d-btn-back w-full sm:w-auto" onclick="dBack()">← Atrás</button><button class="d-btn-next w-full sm:w-auto" id="d-next-1" disabled onclick="dNext()">Siguiente →</button></div></div>
+            <div class="d-step" id="d-step-2"><span class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-sky-500 block mb-3" id="d-dim-2"></span><p class="text-slate-900 font-bold text-xl md:text-2xl italic uppercase tracking-tight leading-tight mb-6 md:mb-8" id="d-q-2"></p><div class="flex flex-col gap-3 md:gap-4 mb-8 md:mb-10" id="d-opts-2"></div><div class="flex flex-col sm:flex-row gap-3 md:gap-4"><button class="d-btn-back w-full sm:w-auto" onclick="dBack()">← Atrás</button><button class="d-btn-next w-full sm:w-auto" id="d-next-2" disabled onclick="dNext()">Siguiente →</button></div></div>
+            <div class="d-step" id="d-step-3"><span class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-sky-500 block mb-3" id="d-dim-3"></span><p class="text-slate-900 font-bold text-xl md:text-2xl italic uppercase tracking-tight leading-tight mb-6 md:mb-8" id="d-q-3"></p><div class="flex flex-col gap-3 md:gap-4 mb-8 md:mb-10" id="d-opts-3"></div><div class="flex flex-col sm:flex-row gap-3 md:gap-4"><button class="d-btn-back w-full sm:w-auto" onclick="dBack()">← Atrás</button><button class="d-btn-next w-full sm:w-auto" id="d-next-3" disabled onclick="dNext()">Siguiente →</button></div></div>
+            <div class="d-step" id="d-step-4"><span class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-sky-500 block mb-3" id="d-dim-4"></span><p class="text-slate-900 font-bold text-xl md:text-2xl italic uppercase tracking-tight leading-tight mb-6 md:mb-8" id="d-q-4"></p><div class="flex flex-col gap-3 md:gap-4 mb-8 md:mb-10" id="d-opts-4"></div><div class="flex flex-col sm:flex-row gap-3 md:gap-4"><button class="d-btn-back w-full sm:w-auto" onclick="dBack()">← Atrás</button><button class="d-btn-next w-full sm:w-auto" id="d-next-4" disabled onclick="dNext()">Siguiente →</button></div></div>
+            <div class="d-step" id="d-step-5"><span class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-sky-500 block mb-3" id="d-dim-5"></span><p class="text-slate-900 font-bold text-xl md:text-2xl italic uppercase tracking-tight leading-tight mb-6 md:mb-8" id="d-q-5"></p><div class="flex flex-col gap-3 md:gap-4 mb-8 md:mb-10" id="d-opts-5"></div><div class="flex flex-col sm:flex-row gap-3 md:gap-4"><button class="d-btn-back w-full sm:w-auto" onclick="dBack()">← Atrás</button><button class="d-btn-next w-full sm:w-auto" id="d-next-5" disabled onclick="dFinalizeInstantReport()">Procesar Resultados →</button></div></div>
             
             <div class="d-step" id="d-step-6">
                 <div id="d-result"></div>
@@ -297,7 +262,9 @@
  
 <footer class="py-16 bg-slate-950 text-slate-400 text-center px-6 border-t-[8px] border-blue-700">
     <div class="container mx-auto max-w-4xl">
-        <div class="flex justify-center mb-8"><img src="logo-oscuro.png" alt="Logo FM" class="h-24 rounded-2xl shadow-[0_0_40px_rgba(29,78,216,0.3)] border border-slate-800"></div>
+        <div class="flex justify-center mb-8">
+            <img src="logo_fabricio.png" alt="Logo FM" class="h-24 object-contain brightness-0 invert rounded-2xl p-2 bg-slate-950 shadow-[0_0_40px_rgba(29,78,216,0.2)] border border-slate-900">
+        </div>
         <h2 class="text-white text-3xl font-black mb-4 uppercase italic tracking-tighter">Fabricio Martínez</h2>
         <p class="text-[9px] mb-12 uppercase tracking-[0.6em] text-sky-400 italic">Optimización Humana de Organizaciones</p>
         <div class="flex justify-center space-x-12 mb-16 text-2xl">
@@ -310,142 +277,13 @@
 </footer>
  
 <script>
-    const rDims = [
-        {key:'liderazgo',label:'Liderazgo Directivo'},
-        {key:'comunicacion',label:'Comunicación'},
-        {key:'okr',label:'Ejecución Estratégica'},
-        {key:'clima',label:'Clima / Motivación'},
-        {key:'decision',label:'Decisión bajo Presión'},
-        {key:'procesos',label:'Eficiencia de Procesos'}
-    ];
-    
-    const rVals = {}; 
-    rDims.forEach(d => rVals[d.key] = 5);
-    
-    (function buildRSliders() {
-        const c = document.getElementById('r-sliders');
-        rDims.forEach(d => {
-            const div = document.createElement('div');
-            div.innerHTML = `
-                <div class="flex justify-between items-center mb-2">
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-slate-600">${d.label}</span>
-                    <span class="text-[11px] font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded" id="rv-${d.key}">5</span>
-                </div>
-                <input class="r-slider" type="range" min="1" max="10" step="1" value="5" oninput="rSlide('${d.key}',this.value)">
-            `;
-            c.appendChild(div);
-        });
-    })();
-    
-    function rSlide(k,v) {
-        rVals[k] = parseInt(v);
-        document.getElementById('rv-'+k).textContent = v;
-        rUpdateChart();
-        rUpdateMetrics();
-    }
-    
-    function rUpdateMetrics() {
-        const v = rDims.map(d => rVals[d.key]);
-        const g = Math.round((v.reduce((a,b) => a+b,0) / (rDims.length*10)) * 100);
-        document.getElementById('r-global').textContent = g + '%';
-        
-        let b = rDims[0], w = rDims[0];
-        rDims.forEach(d => {
-            if(rVals[d.key] > rVals[b.key]) b = d;
-            if(rVals[d.key] < rVals[w.key]) w = d;
-        });
-        
-        document.getElementById('r-best').textContent = b.label;
-        document.getElementById('r-best-val').textContent = rVals[b.key] + '/10';
-        document.getElementById('r-worst').textContent = w.label;
-        document.getElementById('r-worst-val').textContent = rVals[w.key] + '/10';
-        
-        let n, bg, c, br;
-        if(g <= 35) { n = 'Riesgo Crítico'; bg = '#fff1f2'; c = '#e11d48'; br = '#fecdd3'; }
-        else if(g <= 55) { n = 'Sobreviviendo'; bg = '#fffbeb'; c = '#d97706'; br = '#fde68a'; }
-        else if(g <= 75) { n = 'Rendimiento Sólido'; bg = '#f0f9ff'; c = '#0284c7'; br = '#bae6fd'; }
-        else { n = 'Alto Rendimiento'; bg = '#eff6ff'; c = '#1d4ed8'; br = '#bfdbfe'; }
-        
-        const bad = document.getElementById('r-nivel-badge');
-        if (bad) {
-            bad.textContent = n;
-            bad.style.background = bg;
-            bad.style.color = c;
-            bad.style.borderColor = br;
-        }
-    }
-    
-    let rChart;
-    window.addEventListener('DOMContentLoaded', () => {
-        const ctx = document.getElementById('radarChart').getContext('2d');
-        rChart = new Chart(ctx, {
-            type: 'radar',
-            data: {
-                labels: rDims.map(d => d.label),
-                datasets: [
-                    {
-                        label: 'Tu organización',
-                        data: rDims.map(d => rVals[d.key]),
-                        backgroundColor: 'rgba(29, 78, 216, 0.15)',
-                        borderColor: '#1d4ed8',
-                        borderWidth: 2,
-                        pointBackgroundColor: '#d4a359',
-                        pointRadius: 4
-                    },
-                    {
-                        label: 'Seguridad (8)',
-                        data: rDims.map(() => 8),
-                        backgroundColor: 'transparent',
-                        borderColor: 'rgba(148, 163, 184, 0.4)',
-                        borderWidth: 1,
-                        borderDash: [5,5],
-                        pointRadius: 0
-                    }
-                ]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: { legend: { display: false } },
-                scales: {
-                    r: {
-                        min: 0, max: 10,
-                        ticks: { display: false },
-                        grid: { color: 'rgba(226, 232, 240, 0.8)' },
-                        angleLines: { color: 'rgba(226, 232, 240, 0.8)' },
-                        pointLabels: { color: '#475569', font: { size: 10, weight: 'bold' } }
-                    }
-                }
-            }
-        });
-        rUpdateMetrics();
-    });
-    
-    function rUpdateChart() {
-        if(rChart) {
-            rChart.data.datasets[0].data = rDims.map(d => rVals[d.key]);
-            rChart.update('none');
-        }
-    }
-    
-    function rReset() {
-        rDims.forEach(d => {
-            rVals[d.key] = 5;
-            const input = document.querySelector(`input[oninput*="${d.key}"]`);
-            if (input) input.value = 5;
-            document.getElementById('rv-'+d.key).textContent = 5;
-        });
-        rUpdateChart();
-        rUpdateMetrics();
-    }
-    
     const dQuestions = {
         empresa: [
             {dim:'Estratégica',label:'¿Objetivos anuales?',opts:[['Nadie recuerda, apagamos incendios',1],['En un Excel cada 3 meses',2],['Se intentan, pero áreas aisladas',3],['Medidos y accionables por todos',4]]},
             {dim:'Presión',label:'Ante una crisis...',opts:[['Pánico y culpas',1],['El gerente absorbe todo',2],['Se resuelve, deja equipo agotado',3],['Protocolo y datos con frialdad',4]]},
             {dim:'Dependencia',label:'Si el empleado estrella falta un mes...',opts:[['Operación colapsa',1],['Demoras y errores graves',2],['Zafamos con mucho estrés',3],['El sistema absorbe sin pérdida',4]]},
             {dim:'Clima',label:'¿Fricción invisible?',opts:[['Muchas quejas, fuga de talento',1],['Fatiga en épocas pico',2],['Buen clima, falta innovación',3],['Compromiso y enfoque total',4]]},
-            {dim:'Calidad',label:'¿Normativas?',opts:[['Funcionamos a ojo',1],['Sin tiempo para certificar',2],['Estandarizando para no perder clientes',3],['Certificados. Predecibles',4]]}
+            {dim:'Calidad',label:'¿Normativas y Procesos?',opts:[['Funcionamos a ojo',1],['Sin tiempo para estandarizar',2],['Estructurando para no perder clientes',3],['Certificados. Predecibles',4]]}
         ],
         deporte: [
             {dim:'Decisión',label:'Final ajustada...',opts:[['Equipo se nubla',1],['Jugamos al error del rival',2],['Orden pero sin instinto matador',3],['Lucidez y ejecución perfecta',4]]},
@@ -535,11 +373,10 @@
         document.getElementById('d-next-'+n).disabled = true;
     }
     
-    function dFinalizeReportWithoutLead() {
+    function dFinalizeInstantReport() {
         dShowStep(6);
         dStep = 6;
-        const p = document.getElementById('d-progress');
-        if(p) p.style.width = '100%';
+        document.getElementById('d-progress').style.width = '100%';
         document.getElementById('d-step-label').textContent = 'Diagnóstico Clínico';
         document.getElementById('d-step-count').textContent = 'Completado';
         dShowResult();
@@ -552,22 +389,22 @@
         
         const dr = {
             empresa:[
-                ['Tu estructura está en zona de riesgo. El desorden operativo frena la rentabilidad y consume tu tranquilidad diaria.','Falta estandarizar procesos y alinear objetivos urgentemente.','Recomendación: Aplicar un Plan de Mitigación mediante una Gerencia de Talento Interina.'],
-                ['La organización funciona, pero a un costo humano y financiero altísimo. Dependés demasiado de personas clave.','Es el momento de implementar OKRs y células de procesos para que el equipo traccione de forma autónoma.','Sugerencia: Entrenar mandos medios para resolver bajo presión.'],
-                ['Estructura sana con alto potencial de escala. Hay cuellos de botella invisibles en la comunicación.','Afinar flujos internos y profesionalizar la gestión de talento multiplicará tu productividad actual.','Estadio ideal para certificar Normas ISO o desplegar esquemas modulares GTI.'],
-                ['Nivel de excelencia sistémica. Organización ágil y equipo enfocado.','El desafío es sostener el rendimiento ante cambios imprevistos de mercado.','Se sugiere auditoría preventiva trimestral corporativa.']
+                ['Tu estructura está en zona de riesgo crítico. El desorden operativo frena la rentabilidad y consume tu tranquilidad diaria.','Falta estandarizar procesos y delimitar responsabilidades de manera urgente.','Recomendación: Aplicar un Plan de Mitigación Estructural mediante una Gerencia de Talento Interina (GTI).'],
+                ['La organización funciona, pero a un costo humano y financiero muy alto. Dependés demasiado de decisiones centralizadas.','Es el momento ideal para inyectar células tácticas modulares de procesos para traccionar de forma autónoma.','Sugerencia: Diseñar una matriz clara de puestos y funciones.'],
+                ['Estructura sana con alto potencial de escala. Hay cuellos de botella aislados en los canales de comunicación interna.','Profesionalizar la dirección y la retención del talento multiplicará exponencialmente tu productividad actual.','Estadio óptimo para desplegar sistemas GTI de estabilización.'],
+                ['Nivel de excelencia sistémica. Organización ágil y equipo altamente enfocado.','El desafío radica en blindar al equipo ante picos imprevistos de fatiga o estrés operativo.','Se sugiere auditoría preventiva de control corporativo trimestral.']
             ],
             deporte:[
-                ['Alarma competitiva. Los bloqueos emocionales están anulando el rendimiento físico del equipo.','Urge intervención cognitiva para desactivar la parálisis bajo presión.','Recalibrar comunicación de mandos directivos.'],
-                ['El talento no alcanza. La incapacidad de sostener la concentración en momentos clave cuesta campeonatos.','Sistematizar neuro-coaching táctico.','Trabajar cohesión sistémica.'],
-                ['Cerca del podio. Falta la frialdad estratégica que separa finalistas de campeones mundiales.','Optimizar tiempos de respuesta cognitiva y toma de decisiones.','Solidificar procesos dirigenciales.'],
-                ['Alto rendimiento humano. Biología y estrategia alineadas a la perfección.','Monitorear desgaste invisible para evitar fatiga por éxito acumulado.','Actualización de metodologías.']
+                ['Alarma competitiva. Los bloqueos emocionales están anulando por completo el rendimiento físico del equipo.','Urge intervención neuro-cognitiva para desactivar la parálisis bajo presión.','Recalibrar la comunicación de mandos directivos.'],
+                ['El talento no alcanza. La incapacidad de sostener la concentración en momentos clave cuesta campeonatos.','Sistematizar herramientas científicas de neuro-coaching táctico.','Trabajar la cohesión sistémica bajo presión.'],
+                ['Cerca del podio competitivo. Falta consolidar la frialdad estratégica que separa finalistas de campeones mundiales.','Optimizar los tiempos de respuesta cognitiva y la velocidad de veto motor.','Solidificar procesos dirigenciales.'],
+                ['Sistemas de alto rendimiento humano. Biología y estrategia competitiva alineadas a la perfección.','Monitorear el desgaste invisible para evitar fatiga por éxito acumulado.','Actualización periódica de metodologías científicas.']
             ],
             organismo:[
-                ['Parálisis funcional. La burocracia interna secuestró el propósito inicial del equipo.','Reseteo de liderazgo y gestión del cambio cultural.','Abrir canales de comunicación sin ruido.'],
-                ['Mucho esfuerzo aislado con bajo impacto real. Pérdida de energía constante.','Cuerpo directivo necesita herramientas avanzadas de dirección de talento.','Establecer manuales operativos básicos.'],
-                ['Institución con potencial. Falta dar el salto de administradores a líderes ágiles.','Reducir la carga burocrática liberará el potencial del personal.','Sugerencia: Programas de desarrollo estratégico.'],
-                ['Estructura de referencia regional. Clima excelente y flujos limpios.','Sostener actualización ante escenarios volátiles.','Formación continua de mandos clave.']
+                ['Parálisis funcional severa. La burocracia interna secuestró el propósito inicial del equipo directivo.','Reseteo completo de liderazgo y gestión del cambio cultural.','Abrir canales de comunicación sin ruido institucional.'],
+                ['Mucho esfuerzo aislado con bajo impacto real. Pérdida de energía y desgaste constantes.','El cuerpo directivo necesita herramientas avanzadas de dirección de talento.','Establecer manuales operativos y descriptores de puestos básicos.'],
+                ['Institución con alto potencial. Falta dar el salto definitivo de simples administradores a líderes ágiles.','Reducir la carga burocrática invisible liberará el potencial del personal.','Sugerencia: Desplegar programas estratégicos avanzados.'],
+                ['Estructura de referencia regional. Clima excelente y flujos organizativos limpios.','Sostener la actualización continua ante escenarios macro volátiles.','Formación continua y actualización de mandos clave.']
             ]
         };
         
@@ -600,14 +437,14 @@
             `;
         });
         
-        html += `</div><div class="mb-8"><h4 class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3">Conclusión Clínica Basal</h4>`;
+        html += `</div><div class="mb-8"><h4 class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3">Conclusión Clínica Inicial</h4>`;
         recos.forEach(r => { html += `<div class="d-reco shadow-sm">${r}</div>`; });
         
         html += `
             </div>
             <div class="flex flex-col sm:flex-row gap-3 pt-4 border-t border-slate-200">
                 <button onclick="dReset()" class="bg-white border border-slate-300 text-slate-600 w-full sm:w-auto px-6 py-4 font-bold uppercase text-[10px] rounded-md">Reiniciar Test</button>
-                <a href="https://wa.me/5493434164699?text=Hola%20Fabricio,%20complete%20el%20test%20clinico%20en%20la%20web.%20Mi%20nivel%20de%20madurez%20dio%20${p}%25%20(${n}).%20Quiero%20evaluar%20un%20plan%20de%20accion%20GTI." target="_blank" class="flex-1 bg-blue-700 text-white w-full px-6 py-4 font-bold uppercase text-[10px] rounded-md text-center shadow-md">Agendar Devolución Estratégica Gratuita →</a>
+                <a href="https://wa.me/5493434164699?text=Hola%20Fabricio,%20complete%20el%20test%20clinico%20en%20la%20web.%20Mi%20nivel%20de%20madurez%20operativa%20dio%20${p}%25%20(${n}).%20Quiero%20mi%20sesion%20de%20devolucion%20gratuita." target="_blank" class="flex-1 bg-blue-700 text-white w-full px-6 py-4 font-bold uppercase text-[10px] rounded-md text-center shadow-md transition hover:bg-blue-800">Agendar Devolución Estratégica Gratuita →</a>
             </div>
         `;
         
