@@ -1,465 +1,753 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "vnn7b4m8bd");
-    </script>
+
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fabricio Martínez — MBA & Sistemas de Alto Rendimiento Humano. Consultoría estratégica, optimización operativa y gestión de la incertidumbre.">
-    <meta property="og:title" content="Fabricio Martínez | MBA · Sistemas de Alto Rendimiento Humano">
-    <meta property="og:description" content="Optimizá la biología y los procesos de tu organización. Fusión de neurociencia aplicada, dirección general MBA y gestión del talento.">
-    <meta property="og:image" content="https://www.fabriciomartinez.com.ar/20240606_122252.jpg">
-    <meta property="og:url" content="https://www.fabriciomartinez.com.ar/">
+
+    <title>Gerencia Externa de Recursos Humanos | Fabricio Martínez | Liderazgo y Gestión del Talento</title>
+
+    <meta name="description"
+        content="Consultora Estratégica en Personas, Liderazgo y Gestión del Talento. Gerencia Externa de Recursos Humanos. Método LÍDER®. Desarrollo Organizacional. Coaching Ejecutivo.">
+
+    <meta name="keywords"
+        content="Gerencia Externa RRHH, Recursos Humanos, Gestión del Talento, Liderazgo, Coaching Ejecutivo, Consultora RRHH Argentina, Desarrollo Organizacional, Empresas Familiares, Neurociencias">
+
+    <meta name="author" content="Fabricio Martínez">
+
+    <meta property="og:title"
+        content="Fabricio Martínez | Consultora Estratégica en Personas, Liderazgo y Gestión del Talento">
+
+    <meta property="og:description"
+        content="Gerencia Externa de Recursos Humanos · Método LÍDER® · Liderazgo · Gestión del Talento">
+
     <meta property="og:type" content="website">
 
-    <link rel="icon" href="favicon.png" type="image/png">
-    <title>Fabricio Martínez | MBA · Sistemas de Alto Rendimiento Humano</title>
- 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
- 
+    <meta property="og:image" content="img/hero.jpg">
+
+    <meta property="og:locale" content="es_AR">
+
+    <link rel="icon" href="favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Fabricio Martínez Liderazgo y Educación",
+      "image": "https://www.fabriciomartinez.com.ar/img/hero.jpg",
+      "@id": "https://www.fabriciomartinez.com.ar",
+      "url": "https://www.fabriciomartinez.com.ar/",
+      "telephone": "+5493434164699",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Oro Verde",
+        "addressRegion": "Entre Ríos",
+        "addressCountry": "AR"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/fabriciomartinezok/",
+        "https://www.instagram.com/fabri_martinez_ok/"
+      ]
+    }
+    </script>
+
     <style>
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1e293b; overflow-x: hidden; } 
-        .hero-gradient { 
-            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url('20240606_122252.jpg'); 
-            background-size: cover; 
-            background-position: center; 
-            background-attachment: fixed; 
-        }
-        .card-hover:hover { border-color: rgba(212, 163, 89, 0.4); transform: translateY(-5px); transition: all 0.4s ease; box-shadow: 0 10px 25px -5px rgba(29, 78, 216, 0.1); }
-        .d-progress-bg { height: 4px; background: #e2e8f0; border-radius: 2px; }
-        .d-progress-fill { height: 4px; background: #1d4ed8; border-radius: 2px; transition: width 0.4s ease; } 
+        /* Clases de ajuste para asegurar la visualización premium de los nuevos bloques */
+        .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; margin-top: 40px; }
+        .grid-6 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 40px; }
+        .logo img { max-height: 55px; filter: brightness(0) invert(1); }
+        .d-progress-bg { height: 4px; background: #e2e8f0; border-radius: 2px; width: 100%; }
+        .d-progress-fill { height: 4px; background: #1d4ed8; border-radius: 2px; transition: width 0.4s ease; }
         .d-step { display: none; } .d-step.active { display: block; }
-        .d-area-btn { padding: 24px 16px; border: 2px solid #f1f5f9; background: #ffffff; color: #64748b; border-radius: 24px; cursor: pointer; text-align: center; transition: all 0.2s; font-family: 'Inter', sans-serif; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
-        .d-area-btn:hover { border-color: #bae6fd; color: #1d4ed8; background: #f0f9ff; }
-        .d-area-btn.selected { border-color: #1d4ed8; color: #1d4ed8; background: #eff6ff; box-shadow: 0 10px 15px -3px rgba(29, 78, 216, 0.1); }
-        .d-opt-btn { width: 100%; padding: 16px 20px; border: 1px solid #e2e8f0; background: #ffffff; color: #334155; border-radius: 12px; cursor: pointer; text-align: left; font-size: 14px; line-height: 1.5; transition: all 0.15s; font-family: 'Inter', sans-serif; display: block; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
-        .d-opt-btn:hover { border-color: #bae6fd; background: #f8fafc; color: #0f172a; }
-        .d-opt-btn.selected { border-color: #1d4ed8; color: #1d4ed8; background: #eff6ff; font-weight: bold; border-width: 2px; padding: 15px 19px; } 
-        .d-btn-back { padding: 14px 20px; border: 1px solid #cbd5e1; background: #ffffff; color: #64748b; font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; border-radius: 6px; cursor: pointer; font-family: 'Inter', sans-serif; transition: all 0.2s; }
-        .d-btn-back:hover { border-color: #94a3b8; color: #0f172a; background: #f8fafc; }
-        .d-btn-next { flex: 1; padding: 14px 20px; background: #1d4ed8; color: #ffffff; font-size: 10px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; border-radius: 6px; border: none; cursor: pointer; font-family: 'Inter', sans-serif; transition: background 0.2s, opacity 0.2s; }
-        .d-btn-next:disabled { opacity: 0.3; cursor: default; } .d-btn-next:not(:disabled):hover { background: #1e40af; } 
+        .d-area-btn { padding: 24px 16px; border: 2px solid #f1f5f9; background: #ffffff; color: #64748b; border-radius: 24px; cursor: pointer; text-align: center; transition: all 0.2s; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
+        .d-area-btn.selected { border-color: #1d4ed8; color: #1d4ed8; background: #eff6ff; }
+        .d-opt-btn { width: 100%; padding: 16px 20px; border: 1px solid #e2e8f0; background: #ffffff; color: #334155; border-radius: 12px; cursor: pointer; text-align: left; transition: all 0.15s; }
+        .d-opt-btn.selected { border-color: #1d4ed8; color: #1d4ed8; background: #eff6ff; font-weight: bold; }
+        .d-reco { border-left: 3px solid #d4a359; padding: 16px 20px; margin-bottom: 12px; background: #f8fafc; font-size: 14px; color: #334155; line-height: 1.7; border-radius: 0 8px 8px 0; text-align: left; }
         .d-bar-bg { flex: 1; height: 6px; background: #e2e8f0; border-radius: 3px; overflow: hidden; }
         .d-bar-fill { height: 6px; border-radius: 3px; transition: width 1.1s ease; }
-        .d-reco { border-left: 3px solid #d4a359; padding: 16px 20px; margin-bottom: 12px; background: #f8fafc; font-size: 13px; color: #334155; line-height: 1.7; border-radius: 0 8px 8px 0; }
-        @media (min-width: 768px) { .d-area-btn { padding: 32px 16px; } .d-btn-back, .d-btn-next { padding: 14px 24px; } .d-reco { font-size: 14px; } }
     </style>
 </head>
+
 <body>
- 
-<header class="hero-gradient relative min-h-screen flex items-center justify-center text-center px-4 md:px-6">
-    <div class="absolute top-0 left-0 w-full p-4 md:p-8 flex justify-center md:justify-start z-50">
-        <img src="logo_fabricio.png" alt="Fabricio Martínez" class="h-14 md:h-16 object-contain brightness-0 invert opacity-95">
-    </div>
 
-    <div class="max-w-5xl mt-32 md:mt-24 z-10">
-        <h2 class="text-sky-400 text-[10px] md:text-xs font-bold uppercase tracking-[0.4em] mb-6">MBA · Sistemas de Alto Rendimiento Humano</h2>
-        <h1 class="text-4xl md:text-6xl font-black mb-6 md:mb-8 leading-tight uppercase tracking-tighter text-white">¿Tu empresa creció pero hoy <br><span class="text-sky-400 italic">sentís que es un caos?</span></h1>
-        <p class="text-base md:text-xl text-slate-300 mb-10 md:mb-12 max-w-2xl mx-auto leading-relaxed px-4 md:px-0">Ayudamos a PyMEs y organizaciones que están desordenadas o frenadas por la falta de estructura. Profesionalizamos tu arquitectura interna mediante células tácticas especializadas.</p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center relative z-20 px-4 md:px-0">
-            <a href="#gti-servicio" class="bg-blue-700 text-white w-full sm:w-auto px-8 py-5 font-bold uppercase text-[10px] md:text-[11px] tracking-[0.2em] rounded-md hover:bg-blue-800 transition shadow-xl text-center">Nuevo: Gerencia de Talento Externa</a>
-            <a href="#diagnostico" class="bg-slate-800 border-2 border-slate-700 text-slate-200 w-full sm:w-auto px-8 py-5 font-bold uppercase text-[10px] md:text-[11px] tracking-[0.2em] rounded-md hover:bg-slate-700 transition text-center">Detectar fugas de productividad</a>
-        </div>
-    </div>
-</header>
-
-<section id="gti-servicio" class="py-24 bg-slate-950 text-white px-4 md:px-6 border-b border-slate-900">
-    <div class="container mx-auto max-w-6xl">
-        <div class="text-center mb-16">
-            <span class="text-blue-400 font-bold text-[10px] md:text-xs uppercase tracking-[0.5em] bg-blue-950/60 px-4 py-1.5 rounded-full border border-blue-900">Modelo Disruptivo Extra-muros</span>
-            <h2 class="text-3xl md:text-5xl font-black mt-4 uppercase italic tracking-tighter text-white">Gerencia de Talento <span class="text-blue-500">Interina (GTI)</span></h2>
-            <p class="text-slate-400 mt-4 max-w-2xl mx-auto text-sm md:text-base">Estructuramos, profesionalizamos y organizamos los procesos de tu PyME sin sobrecargar tu estructura con costos fijos permanentes de personal. Intervenciones quirúrgicas de alto impacto.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800/80 shadow-md">
-                <div class="text-rose-500 text-2xl mb-4"><i class="fas fa-user-slash"></i></div>
-                <h3 class="text-sm font-bold uppercase tracking-wider text-slate-200 mb-2">Dependencia Operativa Absoluta</h3>
-                <p class="text-slate-400 text-xs md:text-sm leading-relaxed font-light">¿Si el dueño o un empleado clave se ausenta, la toma de decisiones y el negocio se paralizan por completo?</p>
+    <div class="topbar">
+        <div class="container">
+            <div class="topbar-left">
+                Liderazgo • Gestión del Talento • Neurociencias • RRHH
             </div>
-            <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800/80 shadow-md">
-                <div class="text-rose-500 text-2xl mb-4"><i class="fas fa-people-arrows"></i></div>
-                <h3 class="text-sm font-bold uppercase tracking-wider text-slate-200 mb-2">Solapamiento e Incertidumbre</h3>
-                <p class="text-slate-400 text-xs md:text-sm leading-relaxed font-light">"Todos hacen todo" y nadie asume responsabilidades finales. Fricción invisible y fugas severas de capital y tiempo.</p>
-            </div>
-            <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800/80 shadow-md">
-                <div class="text-rose-500 text-2xl mb-4"><i class="fas fa-heart-broken"></i></div>
-                <h3 class="text-sm font-bold uppercase tracking-wider text-slate-200 mb-2">Conflictos en Empresa Familiar</h3>
-                <p class="text-slate-400 text-xs md:text-sm leading-relaxed font-light">Tensiones relacionales y de sucesión que bloquean la toma de decisiones objetiva y afectan la rentabilidad.</p>
+            <div class="topbar-right">
+                Consultora Estratégica para Empresas
             </div>
         </div>
+    </div>
 
-        <div class="bg-gradient-to-r from-blue-950 to-slate-900 border border-blue-900/60 p-8 md:p-12 rounded-3xl flex flex-col lg:flex-row items-center justify-between gap-8">
-            <div class="max-w-2xl text-center lg:text-left">
-                <h3 class="text-lg md:text-xl font-bold uppercase tracking-wide mb-2 text-white">Células Tácticas Modulares de Especialistas</h3>
-                <p class="text-slate-400 text-xs md:text-sm leading-relaxed">Coordinados bajo una dirección estratégica única, desplegamos asociados expertos temporales (Blindaje Legal Laboral, Headhunting Sénior y Auditorías de Calidad) según la necesidad exacta de la PyME. Ordenamos, estabilizamos y nos retiramos de forma limpia.</p>
-            </div>
-            <a href="https://wa.me/5493434164699?text=Hola%20Fabricio,%20estuve%20revisando%20la%20web%20y%20quiero%20coordinar%20una%20reunion%20de%20viabilidad%20para%20el%20servicio%20de%20Gerencia%20de%20Talento%20Interina." target="_blank" class="w-full lg:w-auto bg-blue-700 hover:bg-blue-800 text-white font-bold uppercase text-[10px] md:text-[11px] tracking-widest px-8 py-5 rounded-md transition text-center whitespace-nowrap shadow-xl">Analizar Viabilidad GTI →</a>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <img src="logo_fabricio.png" alt="Fabricio Martínez">
+                </a>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#soluciones">Soluciones</a></li>
+                    <li><a href="#gerencia-externa">Gerencia Externa</a></li>
+                    <li><a href="#metodo">Método LÍDER®</a></li>
+                    <li><a href="#alianzas">Organizaciones</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <a href="#diagnostico" class="btn-header">
+                    Diagnóstico Gratuito
+                </a>
+            </nav>
         </div>
-    </div>
-</section>
- 
-<section class="py-24 bg-sky-50 px-4 md:px-6 border-b border-slate-200">
-    <div class="container mx-auto max-w-6xl">
-        <h3 class="text-sky-500 font-bold text-[10px] md:text-xs text-center uppercase tracking-[0.5em] mb-4">Áreas de Intervención Clave</h3>
-        <h2 class="text-3xl font-black text-center mb-16 uppercase italic tracking-tighter text-slate-900">Qué problemas concretos <span class="text-blue-700">resolvemos</span></h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            <div class="bg-white p-8 rounded-2xl border border-slate-100 card-hover shadow-sm"><i class="fas fa-chart-pie text-3xl text-blue-700 mb-6 block"></i><h4 class="text-sm font-bold mb-3 uppercase tracking-widest text-slate-900">Estructura & OKRs</h4><p class="text-slate-600 text-sm leading-relaxed font-light">Terminá con la dependencia absoluta del dueño. Creamos manuales de procesos y tableros de control para que tu equipo rinda solo.</p></div>
-            <div class="bg-white p-8 rounded-2xl border border-slate-100 card-hover shadow-sm"><i class="fas fa-trophy text-3xl text-blue-700 mb-6 block"></i><h4 class="text-sm font-bold mb-3 uppercase tracking-widest text-slate-900">Rendimiento bajo Presión</h4><p class="text-slate-600 text-sm leading-relaxed font-light">Entrenamos mandos medios y equipos de alta competencia para tomar decisiones lúcidas en momentos críticos sin bloquearse.</p></div>
-            <div class="bg-white p-8 rounded-2xl border border-slate-100 card-hover shadow-sm"><i class="fas fa-microphone-alt text-3xl text-blue-700 mb-6 block"></i><h4 class="text-sm font-bold mb-3 uppercase tracking-widest text-slate-900">Experiencias & Eventos</h4><p class="text-slate-600 text-sm leading-relaxed font-light">Diseño integral de capacitaciones in-company corporativas y grandes ferias sectoriales a pedido del cliente.</p></div>
-            <div class="bg-white p-8 rounded-2xl border border-slate-100 card-hover shadow-sm"><i class="fas fa-users-cog text-3xl text-blue-700 mb-6 block"></i><h4 class="text-sm font-bold mb-3 uppercase tracking-widest text-slate-900">Dirección de Talento</h4><p class="text-slate-600 text-sm leading-relaxed font-light">Frenamos la rotación de personal y los conflictos internos mediante protocolos claros de comunicación y feedback.</p></div>
-            <div class="bg-white p-8 rounded-2xl border border-slate-100 card-hover shadow-sm lg:col-span-2"><i class="fas fa-hand-holding-usd text-3xl text-blue-700 mb-6 block"></i><h4 class="text-sm font-bold mb-3 uppercase tracking-widest text-slate-900">Fugas Financieras (Auditoría a Riesgo Cero)</h4><p class="text-slate-600 text-sm leading-relaxed font-light">Identificamos fugas de capital mediante auditoría de procesos y solo cobramos un porcentaje del ahorro real generado en tu gestión.</p></div>
-        </div>
-    </div>
-</section>
+    </header>
 
-<section class="py-24 bg-white px-4 md:px-6 border-b border-slate-200">
-    <div class="container mx-auto max-w-4xl">
-        <h3 class="text-sky-500 font-bold text-[10px] md:text-xs text-center uppercase tracking-[0.5em] mb-4">Evidencia de Impacto</h3>
-        <h2 class="text-3xl font-black text-center mb-12 uppercase italic tracking-tighter text-slate-900">La transformación en <span class="text-blue-700">números</span></h2>
-        
-        <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-md bg-slate-50">
-            <table class="w-full text-left border-collapse text-sm">
-                <thead>
-                    <tr class="bg-slate-900 text-white font-bold uppercase tracking-wider text-[10px]">
-                        <th class="p-4">Problema Inicial</th>
-                        <th class="p-4">Intervención Aplicada</th>
-                        <th class="p-4 text-right">Resultado Medible</th>
-                    </tr>
-                </thead>
-                <tbody class="divide-y divide-slate-200 text-slate-700">
-                    <tr>
-                        <td class="p-4 font-semibold">Caos operativo y desborde del dueño</td>
-                        <td class="p-4 italic">Estructuración de procesos e implementación de OKRs</td>
-                        <td class="p-4 text-right text-blue-700 font-bold">+22% Eficiencia Operativa</td>
-                    </tr>
-                    <tr>
-                        <td class="p-4 font-semibold">Reuniones eternas y grupos de chat saturados</td>
-                        <td class="p-4 italic">Protocolos avanzados de flujos de información interna</td>
-                        <td class="p-4 text-right text-blue-700 font-bold">-40% Tiempos Muertos</td>
-                    </tr>
-                    <tr>
-                        <td class="p-4 font-semibold">Líderes sobrecargados y burnout de staff</td>
-                        <td class="p-4 italic">Neuro-coaching corporativo y autorregulación biológica</td>
-                        <td class="p-4 text-right text-blue-700 font-bold">Blindaje contra el Estrés</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</section>
- 
-<section class="py-24 bg-sky-50 px-4 md:px-6 border-y border-slate-200 overflow-hidden">
-    <div class="container mx-auto max-w-6xl flex flex-col md:flex-row items-center gap-12 lg:gap-24">
-        <div class="w-full sm:w-4/5 md:w-1/2 lg:w-5/12 relative mb-12 md:mb-0 mx-auto">
-            <div class="w-5/6 aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-slate-200 relative z-10">
-                <img src="20240606_122252.jpg" alt="Fabricio Martínez Consultoría" class="w-full h-full object-cover">
+    <section class="hero" id="inicio">
+
+        <div class="overlay"></div>
+
+        <img src="img/hero.jpg" class="hero-image" alt="Fabricio Martínez">
+
+        <div class="hero-content">
+
+            <span class="hero-tag">
+                MÁS DE 25 AÑOS DESARROLLANDO PERSONAS Y ORGANIZACIONES [cite: 5]
+            </span>
+
+            <h1>
+                Las personas hacen crecer las empresas.
+                <br>
+                Nosotros ayudamos a desarrollar las personas que hacen posible esos resultados.
+            </h1>
+
+            <h2>
+                Acompañamos organizaciones que necesitan profesionalizar su gestión de personas, fortalecer el liderazgo y transformar el talento en una ventaja competitiva. Actuamos como Gerencia Externa de Recursos Humanos o como aliados estratégicos de equipos de RRHH que buscan ir un paso más allá[cite: 5].
+            </h2>
+
+            <div class="hero-buttons">
+
+                <a href="#pre-contacto" class="btn-primary">
+                    Agendá una reunión estratégica
+                </a>
+
+                <a href="#metodo" class="btn-secondary">
+                    Descubrí el Método LÍDER®
+                </a>
+
             </div>
-            <div class="absolute bottom-[-10%] right-0 w-2/3 aspect-video rounded-xl overflow-hidden shadow-2xl border-4 border-white z-20 hover:scale-105 transition duration-500 bg-slate-100">
-                <img src="argentinasoftbolmeditando.jpg" alt="Selección Argentina Femenina de Sóftbol" class="w-full h-full object-cover">
-                <div class="absolute bottom-0 left-0 w-full bg-blue-700/90 backdrop-blur-sm px-2 py-2 text-center">
-                    <p class="text-[7px] md:text-[9px] text-white font-bold uppercase tracking-widest"><i class="fas fa-medal text-sky-300 mr-1"></i>Selección Argentina</p>
+
+            <div class="hero-numbers">
+                <div><h3>25+</h3><span>Años de experiencia</span></div>
+                <div><h3>9</h3><span>Países</span></div>
+                <div><h3>500+</h3><span>Equipos desarrollados</span></div>
+                <div><h3>MBA</h3><span>Dirección Estratégica</span></div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="problemas" id="soluciones">
+
+        <div class="container">
+
+            <span class="section-tag">
+                ¿QUÉ ESTÁ FRENANDO EL CRECIMIENTO DE TU EMPRESA?
+            </span>
+
+            <h2>
+                Muchas empresas no dejan de crecer por falta de mercado. 
+                <br>
+                Se detienen porque la organización ya no acompaña el crecimiento del negocio.
+            </h2>
+
+            <p>
+                Si hoy tu empresa vive alguna de estas situaciones, probablemente llegó el momento de profesionalizar la gestión de personas.
+            </p>
+
+            <div class="grid-6">
+
+                <div class="card-problema">
+                    <div class="icono">📈</div>
+                    <h3>¿Todo termina dependiendo de vos?</h3>
+                    <p>La operación diaria y el ritmo del negocio se paralizan si las decisiones estratégicas y cotidianas no pasan por el fundador.</p>
+                </div>
+
+                <div class="card-problema">
+                    <div class="icono">👥</div>
+                    <h3>¿Los mandos medios resuelven problemas... o te los llevan?</h3>
+                    <p>Falta de autonomía en las líneas intermedias para liderar sus respectivas áreas de forma predecible y eficiente.</p>
+                </div>
+
+                <div class="card-problema">
+                    <div class="icono">🔥</div>
+                    <h3>¿Cuesta encontrar y retener talento?</h3>
+                    <p>Fugas continuas de conocimiento y capital humano clave que desgastan el clima organizacional y la productividad.</p>
+                </div>
+
+                <div class="card-problema">
+                    <div class="icono">📊</div>
+                    <h3>¿Cada incorporación parece una apuesta?</h3>
+                    <p>Ausencia de un sistema técnico de selección científica y perfiles conductuales alineados a los objetivos del negocio.</p>
+                </div>
+
+                <div class="card-problema">
+                    <div class="icono">⚙️</div>
+                    <h3>¿La comunicación genera más conflictos que soluciones?</h3>
+                    <p>Estructuras y grupos de chat saturados, malentendidos recurrentes y tensiones que deterioran los vínculos internos.</p>
+                </div>
+
+                <div class="card-problema">
+                    <div class="icono">🚀</div>
+                    <h3>¿Sentís que la empresa podría dar mucho más?</h3>
+                    <p>Sabés con total certeza que el negocio tiene potencial de escala, pero antes necesitás ordenar la casa por dentro.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="gerencia" id="gerencia-externa" style="background: #0f172a; color: white; padding: 90px 0;">
+
+        <div class="container">
+
+            <div class="section-title" style="text-align: center; margin-bottom: 50px;">
+                <span class="section-tag" style="color: #38bdf8;">EFICIENCIA OPERATIVA</span>
+                <h2 style="color: white; font-size: 32px; font-weight: 900;">¿Por qué elegir una Gerencia Externa?</h2>
+                <p style="color: #94a3b8;">Disponé de una dirección de Recursos Humanos de primer nivel corporativo bajo un esquema modular y flexible.</p>
+            </div>
+
+            <div class="grid-4">
+
+                <div class="gerencia-box" style="background: #020617; border: 1px solid #1e293b; padding: 30px; border-radius: 12px;">
+                    <h3 style="color: #38bdf8; font-size: 18px; margin-bottom: 10px;">Flexibilidad</h3>
+                    <p style="color: #94a3b8; font-size: 14px;">Intervenciones modulares activadas exclusivamente cuando tu organización lo requiera.</p>
+                </div>
+
+                <div class="gerencia-box" style="background: #020617; border: 1px solid #1e293b; padding: 30px; border-radius: 12px;">
+                    <h3 style="color: #38bdf8; font-size: 18px; margin-bottom: 10px;">Menor costo</h3>
+                    <p style="color: #94a3b8; font-size: 14px;">Profesionalizás tu estructura sin incorporar un departamento fijo ni cargas sociales permanentes.</p>
+                </div>
+
+                <div class="gerencia-box" style="background: #020617; border: 1px solid #1e293b; padding: 30px; border-radius: 12px;">
+                    <h3 style="color: #38bdf8; font-size: 18px; margin-bottom: 10px;">Visión externa</h3>
+                    <p style="color: #94a3b8; font-size: 14px;">Aportamos neutralidad técnica para mirar lo que desde adentro, por la inercia diaria, ya no se ve.</p>
+                </div>
+
+                <div class="gerencia-box" style="background: #020617; border: 1px solid #1e293b; padding: 30px; border-radius: 12px;">
+                    <h3 style="color: #38bdf8; font-size: 18px; margin-bottom: 10px;">Equipo multidisciplinario</h3>
+                    <p style="color: #94a3b8; font-size: 14px;">Cada etapa del proyecto reúne de forma transitoria a los asociados expertos exactos para el desafío laboral.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="metodo" id="metodo">
+
+        <div class="container">
+
+            <span class="section-tag">
+                SISTEMA ESTRATÉGICO REGISTRADO
+            </span>
+
+            <h2 style="font-size: 36px; font-weight: 900; line-height: 1.3; margin-bottom: 40px; text-transform: uppercase;">
+                Toda organización evoluciona cuando evolucionan sus líderes.
+            </h2>
+
+            <p class="intro" style="font-weight: bold; color: #1d4ed8; font-size: 22px; margin-bottom: 50px;">
+                Método LÍDER®
+            </p>
+
+            <div class="lider-grid">
+
+                <div class="lider-card">
+                    <div class="letter">L</div>
+                    <h3>Liderazgo</h3>
+                    <p>Desarrollamos líderes que generan confianza, dirección y compromiso real con el rumbo del negocio[cite: 5].</p>
+                </div>
+
+                <div class="lider-card">
+                    <div class="letter">I</div>
+                    <h3>Integración</h3>
+                    <p>Alineamos personas, procesos operativos y cultura de equipo de forma directa con la estrategia de la empresa.</p>
+                </div>
+
+                <div class="lider-card">
+                    <div class="letter">D</div>
+                    <h3>Desarrollo</h3>
+                    <p>Impulsamos el crecimiento del talento y el despliegue técnico de las capacidades organizacionales[cite: 5].</p>
+                </div>
+
+                <div class="lider-card">
+                    <div class="letter">E</div>
+                    <h3>Evolución</h3>
+                    <p>Acompañamos los procesos de cambio cultural con herramientas analíticas, indicadores clave e innovación ágil.</p>
+                </div>
+
+                <div class="lider-card">
+                    <div class="letter">R</div>
+                    <h3>Resultados</h3>
+                    <p>Medimos rigurosamente el impacto de cada intervención para transformar la gestión del talento en valor económico[cite: 6].</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="servicios" style="background: #f8fafc; border-y: 1px solid #e2e8f0;">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-tag">ESTRATEGIA MODULAR</span>
+                <h2>Sólido Respaldo Inter-profesional</h2>
+                <p>Coordinados bajo una dirección estratégica unificada, desplegamos especialistas de primer nivel regional.</p>
+            </div>
+            <div class="servicios-grid">
+                <div class="servicio" style="border-left: 4px solid #1d4ed8;">
+                    <span style="font-size: 10px; font-weight: 900; color: #1d4ed8; uppercase">Unidad Económica</span>
+                    <h3>Matías Martínez</h3>
+                    <p>Consultor financiero y analista de comercialización con destacada trayectoria en medios de comunicación de Entre Ríos. Lidera las auditorías de procesos y fugas bajo modelos de riesgo cero.</p>
+                </div>
+                <div class="servicio" style="border-left: 4px solid #1d4ed8;">
+                    <span style="font-size: 10px; font-weight: 900; color: #1d4ed8; uppercase">Calidad y Normativas</span>
+                    <h3>Lic. José María González</h3>
+                    <p>Especialista en Bromatología. Auditor técnico enfocado en la implementación de estándares internacionales, Normas IRAM e ISO para plantas e industrias alimenticias.</p>
+                </div>
+                <div class="servicio" style="border-left: 4px solid #1d4ed8;">
+                    <span style="font-size: 10px; font-weight: 900; color: #1d4ed8; uppercase">Certificación Corporativa</span>
+                    <h3>Edge Solutions</h3>
+                    <p>Firma internacional asociada para el despliegue técnico de auditorías complejas de procesos, reestructuración modular y validación de estándares globales de gestión.</p>
                 </div>
             </div>
         </div>
-        <div class="w-full md:w-1/2 mt-4 md:mt-0 text-center md:text-left">
-            <h3 class="text-sky-500 font-bold text-[10px] md:text-xs uppercase tracking-[0.4em] mb-4">Dirección General</h3>
-            <h2 class="text-3xl md:text-5xl font-bold mb-6 md:mb-8 uppercase tracking-tighter italic text-slate-900">Fabricio Martínez <span class="text-blue-700 text-2xl md:text-3xl font-black block md:inline not-italic">· MBA</span></h2>
-            <p class="text-base md:text-lg text-slate-600 mb-6 md:mb-8 leading-relaxed">Consultor estratégico y especialista corporativo con más de 25 años de trayectoria. Máster en Administración y Dirección de Empresas (MBA) y Máster en Dirección de Recursos Humanos y Gestión del Talento por la <strong>Escuela de Negocios de Barcelona (ENEB)</strong>. Se desempeña como asesor organizacional de alto impacto y Coach en Neurociencias para <strong>Selecciones Nacionales</strong>.</p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 md:gap-y-4 gap-x-4 md:gap-x-8 font-bold text-slate-700 uppercase text-[9px] md:text-[10px] tracking-[0.15em] mb-10 bg-white p-5 md:p-6 rounded-xl border border-slate-100 shadow-sm">
-                <p class="flex items-center justify-center md:justify-start"><i class="fas fa-graduation-cap text-blue-600 mr-3"></i> MBA & Dirección General</p>
-                <p class="flex items-center justify-center md:justify-start"><i class="fas fa-users text-blue-600 mr-3"></i> Dirección de RRHH (Barcelona)</p>
-                <p class="flex items-center justify-center md:justify-start"><i class="fas fa-brain text-blue-600 mr-3"></i> Neurociencias (UBA)</p>
-                <p class="flex items-center justify-center md:justify-start"><i class="fas fa-check text-blue-600 mr-3"></i> Gestión Institucional & OKRs</p>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<section class="py-24 bg-white px-4 md:px-6 border-b border-slate-200">
-    <div class="container mx-auto max-w-6xl">
-        <h3 class="text-sky-500 font-bold text-[10px] md:text-xs text-center uppercase tracking-[0.5em] mb-4">Hub de Especialistas Asociados</h3>
-        <h2 class="text-3xl md:text-4xl font-black text-center mb-16 uppercase italic tracking-tighter text-slate-900">Expertos en <span class="text-blue-700">Implementación</span></h2>
-        
-        <div class="bg-slate-50 p-8 md:p-12 rounded-3xl border border-slate-200 shadow-md mb-12 flex flex-col md:flex-row items-center gap-10">
-            <div class="w-32 h-32 md:w-48 md:h-48 bg-gradient-to-br from-blue-900 to-slate-900 rounded-full flex items-center justify-center text-white text-4xl md:text-6xl font-black flex-shrink-0 shadow-md border-4 border-white">MM</div>
-            <div class="text-center md:text-left">
-                <div class="inline-block bg-blue-100 text-blue-700 text-[9px] font-black uppercase tracking-widest px-3 py-1 rounded-full mb-4">Socio Estratégico Financiero</div>
-                <h3 class="text-3xl font-black text-slate-900 mb-4 uppercase italic">Matías Martínez</h3>
-                <p class="text-slate-600 mb-6 leading-relaxed">Especialista en comercialización y referente de análisis financiero en <strong>Canal 9 y Canal 6 de Entre Ríos</strong>. Lidera nuestra unidad de Auditoría Económica con un modelo disruptivo de <strong>"Riesgo Cero"</strong>.</p>
-                <div class="text-blue-700 font-bold text-[11px] uppercase tracking-widest flex items-center justify-center md:justify-start gap-2"><i class="fas fa-chart-line"></i> Diagnóstico de Capital • Eficiencia Financiera</div>
+    <section class="nosotros" id="nosotros">
+
+        <div class="container">
+
+            <div class="nosotros-left">
+
+                <span class="section-tag">
+                    DIRECCIÓN ESTRATÉGICA
+                </span>
+
+                <h2>
+                    ¿Quién está detrás de la consultora?
+                </h2>
+
+                <p style="font-size: 16px; line-height: 1.7; color: #334155; margin-bottom: 25px;">
+                    La consultora es dirigida por <strong>Fabricio Martínez, MBA</strong>, especialista en Liderazgo, Neurociencias y Gestión del Talento, junto a una red de profesionales asociados que intervienen de acuerdo con las necesidades de cada organización[cite: 4, 5, 33].
+                </p>
+
+                <p style="font-size: 14px; color: #64748b; line-height: 1.6; margin-bottom: 30px;">
+                    Máster en Administración y Dirección de Empresas (MBA) y Máster en Dirección de Recursos Humanos por la Escuela de Negocios de Barcelona (ENEB). Cuenta con un Diplomado en Neurociencias por la Universidad de Buenos Aires (UBA) y se desempeña como Coach de Selecciones Nacionales[cite: 14, 33].
+                </p>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-size: 11px; font-weight: bold; color: #1e293b; text-transform: uppercase;">
+                    <div><i class="fas fa-graduation-cap text-blue-600 mr-2"></i> MBA Dirección General</div>
+                    <div><i class="fas fa-brain text-blue-600 mr-2"></i> Neurociencias UBA [cite: 33]</div>
+                    <div><i class="fas fa-users text-blue-600 mr-2"></i> Dirección RRHH</div>
+                    <div><i class="fas fa-check-circle text-blue-600 mr-2"></i> Gestión de Talento [cite: 4]</div>
+                </div>
+
             </div>
+
+            <div class="nosotros-right">
+                <img src="img/hero.jpg" alt="Fabricio Martínez">
+            </div>
+
         </div>
 
-        <div class="max-w-3xl mx-auto">
-            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm">
-                <h4 class="text-blue-700 font-black text-xs uppercase tracking-[0.3em] mb-8 flex items-center justify-center md:justify-start gap-3">
-                    <span class="w-8 h-8 bg-blue-100 text-blue-700 rounded-lg flex items-center justify-center"><i class="fas fa-award"></i></span> 
-                    Unidad de Calidad, Normativas y Células GTI
-                </h4>
-                <div class="space-y-8">
-                    <div class="flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
-                        <div class="w-14 h-14 bg-white border border-slate-200 rounded-full flex items-center justify-center text-slate-400 font-bold flex-shrink-0 shadow-sm">JG</div>
-                        <div>
-                            <p class="text-slate-900 font-bold text-sm uppercase mb-1">Lic. José María González</p>
-                            <p class="text-slate-500 text-xs leading-relaxed">Especialista en Bromatología. Implementación de Normas IRAM e ISO para industrias alimenticias.</p>
-                        </div>
-                    </div>
-                    <div class="pt-6 border-t border-slate-200 flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
-                        <div class="w-14 h-14 bg-white border border-slate-200 text-blue-400 rounded-full flex items-center justify-center font-bold flex-shrink-0 shadow-sm">
-                            <i class="fas fa-building text-xl"></i>
-                        </div>
-                        <div>
-                            <p class="text-slate-900 font-bold text-sm uppercase mb-1">Edge Solutions</p>
-                            <p class="text-slate-500 text-xs leading-relaxed">Consultora asociada para la auditoría y certificación de estándares internacionales de gestión y despliegue modular de RRHH.</p>
-                        </div>
-                    </div>
+    </section>
+
+    <section class="porque" id="alianzas" style="background: #f8fafc; border-y: 1px solid #e2e8f0;">
+
+        <div class="container">
+
+            <div class="section-title" style="text-align: center; margin-bottom: 40px;">
+                <span class="section-tag">RESPALDO CORPORATIVO</span>
+                <h2 style="font-size: 32px; font-weight: 900;">Organizaciones con las que trabajamos</h2>
+                <p>Nuestra trayectoria se valida en el rendimiento de los equipos que acompañamos[cite: 6].</p>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 40px;">
+                <span style="background: white; border: 1px solid #e2e8f0; padding: 16px 28px; border-radius: 8px; font-weight: 800; font-size: 12px; color: #1e293b; uppercase tracking-wider shadow-sm transition hover:text-blue-700 duration-200">Grupo Motta [cite: 10]</span>
+                <span style="background: white; border: 1px solid #e2e8f0; padding: 16px 28px; border-radius: 8px; font-weight: 800; font-size: 12px; color: #1e293b; uppercase tracking-wider shadow-sm transition hover:text-blue-700 duration-200">Mirstravel [cite: 11]</span>
+                <span style="background: white; border: 1px solid #e2e8f0; padding: 16px 28px; border-radius: 8px; font-weight: 800; font-size: 12px; color: #1e293b; uppercase tracking-wider shadow-sm transition hover:text-blue-700 duration-200">Distribuidora Werner</span>
+                <span style="background: white; border: 1px solid #e2e8f0; padding: 16px 28px; border-radius: 8px; font-weight: 800; font-size: 12px; color: #1e293b; uppercase tracking-wider shadow-sm transition hover:text-blue-700 duration-200">Cooperativa La Ganadera</span>
+                <span style="background: white; border: 1px solid #e2e8f0; padding: 16px 28px; border-radius: 8px; font-weight: 800; font-size: 12px; color: #1e293b; uppercase tracking-wider shadow-sm transition hover:text-blue-700 duration-200">Universidad de Concepción del Uruguay [cite: 25]</span>
+                <span style="background: white; border: 1px solid #e2e8f0; padding: 16px 28px; border-radius: 8px; font-weight: 800; font-size: 12px; color: #1e293b; uppercase tracking-wider shadow-sm transition hover:text-blue-700 duration-200">Comité Olímpico Argentino</span>
+                <span style="background: white; border: 1px solid #e2e8f0; padding: 16px 28px; border-radius: 8px; font-weight: 800; font-size: 12px; color: #1e293b; uppercase tracking-wider shadow-sm transition hover:text-blue-700 duration-200">Selección Argentina de Sóftbol [cite: 14]</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="diagnostico" style="padding: 100px 0; background: #ffffff;">
+        <div class="container" style="max-width: 750px; margin: 0 auto; padding: 0 20px;">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <span style="color: #1d4ed8; font-weight: bold; font-size: 11px; tracking: 0.2em; uppercase">Evaluación de Estructura</span>
+                <h2 style="font-size: 32px; font-weight: 900; color: #0f172a; margin-top: 10px; uppercase italic">Identificá tu Cuello de Botella</h2>
+                <p style="color: #64748b; font-size: 14px; margin-top: 10px;">Respondé 5 preguntas analíticas de tu ámbito organizativo y obtené conclusiones en tiempo real.</p>
+            </div>
+
+            <div style="background: #f8fafc; padding: 40px; border-radius: 24px; border: 1px solid #e2e8f0; shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                <div style="display: flex; justify-content: space-between; items-center; margin-bottom: 20px; font-size: 11px; font-weight: bold; uppercase color: #94a3b8;">
+                    <span id="d-step-label">Seleccioná tu rubro</span>
+                    <span id="d-step-count" style="color: #1d4ed8; background: #eff6ff; padding: 4px 12px; border-radius: 50px;">Paso 1 de 6</span>
+                </div>
+                <div class="d-progress-bg" style="margin-bottom: 40px;"><div class="d-progress-fill" id="d-progress" style="width:16%"></div></div>
+                
+                <div class="d-step active" id="d-step-0">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; margin-bottom: 35px;" id="d-area-btns"></div>
+                    <button class="d-btn-next w-full" id="d-next-0" disabled onclick="dNext()" style="width: 100%; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; background: #1d4ed8; color: white; padding: 15px; border-radius: 6px; cursor: pointer;">Iniciar Evaluación →</button>
+                </div>
+                
+                <div class="d-step" id="d-step-1"><span id="d-dim-1" style="font-size: 10px; font-weight: bold; color: #0ea5e9; uppercase block mb-2"></span><p id="d-q-1" style="font-size: 20px; font-weight: 800; color: #0f172a; uppercase italic mb-6"></p><div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 35px;" id="d-opts-1"></div><div style="display: flex; gap: 15px;"><button class="d-btn-back" onclick="dBack()">← Atrás</button><button class="d-btn-next" id="d-next-1" disabled onclick="dNext()">Siguiente →</button></div></div>
+                <div class="d-step" id="d-step-2"><span id="d-dim-2" style="font-size: 10px; font-weight: bold; color: #0ea5e9; uppercase block mb-2"></span><p id="d-q-2" style="font-size: 20px; font-weight: 800; color: #0f172a; uppercase italic mb-6"></p><div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 35px;" id="d-opts-2"></div><div style="display: flex; gap: 15px;"><button class="d-btn-back" onclick="dBack()">← Atrás</button><button class="d-btn-next" id="d-next-2" disabled onclick="dNext()">Siguiente →</button></div></div>
+                <div class="d-step" id="d-step-3"><span id="d-dim-3" style="font-size: 10px; font-weight: bold; color: #0ea5e9; uppercase block mb-2"></span><p id="d-q-3" style="font-size: 20px; font-weight: 800; color: #0f172a; uppercase italic mb-6"></p><div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 35px;" id="d-opts-3"></div><div style="display: flex; gap: 15px;"><button class="d-btn-back" onclick="dBack()">← Atrás</button><button class="d-btn-next" id="d-next-3" disabled onclick="dNext()">Siguiente →</button></div></div>
+                <div class="d-step" id="d-step-4"><span id="d-dim-4" style="font-size: 10px; font-weight: bold; color: #0ea5e9; uppercase block mb-2"></span><p id="d-q-4" style="font-size: 20px; font-weight: 800; color: #0f172a; uppercase italic mb-6"></p><div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 35px;" id="d-opts-4"></div><div style="display: flex; gap: 15px;"><button class="d-btn-back" onclick="dBack()">← Atrás</button><button class="d-btn-next" id="d-next-4" disabled onclick="dNext()">Siguiente →</button></div></div>
+                <div class="d-step" id="d-step-5"><span id="d-dim-5" style="font-size: 10px; font-weight: bold; color: #0ea5e9; uppercase block mb-2"></span><p id="d-q-5" style="font-size: 20px; font-weight: 800; color: #0f172a; uppercase italic mb-6"></p><div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 35px;" id="d-opts-5"></div><div style="display: flex; gap: 15px;"><button class="d-btn-back" onclick="dBack()">← Atrás</button><button class="d-btn-next" id="d-next-5" disabled onclick="dFinalizeInstantReport()">Procesar Resultados →</button></div></div>
+                
+                <div class="d-step" id="d-step-6">
+                    <div id="d-result"></div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
- 
-<section id="diagnostico" class="py-24 bg-sky-50 px-4 md:px-6">
-    <div class="container mx-auto max-w-6xl">
-        <h3 class="text-sky-500 font-bold text-[10px] md:text-xs text-center uppercase tracking-[0.5em] mb-4">No asumas. Medí.</h3>
-        <h2 class="text-3xl md:text-4xl font-black text-center mb-4 uppercase italic tracking-tighter text-slate-900">Encontrá tu <span class="text-blue-700">Cuello de Botella</span></h2>
-        <p class="text-slate-600 text-center italic mb-12 md:mb-16 max-w-2xl mx-auto text-sm md:text-base px-2">Respondé 5 preguntas analíticas y obtené un diagnóstico clínico inmediato en pantalla.</p>
- 
-        <div class="bg-white p-6 md:p-14 rounded-2xl md:rounded-3xl border border-slate-200 shadow-xl max-w-3xl mx-auto">
-            <div class="flex justify-between items-center mb-4">
-                <span class="text-[9px] md:text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400" id="d-step-label">Seleccioná tu rubro</span>
-                <span class="text-[9px] md:text-[11px] font-bold uppercase tracking-[0.15em] text-blue-700 bg-blue-50 px-3 py-1 rounded-full" id="d-step-count">Paso 1 de 6</span>
-            </div>
-            <div class="d-progress-bg mb-8 md:mb-12"><div class="d-progress-fill" id="d-progress" style="width:16%"></div></div>
-            
-            <div class="d-step active" id="d-step-0">
-                <p class="text-center text-sky-600 font-bold text-[10px] md:text-[12px] uppercase tracking-widest mb-8"><i class="fas fa-hand-pointer text-lg mr-2"></i> 👇 Elegí el ámbito organizativo para iniciar el test</p>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-10" id="d-area-btns"></div>
-                <button class="d-btn-next w-full py-4 md:py-5 text-[11px] md:text-[12px]" id="d-next-0" disabled onclick="dNext()">Iniciar Evaluación →</button>
-            </div>
-            
-            <div class="d-step" id="d-step-1"><span class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-sky-500 block mb-3" id="d-dim-1"></span><p class="text-slate-900 font-bold text-xl md:text-2xl italic uppercase tracking-tight leading-tight mb-6 md:mb-8" id="d-q-1"></p><div class="flex flex-col gap-3 md:gap-4 mb-8 md:mb-10" id="d-opts-1"></div><div class="flex flex-col sm:flex-row gap-3 md:gap-4"><button class="d-btn-back w-full sm:w-auto" onclick="dBack()">← Atrás</button><button class="d-btn-next w-full sm:w-auto" id="d-next-1" disabled onclick="dNext()">Siguiente →</button></div></div>
-            <div class="d-step" id="d-step-2"><span class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-sky-500 block mb-3" id="d-dim-2"></span><p class="text-slate-900 font-bold text-xl md:text-2xl italic uppercase tracking-tight leading-tight mb-6 md:mb-8" id="d-q-2"></p><div class="flex flex-col gap-3 md:gap-4 mb-8 md:mb-10" id="d-opts-2"></div><div class="flex flex-col sm:flex-row gap-3 md:gap-4"><button class="d-btn-back w-full sm:w-auto" onclick="dBack()">← Atrás</button><button class="d-btn-next w-full sm:w-auto" id="d-next-2" disabled onclick="dNext()">Siguiente →</button></div></div>
-            <div class="d-step" id="d-step-3"><span class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-sky-500 block mb-3" id="d-dim-3"></span><p class="text-slate-900 font-bold text-xl md:text-2xl italic uppercase tracking-tight leading-tight mb-6 md:mb-8" id="d-q-3"></p><div class="flex flex-col gap-3 md:gap-4 mb-8 md:mb-10" id="d-opts-3"></div><div class="flex flex-col sm:flex-row gap-3 md:gap-4"><button class="d-btn-back w-full sm:w-auto" onclick="dBack()">← Atrás</button><button class="d-btn-next w-full sm:w-auto" id="d-next-3" disabled onclick="dNext()">Siguiente →</button></div></div>
-            <div class="d-step" id="d-step-4"><span class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-sky-500 block mb-3" id="d-dim-4"></span><p class="text-slate-900 font-bold text-xl md:text-2xl italic uppercase tracking-tight leading-tight mb-6 md:mb-8" id="d-q-4"></p><div class="flex flex-col gap-3 md:gap-4 mb-8 md:mb-10" id="d-opts-4"></div><div class="flex flex-col sm:flex-row gap-3 md:gap-4"><button class="d-btn-back w-full sm:w-auto" onclick="dBack()">← Atrás</button><button class="d-btn-next w-full sm:w-auto" id="d-next-4" disabled onclick="dNext()">Siguiente →</button></div></div>
-            <div class="d-step" id="d-step-5"><span class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-sky-500 block mb-3" id="d-dim-5"></span><p class="text-slate-900 font-bold text-xl md:text-2xl italic uppercase tracking-tight leading-tight mb-6 md:mb-8" id="d-q-5"></p><div class="flex flex-col gap-3 md:gap-4 mb-8 md:mb-10" id="d-opts-5"></div><div class="flex flex-col sm:flex-row gap-3 md:gap-4"><button class="d-btn-back w-full sm:w-auto" onclick="dBack()">← Atrás</button><button class="d-btn-next w-full sm:w-auto" id="d-next-5" disabled onclick="dFinalizeInstantReport()">Procesar Resultados →</button></div></div>
-            
-            <div class="d-step" id="d-step-6">
-                <div id="d-result"></div>
-            </div>
-        </div>
-    </div>
-</section>
- 
-<footer class="py-16 bg-slate-950 text-slate-400 text-center px-6 border-t-[8px] border-blue-700">
-    <div class="container mx-auto max-w-4xl">
-        <div class="flex justify-center mb-8">
-            <img src="logo_fabricio.png" alt="Logo FM" class="h-24 object-contain brightness-0 invert rounded-2xl p-2 bg-slate-950 shadow-[0_0_40px_rgba(29,78,216,0.2)] border border-slate-900">
-        </div>
-        <h2 class="text-white text-3xl font-black mb-4 uppercase italic tracking-tighter">Fabricio Martínez</h2>
-        <p class="text-[9px] mb-12 uppercase tracking-[0.6em] text-sky-400 italic">Optimización Humana de Organizaciones</p>
-        <div class="flex justify-center space-x-12 mb-16 text-2xl">
-            <a href="https://www.linkedin.com/in/fabriciomartinezok/" target="_blank" class="hover:text-white transition"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/fabri_martinez_ok/?hl=es" target="_blank" class="hover:text-white transition"><i class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/5493434164699" target="_blank" class="hover:text-white transition"><i class="fab fa-whatsapp"></i></a>
-        </div>
-        <p class="text-[8px] uppercase tracking-[0.8em] opacity-40">&copy; 2026 Fabricio Martínez | Estrategia & Gestión</p>
-    </div>
-</footer>
- 
-<script>
-    const dQuestions = {
-        empresa: [
-            {dim:'Estratégica',label:'¿Objetivos anuales?',opts:[['Nadie recuerda, apagamos incendios',1],['En un Excel cada 3 meses',2],['Se intentan, pero áreas aisladas',3],['Medidos y accionables por todos',4]]},
-            {dim:'Presión',label:'Ante una crisis...',opts:[['Pánico y culpas',1],['El gerente absorbe todo',2],['Se resuelve, deja equipo agotado',3],['Protocolo y datos con frialdad',4]]},
-            {dim:'Dependencia',label:'Si el empleado estrella falta un mes...',opts:[['Operación colapsa',1],['Demoras y errores graves',2],['Zafamos con mucho estrés',3],['El sistema absorbe sin pérdida',4]]},
-            {dim:'Clima',label:'¿Fricción invisible?',opts:[['Muchas quejas, fuga de talento',1],['Fatiga en épocas pico',2],['Buen clima, falta innovación',3],['Compromiso y enfoque total',4]]},
-            {dim:'Calidad',label:'¿Normativas y Procesos?',opts:[['Funcionamos a ojo',1],['Sin tiempo para estandarizar',2],['Estructurando para no perder clientes',3],['Certificados. Predecibles',4]]}
-        ],
-        deporte: [
-            {dim:'Decisión',label:'Final ajustada...',opts:[['Equipo se nubla',1],['Jugamos al error del rival',2],['Orden pero sin instinto matador',3],['Lucidez y ejecución perfecta',4]]},
-            {dim:'Cerebro',label:'¿Neuro-coaching?',opts:[['Solo físico y garra',1],['Charlas motivacionales cortas',2],['Algo sin rigor científico',3],['Entrenamos el software mental',4]]},
-            {dim:'Campo',label:'Gestión cuerpo técnico',opts:[['Hostilidad y nerviosismo',1],['Buena intención, pierde foco',2],['Bien, sin herramientas de destrabe',3],['Neuro-compatible. Regula y activa',4]]},
-            {dim:'Química',label:'Ante derrotas...',opts:[['Egos y fractura',1],['Silencio y resignación',2],['Rebeldía sin orden',3],['Sistema cerrado y remontada',4]]},
-            {dim:'Soporte',label:'¿Dirigencia?',opts:[['Improvisación pesa extra',1],['Esfuerzo amateur sin recursos',2],['Acompañan sin largo plazo',3],['Gestión profesional sostiene todo',4]]}
-        ],
-        organismo: [
-            {dim:'Directivo',label:'¿Nave o papeles?',opts:[['Sepultados por burocracia',1],['Sistema traba todo',2],['Innovan empujando mucho',3],['Marcan rumbo y transforman',4]]},
-            {dim:'Cambio',label:'Nueva herramienta...',opts:[['Rechazo automático',1],['Se boicotea en práctica',2],['Grupo tracciona, otro frena',3],['Cultura ágil. Error es aprendizaje',4]]},
-            {dim:'Comunica',label:'¿Cómo viaja info?',opts:[['Radiopasillo y paranoia',1],['Tarde e incompleta',2],['Canales con ruido',3],['Transparente y sin filtros',4]]},
-            {dim:'Procesos',label:'Administración...',opts:[['Caos voluntad de pocos',1],['Oxidados, demoras constantes',2],['Costumbre sin manuales',3],['Lógicos y ahorran tiempo',4]]},
-            {dim:'Propósito',label:'¿Qué se respira?',opts:[['Desgaste y desmotivación',1],['Conexión emocional nula',2],['Camaradería sin norte fuerte',3],['Vida, orgullo y pertenencia',4]]}
-        ]
-    };
-    
-    const dAreas = [
-        {key:'empresa',label:'Empresas / Pymes',icon:'fa-industry text-sky-500'},
-        {key:'deporte',label:'Deporte Competitivo',icon:'fa-trophy text-blue-600'},
-        {key:'organismo',label:'Educación / ONGs',icon:'fa-university text-indigo-500'}
-    ];
-    
-    let dArea = null, dStep = 0, dAnswers = [];
-    
-    (function(){
-        const c = document.getElementById('d-area-btns');
-        dAreas.forEach(a => {
-            const b = document.createElement('button');
-            b.className = 'd-area-btn';
-            b.innerHTML = `<i class="fas ${a.icon} text-3xl mb-4 block"></i><span class="text-[11px] font-bold uppercase tracking-widest block">${a.label}</span>`;
-            b.onclick = () => {
-                document.querySelectorAll('.d-area-btn').forEach(x => x.classList.remove('selected'));
-                b.classList.add('selected');
-                dArea = a.key;
-                document.getElementById('d-next-0').disabled = false;
-            };
-            c.appendChild(b);
-        });
-    })();
-    
-    function dNext() {
-        if(dStep === 0) { dLoadQ(1); dShowStep(1); }
-        else if(dStep >= 1 && dStep <= 4) { dLoadQ(dStep+1); dShowStep(dStep+1); }
-        dStep = Math.min(dStep+1, 5);
-        dUpdateProgress();
-    }
-    
-    function dBack() {
-        dStep = Math.max(dStep-1, 0);
-        dShowStep(dStep);
-        dUpdateProgress();
-    }
-    
-    function dShowStep(n) {
-        document.querySelectorAll('.d-step').forEach(s => s.classList.remove('active'));
-        document.getElementById('d-step-'+n).classList.add('active');
-    }
-    
-    function dUpdateProgress() {
-        const p = Math.round((dStep/5)*100);
-        document.getElementById('d-progress').style.width = p + '%';
-        const l = ['Seleccioná tu rubro','Dimensión 1 de 5','Dimensión 2 de 5','Dimensión 3 de 5','Dimensión 4 de 5','Dimensión 5 de 5','Diagnóstico Clínico'];
-        const c = ['Paso 1 de 6','Paso 2 de 6','Paso 3 de 6','Paso 4 de 6','Paso 5 de 6','Paso 6 de 6','Completado'];
-        document.getElementById('d-step-label').textContent = l[dStep] || '';
-        document.getElementById('d-step-count').textContent = c[dStep] || '';
-    }
-    
-    function dLoadQ(n) {
-        const q = dQuestions[dArea][n-1];
-        document.getElementById('d-dim-'+n).textContent = 'Dimensión '+n+': '+q.dim;
-        document.getElementById('d-q-'+n).textContent = q.label;
-        const c = document.getElementById('d-opts-'+n);
-        c.innerHTML = '';
-        q.opts.forEach(([l,s]) => {
-            const b = document.createElement('button');
-            b.className = 'd-opt-btn';
-            b.textContent = l;
-            b.onclick = () => {
-                c.querySelectorAll('.d-opt-btn').forEach(x => x.classList.remove('selected'));
-                b.classList.add('selected');
-                dAnswers[n-1] = s;
-                document.getElementById('d-next-'+n).disabled = false;
-            };
-            c.appendChild(b);
-        });
-        document.getElementById('d-next-'+n).disabled = true;
-    }
-    
-    function dFinalizeInstantReport() {
-        dShowStep(6);
-        dStep = 6;
-        document.getElementById('d-progress').style.width = '100%';
-        document.getElementById('d-step-label').textContent = 'Diagnóstico Clínico';
-        document.getElementById('d-step-count').textContent = 'Completado';
-        dShowResult();
-    }
+    </section>
 
-    function dShowResult() {
-        const qs = dQuestions[dArea];
-        const t = dAnswers.reduce((a,b) => a+b, 0);
-        const p = Math.round((t/(qs.length*4))*100);
-        
-        const dr = {
-            empresa:[
-                ['Tu estructura está en zona de riesgo crítico. El desorden operativo frena la rentabilidad y consume tu tranquilidad diaria.','Falta estandarizar procesos y delimitar responsabilidades de manera urgente.','Recomendación: Aplicar un Plan de Mitigación Estructural mediante una Gerencia de Talento Interina (GTI).'],
-                ['La organización funciona, pero a un costo humano y financiero muy alto. Dependés demasiado de decisiones centralizadas.','Es el momento ideal para inyectar células tácticas modulares de procesos para traccionar de forma autónoma.','Sugerencia: Diseñar una matriz clara de puestos y funciones.'],
-                ['Estructura sana con alto potencial de escala. Hay cuellos de botella aislados en los canales de comunicación interna.','Profesionalizar la dirección y la retención del talento multiplicará exponencialmente tu productividad actual.','Estadio óptimo para desplegar sistemas GTI de estabilización.'],
-                ['Nivel de excelencia sistémica. Organización ágil y equipo altamente enfocado.','El desafío radica en blindar al equipo ante picos imprevistos de fatiga o estrés operativo.','Se sugiere auditoría preventiva de control corporativo trimestral.']
+    <section id="pre-contacto" style="padding: 90px 0; background: #f8fafc; border-t: 1px solid #e2e8f0; text-align: center;">
+        <div class="container" style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
+            <span class="section-tag" style="color: #1d4ed8; font-weight: bold; font-size: 11px; tracking: 0.2em; uppercase">PRIMER PASO DE EVOLUCIÓN</span>
+            <h2 style="font-size: 32px; font-weight: 900; color: #0f172a; margin: 15px 0 25px 0; uppercase tracking-tight">Una conversación puede cambiar el rumbo de una organización.</h2>
+            <div style="text-align: left; max-width: 650px; margin: 0 auto 40px auto; color: #475569; font-size: 15px; line-height: 1.8;">
+                <p style="margin-bottom: 12px;">✔ No todas las empresas necesitan una Gerencia Externa de Recursos Humanos.</p>
+                <p style="margin-bottom: 12px;">✔ No todas necesitan un proceso de coaching[cite: 6].</p>
+                <p style="margin-bottom: 12px;">✔ No todas necesitan capacitación[cite: 5].</p>
+                <p style="margin-bottom: 25px; font-weight: 600; color: #0f172a;">Lo primero que necesitan es claridad para saber cuál es el próximo paso.</p>
+                <p>Por eso nuestra primera reunión tiene un único objetivo: <strong>escuchar, comprender y ayudarte a identificar</strong> dónde están las mayores oportunidades de evolución de tu organización.</p>
+            </div>
+            <a href="#contacto" class="btn-primary" style="padding: 18px 40px; font-size: 11px; tracking: 0.25em;">Solicitar una reunión estratégica</a>
+        </div>
+    </section>
+
+    <section class="contacto" id="contacto">
+
+        <div class="container">
+
+            <div class="contacto-info">
+
+                <span class="section-tag">
+                    CONTACTO
+                </span>
+
+                <h2>
+                    Conversemos sobre el futuro de tu organización.
+                </h2>
+
+                <p>
+                    Cada empresa tiene desafíos diferentes. Nuestro trabajo comienza escuchando. Luego diseñamos una propuesta adaptada a tu realidad.
+                </p>
+
+                <div class="contact-data">
+                    <p>📍 Entre Ríos · Argentina</p>
+                    <p>📧 contacto@fabriciomartinez.com.ar</p>
+                    <p>🌐 www.fabriciomartinez.com.ar</p>
+                </div>
+
+            </div>
+
+            <div class="contact-form">
+
+                <form>
+                    <input type="text" placeholder="Nombre y apellido" required>
+                    <input type="text" placeholder="Empresa" required>
+                    <input type="email" placeholder="Correo electrónico" required>
+                    <input type="text" placeholder="Teléfono" required>
+                    <textarea rows="6" placeholder="Contanos brevemente cuál es el desafío de tu organización." required></textarea>
+                    <button type="submit">Solicitar una reunión estratégica</button>
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <h2>Recibí contenidos exclusivos sobre liderazgo, gestión del talento y desarrollo organizacional[cite: 4, 5].</h2>
+            <p>Una publicación mensual. Sin spam. Solo conocimiento aplicable.</p>
+            <form>
+                <input type="email" placeholder="Ingresá tu correo electrónico" required>
+                <button type="submit">Suscribirme</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+                    <h3>FABRICIO MARTÍNEZ</h3>
+                    <p>Consultora Estratégica en Personas, Liderazgo y Gestión del Talento[cite: 4, 5].</p>
+                </div>
+
+                <div>
+                    <h4>Soluciones</h4>
+                    <ul>
+                        <li>Gerencia Externa RRHH</li>
+                        <li>Método LÍDER®</li>
+                        <li>Coaching Ejecutivo [cite: 6]</li>
+                        <li>Desarrollo de Líderes [cite: 5]</li>
+                        <li>Gestión del Talento [cite: 4]</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Sectores</h4>
+                    <ul>
+                        <li>Empresas Familiares</li>
+                        <li>PyMES</li>
+                        <li>Industria</li>
+                        <li>Comercio</li>
+                        <li>Organizaciones Deportivas [cite: 6]</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Seguinos</h4>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/fabriciomartinezok/" target="_blank" style="color: inherit;">LinkedIn</a></li>
+                        <li><a href="https://www.instagram.com/fabri_martinez_ok/?hl=es" target="_blank" style="color: inherit;">Instagram</a></li>
+                        <li>YouTube</li>
+                        <li>Facebook</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="footer-bottom">
+                <p>© 2026 Fabricio Martínez · Todos los derechos reservados.</p>
+                <p>Método LÍDER® · Consultora Estratégica en Personas, Liderazgo y Gestión del Talento[cite: 4, 5].</p>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script>
+        const dQuestions = {
+            empresa: [
+                {dim:'Estratégica',label:'¿Objetivos anuales?',opts:[['Nadie recuerda, apagamos incendios',1],['En un Excel cada 3 meses',2],['Se intentan, pero áreas aisladas',3],['Medidos y accionables por todos',4]]},
+                {dim:'Presión',label:'Ante una crisis...',opts:[['Pánico y culpas',1],['El gerente absorbe todo',2],['Se resuelve, deja equipo agotado',3],['Protocolo y datos con frialdad',4]]},
+                {dim:'Dependencia',label:'Si el empleado estrella falta un mes...',opts:[['Operación colapsa',1],['Demoras y errores graves',2],['Zafamos con mucho estrés',3],['El sistema absorbe sin pérdida',4]]},
+                {dim:'Clima',label:'¿Fricción invisible?',opts:[['Muchas quejas, fuga de talento',1],['Fatiga en épocas pico',2],['Buen clima, falta innovación',3],['Compromiso y enfoque total',4]]},
+                {dim:'Calidad',label:'¿Normativas y Procesos?',opts:[['Funcionamos a ojo',1],['Sin tiempo para estandarizar',2],['Estructurando para no perder clientes',3],['Certificados. Predecibles',4]]}
             ],
-            deporte:[
-                ['Alarma competitiva. Los bloqueos emocionales están anulando por completo el rendimiento físico del equipo.','Urge intervención neuro-cognitiva para desactivar la parálisis bajo presión.','Recalibrar la comunicación de mandos directivos.'],
-                ['El talento no alcanza. La incapacidad de sostener la concentración en momentos clave cuesta campeonatos.','Sistematizar herramientas científicas de neuro-coaching táctico.','Trabajar la cohesión sistémica bajo presión.'],
-                ['Cerca del podio competitivo. Falta consolidar la frialdad estratégica que separa finalistas de campeones mundiales.','Optimizar los tiempos de respuesta cognitiva y la velocidad de veto motor.','Solidificar procesos dirigenciales.'],
-                ['Sistemas de alto rendimiento humano. Biología y estrategia competitiva alineadas a la perfección.','Monitorear el desgaste invisible para evitar fatiga por éxito acumulado.','Actualización periódica de metodologías científicas.']
+            deporte: [
+                {dim:'Decisión',label:'Final ajustada...',opts:[['Equipo se nubla',1],['Jugamos al error del rival',2],['Orden pero sin instinto matador',3],['Lucidez y ejecución perfecta',4]]},
+                {dim:'Cerebro',label:'¿Neuro-coaching?',opts:[['Solo físico y garra',1],['Charlas motivacionales cortas',2],['Algo sin rigor científico',3],['Entrenamos el software mental',4]]},
+                {dim:'Campo',label:'Gestión cuerpo técnico',opts:[['Hostilidad y nerviosismo',1],['Buena intención, pierde foco',2],['Bien, sin herramientas de destrabe',3],['Neuro-compatible. Regula y activa',4]]},
+                {dim:'Química',label:'Ante derrotas...',opts:[['Egos y fractura',1],['Silencio y resignación',2],['Rebeldía sin orden',3],['Sistema cerrado y remontada',4]]},
+                {dim:'Soporte',label:'¿Dirigencia?',opts:[['Improvisación pesa extra',1],['Esfuerzo amateur sin recursos',2],['Acompañan sin largo plazo',3],['Gestión profesional sostiene todo',4]]}
             ],
-            organismo:[
-                ['Parálisis funcional severa. La burocracia interna secuestró el propósito inicial del equipo directivo.','Reseteo completo de liderazgo y gestión del cambio cultural.','Abrir canales de comunicación sin ruido institucional.'],
-                ['Mucho esfuerzo aislado con bajo impacto real. Pérdida de energía y desgaste constantes.','El cuerpo directivo necesita herramientas avanzadas de dirección de talento.','Establecer manuales operativos y descriptores de puestos básicos.'],
-                ['Institución con alto potencial. Falta dar el salto definitivo de simples administradores a líderes ágiles.','Reducir la carga burocrática invisible liberará el potencial del personal.','Sugerencia: Desplegar programas estratégicos avanzados.'],
-                ['Estructura de referencia regional. Clima excelente y flujos organizativos limpios.','Sostener la actualización continua ante escenarios macro volátiles.','Formación continua y actualización de mandos clave.']
+            organismo: [
+                {dim:'Directivo',label:'¿Nave o papeles?',opts:[['Sepultados por burocracia',1],['Sistema traba todo',2],['Innovan empujando mucho',3],['Marcan rumbo y transforman',4]]},
+                {dim:'Cambio',label:'Nueva herramienta...',opts:[['Rechazo automático',1],['Se boicotea en práctica',2],['Grupo tracciona, otro frena',3],['Cultura ágil. Error es aprendizaje',4]]},
+                {dim:'Comunica',label:'¿Cómo viaja info?',opts:[['Radiopasillo y paranoia',1],['Tarde e incompleta',2],['Canales con ruido',3],['Transparente y sin filtros',4]]},
+                {dim:'Procesos',label:'Administración...',opts:[['Caos voluntad de pocos',1],['Oxidados, demoras constantes',2],['Costumbre sin manuales',3],['Lógicos y ahorran tiempo',4]]},
+                {dim:'Propósito',label:'¿Qué se respira?',opts:[['Desgaste y desmotivación',1],['Conexión emocional nula',2],['Camaradería sin norte fuerte',3],['Vida, orgullo y pertenencia',4]]}
             ]
         };
         
-        let n, fg, bg, br, idx;
-        if(p <= 40) { n = 'Riesgo Operativo Crítico'; fg = '#e11d48'; bg = '#fff1f2'; br = '#fecdd3'; idx = 0; }
-        else if(p <= 65) { n = 'Sobreviviendo con Esfuerzo'; fg = '#d97706'; bg = '#fffbeb'; br = '#fde68a'; idx = 1; }
-        else if(p <= 85) { n = 'Rendimiento Sólido'; fg = '#0284c7'; bg = '#f0f9ff'; br = '#bae6fd'; idx = 2; }
-        else { n = 'Sistemas de Alto Rendimiento'; fg = '#1d4ed8'; bg = '#eff6ff'; br = '#bfdbfe'; idx = 3; }
+        const dAreas = [
+            {key:'empresa',label:'Empresas / Pymes',icon:'fa-industry text-sky-500'},
+            {key:'deporte',label:'Deporte Competitivo',icon:'fa-trophy text-blue-600'},
+            {key:'organismo',label:'Educación / ONGs',icon:'fa-university text-indigo-500'}
+        ];
         
-        const recos = dr[dArea][idx];
-        const dimC = ['#1d4ed8','#0ea5e9','#0284c7','#3b82f6','#06b6d4'];
+        let dArea = null, dStep = 0, dAnswers = [];
         
-        let html = `
-            <div class="text-center mb-8">
-                <p class="text-xs font-bold uppercase text-slate-500 mb-1">Resultado de tu Diagnóstico Operativo</p>
-                <div class="text-6xl font-black mb-3" style="color:${fg}">${p}%</div>
-                <span class="text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-md inline-block" style="background:${bg};color:${fg};border:1px solid ${br};">${n}</span>
-            </div>
-            <div class="mb-8 bg-white p-6 rounded-2xl border border-slate-200">
-        `;
+        (function(){
+            const c = document.getElementById('d-area-btns');
+            dAreas.forEach(a => {
+                const b = document.createElement('button');
+                b.className = 'd-area-btn';
+                b.innerHTML = `<i class="fas ${a.icon} text-3xl mb-4 block"></i><span class="text-[11px] font-bold uppercase tracking-widest block">${a.label}</span>`;
+                b.onclick = () => {
+                    document.querySelectorAll('.d-area-btn').forEach(x => x.classList.remove('selected'));
+                    b.classList.add('selected');
+                    dArea = a.key;
+                    document.getElementById('d-next-0').disabled = false;
+                };
+                c.appendChild(b);
+            });
+        })();
         
-        qs.forEach((q,i) => {
-            const pr = Math.round((dAnswers[i]||0)/4*100);
+        function dNext() {
+            if(dStep === 0) { dLoadQ(1); dShowStep(1); }
+            else if(dStep >= 1 && dStep <= 4) { dLoadQ(dStep+1); dShowStep(dStep+1); }
+            dStep = Math.min(dStep+1, 5);
+            dUpdateProgress();
+        }
+        
+        function dBack() {
+            dStep = Math.max(dStep-1, 0);
+            dShowStep(dStep);
+            dUpdateProgress();
+        }
+        
+        function dShowStep(n) {
+            document.querySelectorAll('.d-step').forEach(s => s.classList.remove('active'));
+            document.getElementById('d-step-'+n).classList.add('active');
+        }
+        
+        function dUpdateProgress() {
+            const p = Math.round((dStep/5)*100);
+            document.getElementById('d-progress').style.width = p + '%';
+            const l = ['Seleccioná tu rubro','Dimensión 1 de 5','Dimensión 2 de 5','Dimensión 3 de 5','Dimensión 4 de 5','Dimensión 5 de 5','Diagnóstico Clínico'];
+            const c = ['Paso 1 de 6','Paso 2 de 6','Paso 3 de 6','Paso 4 de 6','Paso 5 de 6','Paso 6 de 6','Completado'];
+            document.getElementById('d-step-label').textContent = l[dStep] || '';
+            document.getElementById('d-step-count').textContent = c[dStep] || '';
+        }
+        
+        function dLoadQ(n) {
+            const q = dQuestions[dArea][n-1];
+            document.getElementById('d-dim-'+n).textContent = 'Dimensión '+n+': '+q.dim;
+            document.getElementById('d-q-'+n).textContent = q.label;
+            const c = document.getElementById('d-opts-'+n);
+            c.innerHTML = '';
+            q.opts.forEach(([l,s]) => {
+                const b = document.createElement('button');
+                b.className = 'd-opt-btn';
+                b.textContent = l;
+                b.onclick = () => {
+                    c.querySelectorAll('.d-opt-btn').forEach(x => x.classList.remove('selected'));
+                    b.classList.add('selected');
+                    dAnswers[n-1] = s;
+                    document.getElementById('d-next-'+n).disabled = false;
+                };
+                c.appendChild(b);
+            });
+            document.getElementById('d-next-'+n).disabled = true;
+        }
+        
+        function dFinalizeInstantReport() {
+            dShowStep(6);
+            dStep = 6;
+            document.getElementById('d-progress').style.width = '100%';
+            document.getElementById('d-step-label').textContent = 'Diagnóstico Clínico';
+            document.getElementById('d-step-count').textContent = 'Completado';
+            dShowResult();
+        }
+
+        function dShowResult() {
+            const qs = dQuestions[dArea];
+            const t = dAnswers.reduce((a,b) => a+b, 0);
+            const p = Math.round((t/(qs.length*4))*100);
+            
+            const dr = {
+                empresa:[
+                    ['Tu estructura está en zona de riesgo crítico. El desorden operativo frena la rentabilidad y consume tu tranquilidad diaria.','Falta estandarizar procesos y delimitar responsabilidades de manera urgente.','Recomendación: Aplicar un Plan de Mitigación Estructural mediante una Gerencia de Talento Interina (GTI).'],
+                    ['La organización funciona, pero a un costo humano y financiero muy alto. Dependés demasiado de decisiones centralizadas.','Es el momento ideal para inyectar células tácticas modulares de procesos para traccionar de forma autónoma.','Sugerencia: Diseñar una matriz clara de puestos y funciones.'],
+                    ['Estructura sana con alto potencial de escala. Hay cuellos de botella aislados en los canales de comunicación interna.','Profesionalizar la dirección y la retención del talento multiplicará exponencialmente tu productividad actual.','Estadio óptimo para desplegar sistemas GTI de estabilización.'],
+                    ['Nivel de excelencia sistémica. Organización ágil y equipo altamente enfocado.','El desafío radica en blindar al equipo ante picos imprevistos de fatiga o estrés operativo.','Se sugiere auditoría preventiva de control corporativo trimestral.']
+                ],
+                deporte:[
+                    ['Alarma competitiva. Los bloqueos emocionales están anulando por completo el rendimiento físico del equipo.','Urge intervención neuro-cognitiva para desactivar la parálisis bajo presión.','Recalibrar la comunicación de mandos directivos.'],
+                    ['El talento no alcanza. La incapacidad de sostener la concentración en momentos clave cuesta campeonatos.','Sistematizar herramientas científicas de neuro-coaching táctico.','Trabajar la cohesión sistémica bajo presión.'],
+                    ['Cerca del podio competitivo. Falta consolidar la frialdad estratégica que separa finalistas de campeones mundiales.','Optimizar los tiempos de respuesta cognitiva y la velocidad de veto motor.','Solidificar procesos dirigenciales.'],
+                    ['Sistemas de alto rendimiento humano. Biología y estrategia competitiva alineadas a la perfección.','Monitorear el desgaste invisible para evitar fatiga por éxito acumulado.','Actualización periódica de metodologías científicas.']
+                ],
+                organismo:[
+                    ['Parálisis funcional severa. La burocracia interna secuestró el propósito inicial del equipo directivo.','Reseteo completo de liderazgo y gestión del cambio cultural.','Abrir canales de comunicación sin ruido institucional.'],
+                    ['Mucho esfuerzo aislado con bajo impacto real. Pérdida de energía y desgaste constantes.','El cuerpo directivo necesita herramientas avanzadas de dirección de talento.','Establecer manuales operativos y descriptores de puestos básicos.'],
+                    ['Institución con alto potencial. Falta dar el salto definitivo de simples administradores a líderes ágiles.','Reducir la carga burocrática invisible liberará el potencial del personal.','Sugerencia: Desplegar programas estratégicos avanzados.'],
+                    ['Estructura de referencia regional. Clima excelente y flujos organizativos limpios.','Sostener la actualización continua ante escenarios macro volátiles.','Formación continua y actualización de mandos clave.']
+                ]
+            };
+            
+            let n, fg, bg, br, idx;
+            if(p <= 40) { n = 'Riesgo Operativo Crítico'; fg = '#e11d48'; bg = '#fff1f2'; br = '#fecdd3'; idx = 0; }
+            else if(p <= 65) { n = 'Sobreviviendo con Esfuerzo'; fg = '#d97706'; bg = '#fffbeb'; br = '#fde68a'; idx = 1; }
+            else if(p <= 85) { n = 'Rendimiento Sólido'; fg = '#0284c7'; bg = '#f0f9ff'; br = '#bae6fd'; idx = 2; }
+            else { n = 'Sistemas de Alto Rendimiento'; fg = '#1d4ed8'; bg = '#eff6ff'; br = '#bfdbfe'; idx = 3; }
+            
+            const recos = dr[dArea][idx];
+            const dimC = ['#1d4ed8','#0ea5e9','#0284c7','#3b82f6','#06b6d4'];
+            
+            let html = `
+                <div class="text-center mb-8">
+                    <p class="text-xs font-bold uppercase text-slate-500 mb-1">Resultado de tu Diagnóstico Operativo</p>
+                    <div class="text-6xl font-black mb-3" style="color:${fg}">${p}%</div>
+                    <span class="text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-md inline-block" style="background:${bg};color:${fg};border:1px solid ${br};">${n}</span>
+                </div>
+                <div class="mb-8 bg-white p-6 rounded-2xl border border-slate-200">
+            `;
+            
+            qs.forEach((q,i) => {
+                const pr = Math.round((dAnswers[i]||0)/4*100);
+                html += `
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="text-[9px] md:text-[10px] font-bold uppercase tracking-wider text-slate-600 w-28 flex-shrink-0 leading-tight">${q.dim}</span>
+                        <div class="d-bar-bg flex-1"><div class="d-bar-fill" style="width:${pr}%;background:${dimC[i]}"></div></div>
+                        <span class="text-[10px] font-bold text-slate-800 w-8 text-right">${pr}%</span>
+                    </div>
+                `;
+            });
+            
+            html += `</div><div class="mb-8"><h4 class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3">Conclusión Clínica Basal</h4>`;
+            recos.forEach(r => { html += `<div class="d-reco shadow-sm">${r}</div>`; });
+            
             html += `
-                <div class="flex items-center gap-3 mb-3">
-                    <span class="text-[9px] md:text-[10px] font-bold uppercase tracking-wider text-slate-600 w-28 flex-shrink-0 leading-tight">${q.dim}</span>
-                    <div class="d-bar-bg flex-1"><div class="d-bar-fill" style="width:${pr}%;background:${dimC[i]}"></div></div>
-                    <span class="text-[10px] font-bold text-slate-800 w-8 text-right">${pr}%</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 pt-4 border-t border-slate-200">
+                    <button onclick="dReset()" class="bg-white border border-slate-300 text-slate-600 w-full sm:w-auto px-6 py-4 font-bold uppercase text-[10px] rounded-md">Reiniciar Test</button>
+                    <a href="https://wa.me/5493434164699?text=Hola%20Fabricio,%20complete%20el%20test%20clinico%20en%20la%20web.%20Mi%20nivel%20de%20madurez%20operativa%20dio%20${p}%25%20(${n}).%20Quiero%20mi%20sesion%20de%20devolucion%20gratuita." target="_blank" class="flex-1 bg-blue-700 text-white w-full px-6 py-4 font-bold uppercase text-[10px] rounded-md text-center shadow-md transition hover:bg-blue-800">Agendar Devolución Estratégica Gratuita →</a>
                 </div>
             `;
-        });
+            
+            document.getElementById('d-result').innerHTML = html;
+        }
         
-        html += `</div><div class="mb-8"><h4 class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3">Conclusión Clínica Inicial</h4>`;
-        recos.forEach(r => { html += `<div class="d-reco shadow-sm">${r}</div>`; });
-        
-        html += `
-            </div>
-            <div class="flex flex-col sm:flex-row gap-3 pt-4 border-t border-slate-200">
-                <button onclick="dReset()" class="bg-white border border-slate-300 text-slate-600 w-full sm:w-auto px-6 py-4 font-bold uppercase text-[10px] rounded-md">Reiniciar Test</button>
-                <a href="https://wa.me/5493434164699?text=Hola%20Fabricio,%20complete%20el%20test%20clinico%20en%20la%20web.%20Mi%20nivel%20de%20madurez%20operativa%20dio%20${p}%25%20(${n}).%20Quiero%20mi%20sesion%20de%20devolucion%20gratuita." target="_blank" class="flex-1 bg-blue-700 text-white w-full px-6 py-4 font-bold uppercase text-[10px] rounded-md text-center shadow-md transition hover:bg-blue-800">Agendar Devolución Estratégica Gratuita →</a>
-            </div>
-        `;
-        
-        document.getElementById('d-result').innerHTML = html;
-    }
-    
-    function dReset() {
-        dArea = null; dStep = 0; dAnswers = [];
-        document.querySelectorAll('.d-area-btn').forEach(b => b.classList.remove('selected'));
-        document.getElementById('d-next-0').disabled = true;
-        document.getElementById('d-progress').style.width = '16%';
-        document.getElementById('d-step-label').textContent = 'Seleccioná tu rubro';
-        document.getElementById('d-step-count').textContent = 'Paso 1 de 6';
-        dShowStep(0);
-    }
-</script>
+        function dReset() {
+            dArea = null; dStep = 0; dAnswers = [];
+            document.querySelectorAll('.d-area-btn').forEach(b => b.classList.remove('selected'));
+            document.getElementById('d-next-0').disabled = true;
+            document.getElementById('d-progress').style.width = '16%';
+            document.getElementById('d-step-label').textContent = 'Seleccioná tu rubro';
+            document.getElementById('d-step-count').textContent = 'Paso 1 de 6';
+            dShowStep(0);
+        }
+    </script>
+    <script src="js/main.js"></script>
+
 </body>
+
 </html>
+
