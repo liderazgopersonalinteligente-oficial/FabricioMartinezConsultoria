@@ -29,36 +29,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <!-- ARQUITECTURA DE DISEÑO PREMIUM (CORREGIDA AL PÍXEL) -->
+    <!-- ARQUITECTURA DE DISEÑO PREMIUM SIN REDUNDANCIAS -->
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Montserrat', sans-serif; background-color: #ffffff; color: #1e293b; line-height: 1.6; overflow-x: hidden; }
         .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
         
-        /* Barra de Títulos */
         .topbar { background-color: #0b1329; color: #94a3b8; font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; padding: 12px 0; border-bottom: 1px solid #1e293b; }
         .topbar .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
         
-        /* HEADER PREMIUM DE LÍNEA ÚNICA RIGIDA (Evita saltos de línea molestos) */
+        /* HEADER PREMIUM DE LÍNEA ÚNICA INMUTABLE */
         header { background-color: #0f172a; position: sticky; top: 0; z-index: 1000; border-bottom: 3px solid #1d4ed8; height: 85px; display: flex; align-items: center; }
         header nav { display: flex; justify-content: space-between; align-items: center; width: 100%; height: 100%; }
         header .logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
-        header .logo img { max-height: 40px; width: auto; filter: brightness(0) invert(1); }
-        header ul { display: flex; list-style: none; gap: 20px; align-items: center; margin: 0; padding: 0; }
-        header ul li a { color: #cbd5e1; text-decoration: none; font-size: 13px; font-weight: 600; transition: color 0.3s; letter-spacing: 0.01em; white-space: nowrap; }
+        header .logo svg { height: 42px; width: auto; display: block; }
+        header ul { display: flex; list-style: none; gap: 18px; align-items: center; margin: 0; padding: 0; }
+        header ul li a { color: #cbd5e1; text-decoration: none; font-size: 12px; font-weight: 600; transition: color 0.3s; letter-spacing: 0.01em; white-space: nowrap; text-transform: uppercase; }
         header ul li a:hover { color: #d4a359; }
         
-        .btn-header { background-color: #1d4ed8; color: #ffffff; text-decoration: none; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 10px 18px; border-radius: 4px; transition: background 0.3s; white-space: nowrap; flex-shrink: 0; box-shadow: 0 4px 12px rgba(29, 78, 216, 0.2); }
+        .btn-header { background-color: #1d4ed8; color: #ffffff; text-decoration: none; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; padding: 10px 16px; border-radius: 4px; transition: background 0.3s; white-space: nowrap; flex-shrink: 0; box-shadow: 0 4px 12px rgba(29, 78, 216, 0.2); }
         .btn-header:hover { background-color: #1e40af; }
         
-        /* Secciones Estilizadas */
         .section-tag { color: #1d4ed8; font-weight: 800; font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; display: block; margin-bottom: 16px; }
         
-        /* HERO (Equilibrado para no solapar) */
-        .hero { position: relative; background: linear-gradient(rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.96)), url('img/hero.jpg'); background-size: cover; background-position: center; padding: 120px 0 90px 0; color: #ffffff; text-align: center; }
+        /* HERO EQUILIBRADO CON AIRE COGNITIVO */
+        .hero { position: relative; background: linear-gradient(rgba(15, 23, 42, 0.90), rgba(15, 23, 42, 0.97)), url('img/hero.jpg'); background-size: cover; background-position: center; padding: 150px 0 100px 0; color: #ffffff; text-align: center; }
         .hero-content { max-width: 950px; margin: 0 auto; padding: 0 20px; }
-        .hero h1 { font-size: 38px; font-weight: 800; line-height: 1.3; margin: 24px 0; color: #ffffff; text-transform: uppercase; letter-spacing: -0.01em; }
-        .hero h2 { font-size: 16px; font-weight: 400; color: #cbd5e1; margin-bottom: 40px; line-height: 1.7; max-width: 850px; margin-inline: auto; }
+        .hero .hero-tag { font-size: 12px; font-weight: 700; letter-spacing: 0.3em; color: #94a3b8; text-transform: uppercase; }
+        .hero h1 { font-size: 38px; font-weight: 800; line-height: 1.4; margin: 28px 0; color: #ffffff; text-transform: uppercase; letter-spacing: -0.01em; }
+        .hero h2 { font-size: 16px; font-weight: 400; color: #cbd5e1; margin-bottom: 45px; line-height: 1.8; max-width: 850px; margin-inline: auto; }
         .hero-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 50px; }
         
         .btn-primary, .btn-secondary { padding: 16px 32px; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; border-radius: 6px; transition: all 0.3s; display: inline-block; border: none; cursor: pointer; }
@@ -150,10 +149,10 @@
         footer hr { border: none; border-top: 1px solid #1e293b; margin-bottom: 30px; }
         .footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; font-size: 11px; opacity: 0.6; }
 
-        @media (max-width: 992px) {
+        @media (max-width: 1024px) {
             header { height: auto; padding: 20px 0; }
             header nav { flex-direction: column; gap: 15px; text-align: center; }
-            header ul { margin: 10px 0; gap: 15px; flex-wrap: wrap; justify-content: center; }
+            header ul { margin: 10px 0; gap: 14px; flex-wrap: wrap; justify-content: center; }
             .btn-header { width: 100%; text-align: center; }
         }
     </style>
@@ -173,12 +172,19 @@
         </div>
     </div>
 
-    <!-- HEADER / NAVEGACIÓN -->
+    <!-- HEADER / NAVEGACIÓN CON LOGOTIPO VECTORIAL PURO INYECTADO -->
     <header>
         <div class="container">
             <nav>
                 <a href="#" class="logo">
-                    <img src="img/logo.png" alt="Fabricio Martínez">
+                    <!-- Dibujo SVG nativo del logo de Fabricio Martínez para evitar rutas rotas -->
+                    <svg viewBox="0 0 450 120" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 20 H50 V100 H20 Z" fill="#ffffff"/>
+                        <path d="M40 40 H80 V60 H40 Z" fill="#ffffff"/>
+                        <path d="M60 20 H90 V100 H60 Z" fill="#ffffff"/>
+                        <text x="110" y="70" font-family="'Montserrat', sans-serif" font-weight="900" font-size="34" fill="#ffffff" letter-spacing="1">Fabricio Martínez</text>
+                        <text x="110" y="98" font-family="'Montserrat', sans-serif" font-weight="500" font-size="14" fill="#cbd5e1" letter-spacing="5">LIDERAZGO & EDUCACIÓN</text>
+                    </svg>
                 </a>
                 <ul>
                     <li><a href="#inicio">Inicio</a></li>
@@ -195,11 +201,11 @@
         </div>
     </header>
 
-    <!-- HERO (CAMBIOS 1, 2 Y 3) -->
+    <!-- HERO -->
     <section class="hero" id="inicio">
         <div class="overlay"></div>
         <div class="hero-content">
-            <span class="hero-tag">MÁS DE 25 AÑOS DESARROLLANDO PERSONAS Y ORGANIZACIONES</span>
+            <span class="hero-tag">MÁS DE 25 AÑOS DESARROLLANDO PERSONAS Y ORGANIZACIONES[cite: 1]</span>
             <h1>
                 Las personas hacen crecer las empresas.
                 <br>
@@ -225,7 +231,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN PROBLEMAS (CAMBIOS 4 Y 5) -->
+    <!-- SECCIÓN PROBLEMAS -->
     <section class="problemas" id="soluciones">
         <div class="container">
             <span class="section-tag">¿QUÉ ESTÁ FRENANDO EL CRECIMIENTO DE TU EMPRESA?</span>
@@ -273,7 +279,7 @@
         </div>
     </section>
 
-    <!-- ¿POR QUÉ ELEGIR UNA GERENCIA EXTERNA? (CAMBIO 7) -->
+    <!-- ¿POR QUÉ ELEGIR UNA GERENCIA EXTERNA? -->
     <section class="gerencia" id="gerencia-externa">
         <div class="container">
             <div class="section-title">
@@ -302,7 +308,7 @@
         </div>
     </section>
 
-    <!-- MÉTODO LÍDER® (CAMBIO 6) -->
+    <!-- MÉTODO LÍDER® -->
     <section class="metodo" id="metodo">
         <div class="container">
             <span class="section-tag">SISTEMA ESTRATÉGICO REGISTRADO</span>
@@ -364,7 +370,7 @@
         </div>
     </section>
 
-    <!-- ¿QUIÉN ESTÁ DETRÁS DE LA CONSULTORA? (CAMBIO 8) -->
+    <!-- ¿QUIÉN ESTÁ DETRÁS DE LA CONSULTORA? -->
     <section class="nosotros" id="nosotros">
         <div class="container">
             <div class="nosotros-left">
@@ -389,7 +395,7 @@
         </div>
     </section>
 
-    <!-- ORGANIZACIONES CON LAS QUE TRABAJAMOS (CAMBIO 9) -->
+    <!-- ORGANIZACIONES CON LAS QUE TRABAJAMOS -->
     <section class="porque" id="alianzas" style="background-color: #f8fafc; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
         <div class="container">
             <span class="section-tag">RESPALDO Y CREDIBILIDAD</span>
@@ -441,7 +447,7 @@
         </div>
     </section>
 
-    <!-- CLARIDAD PRE-FORMULARIO (CAMBIO 10) -->
+    <!-- CLARIDAD PRE-FORMULARIO -->
     <section id="pre-contacto">
         <div class="container">
             <span class="section-tag">PRIMER PASO DE EVOLUCIÓN</span>
@@ -486,7 +492,7 @@
     <!-- NEWSLETTER -->
     <section class="newsletter">
         <div class="container">
-            <h2>Recibí contenidos exclusivos sobre liderazgo, gestión del talento y desarrollo organizacional.</h2>
+            <h2>Recibí contenidos exclusivos sobre liderazgo, gestión del talento y desarrollo organizacional[cite: 1].</h2>
             <p>Una publicación mensual. Sin spam. Solo conocimiento aplicable.</p>
             <form>
                 <input type="email" placeholder="Ingresá tu correo electrónico" required>
