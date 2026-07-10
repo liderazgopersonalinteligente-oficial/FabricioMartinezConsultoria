@@ -2,6 +2,10 @@
 <html lang="es">
 
 <head>
+    <!-- ===========================================
+    PROYECTO FARO - FABRICIO MARTÍNEZ
+    MÁS DE 25 AÑOS DESARROLLANDO PERSONAS Y ORGANIZACIONES
+    ============================================ -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,6 +29,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
+    <!-- ARQUITECTURA DE ESTILOS PREMIUM (ALTURA FLUIDA Y DESBLOQUEO DE NOMBRE COMPLETO) -->
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Montserrat', sans-serif; background-color: #ffffff; color: #1e293b; line-height: 1.6; overflow-x: hidden; }
@@ -33,9 +38,9 @@
         .topbar { background-color: #0b1329; color: #94a3b8; font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; padding: 10px 0; border-bottom: 1px solid #1e293b; }
         .topbar .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
         
-        /* HEADER TOTALMENTE CORREGIDO AL PÍXEL PARA EVITAR REORTES */
+        /* HEADER PREMIUM RIGIDO CON ANCHO EXPANSIBLE PARA LOGO */
         header { background-color: #0f172a; position: sticky; top: 0; z-index: 1000; border-bottom: 2px solid #1d4ed8; min-height: 80px; display: flex; align-items: center; padding: 10px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
-        header nav { display: flex; justify-content: space-between; align-items: center; width: 100%; gap: 10px; }
+        header nav { display: flex; justify-content: space-between; align-items: center; width: 100%; height: 100%; gap: 10px; }
         
         /* Ancho expandido a 420px y blindado para asegurar que entre completo "FABRICIO MARTÍNEZ" */
         header .logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; width: 420px; }
@@ -50,9 +55,8 @@
         
         .section-tag { color: #1d4ed8; font-weight: 800; font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; display: block; margin-bottom: 16px; }
         
-        /* HERO CORREGIDO CON AIRE COGNITIVO PERFECTO */
         .hero { position: relative; background: linear-gradient(rgba(15, 23, 42, 0.90), rgba(15, 23, 42, 0.97)), url('img/hero.jpg'); background-size: cover; background-position: center; padding: 140px 0 100px 0; color: #ffffff; text-align: center; }
-        .hero-content { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+        .hero-content { max-width: 950px; margin: 0 auto; padding: 0 20px; }
         .hero h1 { font-size: 38px; font-weight: 800; line-height: 1.4; margin: 24px 0; color: #ffffff; text-transform: uppercase; letter-spacing: -0.01em; }
         .hero h2 { font-size: 16px; font-weight: 400; color: #cbd5e1; margin-bottom: 45px; line-height: 1.8; max-width: 850px; margin-inline: auto; }
         .hero-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 50px; }
@@ -103,8 +107,6 @@
         .nosotros-left { flex: 1; }
         .nosotros-left h2 { font-size: 32px; font-weight: 800; color: #0f172a; margin-bottom: 15px; }
         .nosotros-left p { color: #334155; margin-bottom: 20px; font-size: 15px; line-height: 1.7; }
-        .nosotros-right { flex: 1; text-align: center; }
-        .nosotros-right img { width: 100%; max-width: 450px; border-radius: 16px; box-shadow: 0 15px 30px rgba(0,0,0,0.06); }
         .curriculum-mini { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: 11px; font-weight: bold; color: #1e293b; text-transform: uppercase; margin-top: 25px; }
         .curriculum-mini i { color: #1d4ed8; margin-right: 6px; }
         
@@ -157,6 +159,7 @@
 
 <body>
 
+    <!-- BARRA SUPERIOR -->
     <div class="topbar">
         <div class="container">
             <div class="topbar-left">
@@ -168,6 +171,7 @@
         </div>
     </div>
 
+    <!-- HEADER / NAVEGACIÓN -->
     <header>
         <div class="container">
             <nav>
@@ -189,12 +193,13 @@
                     <li><a href="#metodo">Método LÍDER®</a></li>
                     <li><a href="#alianzas">Organizaciones</a></li>
                     <li><a href="#contacto">Contacto</a></li>
-                    <li><a href="#diagnostico" class="btn-header">Diagnóstico Gratuito</a></li>
+                    <li><a href="#diagnostico" class="btn-header">Diagnóstico Gratito</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <!-- HERO -->
     <section class="hero" id="inicio">
         <div class="overlay"></div>
         <div class="hero-content">
@@ -224,6 +229,7 @@
         </div>
     </section>
 
+    <!-- SECCIÓN PROBLEMAS -->
     <section class="problemas" id="soluciones">
         <div class="container">
             <span class="section-tag">¿QUÉ ESTÁ FRENANDO EL CRECIMIENTO DE TU EMPRESA?</span>
@@ -271,6 +277,7 @@
         </div>
     </section>
 
+    <!-- ¿POR QUÉ ELEGIR UNA GERENCIA EXTERNA? -->
     <section class="gerencia" id="gerencia-externa">
         <div class="container">
             <div class="section-title">
@@ -299,6 +306,7 @@
         </div>
     </section>
 
+    <!-- MÉTODO LÍDER® -->
     <section class="metodo" id="metodo">
         <div class="container">
             <span class="section-tag">SISTEMA ESTRATÉGICO REGISTRADO</span>
@@ -335,6 +343,7 @@
         </div>
     </section>
 
+    <!-- HUB DE ASOCIADOS EXPERTOS -->
     <section class="servicios">
         <div class="container">
             <div class="section-title">
@@ -359,6 +368,7 @@
         </div>
     </section>
 
+    <!-- ¿QUIÉN ESTÁ DETRÁS DE LA CONSULTORA? (IMAGEN INCORRECTA EXTIRPADA SEGURO) -->
     <section class="nosotros" id="nosotros">
         <div class="container">
             <div class="nosotros-left">
@@ -377,17 +387,15 @@
                     <div><i class="fas fa-check-circle"></i> Gestión de Talento</div>
                 </div>
             </div>
-            <div class="nosotros-right">
-                <img src="img/hero.jpg" alt="Fabricio Martínez">
-            </div>
         </div>
     </section>
 
+    <!-- ORGANIZACIONES CON LAS QUE TRABAJAMOS -->
     <section class="porque" id="alianzas" style="background-color: #f8fafc; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
         <div class="container">
             <span class="section-tag">RESPALDO Y CREDIBILIDAD</span>
             <h2>Organizaciones con las que trabajamos</h2>
-            <p style="color: #64748b;">Nuestra trayectoria se valida en los resultados y en la evolución de las instituciones que confían en nuestro sistema.</p>
+            <p style="color: #64748b;">Nuestra trayectoria se valida en los resultados and en la evolución de las instituciones que confían en nuestro sistema.</p>
             <div class="porque-grid">
                 <div class="porque-card">Grupo Motta</div>
                 <div class="porque-card">Mirstravel</div>
@@ -404,6 +412,7 @@
         </div>
     </section>
 
+    <!-- TEST CLÍNICO INTERACTIVO -->
     <section class="diagnostico" id="diagnostico" style="background: #ffffff; padding: 90px 0;">
         <div class="container" style="max-width: 750px; margin: 0 auto;">
             <div style="text-align: center; margin-bottom: 40px;">
@@ -437,6 +446,7 @@
         </div>
     </section>
 
+    <!-- CLARIDAD PRE-FORMULARIO -->
     <section id="pre-contacto">
         <div class="container">
             <span class="section-tag">PRIMER PASO DE EVOLUCIÓN</span>
@@ -452,6 +462,7 @@
         </div>
     </section>
 
+    <!-- FORMULARIO DE CONTACTO -->
     <section class="contacto" id="contacto">
         <div class="container">
             <div class="contacto-info">
@@ -477,9 +488,10 @@
         </div>
     </section>
 
+    <!-- NEWSLETTER -->
     <section class="newsletter">
         <div class="container">
-            <h2>Recibí contenidos exclusivos sobre liderazgo, gestión del talento y desarrollo ancestral.</h2>
+            <h2>Recibí contenidos exclusivos sobre liderazgo, gestión del talento y desarrollo organizacional.</h2>
             <p>Una publicación mensual. Sin spam. Solo conocimiento aplicable.</p>
             <form>
                 <input type="email" placeholder="Ingresá tu correo electrónico" required>
@@ -488,6 +500,7 @@
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer>
         <div class="container">
             <div class="footer-grid">
@@ -533,6 +546,7 @@
         </div>
     </footer>
 
+    <!-- LÓGICA DEL CORE INTERACTIVO (TEST) -->
     <script>
         const dQuestions = {
             empresa: [
