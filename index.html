@@ -29,34 +29,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <!-- ARQUITECTURA DE DISEÑO PREMIUM INTEGRADA (SISTEMA SEGURO) -->
+    <!-- ARQUITECTURA DE ESTILOS PREMIUM ULTRA COMPACTA (MENÚ DELGADO 65PX) -->
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Montserrat', sans-serif; background-color: #ffffff; color: #1e293b; line-height: 1.6; overflow-x: hidden; }
         .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
         
-        .topbar { background-color: #0b1329; color: #94a3b8; font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; padding: 12px 0; border-bottom: 1px solid #1e293b; }
+        .topbar { background-color: #0b1329; color: #94a3b8; font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; padding: 10px 0; border-bottom: 1px solid #1e293b; }
         .topbar .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
         
-        /* HEADER PREMIUM DE LÍNEA ÚNICA INMUTABLE */
-        header { background-color: #0f172a; position: sticky; top: 0; z-index: 1000; border-bottom: 3px solid #1d4ed8; height: 85px; display: flex; align-items: center; }
+        /* REDISEÑO AL PÍXEL DEL MENU FLOTANTE (Delgado, rígido y elegante) */
+        header { background-color: #0f172a; position: sticky; top: 0; z-index: 1000; border-bottom: 2px solid #1d4ed8; height: 65px; display: flex; align-items: center; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
         header nav { display: flex; justify-content: space-between; align-items: center; width: 100%; height: 100%; }
-        header .logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; width: 240px; }
-        header .logo svg { height: 50px; width: 100%; display: block; }
-        header ul { display: flex; list-style: none; gap: 16px; align-items: center; margin: 0; padding: 0; }
+        
+        /* Contenedor y filtro del logo oficial para transformarlo en blanco puro */
+        header .logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
+        header .logo img { max-height: 38px; width: auto; filter: brightness(0) invert(1); opacity: 0.95; transition: opacity 0.3s; }
+        header .logo img:hover { opacity: 1; }
+        
+        header ul { display: flex; list-style: none; gap: 20px; align-items: center; margin: 0; padding: 0; }
         header ul li a { color: #cbd5e1; text-decoration: none; font-size: 11px; font-weight: 700; transition: color 0.3s; letter-spacing: 0.05em; white-space: nowrap; text-transform: uppercase; }
         header ul li a:hover { color: #d4a359; }
         
-        .btn-header { background-color: #1d4ed8; color: #ffffff; text-decoration: none; font-size: 10px; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; padding: 10px 16px; border-radius: 4px; transition: background 0.3s; white-space: nowrap; flex-shrink: 0; box-shadow: 0 4px 12px rgba(29, 78, 216, 0.2); }
-        .btn-header:hover { background-color: #1e40af; }
+        /* Integración estética del botón de conversión dentro de la grilla del menú */
+        .btn-header { color: #ffffff !important; background-color: #1d4ed8; padding: 8px 14px; border-radius: 4px; font-weight: 800 !important; font-size: 10px !important; letter-spacing: 0.05em; transition: all 0.3s ease !important; box-shadow: 0 4px 10px rgba(29, 78, 216, 0.2); }
+        .btn-header:hover { background-color: #1e40af !important; transform: translateY(-1px); }
         
         .section-tag { color: #1d4ed8; font-weight: 800; font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; display: block; margin-bottom: 16px; }
         
-        /* HERO CORREGIDO AL PÍXEL (Aire y respiro de contenidos) */
-        .hero { position: relative; background: linear-gradient(rgba(15, 23, 42, 0.90), rgba(15, 23, 42, 0.97)), url('img/hero.jpg'); background-size: cover; background-position: center; padding: 160px 0 100px 0; color: #ffffff; text-align: center; }
+        /* HERO CORREGIDO (Aire cenital perfecto) */
+        .hero { position: relative; background: linear-gradient(rgba(15, 23, 42, 0.90), rgba(15, 23, 42, 0.97)), url('img/hero.jpg'); background-size: cover; background-position: center; padding: 130px 0 90px 0; color: #ffffff; text-align: center; }
         .hero-content { max-width: 950px; margin: 0 auto; padding: 0 20px; }
-        .hero .hero-tag { font-size: 12px; font-weight: 700; letter-spacing: 0.3em; color: #94a3b8; text-transform: uppercase; }
-        .hero h1 { font-size: 38px; font-weight: 800; line-height: 1.4; margin: 28px 0; color: #ffffff; text-transform: uppercase; letter-spacing: -0.01em; }
+        .hero .hero-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.3em; color: #94a3b8; text-transform: uppercase; }
+        .hero h1 { font-size: 38px; font-weight: 800; line-height: 1.4; margin: 24px 0; color: #ffffff; text-transform: uppercase; letter-spacing: -0.01em; }
         .hero h2 { font-size: 16px; font-weight: 400; color: #cbd5e1; margin-bottom: 45px; line-height: 1.8; max-width: 850px; margin-inline: auto; }
         .hero-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 50px; }
         
@@ -149,10 +154,10 @@
         footer hr { border: none; border-top: 1px solid #1e293b; margin-bottom: 30px; }
         .footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; font-size: 11px; opacity: 0.6; }
 
-        @media (max-width: 1120px) {
-            header { height: auto; padding: 20px 0; }
-            header nav { flex-direction: column; gap: 15px; text-align: center; }
-            header ul { margin: 10px 0; gap: 14px; flex-wrap: wrap; justify-content: center; }
+        @media (max-width: 1024px) {
+            header { height: auto; padding: 15px 0; }
+            header nav { flex-direction: column; gap: 12px; text-align: center; }
+            header ul { margin: 5px 0; gap: 12px; flex-wrap: wrap; justify-content: center; }
             .btn-header { width: 100%; text-align: center; }
         }
     </style>
@@ -172,21 +177,13 @@
         </div>
     </div>
 
-    <!-- HEADER / NAVEGACIÓN CON LOGOTIPO VECTORIAL INCORPORADO -->
+    <!-- HEADER / NAVEGACIÓN (DELGADO Y EQUILIBRADO) -->
     <header>
         <div class="container">
             <nav>
                 <a href="#" class="logo">
-                    <!-- Dibujo SVG nativo del logotipo oficial en blanco y oro -->
-                    <svg viewBox="0 0 450 120" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Símbolo Izquierdo (FM Estilizada) -->
-                        <path d="M15 20 H50 V100 H15 Z" fill="#ffffff"/>
-                        <path d="M35 40 H75 V58 H35 Z" fill="#d4a359"/>
-                        <path d="M55 20 H90 V100 H55 Z" fill="#ffffff"/>
-                        <!-- Tipografía Corporativa Oficial -->
-                        <text x="110" y="68" font-family="'Montserrat', sans-serif" font-weight="900" font-size="32" fill="#ffffff" letter-spacing="1">FABRICIO MARTÍNEZ</text>
-                        <text x="110" y="96" font-family="'Montserrat', sans-serif" font-weight="600" font-size="13" fill="#cbd5e1" letter-spacing="4.5">EDUCACIÓN & LIDERAZGO</text>
-                    </svg>
+                    <!-- Vinculación del logo real con filtro CSS inteligente -->
+                    <img src="logo_fabricio.png" alt="Fabricio Martínez">
                 </a>
                 <ul>
                     <li><a href="#inicio">Inicio</a></li>
@@ -195,10 +192,8 @@
                     <li><a href="#metodo">Método LÍDER®</a></li>
                     <li><a href="#alianzas">Organizaciones</a></li>
                     <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#diagnostico" class="btn-header">Diagnóstico Gratuito</a></li>
                 </ul>
-                <a href="#diagnostico" class="btn-header">
-                    Diagnóstico Gratuito
-                </a>
             </nav>
         </div>
     </header>
@@ -379,16 +374,16 @@
                 <span class="section-tag">DIRECCIÓN ESTRATÉGICA</span>
                 <h2>¿Quién está detrás de la consultora?</h2>
                 <p>
-                    La consultora es dirigida por <strong>Fabricio Martínez, MBA</strong>, especialista en Liderazgo, Neurociencias y Gestión del Talento, junto a una red de profesionales asociados que intervienen de acuerdo con las necesidades de cada organización.
+                    La consultora es dirigida por <strong>Fabricio Martínez, MBA</strong>, especialista en Liderazgo, Neurociencias y Gestión del Talento, junto a una red de profesionales asociados que intervienen de acuerdo con las necesidades de cada organización[cite: 1].
                 </p>
                 <p>
-                    Con más de veinticinco años de trayectoria, ha acompañado organizaciones públicas y privadas, universidades, empresas familiares, multinacionales e instituciones deportivas de alta competencia en procesos de transformación biológica y operativa.
+                    Con más de veinticinco años de trayectoria, ha acompañado organizaciones públicas y privadas, universidades, empresas familiares, multinacionales e instituciones deportivas de alta competencia en procesos de transformación biológica y operativa[cite: 1].
                 </p>
                 <div class="curriculum-mini">
-                    <div><i class="fas fa-graduation-cap"></i> MBA & Dirección</div>
-                    <div><i class="fas fa-brain"></i> Neurociencias UBA</div>
-                    <div><i class="fas fa-users"></i> Dirección RRHH</div>
-                    <div><i class="fas fa-check-circle"></i> Gestión de Talento</div>
+                    <div><i class="fas fa-graduation-cap"></i> MBA & Dirección[cite: 1]</div>
+                    <div><i class="fas fa-brain"></i> Neurociencias UBA[cite: 1]</div>
+                    <div><i class="fas fa-users"></i> Dirección RRHH[cite: 1]</div>
+                    <div><i class="fas fa-check-circle"></i> Gestión de Talento[cite: 1]</div>
                 </div>
             </div>
             <div class="nosotros-right">
@@ -402,15 +397,15 @@
         <div class="container">
             <span class="section-tag">RESPALDO Y CREDIBILIDAD</span>
             <h2 style="font-size: 28px; font-weight: 800; color: #0f172a; margin-bottom: 15px;">Organizaciones con las que trabajamos</h2>
-            <p style="color: #64748b;">Nuestra trayectoria se valida en los resultados y en la evolución de las instituciones que confían en nuestro sistema.</p>
+            <p style="color: #64748b;">Nuestra trayectoria se valida en los resultados y en la evolución de las instituciones que confían en nuestro sistema[cite: 1].</p>
             <div class="porque-grid">
-                <div class="porque-card">Grupo Motta</div>
-                <div class="porque-card">Mirstravel</div>
+                <div class="porque-card">Grupo Motta[cite: 1]</div>
+                <div class="porque-card">Mirstravel[cite: 1]</div>
                 <div class="porque-card">Distribuidora Werner</div>
                 <div class="porque-card">Cooperativa La Ganadera</div>
-                <div class="porque-card">Universidad de Concepción del Uruguay</div>
+                <div class="porque-card">Universidad de Concepción del Uruguay[cite: 1]</div>
                 <div class="porque-card">Comité Olímpico Argentino</div>
-                <div class="porque-card">Selección Argentina de Sóftbol</div>
+                <div class="porque-card">Selección Argentina de Sóftbol[cite: 1]</div>
             </div>
         </div>
     </section>
@@ -456,8 +451,8 @@
             <h2>Una conversación puede cambiar el rumbo de una organización.</h2>
             <div class="info-block">
                 <p>✔ No todas las empresas necesitan una Gerencia Externa de Recursos Humanos.</p>
-                <p>✔ No todas necesitan un proceso de coaching.</p>
-                <p>✔ No todas necesitan capacitación.</p>
+                <p>✔ No todas necesitan un proceso de coaching[cite: 1].</p>
+                <p>✔ No todas necesitan capacitación[cite: 1].</p>
                 <p style="font-weight: 600; color: #0f172a; border-left: 4px solid #1d4ed8; padding-left: 15px;">Lo primero que necesitan es claridad para saber cuál es el próximo paso.</p>
                 <p>Por eso nuestra primera reunión tiene un único objetivo: <strong>escuchar, comprender y ayudarte a identificar</strong> dónde están las mayores oportunidades de evolución de tu organización.</p>
             </div>
@@ -494,7 +489,7 @@
     <!-- NEWSLETTER -->
     <section class="newsletter">
         <div class="container">
-            <h2>Recibí contenidos exclusivos sobre liderazgo, gestión del talento y desarrollo organizacional.</h2>
+            <h2>Recibí contenidos exclusivos sobre liderazgo, gestión del talento y desarrollo organizacional[cite: 1].</h2>
             <p>Una publicación mensual. Sin spam. Solo conocimiento aplicable.</p>
             <form>
                 <input type="email" placeholder="Ingresá tu correo electrónico" required>
@@ -509,16 +504,16 @@
             <div class="footer-grid">
                 <div>
                     <h3>FABRICIO MARTÍNEZ</h3>
-                    <p>Consultora Estratégica en Personas, Liderazgo y Gestión del Talento.</p>
+                    <p>Consultora Estratégica en Personas, Liderazgo y Gestión del Talento[cite: 1].</p>
                 </div>
                 <div>
                     <h4>Soluciones</h4>
                     <ul>
                         <li>Gerencia Externa RRHH</li>
                         <li>Método LÍDER®</li>
-                        <li>Coaching Ejecutivo</li>
-                        <li>Desarrollo de Líderes</li>
-                        <li>Gestión del Talento</li>
+                        <li>Coaching Ejecutivo[cite: 1]</li>
+                        <li>Desarrollo de Líderes[cite: 1]</li>
+                        <li>Gestión del Talento[cite: 1]</li>
                     </ul>
                 </div>
                 <div>
@@ -528,7 +523,7 @@
                         <li>PyMES</li>
                         <li>Industria</li>
                         <li>Comercio</li>
-                        <li>Organizaciones Deportivas</li>
+                        <li>Organizaciones Deportivas[cite: 1]</li>
                     </ul>
                 </div>
                 <div>
@@ -544,7 +539,7 @@
             <hr>
             <div class="footer-bottom">
                 <p>© 2026 Fabricio Martínez · Todos los derechos reservados.</p>
-                <p>Método LÍDER® · Consultora Estratégica en Personas, Liderazgo y Gestión del Talento.</p>
+                <p>Método LÍDER® · Consultora Estratégica en Personas, Liderazgo y Gestión del Talento[cite: 1].</p>
             </div>
         </div>
     </footer>
@@ -679,7 +674,7 @@
                     ['Nivel de excelencia sistémica. Organización ágil y equipo altamente enfocado.','El desafío radica en blindar al equipo ante picos imprevistos de fatiga o estrés operativo.','Se sugiere auditoría preventiva de control corporativo trimestral.']
                 ],
                 deporte:[
-                    ['Alarma competitiva. Los bloqueos emocionales están anulando por completo el rendimiento físico del equipo.','Urge intervención neuro-cognitiva para desactivar la parálisis bajo presión.','Recalibrar la comunicación de mandos directivos.'],
+                    ['Alarma competitiva. Los bloqueos emocionales están aunlando por completo el rendimiento físico del equipo.','Urge intervención neuro-cognitiva para desactivar la parálisis bajo presión.','Recalibrar la comunicación de mandos directivos.'],
                     ['El talento no alcanza. La incapacidad de sostener la concentración en momentos clave cuesta campeonatos.','Sistematizar herramientas científicas de neuro-coaching táctico.','Trabajar la cohesión sistémica bajo presión.'],
                     ['Cerca del podio competitivo. Falta consolidar la frialdad estratégica que separa finalistas de campeones mundiales.','Optimizar los tiempos de respuesta cognitiva y la velocidad de veto motor.','Solidificar procesos dirigenciales.'],
                     ['Sistemas de alto rendimiento humano. Biología y estrategia competitiva alineadas a la perfección.','Monitorear el desgaste invisible para evitar fatiga por éxito acumulado.','Actualización periódica de metodologías científicas.']
@@ -721,7 +716,7 @@
                 `;
             });
             
-            html += `</div><div><h4 style="font-size:11px; font-weight:bold; text-transform:uppercase; color:#94a3b8; margin-bottom:15px;">Conclusión Clínica Basal</h4>`;
+            html += `</div><div><h4 style="font-size:11px; font-weight:bold; text-transform:uppercase; color:#94a3b8; margin-bottom:15px;">Conclusión Clinical Basal</h4>`;
             recos.forEach(r => { html += `<div class="d-reco">${r}</div>`; });
             
             html += `
@@ -751,4 +746,5 @@
     <script src="js/main.js"></script>
 </body>
 
+</html>
 </html>
