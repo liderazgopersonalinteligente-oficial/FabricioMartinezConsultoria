@@ -1,0 +1,11 @@
+SITIO WEB — FABRICIO MARTÍNEZ / HUMANO
+
+Este paquete está listo para subir.
+
+1. Descomprimí el archivo.
+2. Subí todos los archivos de esta carpeta a la raíz del alojamiento de fabriciomartinez.com.ar.
+3. Reemplazá los archivos anteriores cuando el alojamiento lo solicite.
+4. Verificá que la portada abra y probá el botón de WhatsApp.
+
+Archivo principal: index.html
+No necesita base de datos ni instalación.
