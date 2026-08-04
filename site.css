@@ -1275,8 +1275,8 @@ h2 em {
   height: 55px;
   border: 1px solid rgba(255, 255, 255, 0.55);
   border-radius: 50%;
-  background: var(--cyan);
-  color: var(--navy-950);
+  background: #25d366;
+  color: var(--white);
   box-shadow: 0 14px 35px rgba(4, 18, 38, 0.24);
   font-size: 1.25rem;
   font-weight: 900;
@@ -1285,8 +1285,15 @@ h2 em {
 }
 
 .floating-contact:hover {
-  background: var(--cyan-bright);
+  background: #20bd5a;
   transform: translateY(-3px) rotate(4deg);
+}
+
+.whatsapp-icon {
+  display: block;
+  width: 27px;
+  height: 27px;
+  fill: currentColor;
 }
 
 .reveal {
@@ -1359,11 +1366,12 @@ h2 em {
   }
 
   .nav-menu {
-    position: fixed;
-    top: 110px;
+    position: absolute;
+    top: 100%;
     right: 0;
-    bottom: 0;
+    bottom: auto;
     left: 0;
+    min-height: calc(100dvh - 78px);
     display: flex;
     align-items: stretch;
     padding: 32px 24px 50px;
@@ -1520,7 +1528,7 @@ h2 em {
   }
 
   .nav-menu {
-    top: 101px;
+    min-height: calc(100dvh - 70px);
   }
 
   .hero {
